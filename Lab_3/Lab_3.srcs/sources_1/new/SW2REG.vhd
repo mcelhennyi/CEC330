@@ -44,7 +44,7 @@ end SW2REG;
 
 architecture Behavioral of SW2REG is
 
-signal REG : STD_LOGIC_VECTOR (15 DOWNTO 0) := x"0000";
+--signal REG : STD_LOGIC_VECTOR (15 DOWNTO 0) := x"0000";
 
 begin
 

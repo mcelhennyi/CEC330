@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Thu Sep 17 20:58:43 2015
-| Host              : Austin-MBP running 64-bit major release  (build 9200)
+| Date              : Fri Sep 18 23:13:13 2015
+| Host              : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Top_Countdown_clock_utilization_routed.rpt
 | Design            : Top_Countdown
 | Device            : 7a100t-csg324
@@ -42,15 +42,15 @@ Table of Contents
 2. Details of Global Clocks
 ---------------------------
 
-+-------+--------------------------+---------------------+--------------+-------+
-|       |                          |                     |   Num Loads  |       |
-+-------+--------------------------+---------------------+------+-------+-------+
-| Index | BUFG Cell                | Net Name            | BELs | Sites | Fixed |
-+-------+--------------------------+---------------------+------+-------+-------+
-|     1 | BTNC_IBUF_BUFG_inst      | BTNC_IBUF_BUFG      |    1 |     1 |    no |
-|     2 | CLK_IN_IBUF_BUFG_inst    | CLK_IN_IBUF_BUFG    |   23 |     6 |    no |
-|     3 | CLK_OUT_slower_BUFG_inst | CLK_OUT_slower_BUFG |   33 |    21 |    no |
-+-------+--------------------------+---------------------+------+-------+-------+
++-------+-----------------------+------------------+--------------+-------+
+|       |                       |                  |   Num Loads  |       |
++-------+-----------------------+------------------+------+-------+-------+
+| Index | BUFG Cell             | Net Name         | BELs | Sites | Fixed |
++-------+-----------------------+------------------+------+-------+-------+
+|     1 | BTNC_IBUF_BUFG_inst   | BTNC_IBUF_BUFG   |    1 |     1 |    no |
+|     2 | CLK_IN_IBUF_BUFG_inst | CLK_IN_IBUF_BUFG |   23 |     6 |    no |
+|     3 | clk_slow_BUFG_inst    | clk_slow_BUFG    |   49 |    36 |    no |
++-------+-----------------------+------------------+------+-------+-------+
 
 
 3. Details of Regional Clocks
@@ -65,21 +65,33 @@ Table of Contents
 6. Details of Local Clocks
 --------------------------
 
-+-------+-------------------------------------+-------------------------+--------------+-------+
-|       |                                     |                         |   Num Loads  |       |
-+-------+-------------------------------------+-------------------------+------+-------+-------+
-| Index | Local Clk Src                       | Net Name                | BELs | Sites | Fixed |
-+-------+-------------------------------------+-------------------------+------+-------+-------+
-|     1 | REG_reg[0]_LDC_i_1                  | REG_reg[0]_LDC_i_1_n_0  |    2 |     2 |    no |
-|     2 | REG_reg[1]_LDC_i_1                  | REG_reg[1]_LDC_i_1_n_0  |    2 |     2 |    no |
-|     3 | REG_reg[2]_LDC_i_1                  | REG_reg[2]_LDC_i_1_n_0  |    2 |     2 |    no |
-|     4 | REG_reg[3]_LDC_i_1                  | REG_reg[3]_LDC_i_1_n_0  |    2 |     2 |    no |
-|     5 | dividermap/register_counter_reg[15] | dividermap/out[0]       |    3 |     2 |    no |
-|     6 | REG_reg[13]_LDC_i_1                 | REG_reg[13]_LDC_i_1_n_0 |    4 |     2 |    no |
-|     7 | REG_reg[14]_LDC_i_1                 | REG_reg[14]_LDC_i_1_n_0 |    4 |     2 |    no |
-|     8 | REG_reg[12]_LDC_i_1                 | REG_reg[12]_LDC_i_1_n_0 |    5 |     4 |    no |
-|     9 | REG_reg[15]_LDC_i_1                 | REG_reg[15]_LDC_i_1_n_0 |    5 |     2 |    no |
-+-------+-------------------------------------+-------------------------+------+-------+-------+
++-------+---------------------------------------------------+-------------------------------------------------------+--------------+-------+
+|       |                                                   |                                                       |   Num Loads  |       |
++-------+---------------------------------------------------+-------------------------------------------------------+------+-------+-------+
+| Index | Local Clk Src                                     | Net Name                                              | BELs | Sites | Fixed |
++-------+---------------------------------------------------+-------------------------------------------------------+------+-------+-------+
+|     1 | countedownregister/registerMiddle_reg[0]_LDC_i_1  | countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0  |    2 |     2 |    no |
+|     2 | countedownregister/registerMiddle_reg[10]_LDC_i_1 | countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0 |    2 |     2 |    no |
+|     3 | countedownregister/registerMiddle_reg[11]_LDC_i_1 | countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0 |    2 |     2 |    no |
+|     4 | countedownregister/registerMiddle_reg[12]_LDC_i_1 | countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0 |    2 |     2 |    no |
+|     5 | countedownregister/registerMiddle_reg[13]_LDC_i_1 | countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0 |    2 |     2 |    no |
+|     6 | countedownregister/registerMiddle_reg[14]_LDC_i_1 | countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0 |    2 |     2 |    no |
+|     7 | countedownregister/registerMiddle_reg[15]_LDC_i_1 | countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0 |    2 |     2 |    no |
+|     8 | countedownregister/registerMiddle_reg[1]_LDC_i_1  | countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0  |    2 |     2 |    no |
+|     9 | countedownregister/registerMiddle_reg[2]_LDC_i_1  | countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    10 | countedownregister/registerMiddle_reg[3]_LDC_i_1  | countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    11 | countedownregister/registerMiddle_reg[4]_LDC_i_1  | countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    12 | countedownregister/registerMiddle_reg[5]_LDC_i_1  | countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    13 | countedownregister/registerMiddle_reg[6]_LDC_i_1  | countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    14 | countedownregister/registerMiddle_reg[7]_LDC_i_1  | countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    15 | countedownregister/registerMiddle_reg[8]_LDC_i_1  | countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    16 | countedownregister/registerMiddle_reg[9]_LDC_i_1  | countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0  |    2 |     2 |    no |
+|    17 | dividermap/register_counter_reg[15]               | dividermap/out[0]                                     |    3 |     2 |    no |
+|    18 | countedownregister/REG_reg[3]_i_1                 | countedownregister/E[0]                               |    4 |     1 |    no |
+|    19 | countedownregister/REG_reg[7]_i_1                 | countedownregister/E[1]                               |    4 |     1 |    no |
+|    20 | countedownregister/REG_reg[11]_i_1                | countedownregister/E[2]                               |    4 |     2 |    no |
+|    21 | countedownregister/REG_reg[15]_i_1                | countedownregister/E[3]                               |    4 |     2 |    no |
++-------+---------------------------------------------------+-------------------------------------------------------+------+-------+-------+
 
 
 7. Clock Regions : Key Resource Utilization
@@ -92,7 +104,7 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |    0 | 12000 |    0 |  2200 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   69 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  107 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
@@ -105,19 +117,19 @@ Table of Contents
 8. Net wise resources used in clock region X0Y1
 -----------------------------------------------
 
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------+
-| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |    Clock Net Name   |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------+
-| BUFG        | BUFHCE_X0Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  23 |     0 |        0 | CLK_IN_IBUF_BUFG    |
-| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  33 |     0 |        0 | CLK_OUT_slower_BUFG |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |  Clock Net Name  |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
+| BUFG        | BUFHCE_X0Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  23 |     0 |        0 | CLK_IN_IBUF_BUFG |
+| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  49 |     0 |        0 | clk_slow_BUFG    |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
 
 
 
 # Location of BUFG Primitives 
 set_property LOC BUFGCTRL_X0Y1 [get_cells BTNC_IBUF_BUFG_inst]
 set_property LOC BUFGCTRL_X0Y16 [get_cells CLK_IN_IBUF_BUFG_inst]
-set_property LOC BUFGCTRL_X0Y0 [get_cells CLK_OUT_slower_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y0 [get_cells clk_slow_BUFG_inst]
 
 # Location of IO Clock Primitives
 
@@ -151,67 +163,151 @@ add_cells_to_pblock [get_pblocks  {CLKAG_CLK_IN_IBUF_BUFG}] [get_cells -filter {
 resize_pblock [get_pblocks {CLKAG_CLK_IN_IBUF_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "CLK_OUT_slower_BUFG" driven by instance "CLK_OUT_slower_BUFG_inst" located at site "BUFGCTRL_X0Y0"
+# Clock net "clk_slow_BUFG" driven by instance "clk_slow_BUFG_inst" located at site "BUFGCTRL_X0Y0"
 #startgroup
-create_pblock {CLKAG_CLK_OUT_slower_BUFG}
-add_cells_to_pblock [get_pblocks  {CLKAG_CLK_OUT_slower_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="CLK_OUT_slower_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_CLK_OUT_slower_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_clk_slow_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_clk_slow_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_slow_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_clk_slow_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[0]_LDC_i_1_n_0" driven by instance "REG_reg[0]_LDC_i_1" located at site "SLICE_X1Y92"
+# Clock net "countedownregister/E[0]" driven by instance "countedownregister/REG_reg[3]_i_1" located at site "SLICE_X0Y86"
 #startgroup
-create_pblock {CLKAG_REG_reg[0]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[0]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[0]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[0]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/E[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/E[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/E[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/E[0]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[12]_LDC_i_1_n_0" driven by instance "REG_reg[12]_LDC_i_1" located at site "SLICE_X4Y92"
+# Clock net "countedownregister/E[1]" driven by instance "countedownregister/REG_reg[7]_i_1" located at site "SLICE_X0Y86"
 #startgroup
-create_pblock {CLKAG_REG_reg[12]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[12]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[12]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[12]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/E[1]}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/E[1]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/E[1]"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/E[1]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[13]_LDC_i_1_n_0" driven by instance "REG_reg[13]_LDC_i_1" located at site "SLICE_X4Y93"
+# Clock net "countedownregister/E[2]" driven by instance "countedownregister/REG_reg[11]_i_1" located at site "SLICE_X0Y87"
 #startgroup
-create_pblock {CLKAG_REG_reg[13]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[13]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[13]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[13]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/E[2]}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/E[2]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/E[2]"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/E[2]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[14]_LDC_i_1_n_0" driven by instance "REG_reg[14]_LDC_i_1" located at site "SLICE_X4Y93"
+# Clock net "countedownregister/E[3]" driven by instance "countedownregister/REG_reg[15]_i_1" located at site "SLICE_X0Y87"
 #startgroup
-create_pblock {CLKAG_REG_reg[14]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[14]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[14]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[14]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/E[3]}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/E[3]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/E[3]"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/E[3]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[15]_LDC_i_1_n_0" driven by instance "REG_reg[15]_LDC_i_1" located at site "SLICE_X1Y94"
+# Clock net "countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[0]_LDC_i_1" located at site "SLICE_X1Y88"
 #startgroup
-create_pblock {CLKAG_REG_reg[15]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[15]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[15]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[15]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[1]_LDC_i_1_n_0" driven by instance "REG_reg[1]_LDC_i_1" located at site "SLICE_X4Y92"
+# Clock net "countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[10]_LDC_i_1" located at site "SLICE_X1Y90"
 #startgroup
-create_pblock {CLKAG_REG_reg[1]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[1]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[1]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[1]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[2]_LDC_i_1_n_0" driven by instance "REG_reg[2]_LDC_i_1" located at site "SLICE_X1Y93"
+# Clock net "countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[11]_LDC_i_1" located at site "SLICE_X4Y91"
 #startgroup
-create_pblock {CLKAG_REG_reg[2]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[2]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[2]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[2]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "REG_reg[3]_LDC_i_1_n_0" driven by instance "REG_reg[3]_LDC_i_1" located at site "SLICE_X1Y93"
+# Clock net "countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[12]_LDC_i_1" located at site "SLICE_X4Y92"
 #startgroup
-create_pblock {CLKAG_REG_reg[3]_LDC_i_1_n_0}
-add_cells_to_pblock [get_pblocks  {CLKAG_REG_reg[3]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="REG_reg[3]_LDC_i_1_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_REG_reg[3]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[13]_LDC_i_1" located at site "SLICE_X4Y92"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[14]_LDC_i_1" located at site "SLICE_X2Y90"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[15]_LDC_i_1" located at site "SLICE_X5Y92"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[1]_LDC_i_1" located at site "SLICE_X1Y88"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[2]_LDC_i_1" located at site "SLICE_X4Y88"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[3]_LDC_i_1" located at site "SLICE_X5Y87"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[4]_LDC_i_1" located at site "SLICE_X4Y86"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[5]_LDC_i_1" located at site "SLICE_X5Y86"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[6]_LDC_i_1" located at site "SLICE_X2Y88"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[7]_LDC_i_1" located at site "SLICE_X3Y87"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[8]_LDC_i_1" located at site "SLICE_X2Y89"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+#endgroup
+
+# Clock net "countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0" driven by instance "countedownregister/registerMiddle_reg[9]_LDC_i_1" located at site "SLICE_X3Y90"
+#startgroup
+create_pblock {CLKAG_countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
 # Clock net "dividermap/out[0]" driven by instance "dividermap/register_counter_reg[15]" located at site "SLICE_X15Y94"

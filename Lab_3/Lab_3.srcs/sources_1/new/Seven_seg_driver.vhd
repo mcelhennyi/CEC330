@@ -55,37 +55,33 @@ counter: process(CLK_AN)
     end process counter;
 --decides which digit to decode
 WITH Disp_counter SELECT
---        Display <= "1000" WHEN "00", 
---                   "0001" WHEN "01", 
---                   "1100" WHEN "10", 
---                   "0010" WHEN "11";
-         Display <= REG(15 downto 12) WHEN "00", 
-                     REG(11 downto 8) WHEN "01", 
-                     REG(7 downto 4) WHEN "10", 
-                     REG(3 downto 0) WHEN "11";
+    Display <= REG(15 downto 12) WHEN "00", 
+             REG(11 downto 8) WHEN "01", 
+             REG(7 downto 4) WHEN "10", 
+             REG(3 downto 0) WHEN "11";
 --decides which 7 segment display to turn on
 WITH Disp_counter SELECT
-        AN <= "0111" WHEN "00", 
-              "1011" WHEN "01", 
-              "1101" WHEN "10", 
-              "1110" WHEN "11";
+    AN <= "0111" WHEN "00", 
+          "1011" WHEN "01", 
+          "1101" WHEN "10", 
+          "1110" WHEN "11";
 --decodes a four bit number for the 7 segment display
 WITH Display SELECT
-        Display_out <= "11000000" WHEN x"0", -- number 0 on seven seg display
-        "11111001" WHEN x"1", -- number 1 on seven seg display
-        "10100100" WHEN x"2", -- number 2 on seven seg display
-        "10110000" WHEN x"3", -- number 3 on seven seg display
-        "10011001" WHEN x"4", -- number 4 on seven seg display
-        "10010010" WHEN x"5", -- number 5 on seven seg display
-        "10000011" WHEN x"6", -- number 6 on seven seg display
-        "11111000" WHEN x"7", -- number 7 on seven seg display
-        "10000000" WHEN x"8", -- number 8 on seven seg display
-        "10011000" WHEN x"9", -- number 9 on seven seg display   
-        "10001000" WHEN x"a", -- number A on seven seg display 
-        "10000011" WHEN x"b", -- number B on seven seg display 
-        "10100111" WHEN x"c", -- number C on seven seg display 
-        "10100001" WHEN x"d", -- number D on seven seg display 
-        "10000110" WHEN x"e", -- number E on seven seg display 
-        "10001110" WHEN x"f"; -- number F on seven seg display 
+    Display_out <=  "11000000" WHEN x"0", -- number 0 on seven seg display
+                    "11111001" WHEN x"1", -- number 1 on seven seg display
+                    "10100100" WHEN x"2", -- number 2 on seven seg display
+                    "10110000" WHEN x"3", -- number 3 on seven seg display
+                    "10011001" WHEN x"4", -- number 4 on seven seg display
+                    "10010010" WHEN x"5", -- number 5 on seven seg display
+                    "10000011" WHEN x"6", -- number 6 on seven seg display
+                    "11111000" WHEN x"7", -- number 7 on seven seg display
+                    "10000000" WHEN x"8", -- number 8 on seven seg display
+                    "10011000" WHEN x"9", -- number 9 on seven seg display   
+                    "10001000" WHEN x"a", -- number A on seven seg display 
+                    "10000011" WHEN x"b", -- number B on seven seg display 
+                    "10100111" WHEN x"c", -- number C on seven seg display 
+                    "10100001" WHEN x"d", -- number D on seven seg display 
+                    "10000110" WHEN x"e", -- number E on seven seg display 
+                    "10001110" WHEN x"f"; -- number F on seven seg display 
 
 end Behavioral;

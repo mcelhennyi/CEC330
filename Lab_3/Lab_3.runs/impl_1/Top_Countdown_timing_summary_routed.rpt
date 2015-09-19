@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Thu Sep 17 20:58:43 2015
-| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Date         : Fri Sep 18 23:13:12 2015
+| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_Countdown_timing_summary_routed.rpt -rpx Top_Countdown_timing_summary_routed.rpx
 | Design       : Top_Countdown
 | Device       : 7a100t-csg324
@@ -50,109 +50,151 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There is 1 register/latch pin with no clock driven by root clock pin: BTNC (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: BTNC (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: BTN[0] (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: BTND (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: BTNL (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: BTNR (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: BTNU (HIGH)
 
  There are 23 register/latch pins with no clock driven by root clock pin: CLK_IN (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: SW[0] (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/countdown_reg/G (HIGH)
 
- There are 2 register/latch pins with no clock driven by root clock pin: SW[1] (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[0]_C/C (HIGH)
 
- There are 2 register/latch pins with no clock driven by root clock pin: SW[2] (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[0]_LDC/G (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: SW[3] (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[0]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[0]_C/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[10]_C/C (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[0]_LDC/G (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[10]_LDC/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[0]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[10]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[10]_C/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[11]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[10]_P/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[11]_LDC/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[11]_C/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[11]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[11]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[12]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[12]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[12]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[12]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[12]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[12]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[13]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[13]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[13]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[13]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[13]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[13]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[14]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[14]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[14]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[14]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[14]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[14]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[15]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[15]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[15]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[15]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[15]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[15]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[1]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[1]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[1]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[1]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[1]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[1]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[2]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[2]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[2]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[2]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[2]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[2]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[3]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[3]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[3]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[3]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[3]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[3]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[4]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[4]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[4]_LDC/G (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[4]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[4]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[4]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[5]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[5]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[5]_LDC/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[5]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[5]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[6]_C/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[6]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[6]_P/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[6]_LDC/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[7]_C/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[6]_P/C (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: REG_reg[7]_LDC/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[7]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[7]_P/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[7]_LDC/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[8]_C/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[7]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[8]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[8]_C/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[9]_C/C (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[8]_LDC/G (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: REG_reg[9]_P/C (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[8]_P/C (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: countdown_reg/G (HIGH)
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[9]_C/C (HIGH)
+
+ There are 15 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[9]_LDC/G (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: countedownregister/registerMiddle_reg[9]_P/C (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: dividermap/register_counter_reg[15]/C (HIGH)
 
- There are 33 register/latch pins with no clock driven by root clock pin: dividermap/register_counter_reg[22]/C (HIGH)
+ There are 49 register/latch pins with no clock driven by root clock pin: dividermap/register_counter_reg[22]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[0]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[10]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[11]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[12]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[13]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[14]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[15]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[1]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[2]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[3]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[4]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[5]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[6]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[7]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[8]/G (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: switch/REG_reg[9]/G (HIGH)
 
 
 2. checking constant_clock
@@ -167,21 +209,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 134 pins that are not constrained for maximum delay. (HIGH)
+ There are 188 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 7 input ports with no input delay specified. (HIGH)
+ There are 10 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 13 ports with no output delay specified. (HIGH)
+ There are 12 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

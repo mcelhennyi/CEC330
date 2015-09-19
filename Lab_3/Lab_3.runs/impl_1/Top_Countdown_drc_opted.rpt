@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Thu Sep 17 20:58:03 2015
-| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Date         : Fri Sep 18 23:12:33 2015
+| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
 
@@ -20,25 +20,10 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 5
+             Violations found: 2
 
 2. REPORT DETAILS
 -----------------
-BUFC-1#1 Warning
-Input Buffer Connections  
-Input buffer BTN[1]_IBUF_inst has no loads. An input buffer must drive an internal load.
-Related violations: <none>
-
-BUFC-1#2 Warning
-Input Buffer Connections  
-Input buffer BTN[2]_IBUF_inst has no loads. An input buffer must drive an internal load.
-Related violations: <none>
-
-BUFC-1#3 Warning
-Input Buffer Connections  
-Input buffer BTN[3]_IBUF_inst has no loads. An input buffer must drive an internal load.
-Related violations: <none>
-
 CFGBVS-1#1 Warning
 Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
 Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="C:/Users/Austin/vivado_projects/Lab_3/Lab_3.xpr">
+<Project Version="7" Minor="5" Path="F:/CEC330/Lab_3/Lab_3.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="28fcff4457454104a8c1472034ce7b3f"/>
@@ -39,6 +39,12 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/SW2REG.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/countdown.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
