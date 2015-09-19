@@ -52,7 +52,7 @@ counter: process(CLK_IN)
         end if;
     end process counter;
     
-CLK_OUT_slower <= register_counter(22);--26
+CLK_OUT_slower <= register_counter(26);
 CLK_OUT_an <= register_counter(15);
 
 end Behavioral;

@@ -65,6 +65,10 @@ begin
         countdown <= '1';
         registerMiddle <= registerIn;
     end if;
+--    --added for easy clear of counter
+--    if (CPUreset = '1') then
+--        registerMiddle <= x"0000";
+--    end if;
     --sets countdown to off state if register is 0 and turns led 3 on
     if (registerMiddle = x"0000") then
         countdown <= '0';
@@ -75,6 +79,7 @@ begin
         registerOut <= registerMiddle;
         LED3 <= '0';
     end if;
+registerOut <= registerMiddle;
 FLAG <= countdown;
 end process countdown_process;
        

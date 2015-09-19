@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Fri Sep 18 23:13:13 2015
+| Date             : Fri Sep 18 23:59:21 2015
 | Host             : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : Top_Countdown
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 31.317 (Junction temp exceeded!) |
-| Dynamic (W)              | 30.520                           |
+| Total On-Chip Power (W)  | 31.320 (Junction temp exceeded!) |
+| Dynamic (W)              | 30.523                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -49,16 +49,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.379 |      241 |       --- |             --- |
-|   LUT as Logic |     0.309 |       88 |     63400 |            0.14 |
-|   CARRY4       |     0.043 |       10 |     15850 |            0.06 |
-|   Register     |     0.014 |      107 |    126800 |            0.08 |
+| Slice Logic    |     0.396 |      229 |       --- |             --- |
+|   LUT as Logic |     0.324 |       88 |     63400 |            0.14 |
+|   CARRY4       |     0.045 |       11 |     15850 |            0.07 |
+|   Register     |     0.015 |       95 |    126800 |            0.07 |
 |   BUFG         |     0.012 |        3 |        32 |            9.38 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.820 |      220 |       --- |             --- |
-| I/O            |    29.321 |       27 |       210 |           12.86 |
+| Signals        |     0.803 |      209 |       --- |             --- |
+| I/O            |    29.325 |       28 |       210 |           13.33 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    31.317 |          |           |                 |
+| Total          |    31.320 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,7 +68,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.798 |       1.235 |      0.563 |
+| Vccint    |       1.000 |     1.801 |       1.239 |      0.563 |
 | Vccaux    |       1.800 |     1.166 |       1.073 |      0.093 |
 | Vcco33    |       3.300 |     8.293 |       8.289 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -135,11 +135,11 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| Top_Countdown        |    30.520 |
-|   countedownregister |     0.812 |
-|   disp7seg           |     0.237 |
-|   dividermap         |     0.064 |
-|   switch             |     0.017 |
+| Top_Countdown        |    30.523 |
+|   countedownregister |     0.811 |
+|   disp7seg           |     0.221 |
+|   dividermap         |     0.072 |
+|   switch             |     0.030 |
 +----------------------+-----------+
 
 

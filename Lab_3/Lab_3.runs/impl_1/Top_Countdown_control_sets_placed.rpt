@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Sep 18 23:12:35 2015
+| Date         : Fri Sep 18 23:58:45 2015
 | Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Countdown_control_sets_placed.rpt
 | Design       : Top_Countdown
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    57 |
-| Minimum Number of register sites lost to control set restrictions |   373 |
+| Number of unique control sets                                     |    56 |
+| Minimum Number of register sites lost to control set restrictions |   377 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              41 |           13 |
+| No           | No                    | No                     |              45 |           13 |
 | No           | No                    | Yes                    |               2 |            2 |
 | No           | Yes                   | No                     |              17 |           17 |
-| Yes          | No                    | No                     |              16 |            3 |
+| Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |              31 |           31 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -45,66 +45,65 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------------------------------+---------------------------------+-------------------------------------------------------+------------------+----------------+
-|                      Clock Signal                      |          Enable Signal          |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
-+--------------------------------------------------------+---------------------------------+-------------------------------------------------------+------------------+----------------+
-|  clk_slow_BUFG                                         |                                 | countedownregister/registerMiddle_reg[0]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         |                                 | countedownregister/eqOp                               |                1 |              1 |
-|  countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[0]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[9]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[8]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[7]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[6]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[5]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[4]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[3]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[2]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[1]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[15]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[14]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[13]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[12]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[11]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[10]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_slow_BUFG                                         | countedownregister/FLAG         | countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0  |                1 |              1 |
-|  BTNC_IBUF_BUFG                                        |                                 | countedownregister/eqOp                               |                1 |              1 |
-|  countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[9]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[8]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[7]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[6]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[5]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[4]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[3]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[2]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0  |                                 | countedownregister/registerMiddle_reg[1]_LDC_i_2_n_0  |                1 |              1 |
-|  countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0 |                                 | countedownregister/registerMiddle_reg[15]_LDC_i_2_n_0 |                1 |              1 |
-|  countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0 |                                 | countedownregister/registerMiddle_reg[14]_LDC_i_2_n_0 |                1 |              1 |
-|  countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0 |                                 | countedownregister/registerMiddle_reg[13]_LDC_i_2_n_0 |                1 |              1 |
-|  countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0 |                                 | countedownregister/registerMiddle_reg[12]_LDC_i_2_n_0 |                1 |              1 |
-|  countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0 |                                 | countedownregister/registerMiddle_reg[11]_LDC_i_2_n_0 |                1 |              1 |
-|  countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0 |                                 | countedownregister/registerMiddle_reg[10]_LDC_i_2_n_0 |                1 |              1 |
-|  dividermap/out[0]                                     |                                 |                                                       |                1 |              2 |
-|  countedownregister/E[1]                               |                                 |                                                       |                1 |              4 |
-|  countedownregister/E[0]                               |                                 |                                                       |                1 |              4 |
-|  countedownregister/E[3]                               |                                 |                                                       |                2 |              4 |
-|  countedownregister/E[2]                               |                                 |                                                       |                2 |              4 |
-|  clk_slow_BUFG                                         | countedownregister/registerOut0 |                                                       |                3 |             16 |
-|  CLK_IN_IBUF_BUFG                                      |                                 |                                                       |                6 |             23 |
-+--------------------------------------------------------+---------------------------------+-------------------------------------------------------+------------------+----------------+
++--------------------------------------------------------+-------------------------+-------------------------------------------------------+------------------+----------------+
+|                      Clock Signal                      |      Enable Signal      |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++--------------------------------------------------------+-------------------------+-------------------------------------------------------+------------------+----------------+
+|  clk_slow_BUFG                                         |                         | countedownregister/registerMiddle_reg[0]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         |                         | countedownregister/eqOp                               |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[9]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[8]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[7]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[6]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[5]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[4]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[3]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[2]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[1]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[15]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[14]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[13]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[12]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[11]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[10]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_slow_BUFG                                         | countedownregister/FLAG | countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0  |                1 |              1 |
+|  BTNC_IBUF_BUFG                                        |                         | countedownregister/eqOp                               |                1 |              1 |
+|  countedownregister/registerMiddle_reg[9]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[9]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[8]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[8]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[7]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[7]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[6]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[6]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[5]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[5]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[4]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[4]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[3]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[3]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[2]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[2]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[1]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[1]_LDC_i_2_n_0  |                1 |              1 |
+|  countedownregister/registerMiddle_reg[15]_LDC_i_1_n_0 |                         | countedownregister/registerMiddle_reg[15]_LDC_i_2_n_0 |                1 |              1 |
+|  countedownregister/registerMiddle_reg[14]_LDC_i_1_n_0 |                         | countedownregister/registerMiddle_reg[14]_LDC_i_2_n_0 |                1 |              1 |
+|  countedownregister/registerMiddle_reg[13]_LDC_i_1_n_0 |                         | countedownregister/registerMiddle_reg[13]_LDC_i_2_n_0 |                1 |              1 |
+|  countedownregister/registerMiddle_reg[12]_LDC_i_1_n_0 |                         | countedownregister/registerMiddle_reg[12]_LDC_i_2_n_0 |                1 |              1 |
+|  countedownregister/registerMiddle_reg[11]_LDC_i_1_n_0 |                         | countedownregister/registerMiddle_reg[11]_LDC_i_2_n_0 |                1 |              1 |
+|  countedownregister/registerMiddle_reg[10]_LDC_i_1_n_0 |                         | countedownregister/registerMiddle_reg[10]_LDC_i_2_n_0 |                1 |              1 |
+|  countedownregister/registerMiddle_reg[0]_LDC_i_1_n_0  |                         | countedownregister/registerMiddle_reg[0]_LDC_i_2_n_0  |                1 |              1 |
+|  dividermap/out[0]                                     |                         |                                                       |                1 |              2 |
+|  switch/REG_reg[11]_i_1_n_0                            |                         |                                                       |                1 |              4 |
+|  switch/REG_reg[7]_i_1_n_0                             |                         |                                                       |                1 |              4 |
+|  switch/REG_reg[3]_i_1_n_0                             |                         |                                                       |                1 |              4 |
+|  switch/REG_reg[15]_i_1_n_0                            |                         |                                                       |                2 |              4 |
+|  CLK_IN_IBUF_BUFG                                      |                         |                                                       |                7 |             27 |
++--------------------------------------------------------+-------------------------+-------------------------------------------------------+------------------+----------------+
 
 

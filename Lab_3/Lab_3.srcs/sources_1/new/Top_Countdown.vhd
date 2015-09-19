@@ -44,7 +44,8 @@ entity Top_Countdown is
            LED3 : out STD_LOGIC;
            LED0 : out STD_LOGIC;
            AN : out STD_LOGIC_VECTOR (7 DOWNTO 0);
-           SEG : out STD_LOGIC_VECTOR (7 DOWNTO 0)
+           SEG : out STD_LOGIC_VECTOR (7 DOWNTO 0);
+           CPUreset: in STD_LOGIC
            );
 end Top_Countdown;
 
