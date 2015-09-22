@@ -53,13 +53,13 @@ counter: process(CLK_AN)
             Disp_counter <= Disp_counter + 1;
         end if;
     end process counter;
---decides which digit to decode
+--decides which digit to decode based on count
 WITH Disp_counter SELECT
     Display <= REG(15 downto 12) WHEN "00", 
              REG(11 downto 8) WHEN "01", 
              REG(7 downto 4) WHEN "10", 
              REG(3 downto 0) WHEN "11";
---decides which 7 segment display to turn on
+--decides which 7 segment display to turn on based on count
 WITH Disp_counter SELECT
     AN <= "0111" WHEN "00", 
           "1011" WHEN "01", 

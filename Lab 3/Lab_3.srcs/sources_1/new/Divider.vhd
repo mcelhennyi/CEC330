@@ -41,10 +41,11 @@ end Divider;
 
 architecture Behavioral of Divider is
 
-    signal register_counter : STD_LOGIC_VECTOR (26 DOWNTO 0) := "000" & x"000000";
+signal register_counter : STD_LOGIC_VECTOR (26 DOWNTO 0) := "000" & x"000000";
 
 begin
 
+--counts up every clock for a clock divider
 counter: process(CLK_IN)
     begin
         if (rising_edge(CLK_IN)) then
@@ -52,7 +53,7 @@ counter: process(CLK_IN)
         end if;
     end process counter;
     
-CLK_OUT_slower <= register_counter(26);
-CLK_OUT_an <= register_counter(15);
+CLK_OUT_slower <= register_counter(26);--Slow 1Hz clock
+CLK_OUT_an <= register_counter(15);--About 70Hz for display switching
 
 end Behavioral;

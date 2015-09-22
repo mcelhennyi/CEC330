@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Mon Sep 21 15:11:44 2015
-| Host             : Austin-MBP running 64-bit major release  (build 9200)
+| Date             : Mon Sep 21 23:27:37 2015
+| Host             : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : Top_Countdown
 | Device           : xc7a100tcsg324-1
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 25.156 (Junction temp exceeded!) |
-| Dynamic (W)              | 24.359                           |
+| Total On-Chip Power (W)  | 25.152 (Junction temp exceeded!) |
+| Dynamic (W)              | 24.355                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -57,9 +57,9 @@ Table of Contents
 |   F7/F8 Muxes  |     0.003 |        9 |     63400 |            0.01 |
 |   Others       |     0.000 |        9 |       --- |             --- |
 | Signals        |     0.803 |      209 |       --- |             --- |
-| I/O            |    23.118 |       28 |       210 |           13.33 |
+| I/O            |    23.114 |       27 |       210 |           12.86 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    25.156 |          |           |                 |
+| Total          |    25.152 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,7 +69,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.844 |       1.281 |      0.563 |
+| Vccint    |       1.000 |     1.840 |       1.277 |      0.563 |
 | Vccaux    |       1.800 |     0.939 |       0.846 |      0.093 |
 | Vcco33    |       3.300 |     6.536 |       6.532 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -136,7 +136,7 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| Top_Countdown        |    24.359 |
+| Top_Countdown        |    24.355 |
 |   countedownregister |     0.776 |
 |   disp7seg           |     0.291 |
 |   dividermap         |     0.085 |

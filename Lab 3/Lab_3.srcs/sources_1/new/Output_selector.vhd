@@ -43,10 +43,8 @@ architecture Behavioral of Output_selector is
 
 begin
 
---decides which 
+--decides which register value to show
 WITH FLAG SELECT
-    reg_to_driver <= switch_in WHEN '0', 
-                     count_in WHEN '1';
-
-
+    reg_to_driver <= switch_in WHEN '0', --sw2reg value 
+                     count_in WHEN '1'; --countdown value
 end Behavioral;

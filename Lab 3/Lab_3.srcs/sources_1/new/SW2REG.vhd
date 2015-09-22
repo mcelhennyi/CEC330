@@ -39,7 +39,6 @@ entity SW2REG is
            BTND : in STD_LOGIC;
            SW : in STD_LOGIC_VECTOR (3 downto 0);
            FLAG : in STD_LOGIC
-          -- LED3: out STD_LOGIC
            );
 end SW2REG;
 
@@ -47,6 +46,7 @@ architecture Behavioral of SW2REG is
 
 begin
 
+--if the flag is off and a button is pressed it puts the switch value into the register
 SW2REG: process(FLAG,BTNL,BTNU,BTND,BTNR,SW)
     begin
         if (FLAG = '0') then
