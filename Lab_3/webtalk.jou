@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Sep 20 22:05:38 2015
+# Process ID: 6676
+# Log file: F:/CEC330/Lab_3/webtalk.log
+# Journal file: F:/CEC330/Lab_3\webtalk.jou
+#-----------------------------------------------------------
+source F:/CEC330/Lab_3/Lab_3.hw/webtalk/labtool_webtalk.tcl -notrace
