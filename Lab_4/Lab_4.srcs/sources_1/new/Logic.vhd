@@ -44,7 +44,7 @@ entity Logic is
            Disp5 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
-           Disp8 : out STD_LOGIC_VECTOR (3 downto 0)
+           Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC
            );

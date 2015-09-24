@@ -104,7 +104,7 @@ component Logic
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
            BTNU : in STD_LOGIC;
-           BTND : in STD_LOGIC;
+           BTND : in STD_LOGIC
            );
 end component Logic;
 --
