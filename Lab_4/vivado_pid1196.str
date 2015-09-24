@@ -360,3 +360,79 @@ selectCodeEditor("sequencer.vhd", 153, 113); // bj:J (JPanel:JComponent, cl:JFra
 // TclEventType: DG_UPDATE_GRAPH
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 486 MB. GUI used memory: 34 MB. Current time: 9/24/15 6:53:10 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 491 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // ap:DockableFrame
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 2, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 2, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 29 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, sequencer.vhd]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sequencer.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 79 seconds
+selectCodeEditor("sequencer.vhd", 66, 475); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 281, 386); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 281, 386, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("sequencer.vhd", 277, 318); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 277, 318, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 127 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Divider.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Divider.vhd", 219, 349); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sequencer.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor("sequencer.vhd", 398, 106); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 103 seconds
+selectCodeEditor("sequencer.vhd", 178, 450); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 137, 434); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 138, 416); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 136, 361); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 136, 361); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 136, 361); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 139, 364); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 131, 350); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 138, 299); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 132, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectCodeEditor("sequencer.vhd", 83, 475); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("sequencer.vhd", 299, 451); // bj:J (JPanel:JComponent, cl:JFrame)

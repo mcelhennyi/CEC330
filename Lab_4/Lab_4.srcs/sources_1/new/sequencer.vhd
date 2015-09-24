@@ -60,17 +60,17 @@ sequence: process(clk_slow)
         
         if state_counter = "00000" then
             --flag start state
-            flag_0 = '1';
-            flag_17 = '0';
+            flag_0 <= '1';
+            flag_17 <= '0';
         elsif state_counter = "01111" then
             --flag 15 seconds state
-            flag_0 = '0';
-            flag_15 = '1';
+            flag_0 <= '0';
+            flag_15 <= '1';
         elsif state_counter = "10001" then
             --flag 17 seconds state
-            flag_15 = '0';
-            flag_17 = '1';
-            state_counter = "00000";
+            flag_15 <= '0';
+            flag_17 <= '1';
+            state_counter <= "00000";
         
         end if;
     end process sequence;
