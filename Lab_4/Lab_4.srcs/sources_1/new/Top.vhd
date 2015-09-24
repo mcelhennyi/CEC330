@@ -47,14 +47,14 @@ end Top;
 
 architecture Behavioral of Top is
 
-signal Disp1 : out STD_LOGIC_VECTOR (3 downto 0);
-signal Disp2 : out STD_LOGIC_VECTOR (3 downto 0);
-signal Disp3 : out STD_LOGIC_VECTOR (3 downto 0);
-signal Disp4 : out STD_LOGIC_VECTOR (3 downto 0);
-signal Disp5 : out STD_LOGIC_VECTOR (3 downto 0);
-signal Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
-signal Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
-signal Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp2 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp4 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
 
 signal clk_slow : STD_LOGIC := '0';--The one Hz clock
 signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and cathode counter
@@ -80,7 +80,6 @@ component Seven_seg_driver
            AN : out STD_LOGIC_VECTOR (3 DOWNTO 0)
            );
 end component Seven_seg_driver;
-
 --Divides the clock into a 1hz slow signal and a ~70hz signal for the display switching
 component Divider
     Port ( CLK_IN : in STD_LOGIC;
@@ -89,7 +88,7 @@ component Divider
            RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end component Divider;
-
+--
 component Logic
     Port ( FLAG_0 : in STD_LOGIC;
            FLAG_15 : in STD_LOGIC;
@@ -103,13 +102,25 @@ component Logic
            Disp5 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
-           Disp8 : out STD_LOGIC_VECTOR (3 downto 0)
+           Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
+           BTNU : in STD_LOGIC;
+           BTND : in STD_LOGIC;
            );
 end component Logic;
+--
+component sequencer
+    Port ( reset : in STD_LOGIC;
+           clk_slow : in STD_LOGIC;
+           sw_15 : in STD_LOGIC;
+           flag_0 : out STD_LOGIC;
+           flag_15 : out STD_LOGIC;
+           flag_17 : out STD_LOGIC
+           );
+end component sequencer;
 
 begin
 --maps the driver 
-disp7seg : Seven_seg_driver
+Seven_seg_map : Seven_seg_driver
      port map ( CLK_AN => clk_an,
                 Disp1 => Disp1,
                 Disp2 => Disp2,
@@ -120,18 +131,18 @@ disp7seg : Seven_seg_driver
                 Disp7 => Disp7,
                 Disp8 => Disp8,
                 Display_out => SEG,
-                AN => AN(3 downto 0)
+                AN => AN
                 );
                 
 -- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
-dividermap : Divider
+divider_map : Divider
      port map ( CLK_IN  => CLK_IN,
                 CLK_OUT_slower => clk_slow,
                 CLK_OUT_an => clk_an,
                 RAND_OUT => rand_num
                 );
                 
-logicmap : Logic 
+logic_map : Logic 
     port map ( FLAG_0 => flag_0,
                FLAG_15 => flag_15,
                FLAG_17 => flag_17,
@@ -145,6 +156,17 @@ logicmap : Logic
                Disp6 => Disp6,
                Disp7 => Disp7,
                Disp8 => Disp8,
+               BTNU => BTNU,
+               BTND => BTND
+               );
+               
+sequencer_map : sequencer           
+    port map ( reset => BTNU,
+               clk_slow => CLK_SLOW,
+               sw_15 => SW_15,
+               flag_0 => flag_0,
+               flag_15 => flag_15,
+               flag_17 => flag_17
                );
 
 
