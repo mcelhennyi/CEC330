@@ -436,3 +436,5 @@ selectCodeEditor("sequencer.vhd", 132, 281); // bj:J (JPanel:JComponent, cl:JFra
 // Elapsed time: 10 seconds
 selectCodeEditor("sequencer.vhd", 83, 475); // bj:J (JPanel:JComponent, cl:JFrame)
 selectCodeEditor("sequencer.vhd", 299, 451); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

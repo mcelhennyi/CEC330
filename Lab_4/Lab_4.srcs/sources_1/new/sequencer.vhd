@@ -71,7 +71,7 @@ sequence: process(clk_slow)
             flag_15 <= '0';
             flag_17 <= '1';
             state_counter <= "00000";
-        
         end if;
+        
     end process sequence;
 end Behavioral;
