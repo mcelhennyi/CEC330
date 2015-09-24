@@ -37,7 +37,14 @@ entity Logic is
            FLAG_17 : in STD_LOGIC;
            SW : in STD_LOGIC_VECTOR (7 downto 0);
            FLAG_an : out STD_LOGIC;
-           SEG : out STD_LOGIC_VECTOR (7 downto 0)
+           Disp1 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp2 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp3 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp4 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp5 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp8 : out STD_LOGIC_VECTOR (3 downto 0)
            );
 end Logic;
 

@@ -47,8 +47,15 @@ end Top;
 
 architecture Behavioral of Top is
 
-signal reg_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
-signal reg_2 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+signal Disp1 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp2 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp3 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp4 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp5 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
+signal Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
+
 signal clk_slow : STD_LOGIC := '0';--The one Hz clock
 signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and cathode counter
 signal rand_num : STD_LOGIC_VECTOR (7 downto 0);
@@ -89,7 +96,14 @@ component Logic
            FLAG_17 : in STD_LOGIC;
            SW : in STD_LOGIC_VECTOR (7 downto 0);
            FLAG_an : out STD_LOGIC;
-           SEG : out STD_LOGIC_VECTOR (7 downto 0)
+           Disp1 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp2 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp3 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp4 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp5 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
+           Disp8 : out STD_LOGIC_VECTOR (3 downto 0)
            );
 end component Logic;
 
@@ -97,14 +111,14 @@ begin
 --maps the driver 
 disp7seg : Seven_seg_driver
      port map ( CLK_AN => clk_an,
-                Disp1 => reg_1(3 downto 0),
-                Disp2 => reg_1(7 downto 4),
-                Disp3 => reg_1(11 downto 8),
-                Disp4 => reg_1(15 downto 12),
-                Disp5 => reg(19 downto 16),
-                Disp6 => reg(23 downto 20),
-                Disp7 => reg(27 downto 24),
-                Disp8 => reg(31 downto 28),
+                Disp1 => Disp1,
+                Disp2 => Disp2,
+                Disp3 => Disp3,
+                Disp4 => Disp4,
+                Disp5 => Disp5,
+                Disp6 => Disp6,
+                Disp7 => Disp7,
+                Disp8 => Disp8,
                 Display_out => SEG,
                 AN => AN(3 downto 0)
                 );
@@ -123,7 +137,14 @@ logicmap : Logic
                FLAG_17 => flag_17,
                SW => SW,
                FLAG_an => flag_an,
-               SEG => SEG
+               Disp1 => Disp1,
+               Disp2 => Disp2,
+               Disp3 => Disp3,
+               Disp4 => Disp4,
+               Disp5 => Disp5,
+               Disp6 => Disp6,
+               Disp7 => Disp7,
+               Disp8 => Disp8,
                );
 
 
