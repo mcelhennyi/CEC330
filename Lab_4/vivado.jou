@@ -2,10 +2,13 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu Sep 24 16:08:27 2015
-# Process ID: 5760
-# Log file: C:/Users/Austin/Documents/CEC330/Lab_4/vivado.log
-# Journal file: C:/Users/Austin/Documents/CEC330/Lab_4\vivado.jou
+# Start of session at: Thu Sep 24 18:13:00 2015
+# Process ID: 1196
+# Log file: C:/Users/Ian McElhenny/Documents/CEC330/Lab_4/vivado.log
+# Journal file: C:/Users/Ian McElhenny/Documents/CEC330/Lab_4\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.xpr
+open_project {C:/Users/Ian McElhenny/Documents/CEC330/Lab_4/Lab_4.xpr}
+close [ open {C:/Users/Ian McElhenny/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd} w ]
+add_files {{C:/Users/Ian McElhenny/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd}}
+update_compile_order -fileset sources_1

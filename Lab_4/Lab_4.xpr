@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.xpr">
+<Project Version="7" Minor="5" Path="C:/Users/Ian McElhenny/Documents/CEC330/Lab_4/Lab_4.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c6f4355704ba454cac9dc7ccca0fd1d1"/>
@@ -39,6 +39,13 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/Top.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/sequencer.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
