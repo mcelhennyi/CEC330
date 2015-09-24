@@ -32,14 +32,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity sequencer is
-    Port ( 
-           reset : in STD_LOGIC;
+    Port ( reset : in STD_LOGIC;
            clk_slow : in STD_LOGIC;
            sw_15 : in STD_LOGIC;
            flag_0 : out STD_LOGIC;
            flag_15 : out STD_LOGIC;
            flag_17 : out STD_LOGIC
-          );
+           );
 end sequencer;
 
 architecture Behavioral of sequencer is

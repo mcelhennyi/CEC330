@@ -16,3 +16,4 @@ close_project
 open_project {C:/Users/Ian McElhenny/Documents/CEC330/Lab_4/Lab_4.xpr}
 close_project
 open_project {C:/Users/Ian McElhenny/Documents/CEC330/Lab_4/Lab_4.xpr}
+update_compile_order -fileset sources_1
