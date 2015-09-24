@@ -47,7 +47,8 @@ end Top;
 
 architecture Behavioral of Top is
 
-signal reg : STD_LOGIC_VECTOR (31 DOWNTO 0);--The register that connects the mux output of the register to the decoder
+signal reg_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+signal reg_2 : STD_LOGIC_VECTOR (15 DOWNTO 0);
 signal clk_slow : STD_LOGIC := '0';--The one Hz clock
 signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and cathode counter
 signal rand_num : STD_LOGIC_VECTOR (7 downto 0);
@@ -96,10 +97,10 @@ begin
 --maps the driver 
 disp7seg : Seven_seg_driver
      port map ( CLK_AN => clk_an,
-                Disp1 => reg(3 downto 0),
-                Disp2 => reg(7 downto 4),
-                Disp3 => reg(11 downto 8),
-                Disp4 => reg(15 downto 12),
+                Disp1 => reg_1(3 downto 0),
+                Disp2 => reg_1(7 downto 4),
+                Disp3 => reg_1(11 downto 8),
+                Disp4 => reg_1(15 downto 12),
                 Disp5 => reg(19 downto 16),
                 Disp6 => reg(23 downto 20),
                 Disp7 => reg(27 downto 24),
