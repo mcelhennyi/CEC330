@@ -55,6 +55,8 @@ sequence: process(clk_slow)
             if (rising_edge(clk_slow)) then
                 state_counter <= state_counter +1;
             end if;
+        elsif sw_15 = '1' then
+            --flash led 15
         end if;
         
         if state_counter = "00000" then

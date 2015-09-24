@@ -90,7 +90,8 @@ component Divider
 end component Divider;
 --
 component Logic
-    Port ( FLAG_0 : in STD_LOGIC;
+    Port ( RAND_NUM : in STD_LOGIC_VECTOR (7 downto 0);
+           FLAG_0 : in STD_LOGIC;
            FLAG_15 : in STD_LOGIC;
            FLAG_17 : in STD_LOGIC;
            SW : in STD_LOGIC_VECTOR (7 downto 0);
@@ -143,7 +144,8 @@ divider_map : Divider
                 );
                 
 logic_map : Logic 
-    port map ( FLAG_0 => flag_0,
+    port map ( RAND_NUM => rand_num,
+               FLAG_0 => flag_0,
                FLAG_15 => flag_15,
                FLAG_17 => flag_17,
                SW => SW,
