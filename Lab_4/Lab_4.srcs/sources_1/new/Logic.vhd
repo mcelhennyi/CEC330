@@ -45,6 +45,8 @@ entity Logic is
            Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0)
+           BTNU : in STD_LOGIC;
+           BTND : in STD_LOGIC
            );
 end Logic;
 
@@ -52,5 +54,22 @@ architecture Behavioral of Logic is
 
 begin
 
+logic_sequence: process(FLAG_0, FLAG_15, FLAG_17)
+    begin
+        if FLAG_0 = '1' then
+            --start process
+            --generate A1, B1
+            --store A1 and B1 to RAM
+            --
+            --display A1
+            --display B1
+            --display sw
+            --
+        elsif FLAG_15 = '1' then
+            --start 15 sec process
+        elsif FLAG_17 = '1' then
+            --start 17 sec process
+        end if;
+    end process logic_sequence;
 
 end Behavioral;
