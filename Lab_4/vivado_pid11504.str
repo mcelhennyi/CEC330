@@ -1,0 +1,298 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 11504
+
+Current time: 	9/24/15 2:47:27 PM EDT
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1440x900
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Austin
+User directory: C:/Users/Austin/Documents/CEC330/Lab_4
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	224 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 444 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Austin\Documents\CEC330\Lab_4\Lab_4.xpr. Version: Vivado v2015.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 49 MB (+49202kb) [00:00:03]
+// [Engine Memory]: 397 MB (+264731kb) [00:00:03]
+// [GUI Memory]: 63 MB (+11339kb) [00:00:04]
+// [Engine Memory]: 441 MB (+25718kb) [00:00:04]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Austin/Documents/CEC330/Lab 3/Lab_4' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Lab_4; location: C:/Users/Austin/Documents/CEC330/Lab_4; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 451 MB. GUI used memory: 29 MB. Current time: 9/24/15 2:47:29 PM EDT
+// Elapsed time: 124 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cl:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, (String) null); // w:JideButton (JPanel:JComponent, b:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File..."); // ab:JMenuItem (ai:JPopupMenu, b:g)
+// I:ag (b:g): Create Source File: addNotify
+// Elapsed time: 37 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Top_modual"); // ao:JTextField (JPanel:JComponent, I:ag)
+// Elapsed time: 39 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Top"); // ao:JTextField (JPanel:JComponent, I:ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, I:ag)
+dismissDialog("Create Source File"); // I:ag (b:g)
+// Tcl Message: file mkdir C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new 
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 91 seconds
+dismissDialog("Add Sources"); // b:g (cl:JFrame)
+// Tcl Message: close [ open C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd 
+// L:ag (cl:JFrame): Define Module: addNotify
+setText(PAResourceAtoD.DefineModulesDialog_ENTITY_NAME, "Top"); // ao:JTextField (JPanel:JComponent, L:ag)
+// Elapsed time: 84 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab:v (m:JViewport, L:ag)
+// Elapsed time: 48 seconds
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "SW", 0, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, (String) null, 0); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "SW15", 1, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 2, (String) null, 0); // ab:v (m:JViewport, L:ag)
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "LED", 2, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 3, (String) null, 0); // ab:v (m:JViewport, L:ag)
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "BTNC", 3, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 4, (String) null, 0); // ab:v (m:JViewport, L:ag)
+// [Engine Memory]: 465 MB (+1768kb) [00:06:34]
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 2, "Direction", 1); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 4, "Direction", 1); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "LED ; in ; false ; 0 ; 0", 2, "in", 1); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 2, "Direction", 1); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "LED", 2, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 4, (String) null, 0); // ab:v (m:JViewport, L:ag)
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "BTNU", 4, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 5, (String) null, 0); // ab:v (m:JViewport, L:ag)
+// Elapsed time: 12 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "BTND", 5, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Define Module"); // L:ag (cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 481 MB. GUI used memory: 33 MB. Current time: 9/24/15 2:54:29 PM EDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// Elapsed time: 43 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cl:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, (String) null); // w:JideButton (JPanel:JComponent, b:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File..."); // ab:JMenuItem (ai:JPopupMenu, b:g)
+// I:ag (b:g): Create Source File: addNotify
+// [GUI Memory]: 66 MB (+300kb) [00:08:26]
+// Elapsed time: 24 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Seven_seg_driver"); // ao:JTextField (JPanel:JComponent, I:ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, I:ag)
+dismissDialog("Create Source File"); // I:ag (b:g)
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 33 seconds
+dismissDialog("Add Sources"); // b:g (cl:JFrame)
+// Tcl Message: close [ open C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd 
+// L:ag (cl:JFrame): Define Module: addNotify
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab:v (m:JViewport, L:ag)
+// Elapsed time: 21 seconds
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "CLK_AN", 0, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, (String) null, 0); // ab:v (m:JViewport, L:ag)
+// Elapsed time: 49 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Disp1", 1, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 2, (String) null, 0); // ab:v (m:JViewport, L:ag)
+// Elapsed time: 11 seconds
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Disp2", 2, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 3, (String) null, 0); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Disp3", 3, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Disp4", 4, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+// Elapsed time: 19 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Display_out", 5, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 6, (String) null, 0); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "AN", 6, "Port Name", 0); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "AN ; in ; false ; 0 ; 0", 6, "in", 1); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 6, "Direction", 1); // ab:v (m:JViewport, L:ag)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Display_out ; in ; false ; 0 ; 0", 5, "in", 1); // ab:v (m:JViewport, L:ag)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 5, "Direction", 1); // ab:v (m:JViewport, L:ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, L:ag)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Define Module"); // L:ag (cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 77 MB (+8466kb) [00:10:59]
+// [Engine Memory]: 508 MB (+20731kb) [00:10:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 508 MB. GUI used memory: 39 MB. Current time: 9/24/15 2:58:24 PM EDT
+// Elapsed time: 12 seconds
+selectCodeEditor("Top.vhd", 91, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 120, 384); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("Top.vhd", 8, 295); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top.vhd", 284, 343); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Seven_seg_driver - Behavioral (Seven_seg_driver.vhd)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Seven_seg_driver - Behavioral (Seven_seg_driver.vhd)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("Seven_seg_driver.vhd", 55, 358); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 46, 342); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 130, 386); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 25, 307); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 23, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 19 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 125, 267); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 112, 43); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 194, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+selectCodeEditor("Seven_seg_driver.vhd", 114, 59); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 196, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 196, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 201, 212); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 221, 195); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 128, 214); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 103, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 109, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 108, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 114, 329); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 112, 349); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 134, 177); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 116, 196); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 39 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 82, 181); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 35 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 345, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 266, 163); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 338, 160); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 218, 94); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 218, 109); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 217, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 219, 145); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 82 MB (+1112kb) [00:15:49]
+// Elapsed time: 10 seconds
+selectCodeEditor("Seven_seg_driver.vhd", 432, 166); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 386, 204); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 268, 75); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 223, 76); // bj:J (JPanel:JComponent, cl:JFrame)
