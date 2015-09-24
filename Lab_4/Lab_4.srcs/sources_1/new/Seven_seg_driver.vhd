@@ -50,7 +50,13 @@ architecture Behavioral of Seven_seg_driver is
 
     signal Disp_counter : STD_LOGIC_VECTOR (2 DOWNTO 0) := "000";
     signal Display : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
-
+    
+    type an_array is array(1 downto 8, 7 downto 0) of std_logic; 
+    
+    signal an : an_array := ("11111110","11111101","11111011","11110111","11101111","11011111","10111111","01111111");
+                          --  disp1      disp2      disp3      disp4      disp5      disp6      disp7      disp8
+    
+    
 begin
 --counts from 0 to 3
 counter: process(CLK_AN)
@@ -62,23 +68,23 @@ counter: process(CLK_AN)
 --decides which digit to decode based on count
 WITH Disp_counter SELECT
     Display <= Disp1 WHEN "000", 
-               --Disp2 WHEN "001", 
+               Disp2 WHEN "001", 
                Disp3 WHEN "010", 
-               --Disp4 WHEN "011",
+               Disp4 WHEN "011",
                Disp5 WHEN "100",
                Disp6 WHEN "101",
                Disp7 WHEN "110",
                Disp8 WHEN "111";
 --decides which 7 segment display to turn on based on count
 WITH Disp_counter SELECT
-    AN <= "11111110" WHEN "000", --Display1 on
-          --"11111101" WHEN "001", --Display2 on
-          "11111011" WHEN "010", --Display3 on
-          --"11110111" WHEN "011", --Display4 on
-          "11101111" WHEN "100", --Display5 on
-          "11011111" WHEN "101", --Display6 on
-          "10111111" WHEN "110", --Display7 on
-          "01111111" WHEN "111"; --Display8 on
+    AN <= an(1) WHEN "000", --Display1 on
+          an(2) WHEN "001", --Display2 on
+          an(3) WHEN "010", --Display3 on
+          an(4) WHEN "011", --Display4 on
+          an(5) WHEN "100", --Display5 on
+          an(6) WHEN "101", --Display6 on
+          an(7) WHEN "110", --Display7 on
+          an(8) WHEN "111"; --Display8 on
 --decodes a four bit number for the 7 segment display
 WITH Display SELECT
     Display_out <=  "11000000" WHEN x"0", -- number 0 on seven seg display
