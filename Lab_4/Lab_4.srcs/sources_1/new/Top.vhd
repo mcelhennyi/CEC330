@@ -50,6 +50,12 @@ architecture Behavioral of Top is
 signal reg : STD_LOGIC_VECTOR (31 DOWNTO 0);--The register that connects the mux output of the register to the decoder
 signal clk_slow : STD_LOGIC := '0';--The one Hz clock
 signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and cathode counter
+signal rand_num : STD_LOGIC_VECTOR (7 downto 0);
+
+signal flag_0 : STD_LOGIC;
+signal flag_15 : STD_LOGIC;
+signal flag_17 : STD_LOGIC;
+signal flag_an : STD_LOGIC;
 
 --Drives the seven segment displays
 component Seven_seg_driver
@@ -71,9 +77,20 @@ end component Seven_seg_driver;
 component Divider
     Port ( CLK_IN : in STD_LOGIC;
            CLK_OUT_SLOW : out STD_LOGIC;
-           CLK_OUT_AN : out STD_LOGIC
+           CLK_OUT_AN : out STD_LOGIC;
+           RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end component Divider;
+
+component Logic
+    Port ( FLAG_0 : in STD_LOGIC;
+           FLAG_15 : in STD_LOGIC;
+           FLAG_17 : in STD_LOGIC;
+           SW : in STD_LOGIC_VECTOR (7 downto 0);
+           FLAG_an : out STD_LOGIC;
+           SEG : out STD_LOGIC_VECTOR (7 downto 0)
+           );
+end component Logic;
 
 begin
 --maps the driver 
@@ -91,12 +108,22 @@ disp7seg : Seven_seg_driver
                 AN => AN(3 downto 0)
                 );
                 
--- maps the divider to the annode/cathode clock and the slow 1hz clock       
+-- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
 dividermap : Divider
      port map ( CLK_IN  => CLK_IN,
                 CLK_OUT_slower => clk_slow,
-                CLK_OUT_an => clk_an 
+                CLK_OUT_an => clk_an,
+                RAND_OUT => rand_num
                 );
+                
+logicmap : Logic 
+    port map ( FLAG_0 => flag_0,
+               FLAG_15 => flag_15,
+               FLAG_17 => flag_17,
+               SW => SW,
+               FLAG_an => flag_an,
+               SEG => SEG
+               );
 
 
 end Behavioral;

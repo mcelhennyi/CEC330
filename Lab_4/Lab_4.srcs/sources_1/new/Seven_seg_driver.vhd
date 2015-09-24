@@ -41,6 +41,7 @@ entity Seven_seg_driver is
            Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
+           FLAG_an : in STD_LOGIC;
            Display_out : out STD_LOGIC_VECTOR (7 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0)
            );
@@ -51,14 +52,27 @@ architecture Behavioral of Seven_seg_driver is
     signal Disp_counter : STD_LOGIC_VECTOR (2 DOWNTO 0) := "000";
     signal Display : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
     
-    type an_array is array(1 downto 8, 7 downto 0) of std_logic; 
-    
+    type an_array is array(1 downto 8, 7 downto 0) of STD_LOGIC; 
     signal an : an_array := ("11111110","11111101","11111011","11110111","11101111","11011111","10111111","01111111");
                           --  disp1      disp2      disp3      disp4      disp5      disp6      disp7      disp8
-    
+    signal an_OFF : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11111111";
     
 begin
---counts from 0 to 3
+--These anodes are not used and are set to be off
+an(1) <= an_OFF;
+an(2) <= an_OFF;
+--anodes are off if FLAG_an is 0, else they are on
+anode_states: process(CLK_AN)
+    begin
+        if (FLAG_an = '0') then
+            an(5) <= an_OFF;
+            an(6) <= an_OFF;
+        else
+            an(5) <= "11101111";
+            an(6) <= "11011111";
+        end if;
+    end process anode_states;
+--counts from 0 to 7
 counter: process(CLK_AN)
     begin
         if (rising_edge(CLK_AN)) then
