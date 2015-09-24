@@ -37,14 +37,18 @@ entity Seven_seg_driver is
            Disp2 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp3 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp4 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
            Display_out : out STD_LOGIC_VECTOR (7 downto 0);
-           AN : out STD_LOGIC_VECTOR (3 downto 0)
+           AN : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end Seven_seg_driver;
 
 architecture Behavioral of Seven_seg_driver is
 
-    signal Disp_counter : STD_LOGIC_VECTOR (1 DOWNTO 0) := "00";
+    signal Disp_counter : STD_LOGIC_VECTOR (2 DOWNTO 0) := "000";
     signal Display : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
 
 begin
@@ -57,16 +61,24 @@ counter: process(CLK_AN)
     end process counter;
 --decides which digit to decode based on count
 WITH Disp_counter SELECT
-    Display <= Disp1 WHEN "00", 
-             Disp2 WHEN "01", 
-             Disp3 WHEN "10", 
-             Disp4 WHEN "11";
+    Display <= Disp1 WHEN "000", 
+               Disp2 WHEN "001", 
+               Disp3 WHEN "010", 
+               Disp4 WHEN "011",
+               Disp5 WHEN "100",
+               Disp6 WHEN "101",
+               Disp7 WHEN "110",
+               Disp8 WHEN "111";
 --decides which 7 segment display to turn on based on count
 WITH Disp_counter SELECT
-    AN <= "1110" WHEN "00", 
-          "1101" WHEN "01", 
-          "1011" WHEN "10", 
-          "0111" WHEN "11";
+    AN <= "11111110" WHEN "000", 
+          "11111101" WHEN "001", 
+          "11111011" WHEN "010", 
+          "11110111" WHEN "011",
+          "11101111" WHEN "100",
+          "11011111" WHEN "101",
+          "10111111" WHEN "110",
+          "01111111" WHEN "111";
 --decodes a four bit number for the 7 segment display
 WITH Display SELECT
     Display_out <=  "11000000" WHEN x"0", -- number 0 on seven seg display
