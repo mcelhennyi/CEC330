@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Sep 24 14:47:19 2015
+# Process ID: 11504
+# Log file: C:/Users/Austin/Documents/CEC330/Lab_4/vivado.log
+# Journal file: C:/Users/Austin/Documents/CEC330/Lab_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.xpr
+file mkdir C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new
+close [ open C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd w ]
+add_files C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+close [ open C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd w ]
+add_files C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd w ]
+add_files C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

@@ -62,23 +62,23 @@ counter: process(CLK_AN)
 --decides which digit to decode based on count
 WITH Disp_counter SELECT
     Display <= Disp1 WHEN "000", 
-               Disp2 WHEN "001", 
+               --Disp2 WHEN "001", 
                Disp3 WHEN "010", 
-               Disp4 WHEN "011",
+               --Disp4 WHEN "011",
                Disp5 WHEN "100",
                Disp6 WHEN "101",
                Disp7 WHEN "110",
                Disp8 WHEN "111";
 --decides which 7 segment display to turn on based on count
 WITH Disp_counter SELECT
-    AN <= "11111110" WHEN "000", 
-          "11111101" WHEN "001", 
-          "11111011" WHEN "010", 
-          "11110111" WHEN "011",
-          "11101111" WHEN "100",
-          "11011111" WHEN "101",
-          "10111111" WHEN "110",
-          "01111111" WHEN "111";
+    AN <= "11111110" WHEN "000", --Display1 on
+          --"11111101" WHEN "001", --Display2 on
+          "11111011" WHEN "010", --Display3 on
+          --"11110111" WHEN "011", --Display4 on
+          "11101111" WHEN "100", --Display5 on
+          "11011111" WHEN "101", --Display6 on
+          "10111111" WHEN "110", --Display7 on
+          "01111111" WHEN "111"; --Display8 on
 --decodes a four bit number for the 7 segment display
 WITH Display SELECT
     Display_out <=  "11000000" WHEN x"0", -- number 0 on seven seg display

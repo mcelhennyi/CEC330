@@ -33,12 +33,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Top is
     Port ( CLK_IN : in STD_LOGIC;
-           SW : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           SW : in STD_LOGIC_VECTOR (7 DOWNTO 0);
            SW15 : in STD_LOGIC;
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
            BTNC : in STD_LOGIC;
---           LED3 : out STD_LOGIC;
+           LED7 : out STD_LOGIC;
+           LED8 : out STD_LOGIC;
            AN : out STD_LOGIC_VECTOR (7 DOWNTO 0);
            SEG : out STD_LOGIC_VECTOR (7 DOWNTO 0)
            );
