@@ -54,7 +54,7 @@ architecture Behavioral of Seven_seg_driver is
     signal Disp_counter : STD_LOGIC_VECTOR (2 DOWNTO 0) := "000";
     signal Display : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
     
-    type an_array is array(8 downto 1) of STD_LOGIC_VECTOR (7 downto 0) ; 
+    type an_array is array(1 to 8) of STD_LOGIC_VECTOR (7 downto 0) ; 
     signal an : an_array := ("11111110","11111101","11111011","11110111","11101111","11011111","10111111","01111111");
                           --  disp1      disp2      disp3      disp4      disp5      disp6      disp7      disp8
 --    signal an_OFF : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11111111";

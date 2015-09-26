@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Sep 25 21:49:45 2015
+| Date         : Fri Sep 25 22:39:41 2015
 | Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  144 |     0 |     63400 |  0.23 |
-|   LUT as Logic          |  144 |     0 |     63400 |  0.23 |
+| Slice LUTs*             |  145 |     0 |     63400 |  0.23 |
+|   LUT as Logic          |  145 |     0 |     63400 |  0.23 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  147 |     0 |    126800 |  0.12 |
+| Slice Registers         |  143 |     0 |    126800 |  0.11 |
 |   Register as Flip Flop |   35 |     0 |    126800 |  0.03 |
-|   Register as Latch     |  112 |     0 |    126800 |  0.09 |
+|   Register as Latch     |  108 |     0 |    126800 |  0.09 |
 | F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -48,14 +48,14 @@ Table of Contents
 +-------+--------------+-------------+--------------+
 | Total | Clock Enable | Synchronous | Asynchronous |
 +-------+--------------+-------------+--------------+
-| 0     |            _ |           - |            - |
+| 2     |            _ |           - |            - |
 | 0     |            _ |           - |          Set |
 | 0     |            _ |           - |        Reset |
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 116   |          Yes |           - |        Reset |
+| 110   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 30    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   30 |     0 |       210 | 14.29 |
+| Bonded IOB                  |   29 |     0 |       210 | 13.81 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -147,18 +147,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LDCE     |  111 |        Flop & Latch |
+| LDCE     |  107 |        Flop & Latch |
 | LUT1     |   62 |                 LUT |
-| LUT6     |   48 |                 LUT |
+| LUT6     |   49 |                 LUT |
 | FDRE     |   30 |        Flop & Latch |
 | OBUF     |   17 |                  IO |
 | LUT5     |   17 |                 LUT |
 | LUT4     |   17 |                 LUT |
 | CARRY4   |   15 |          CarryLogic |
-| IBUF     |   11 |                  IO |
-| LUT3     |    7 |                 LUT |
-| LUT2     |    5 |                 LUT |
+| LUT3     |   11 |                 LUT |
+| IBUF     |   10 |                  IO |
 | FDCE     |    5 |        Flop & Latch |
+| LUT2     |    4 |                 LUT |
 | OBUFT    |    2 |                  IO |
 | BUFG     |    2 |               Clock |
 | LDPE     |    1 |        Flop & Latch |

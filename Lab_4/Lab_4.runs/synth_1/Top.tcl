@@ -15,8 +15,8 @@ set_property parent.project_path F:/CEC330/Lab_4/Lab_4.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 read_vhdl -library xil_defaultlib {
-  F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd
   F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd
+  F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd
   F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd
   F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd
   F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd

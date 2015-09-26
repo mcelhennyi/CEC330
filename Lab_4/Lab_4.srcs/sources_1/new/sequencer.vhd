@@ -46,42 +46,54 @@ end sequencer;
 
 architecture Behavioral of sequencer is
 
-signal state_counter : STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000";
+signal state_counter : STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000"; 
 
 begin
 
-sequence: process(clk_slow, reset, sw_15)
+sequence_counter: process(clk_slow, reset, sw_15)
     begin
         --pause switch
         if sw_15 = '0' then
-            led15 <= '0';
+--            led15 <= '0';
             --increments the state counter every slow clock cycle
             if (rising_edge(clk_slow)) then
                 state_counter <= state_counter +1;
             end if;
+            
+            if state_counter = "10010" then --if the count is 16 set to zero
+                state_counter <=  "00000";
+            end if;
         elsif sw_15 = '1' then
             --flash led 15
-            led15 <= clk_slow;
+--            led15 <= clk_slow;
         end if;
         
         --reset to reset the state to the first state
         if reset = '1' then
-            state_counter <= "00000";
+        --            state_counter <= "00000";
         end if;
-        
-        if state_counter = "00000" then
+end process sequence_counter;
+
+sequence: process(clk_slow, reset, sw_15)
+    begin     
+
+        if state_counter < "01111" then
             --flag start state
             flag_0 <= '1';
             flag_17 <= '0';
-        elsif state_counter = "01111" then
+            flag_15 <= '0';
+            led15 <= '1'; --debug statement delete at implementation
+        elsif state_counter >= "01111" and state_counter < "10001" then
             --flag 15 seconds state
             flag_0 <= '0';
             flag_15 <= '1';
+            led15 <= '0'; --debug statement delete at implementation
         elsif state_counter = "10001" then
             --flag 17 seconds state
             flag_15 <= '0';
             flag_17 <= '1';
-            state_counter <= "00000";
+            led15 <= '1'; --debug statement delete at implementation
+--            state_counter <= "00000";
         end if;
         
     end process sequence;
