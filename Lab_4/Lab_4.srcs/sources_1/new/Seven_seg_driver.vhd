@@ -59,13 +59,14 @@ architecture Behavioral of Seven_seg_driver is
                           --  disp1      disp2      disp3      disp4      disp5      disp6      disp7      disp8
 --    signal an_OFF : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11111111";
     --^ what is this? -Ian
+    -- it was just a constant value so i didnt have to type "11111111" every time i wanted to turn off a display -Austin
     
     
     
 begin
 --These anodes are not used and are set to be off
 an(1) <= "11111111";
-an(2) <= "11111111";
+an(3) <= "11111111";
 --anodes are off if FLAG_an is 0, else they are on
 anode_states: process(CLK_AN, FLAG_an)
     begin

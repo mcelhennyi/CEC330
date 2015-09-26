@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Sep 25 22:40:03 2015
-| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
+| Date         : Sat Sep 26 00:01:15 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
 | Device       : xc7a100t
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    18 |
-| Minimum Number of register sites lost to control set restrictions |    57 |
+| Number of unique control sets                                     |    19 |
+| Minimum Number of register sites lost to control set restrictions |    64 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             136 |           49 |
+| No           | No                    | No                     |             137 |           52 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               2 |            2 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               5 |            1 |
+| Yes          | No                    | Yes                    |               5 |            2 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -52,20 +52,21 @@ Table of Contents
 |  sequencer_map/led15_reg/G0        |                              |                                        |                1 |              1 |
 |  sequencer_map/flag_17_reg_i_1_n_1 |                              | sequencer_map/ltOp                     |                1 |              1 |
 |  sequencer_map/flag_00             |                              | sequencer_map/ltOp                     |                1 |              1 |
-|  divider_map/out[0]                |                              |                                        |                2 |              3 |
-|  logic_map/C_reg[3][3]_i_1_n_1     |                              |                                        |                1 |              4 |
-|  logic_map/C_reg[2][3]_i_1_n_1     |                              |                                        |                1 |              4 |
-|  logic_map/C_reg[1][3]_i_1_n_1     |                              |                                        |                1 |              4 |
-|  logic_map/C_reg[0][3]_i_2_n_1     |                              |                                        |                1 |              4 |
-|  divider_map/clk                   | sequencer_map/state_counter0 | sequencer_map/state_counter[4]_i_3_n_1 |                1 |              5 |
-|  logic_map/Disp1_reg[3]_i_1_n_1    |                              |                                        |                2 |              8 |
+|  logic_map/FLAG_an2_out            |                              |                                        |                1 |              1 |
+|  divider_map/RAND_NUM[6]           |                              |                                        |                1 |              3 |
+|  logic_map/C_reg[3][3]_i_1_n_1     |                              |                                        |                2 |              4 |
+|  logic_map/C_reg[2][3]_i_1_n_1     |                              |                                        |                4 |              4 |
+|  logic_map/C_reg[1][3]_i_1_n_1     |                              |                                        |                3 |              4 |
+|  logic_map/C_reg[0][3]_i_2_n_1     |                              |                                        |                2 |              4 |
+|  divider_map/clk                   | sequencer_map/state_counter0 | sequencer_map/state_counter[4]_i_3_n_1 |                2 |              5 |
+|  logic_map/Disp5_reg[3]_i_1_n_1    |                              |                                        |                3 |              8 |
 |  logic_map/B_reg[3][3]_i_1_n_1     |                              |                                        |                3 |              8 |
-|  logic_map/B_reg[2][3]_i_1_n_1     |                              |                                        |                4 |              8 |
-|  logic_map/B_reg[1][3]_i_1_n_1     |                              |                                        |                4 |              8 |
-|  logic_map/B_reg[0][3]_i_1_n_1     |                              |                                        |                3 |              8 |
-|  logic_map/Disp3_reg[3]_i_1_n_1    |                              |                                        |                9 |             16 |
+|  logic_map/B_reg[2][3]_i_1_n_1     |                              |                                        |                2 |              8 |
+|  logic_map/B_reg[1][3]_i_1_n_1     |                              |                                        |                3 |              8 |
+|  logic_map/B_reg[0][3]_i_1_n_1     |                              |                                        |                2 |              8 |
+|  logic_map/Disp2_reg[3]_i_2_n_1    |                              |                                        |                8 |             16 |
 |  CLK_IN_IBUF_BUFG                  |                              |                                        |                7 |             27 |
-|  n_0_29_BUFG                       |                              |                                        |                9 |             32 |
+|  n_0_31_BUFG                       |                              |                                        |                9 |             32 |
 +------------------------------------+------------------------------+----------------------------------------+------------------+----------------+
 
 

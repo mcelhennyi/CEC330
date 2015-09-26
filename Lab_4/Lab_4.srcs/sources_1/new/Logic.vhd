@@ -86,19 +86,21 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17 )--add btnc
             if FLAG_0 = '1' then
                 --start process
                 --turn off correct answer display
-                FLAG_an <= '1';
+                FLAG_an <= '0';
                 --store A1 and B1 to RAM
-                A(test_count) <= RAND_NUM(3 downto 0);--test count will need to be an integer
+                A(test_count) <= RAND_NUM(3 downto 0);
                 B(test_count) <= RAND_NUM(7 downto 4);
+                --A(test_count) <= "1000";
+                --B(test_count) <= "0001";
                 --store student answer to RAM
                 S(test_count) <= SW;
                 --display A1
-                Disp7 <= A(test_count);
+                Disp4 <= A(test_count);
                 --display B1
-                Disp5 <= B(test_count);
-                --display sw
-                Disp3 <= SW(3 downto 0);
-                Disp4 <= SW(7 downto 4);           
+                Disp2 <= B(test_count);
+                --display sw Student's Answer
+                Disp7 <= SW(3 downto 0);
+                Disp8 <= SW(7 downto 4);           
             elsif FLAG_15 = '1' then
                 --start 15 sec process
                 --turn on answer display
@@ -107,8 +109,8 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17 )--add btnc
                 C(test_count) <= A(test_count) + B(test_count);
                 sum <= C(test_count);
                 -- display answer
-                Disp2 <= sum(7 downto 4);
-                Disp1 <= sum(3 downto 0);
+                Disp6 <= sum(7 downto 4);
+                Disp5 <= sum(3 downto 0);
             elsif FLAG_17 = '1' then
                 --start 17 sec process
                 test_count := test_count + 1;

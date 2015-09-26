@@ -77,6 +77,7 @@ component Seven_seg_driver
            Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
+           FLAG_an : in STD_LOGIC;
            Display_out : out STD_LOGIC_VECTOR (7 DOWNTO 0);
            AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
            );
@@ -134,6 +135,7 @@ Seven_seg_map : Seven_seg_driver
                 Disp6 => Disp6,
                 Disp7 => Disp7,
                 Disp8 => Disp8,
+                FLAG_an => flag_an,
                 Display_out => SEG,
                 AN_out => AN
                 );

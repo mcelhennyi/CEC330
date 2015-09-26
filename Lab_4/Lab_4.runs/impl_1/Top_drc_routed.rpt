@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Sep 25 22:40:39 2015
-| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
+| Date         : Sat Sep 26 00:01:51 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 19
+             Violations found: 20
 
 2. REPORT DETAILS
 -----------------
@@ -94,30 +94,35 @@ Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net logic_map/Disp1_reg[3]_i_1_n_1 is a gated clock net sourced by a combinational pin logic_map/Disp1_reg[3]_i_1/O, cell logic_map/Disp1_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net logic_map/Disp2_reg[3]_i_2_n_1 is a gated clock net sourced by a combinational pin logic_map/Disp2_reg[3]_i_2/O, cell logic_map/Disp2_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net logic_map/Disp3_reg[3]_i_1_n_1 is a gated clock net sourced by a combinational pin logic_map/Disp3_reg[3]_i_1/O, cell logic_map/Disp3_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net logic_map/Disp5_reg[3]_i_1_n_1 is a gated clock net sourced by a combinational pin logic_map/Disp5_reg[3]_i_1/O, cell logic_map/Disp5_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net sequencer_map/flag_00 is a gated clock net sourced by a combinational pin sequencer_map/flag_0_reg_i_1/O, cell sequencer_map/flag_0_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net logic_map/FLAG_an2_out is a gated clock net sourced by a combinational pin logic_map/FLAG_an_reg_i_2/O, cell logic_map/FLAG_an_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net sequencer_map/flag_15_reg/G0 is a gated clock net sourced by a combinational pin sequencer_map/flag_15_reg/L3_2/O, cell sequencer_map/flag_15_reg/L3_2 (in sequencer_map/flag_15_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net sequencer_map/flag_00 is a gated clock net sourced by a combinational pin sequencer_map/flag_0_reg_i_1/O, cell sequencer_map/flag_0_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net sequencer_map/flag_17_reg_i_1_n_1 is a gated clock net sourced by a combinational pin sequencer_map/flag_17_reg_i_1/O, cell sequencer_map/flag_17_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net sequencer_map/flag_15_reg/G0 is a gated clock net sourced by a combinational pin sequencer_map/flag_15_reg/L3_2/O, cell sequencer_map/flag_15_reg/L3_2 (in sequencer_map/flag_15_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
+Gated clock check  
+Net sequencer_map/flag_17_reg_i_1_n_1 is a gated clock net sourced by a combinational pin sequencer_map/flag_17_reg_i_1/O, cell sequencer_map/flag_17_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
 Gated clock check  
 Net sequencer_map/led15_reg/G0 is a gated clock net sourced by a combinational pin sequencer_map/led15_reg/L3_2/O, cell sequencer_map/led15_reg/L3_2 (in sequencer_map/led15_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
