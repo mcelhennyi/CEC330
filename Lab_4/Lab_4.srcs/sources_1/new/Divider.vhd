@@ -21,7 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -54,7 +55,7 @@ counter: process(CLK_IN)
     end process counter;
     
 CLK_OUT_SLOW <= register_counter(26);--Slow 1Hz clock
-CLK_OUT_AN <= register_counter(15);--About 70Hz for display switching
+CLK_OUT_AN <= register_counter(14);--About 70Hz for display switching
 RAND_OUT <= register_counter(7 downto 0);
 
 end Behavioral;

@@ -40,6 +40,7 @@ entity Top is
            BTNC : in STD_LOGIC;
            LED7 : out STD_LOGIC;
            LED8 : out STD_LOGIC;
+           LED15 : out STD_LOGIC;
            AN : out STD_LOGIC_VECTOR (7 DOWNTO 0);
            SEG : out STD_LOGIC_VECTOR (7 DOWNTO 0)
            );
@@ -77,7 +78,7 @@ component Seven_seg_driver
            Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
            Display_out : out STD_LOGIC_VECTOR (7 DOWNTO 0);
-           AN : out STD_LOGIC_VECTOR (3 DOWNTO 0)
+           AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
            );
 end component Seven_seg_driver;
 --Divides the clock into a 1hz slow signal and a ~70hz signal for the display switching
@@ -105,7 +106,8 @@ component Logic
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
            BTNU : in STD_LOGIC;
-           BTND : in STD_LOGIC
+           BTND : in STD_LOGIC;
+           RESET : in STD_LOGIC
            );
 end component Logic;
 --
@@ -115,7 +117,8 @@ component sequencer
            sw_15 : in STD_LOGIC;
            flag_0 : out STD_LOGIC;
            flag_15 : out STD_LOGIC;
-           flag_17 : out STD_LOGIC
+           flag_17 : out STD_LOGIC;
+           led15 : out STD_LOGIC
            );
 end component sequencer;
 
@@ -132,13 +135,13 @@ Seven_seg_map : Seven_seg_driver
                 Disp7 => Disp7,
                 Disp8 => Disp8,
                 Display_out => SEG,
-                AN => AN
+                AN_out => AN
                 );
                 
 -- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
 divider_map : Divider
      port map ( CLK_IN  => CLK_IN,
-                CLK_OUT_slower => clk_slow,
+                CLK_OUT_slow => clk_slow,
                 CLK_OUT_an => clk_an,
                 RAND_OUT => rand_num
                 );
@@ -159,16 +162,18 @@ logic_map : Logic
                Disp7 => Disp7,
                Disp8 => Disp8,
                BTNU => BTNU,
-               BTND => BTND
+               BTND => BTND,
+               RESET => BTNC
                );
                
 sequencer_map : sequencer           
     port map ( reset => BTNU,
                clk_slow => CLK_SLOW,
-               sw_15 => SW_15,
+               sw_15 => SW15,
                flag_0 => flag_0,
                flag_15 => flag_15,
-               flag_17 => flag_17
+               flag_17 => flag_17,
+               led15 => LED15
                );
 
 

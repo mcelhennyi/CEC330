@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -43,7 +45,7 @@ entity Seven_seg_driver is
            Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
            FLAG_an : in STD_LOGIC;
            Display_out : out STD_LOGIC_VECTOR (7 downto 0);
-           AN : out STD_LOGIC_VECTOR (7 downto 0)
+           AN_out : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end Seven_seg_driver;
 
@@ -52,21 +54,24 @@ architecture Behavioral of Seven_seg_driver is
     signal Disp_counter : STD_LOGIC_VECTOR (2 DOWNTO 0) := "000";
     signal Display : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
     
-    type an_array is array(1 downto 8, 7 downto 0) of STD_LOGIC; 
+    type an_array is array(8 downto 1) of STD_LOGIC_VECTOR (7 downto 0) ; 
     signal an : an_array := ("11111110","11111101","11111011","11110111","11101111","11011111","10111111","01111111");
                           --  disp1      disp2      disp3      disp4      disp5      disp6      disp7      disp8
-    signal an_OFF : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11111111";
+--    signal an_OFF : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11111111";
+    --^ what is this? -Ian
+    
+    
     
 begin
 --These anodes are not used and are set to be off
-an(1) <= an_OFF;
-an(2) <= an_OFF;
+an(1) <= "11111111";
+an(2) <= "11111111";
 --anodes are off if FLAG_an is 0, else they are on
-anode_states: process(CLK_AN)
+anode_states: process(CLK_AN, FLAG_an)
     begin
         if (FLAG_an = '0') then
-            an(5) <= an_OFF;
-            an(6) <= an_OFF;
+            an(5) <= "11111111"; --replaced an_off
+            an(6) <= "11111111"; --replaced an_off
         else
             an(5) <= "11101111";
             an(6) <= "11011111";
@@ -91,7 +96,7 @@ WITH Disp_counter SELECT
                Disp8 WHEN "111";
 --decides which 7 segment display to turn on based on count
 WITH Disp_counter SELECT
-    AN <= an(1) WHEN "000", --Display1 on
+    AN_out <= an(1) WHEN "000", --Display1 on
           an(2) WHEN "001", --Display2 on
           an(3) WHEN "010", --Display3 on
           an(4) WHEN "011", --Display4 on

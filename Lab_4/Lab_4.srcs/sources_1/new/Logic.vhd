@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -47,7 +48,8 @@ entity Logic is
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
            BTNU : in STD_LOGIC;
-           BTND : in STD_LOGIC
+           BTND : in STD_LOGIC;
+           RESET : in STD_LOGIC
            );
 end Logic;
 
@@ -55,43 +57,68 @@ architecture Behavioral of Logic is
 
    -- signal test_count : STD_LOGIC_VECTOR (2 downto 0) := "000";
 
-    type AB_array is array(3 downto 0, 3 downto 0) of STD_LOGIC; 
-    signal A : AB_array;
-    signal B : AB_array;
+    type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (3 downto 0); --creates the width of a single part
+--    type AB_array is array (3 downto 0) of AB_values; --puts all the parts in a vector of 4 values
+    signal A : AB_values;
+    signal B : AB_values;
     
-    type SC_array is array(3 downto 0, 7 downto 0) of STD_LOGIC; 
-    signal S : SC_array;
-    signal C : SC_array;
-    
+    type SC_values is array (3 downto 0) of STD_LOGIC_VECTOR (7 downto 0); --creates the width of a single part
+
+--    type SC_values is array (7 downto 0) of STD_LOGIC_VECTOR;
+--    type SC_array is array(3 downto 0) of SC_values; 
+    signal S : SC_values;
+    signal C : SC_values;
+        
+    signal sum : STD_LOGIC_VECTOR (7 DOWNTO 0) := x"00"; --temp sum each iteration
+
 begin
 
 logic_sequence: process(FLAG_0, FLAG_15, FLAG_17 )--add btnc
+    variable test_count : integer := 0; --index of iteration
+--    variable A : AB_array;
+--    variable B : AB_array;
+--    variable S : SC_array;
+--    variable C : SC_array;
+
     begin
     --add if statment to clear test_count if btnc is pressed
         if test_count /= "100" then
             if FLAG_0 = '1' then
                 --start process
+                --turn off correct answer display
+                FLAG_an <= '1';
                 --store A1 and B1 to RAM
                 A(test_count) <= RAND_NUM(3 downto 0);--test count will need to be an integer
                 B(test_count) <= RAND_NUM(7 downto 4);
-                --
+                --store student answer to RAM
+                S(test_count) <= SW;
                 --display A1
+                Disp7 <= A(test_count);
                 --display B1
+                Disp5 <= B(test_count);
                 --display sw
-                --send flag_an = 0
-                --
+                Disp3 <= SW(3 downto 0);
+                Disp4 <= SW(7 downto 4);           
             elsif FLAG_15 = '1' then
                 --start 15 sec process
-                -- flag_an = 1, 
-                --get answer
+                --turn on answer display
+                FLAG_an <= '1';
+                --get  actual answer and store actual answer to RAM
+                C(test_count) <= A(test_count) + B(test_count);
+                sum <= C(test_count);
                 -- display answer
+                Disp2 <= sum(7 downto 4);
+                Disp1 <= sum(3 downto 0);
             elsif FLAG_17 = '1' then
                 --start 17 sec process
-                test_count <= test_count + 1;
-            
+                test_count := test_count + 1;
+                
             end if;
         elsif test_count = "100" then
             --flash led7 and 8
+            if RESET = '1' then
+                --set test_count to zero (which should start over the process)
+            end if;
         end if;
     end process logic_sequence;
 

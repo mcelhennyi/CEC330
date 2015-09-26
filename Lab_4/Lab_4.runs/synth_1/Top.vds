@@ -1,0 +1,1156 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Sep 25 21:49:22 2015
+# Process ID: 3776
+# Log file: F:/CEC330/Lab_4/Lab_4.runs/synth_1/Top.vds
+# Journal file: F:/CEC330/Lab_4/Lab_4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 243.848 ; gain = 67.773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:49]
+INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'Seven_seg_driver' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'Seven_seg_driver' (1#1) [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd:52]
+INFO: [Synth 8-3491] module 'Divider' declared at 'F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'Divider' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Divider' (2#1) [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd:43]
+INFO: [Synth 8-3491] module 'Logic' declared at 'F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:35' bound to instance 'logic_map' of component 'Logic' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'Logic' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:56]
+WARNING: [Synth 8-614] signal 'RAND_NUM' is read in the process but is not in the sensitivity list [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
+WARNING: [Synth 8-614] signal 'SW' is read in the process but is not in the sensitivity list [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
+WARNING: [Synth 8-614] signal 'A' is read in the process but is not in the sensitivity list [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
+WARNING: [Synth 8-614] signal 'B' is read in the process but is not in the sensitivity list [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
+WARNING: [Synth 8-614] signal 'C' is read in the process but is not in the sensitivity list [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
+WARNING: [Synth 8-614] signal 'sum' is read in the process but is not in the sensitivity list [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
+WARNING: [Synth 8-3848] Net Disp6 in module/entity Logic does not have driver. [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:47]
+WARNING: [Synth 8-3848] Net Disp8 in module/entity Logic does not have driver. [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'Logic' (3#1) [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:56]
+INFO: [Synth 8-3491] module 'sequencer' declared at 'F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:36' bound to instance 'sequencer_map' of component 'sequencer' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'sequencer' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:47]
+WARNING: [Synth 8-614] signal 'state_counter' is read in the process but is not in the sensitivity list [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'sequencer' (4#1) [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:47]
+WARNING: [Synth 8-3848] Net LED7 in module/entity Top does not have driver. [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:41]
+WARNING: [Synth 8-3848] Net LED8 in module/entity Top does not have driver. [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Top' (5#1) [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:49]
+WARNING: [Synth 8-3331] design Top has unconnected port LED7
+WARNING: [Synth 8-3331] design Top has unconnected port LED8
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 278.996 ; gain = 102.922
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:FLAG_an to constant 0 [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:127]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 278.996 ; gain = 102.922
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'SW15_IBUF'. [F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 583.184 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 2 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 2 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 8 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 8 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 9 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 9 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 10 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 10 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 11 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 11 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 12 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 12 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 13 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 14 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 14 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 15 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 15 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 23 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 23 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 35 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 36 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 43 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 43 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 55 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 55 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 56 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 56 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 57 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 57 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 58 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 58 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 59 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 59 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 60 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 61 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 63 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 65 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 66 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 67 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 67 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 68 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 69 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 69 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 70 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 71 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 72 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 79 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 79 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 80 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 80 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 83 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 83 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "A_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "A_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "A_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "A_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'FLAG_an_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:89]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp1_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:111]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:110]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp3_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp4_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp5_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp7_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:96]
+WARNING: [Synth 8-327] inferring latch for variable 'test_count_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:85]
+WARNING: [Synth 8-327] inferring latch for variable 'sum_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:108]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[0]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[1]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[2]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[3]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[0]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[1]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[2]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[3]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[0]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[1]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[2]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[3]' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'flag_0_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:74]
+WARNING: [Synth 8-327] inferring latch for variable 'flag_15_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:79]
+WARNING: [Synth 8-327] inferring latch for variable 'flag_17_reg' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:75]
+WARNING: [Synth 8-327] inferring latch for variable 'state_counter' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:72]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	  16 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Seven_seg_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	  16 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+Module Logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module sequencer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "logic_map/A_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "logic_map/A_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "logic_map/A_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "logic_map/A_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-3331] design Top has unconnected port LED7
+WARNING: [Synth 8-3331] design Top has unconnected port LED8
+WARNING: [Synth 8-3917] design Top has port AN[7] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port AN[6] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port AN[3] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port AN[2] driven by constant 1
+WARNING: [Synth 8-3917] design Top has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design Top has unconnected port BTND
+WARNING: [Synth 8-3331] design Top has unconnected port BTNC
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.184 ; gain = 407.109
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/sum_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/sum_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (\logic_map/FLAG_an_reg ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[7] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[6] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[4] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[5] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[1] ) is unused and will be removed from module Top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 583.184 ; gain = 407.109
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 2 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 2 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 8 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 8 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 9 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 9 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 10 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 10 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 11 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 11 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 12 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 12 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 13 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 14 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 14 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 15 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 15 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 23 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 23 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 35 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 36 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 43 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 43 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 55 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 55 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 56 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 56 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 57 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 57 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 58 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 58 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 59 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 59 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 60 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 61 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 63 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 65 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 66 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 67 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 67 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 68 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 69 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 69 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 70 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 71 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 72 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 79 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 79 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 80 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 80 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 83 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+incorrect set of required parameters for "set_property" at line 83 of file F:/CEC330/Lab_4/Lab_4.srcs/constrs_1/new/master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[4] with 1st driver pin 'sequencer_map/state_counter_reg[4]/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:60]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[4] with 2nd driver pin 'sequencer_map/state_counter/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[3] with 1st driver pin 'sequencer_map/state_counter_reg[3]/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:60]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[3] with 2nd driver pin 'sequencer_map/state_counter__0/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[2] with 1st driver pin 'sequencer_map/state_counter_reg[2]/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:60]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[2] with 2nd driver pin 'sequencer_map/state_counter__1/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[1] with 1st driver pin 'sequencer_map/state_counter_reg[1]/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:60]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[1] with 2nd driver pin 'sequencer_map/state_counter__2/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[0] with 1st driver pin 'sequencer_map/state_counter_reg[0]/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:60]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sequencer_map/state_counter__4[0] with 2nd driver pin 'sequencer_map/state_counter__3/Q' [F:/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:72]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        5|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    15|
+|3     |LUT1   |    62|
+|4     |LUT2   |     5|
+|5     |LUT3   |     7|
+|6     |LUT4   |    17|
+|7     |LUT5   |    17|
+|8     |LUT6   |    48|
+|9     |FDCE   |     5|
+|10    |FDRE   |    30|
+|11    |LD     |   110|
+|12    |LDC    |     1|
+|13    |LDP    |     1|
+|14    |IBUF   |    11|
+|15    |OBUF   |    17|
+|16    |OBUFT  |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------+-----------------+------+
+|      |Instance        |Module           |Cells |
++------+----------------+-----------------+------+
+|1     |top             |                 |   350|
+|2     |  Seven_seg_map |Seven_seg_driver |    10|
+|3     |  divider_map   |Divider          |    62|
+|4     |  logic_map     |Logic            |   221|
+|5     |  sequencer_map |sequencer        |    25|
++------+----------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 10 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 583.184 ; gain = 88.242
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 407.109
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 138 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 112 instances were transformed.
+  LD => LDCE: 110 instances
+  LDC => LDCE: 1 instances
+  LDP => LDPE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 58 Warnings, 11 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 583.184 ; gain = 392.699
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 583.184 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 21:49:45 2015...

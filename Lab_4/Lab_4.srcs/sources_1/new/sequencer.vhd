@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -37,7 +39,8 @@ entity sequencer is
            sw_15 : in STD_LOGIC;
            flag_0 : out STD_LOGIC;
            flag_15 : out STD_LOGIC;
-           flag_17 : out STD_LOGIC
+           flag_17 : out STD_LOGIC;
+           led15 : out STD_LOGIC
            );
 end sequencer;
 
@@ -47,16 +50,23 @@ signal state_counter : STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000";
 
 begin
 
-sequence: process(clk_slow)
+sequence: process(clk_slow, reset, sw_15)
     begin
         --pause switch
         if sw_15 = '0' then
+            led15 <= '0';
             --increments the state counter every slow clock cycle
             if (rising_edge(clk_slow)) then
                 state_counter <= state_counter +1;
             end if;
         elsif sw_15 = '1' then
             --flash led 15
+            led15 <= clk_slow;
+        end if;
+        
+        --reset to reset the state to the first state
+        if reset = '1' then
+            state_counter <= "00000";
         end if;
         
         if state_counter = "00000" then
