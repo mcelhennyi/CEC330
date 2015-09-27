@@ -54,7 +54,7 @@ sequence_counter: process(clk_slow, reset, sw_15)
     begin
         --pause switch
         if sw_15 = '0' then
---            led15 <= '0';
+            led15 <= '0';
             --increments the state counter every slow clock cycle
             if (rising_edge(clk_slow)) then
                 state_counter <= state_counter +1;
@@ -65,12 +65,12 @@ sequence_counter: process(clk_slow, reset, sw_15)
             end if;
         elsif sw_15 = '1' then
             --flash led 15
---            led15 <= clk_slow;
+            led15 <= clk_slow;
         end if;
         
         --reset to reset the state to the first state
         if reset = '1' then
-        --            state_counter <= "00000";
+            --state_counter <= "00000";
         end if;
 end process sequence_counter;
 
@@ -82,18 +82,18 @@ sequence: process(clk_slow, reset, sw_15)
             flag_0 <= '1';
             flag_17 <= '0';
             flag_15 <= '0';
-            led15 <= '1'; --debug statement delete at implementation
+            --led15 <= '1'; --debug statement delete at implementation
         elsif state_counter >= "01111" and state_counter < "10001" then
             --flag 15 seconds state
             flag_0 <= '0';
             flag_15 <= '1';
-            led15 <= '0'; --debug statement delete at implementation
+            --led15 <= '0'; --debug statement delete at implementation
         elsif state_counter = "10001" then
             --flag 17 seconds state
             flag_15 <= '0';
             flag_17 <= '1';
-            led15 <= '1'; --debug statement delete at implementation
---            state_counter <= "00000";
+            --led15 <= '1'; --debug statement delete at implementation
+            --state_counter <= "00000";
         end if;
         
     end process sequence;

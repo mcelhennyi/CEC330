@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sat Sep 26 00:00:25 2015
-# Process ID: 5704
+# Start of session at: Sat Sep 26 23:49:54 2015
+# Process ID: 1880
 # Log file: C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.runs/synth_1/Top.vds
 # Journal file: C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,38 +13,34 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 245.625 ; gain = 68.512
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 245.930 ; gain = 68.672
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:49]
-INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:128]
+INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:130]
 INFO: [Synth 8-638] synthesizing module 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'Seven_seg_driver' (1#1) [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Seven_seg_driver.vhd:52]
-INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:144]
+INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:146]
 INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'Divider' (2#1) [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Divider.vhd:43]
-INFO: [Synth 8-3491] module 'Logic' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:35' bound to instance 'logic_map' of component 'Logic' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:151]
-INFO: [Synth 8-638] synthesizing module 'Logic' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:56]
-WARNING: [Synth 8-614] signal 'RAND_NUM' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
-WARNING: [Synth 8-614] signal 'SW' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
-WARNING: [Synth 8-614] signal 'A' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
-WARNING: [Synth 8-614] signal 'B' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
-WARNING: [Synth 8-614] signal 'C' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
-WARNING: [Synth 8-614] signal 'sum' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:76]
+INFO: [Synth 8-3491] module 'Logic' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:35' bound to instance 'logic_map' of component 'Logic' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'Logic' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:58]
+WARNING: [Synth 8-614] signal 'test_count' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:78]
+WARNING: [Synth 8-614] signal 'SW' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:78]
+WARNING: [Synth 8-614] signal 'A' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:78]
+WARNING: [Synth 8-614] signal 'B' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:78]
+WARNING: [Synth 8-614] signal 'C' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:78]
+WARNING: [Synth 8-614] signal 'sum' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:78]
 WARNING: [Synth 8-3848] Net Disp1 in module/entity Logic does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:42]
 WARNING: [Synth 8-3848] Net Disp3 in module/entity Logic does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'Logic' (3#1) [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:56]
-INFO: [Synth 8-3491] module 'sequencer' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:36' bound to instance 'sequencer_map' of component 'sequencer' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:171]
+INFO: [Synth 8-256] done synthesizing module 'Logic' (3#1) [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:58]
+INFO: [Synth 8-3491] module 'sequencer' declared at 'C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:36' bound to instance 'sequencer_map' of component 'sequencer' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:175]
 INFO: [Synth 8-638] synthesizing module 'sequencer' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:47]
 WARNING: [Synth 8-614] signal 'state_counter' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:53]
 WARNING: [Synth 8-614] signal 'state_counter' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:77]
 INFO: [Synth 8-256] done synthesizing module 'sequencer' (4#1) [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:47]
-WARNING: [Synth 8-3848] Net LED7 in module/entity Top does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:41]
-WARNING: [Synth 8-3848] Net LED8 in module/entity Top does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'Top' (5#1) [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Top.vhd:49]
-WARNING: [Synth 8-3331] design Top has unconnected port LED7
-WARNING: [Synth 8-3331] design Top has unconnected port LED8
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.930 ; gain = 102.816
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.234 ; gain = 102.977
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -54,7 +50,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.930 ; gain = 102.816
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.234 ; gain = 102.977
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -71,16 +67,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 584.227 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 584.605 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -470,39 +466,41 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "A_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "A_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "A_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "A_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
-WARNING: [Synth 8-327] inferring latch for variable 'FLAG_an_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:89]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:100]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp4_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:98]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp5_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:113]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp6_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:112]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp7_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:102]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp8_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:103]
-WARNING: [Synth 8-327] inferring latch for variable 'test_count_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'B_reg[0]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
-WARNING: [Synth 8-327] inferring latch for variable 'B_reg[1]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
-WARNING: [Synth 8-327] inferring latch for variable 'B_reg[2]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
-WARNING: [Synth 8-327] inferring latch for variable 'B_reg[3]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:92]
-WARNING: [Synth 8-327] inferring latch for variable 'A_reg[0]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
-WARNING: [Synth 8-327] inferring latch for variable 'A_reg[1]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
-WARNING: [Synth 8-327] inferring latch for variable 'A_reg[2]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
-WARNING: [Synth 8-327] inferring latch for variable 'A_reg[3]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:91]
-WARNING: [Synth 8-327] inferring latch for variable 'sum_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:110]
-WARNING: [Synth 8-327] inferring latch for variable 'C_reg[0]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:109]
-WARNING: [Synth 8-327] inferring latch for variable 'C_reg[1]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:109]
-WARNING: [Synth 8-327] inferring latch for variable 'C_reg[2]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:109]
-WARNING: [Synth 8-327] inferring latch for variable 'C_reg[3]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:109]
+WARNING: [Synth 8-327] inferring latch for variable 'FLAG_an_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:93]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:104]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp4_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:102]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp5_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:122]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp6_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:121]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp7_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp8_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'LED7_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:88]
+WARNING: [Synth 8-327] inferring latch for variable 'LED8_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:89]
+WARNING: [Synth 8-327] inferring latch for variable 'test_count_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:87]
+WARNING: [Synth 8-327] inferring latch for variable 'test_count_int_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:97]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[0]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[1]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[2]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'B_reg[3]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[0]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:97]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[1]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:97]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[2]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:97]
+WARNING: [Synth 8-327] inferring latch for variable 'A_reg[3]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:97]
+WARNING: [Synth 8-327] inferring latch for variable 'sum_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:119]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[0]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:118]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[1]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:118]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[2]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:118]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg[3]' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/Logic.vhd:118]
 WARNING: [Synth 8-327] inferring latch for variable 'flag_0_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:82]
 WARNING: [Synth 8-327] inferring latch for variable 'flag_15_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:84]
 WARNING: [Synth 8-327] inferring latch for variable 'flag_17_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:83]
-WARNING: [Synth 8-327] inferring latch for variable 'led15_reg' [C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.srcs/sources_1/new/sequencer.vhd:85]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -518,7 +516,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
 	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
@@ -527,7 +525,7 @@ Detailed RTL Component Info :
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -550,9 +548,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module sequencer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -573,7 +572,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 584.227 ; gain = 407.113
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -581,18 +580,15 @@ INFO: [Synth 8-5545] ROM "logic_map/A_reg[0]" won't be mapped to RAM because add
 INFO: [Synth 8-5545] ROM "logic_map/A_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "logic_map/A_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "logic_map/A_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
-WARNING: [Synth 8-3331] design Top has unconnected port LED7
-WARNING: [Synth 8-3331] design Top has unconnected port LED8
 WARNING: [Synth 8-3917] design Top has port AN[2] driven by constant 1
 WARNING: [Synth 8-3917] design Top has port AN[0] driven by constant 1
 WARNING: [Synth 8-3917] design Top has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3331] design Top has unconnected port BTNU
 WARNING: [Synth 8-3331] design Top has unconnected port BTND
-WARNING: [Synth 8-3331] design Top has unconnected port BTNC
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.605 ; gain = 407.348
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -600,29 +596,144 @@ Report RTL Partitions:
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/sum_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/B_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/B_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/B_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/B_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/B_reg[3][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/B_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/B_reg[2][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/B_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/C_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/C_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/C_reg[2][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/C_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/C_reg[3][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/C_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/C_reg[2][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/C_reg[0][1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/sum_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/Disp2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/Disp2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/sum_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/sum_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\logic_map/sum_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\logic_map/sum_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp4_reg[2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp4_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[31] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[30] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[29] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[28] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[27] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[26] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[25] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[24] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[23] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[22] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[21] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[20] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[19] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[18] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[17] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[16] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[15] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[14] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[13] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[12] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[11] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[10] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[9] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[8] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[7] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[6] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[5] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[4] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/test_count_int_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[0][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[0][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[1][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[1][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[2][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[2][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[3][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[3][0] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[7] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[6] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[4] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[0][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[0][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[0][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[0][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[1][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[1][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[1][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[1][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[2][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[2][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[2][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[2][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[3][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[3][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[3][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/C_reg[3][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[3][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[3][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[1][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[1][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[2][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[2][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[0][0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[0][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[3][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[3][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[1][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[1][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[2][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[2][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[0][3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/A_reg[0][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[3][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[1][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[2][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[0][2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[3][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[1][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[2][1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/B_reg[0][1] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[5] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp6_reg[3] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp6_reg[0] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp6_reg[2] ) is unused and will be removed from module Top.
 WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp6_reg[1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[0] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp4_reg[3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[3] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp4_reg[1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/Disp2_reg[1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[2] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[1] ) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (\logic_map/sum_reg[0] ) is unused and will be removed from module Top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.605 ; gain = 407.348
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1014,10 +1125,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1029,7 +1140,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1047,7 +1158,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1060,7 +1171,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1072,13 +1183,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.227 ; gain = 407.113
+Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1094,58 +1205,56 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |    15|
-|3     |LUT1   |    62|
-|4     |LUT2   |     5|
-|5     |LUT3   |     7|
-|6     |LUT4   |    12|
-|7     |LUT5   |    31|
-|8     |LUT6   |    36|
-|9     |MUXF7  |    14|
-|10    |MUXF8  |     7|
-|11    |FDCE   |     5|
-|12    |FDRE   |    30|
-|13    |LD     |   105|
-|14    |LDC    |     1|
-|15    |LDCP   |     2|
-|16    |LDP    |     1|
-|17    |IBUF   |    10|
-|18    |OBUF   |    17|
-|19    |OBUFT  |     2|
+|1     |BUFG   |     1|
+|2     |CARRY4 |     7|
+|3     |LUT1   |    32|
+|4     |LUT2   |     6|
+|5     |LUT3   |    10|
+|6     |LUT4   |     5|
+|7     |LUT5   |     5|
+|8     |LUT6   |    15|
+|9     |MUXF7  |     7|
+|10    |FDCE   |     5|
+|11    |FDRE   |    30|
+|12    |LD     |     9|
+|13    |LDC    |     6|
+|14    |LDCP   |     1|
+|15    |LDP    |     1|
+|16    |IBUF   |    11|
+|17    |OBUF   |    19|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------+-----------------+------+
 |      |Instance        |Module           |Cells |
 +------+----------------+-----------------+------+
-|1     |top             |                 |   364|
+|1     |top             |                 |   170|
 |2     |  Seven_seg_map |Seven_seg_driver |    12|
-|3     |  divider_map   |Divider          |    61|
-|4     |  logic_map     |Logic            |   237|
+|3     |  divider_map   |Divider          |    62|
+|4     |  logic_map     |Logic            |    42|
 |5     |  sequencer_map |sequencer        |    23|
 +------+----------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.227 ; gain = 407.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 407.348
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 584.227 ; gain = 88.285
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.227 ; gain = 407.113
+Synthesis finished with 0 errors, 0 critical warnings and 136 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 584.605 ; gain = 88.285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 584.605 ; gain = 407.348
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 134 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 109 instances were transformed.
-  LD => LDCE: 105 instances
-  LDC => LDCE: 1 instances
-  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 2 instances
+  A total of 17 instances were transformed.
+  LD => LDCE: 9 instances
+  LDC => LDCE: 6 instances
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 1 instances
   LDP => LDPE: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-35 Infos, 56 Warnings, 1 Critical Warnings and 0 Errors encountered.
+58 Infos, 143 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 584.227 ; gain = 392.844
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.039 . Memory (MB): peak = 584.227 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 00:00:50 2015...
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 584.605 ; gain = 392.918
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 584.605 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 23:50:19 2015...

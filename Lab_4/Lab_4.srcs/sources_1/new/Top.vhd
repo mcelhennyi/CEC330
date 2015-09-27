@@ -106,6 +106,8 @@ component Logic
            Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
+           LED7 : out STD_LOGIC;
+           LED8 : out STD_LOGIC;
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
            RESET : in STD_LOGIC
@@ -163,13 +165,15 @@ logic_map : Logic
                Disp6 => Disp6,
                Disp7 => Disp7,
                Disp8 => Disp8,
+               LED7 => LED7,
+               LED8 => LED8,
                BTNU => BTNU,
                BTND => BTND,
                RESET => BTNC
                );
                
 sequencer_map : sequencer           
-    port map ( reset => BTNU,
+    port map ( reset => BTNC,
                clk_slow => CLK_SLOW,
                sw_15 => SW15,
                flag_0 => flag_0,

@@ -47,6 +47,8 @@ entity Logic is
            Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
+           LED7 : out STD_LOGIC;
+           LED8 : out STD_LOGIC;
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
            RESET : in STD_LOGIC
@@ -55,7 +57,7 @@ end Logic;
 
 architecture Behavioral of Logic is
 
-   -- signal test_count : STD_LOGIC_VECTOR (2 downto 0) := "000";
+    signal test_count : STD_LOGIC_VECTOR (2 downto 0) := "000";
 
     type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (3 downto 0); --creates the width of a single part
 --    type AB_array is array (3 downto 0) of AB_values; --puts all the parts in a vector of 4 values
@@ -73,8 +75,8 @@ architecture Behavioral of Logic is
 
 begin
 
-logic_sequence: process(FLAG_0, FLAG_15, FLAG_17 )--add btnc
-    variable test_count : integer := 0; --index of iteration
+logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
+    variable test_count_int : integer := 0; --index of iteration
 --    variable A : AB_array;
 --    variable B : AB_array;
 --    variable S : SC_array;
@@ -82,46 +84,66 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17 )--add btnc
 
     begin
     --add if statment to clear test_count if btnc is pressed
-        if test_count /= "100" then
+        if test_count < "100" then
+            LED7 <= '0';
+            LED8 <= '0';
             if FLAG_0 = '1' then
                 --start process
                 --turn off correct answer display
                 FLAG_an <= '0';
                 --store A1 and B1 to RAM
-                A(test_count) <= RAND_NUM(3 downto 0);
-                B(test_count) <= RAND_NUM(7 downto 4);
-                --A(test_count) <= "1000";
-                --B(test_count) <= "0001";
+                --A(test_count) <= RAND_NUM(3 downto 0);
+                --B(test_count) <= RAND_NUM(7 downto 4);
+                A(test_count_int) <= "1000";
+                B(test_count_int) <= "0001";
                 --store student answer to RAM
-                S(test_count) <= SW;
+                S(test_count_int) <= SW;
                 --display A1
-                Disp4 <= A(test_count);
+                Disp4 <= A(test_count_int);
                 --display B1
-                Disp2 <= B(test_count);
+                Disp2 <= B(test_count_int);
                 --display sw Student's Answer
                 Disp7 <= SW(3 downto 0);
                 Disp8 <= SW(7 downto 4);           
             elsif FLAG_15 = '1' then
+                --display A1
+                Disp4 <= A(test_count_int);--keeps these displays on
+                --display B1
+                Disp2 <= B(test_count_int);
+                
                 --start 15 sec process
                 --turn on answer display
                 FLAG_an <= '1';
                 --get  actual answer and store actual answer to RAM
-                C(test_count) <= A(test_count) + B(test_count);
-                sum <= C(test_count);
+                C(test_count_int) <= A(test_count_int) + B(test_count_int);
+                sum <= C(test_count_int);
                 -- display answer
                 Disp6 <= sum(7 downto 4);
                 Disp5 <= sum(3 downto 0);
-            elsif FLAG_17 = '1' then
+            elsif FLAG_17 = '1' then--it seems not to be running this at all now?
                 --start 17 sec process
-                test_count := test_count + 1;
+                test_count_int := test_count_int + 1;
+                test_count <= test_count + 1;
+                LED7 <= '1';--debug statement delete at implementation
                 
             end if;
         elsif test_count = "100" then
             --flash led7 and 8
-            if RESET = '1' then
-                --set test_count to zero (which should start over the process)
-            end if;
+            LED7 <= '1';
+            LED8 <= '1';
+--            if RESET = '1' then
+--                --set test_count to zero (which should start over the process)
+--                test_count_int := 0;
+--                test_count <= "000";
+--            end if;
         end if;
+        
+        if RESET = '1' then
+            --set test_count to zero (which should start over the process)
+            test_count_int := 0;
+            test_count <= "000";
+        end if;
+        
     end process logic_sequence;
 
 end Behavioral;
