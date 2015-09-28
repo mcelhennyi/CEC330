@@ -60,7 +60,7 @@ sequence_counter: process(clk_slow, reset, sw_15)
                 state_counter <= state_counter +1;
             end if;
             
-            if state_counter = "10010" then --if the count is 16 set to zero
+            if state_counter >= "10001" then --if the count is 17 set to zero
                 state_counter <=  "00000";
             end if;
         elsif sw_15 = '1' then
@@ -70,7 +70,7 @@ sequence_counter: process(clk_slow, reset, sw_15)
         
         --reset to reset the state to the first state
         if reset = '1' then
-            --state_counter <= "00000";
+            state_counter <= "00000";
         end if;
 end process sequence_counter;
 
@@ -83,16 +83,19 @@ sequence: process(clk_slow, reset, sw_15)
             flag_17 <= '0';
             flag_15 <= '0';
             --led15 <= '1'; --debug statement delete at implementation
-        elsif state_counter >= "01111" and state_counter < "10001" then
+        elsif state_counter >= "01111" and state_counter < "10001" then -->= 15 and < 17
             --flag 15 seconds state
             flag_0 <= '0';
             flag_15 <= '1';
             --led15 <= '0'; --debug statement delete at implementation
-        elsif state_counter = "10001" then
+        elsif state_counter >= "1000" then
             --flag 17 seconds state
             flag_15 <= '0';
+--            if (rising_edge(clk_slow)) then
+--                flag_17 <= '1';
+--            end if;            
             flag_17 <= '1';
-            --led15 <= '1'; --debug statement delete at implementation
+--            led15 <= '1'; --debug statement delete at implementation
             --state_counter <= "00000";
         end if;
         

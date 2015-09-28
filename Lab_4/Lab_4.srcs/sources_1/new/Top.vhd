@@ -86,8 +86,8 @@ end component Seven_seg_driver;
 component Divider
     Port ( CLK_IN : in STD_LOGIC;
            CLK_OUT_SLOW : out STD_LOGIC;
-           CLK_OUT_AN : out STD_LOGIC;
-           RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0)
+           CLK_OUT_AN : out STD_LOGIC
+--           RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end component Divider;
 --
@@ -110,7 +110,8 @@ component Logic
            LED8 : out STD_LOGIC;
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
-           RESET : in STD_LOGIC
+           RESET : in STD_LOGIC;
+           clk_slow: in STD_LOGIC
            );
 end component Logic;
 --
@@ -124,6 +125,12 @@ component sequencer
            led15 : out STD_LOGIC
            );
 end component sequencer;
+
+component random
+      Port ( clk_in : in STD_LOGIC;
+             rand_out : out STD_LOGIC_VECTOR (7 downto 0)
+            );
+end component random;
 
 begin
 --maps the driver 
@@ -146,8 +153,8 @@ Seven_seg_map : Seven_seg_driver
 divider_map : Divider
      port map ( CLK_IN  => CLK_IN,
                 CLK_OUT_slow => clk_slow,
-                CLK_OUT_an => clk_an,
-                RAND_OUT => rand_num
+                CLK_OUT_an => clk_an
+--                RAND_OUT => rand_num
                 );
                 
 logic_map : Logic 
@@ -169,10 +176,11 @@ logic_map : Logic
                LED8 => LED8,
                BTNU => BTNU,
                BTND => BTND,
-               RESET => BTNC
+               RESET => BTNC,
+               clk_slow => clk_slow
                );
                
-sequencer_map : sequencer           
+sequencer_map: sequencer           
     port map ( reset => BTNC,
                clk_slow => CLK_SLOW,
                sw_15 => SW15,
@@ -182,5 +190,9 @@ sequencer_map : sequencer
                led15 => LED15
                );
 
+random_map: random
+      port map ( clk_in => CLK_IN,
+                 rand_out => rand_num
+                );
 
 end Behavioral;

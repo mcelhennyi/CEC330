@@ -35,8 +35,8 @@ use ieee.std_logic_arith.ALL;
 entity Divider is
     Port ( CLK_IN : in STD_LOGIC;
            CLK_OUT_SLOW : out STD_LOGIC;
-           CLK_OUT_AN : out STD_LOGIC;
-           RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0)
+           CLK_OUT_AN : out STD_LOGIC
+--           RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end Divider;
 
@@ -56,6 +56,6 @@ counter: process(CLK_IN)
     
 CLK_OUT_SLOW <= register_counter(26);--Slow 1Hz clock--26
 CLK_OUT_AN <= register_counter(14);--About 70Hz for display switching
-RAND_OUT <= register_counter(15 downto 8);
+--RAND_OUT <= register_counter(15 downto 8);
 
 end Behavioral;

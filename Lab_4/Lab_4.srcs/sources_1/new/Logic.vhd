@@ -51,7 +51,8 @@ entity Logic is
            LED8 : out STD_LOGIC;
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
-           RESET : in STD_LOGIC
+           RESET : in STD_LOGIC;
+           clk_slow : in STD_LOGIC
            );
 end Logic;
 
@@ -92,8 +93,8 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
                 --turn off correct answer display
                 FLAG_an <= '0';
                 --store A1 and B1 to RAM
-                --A(test_count) <= RAND_NUM(3 downto 0);
-                --B(test_count) <= RAND_NUM(7 downto 4);
+--                A(test_count_int) <= RAND_NUM(3 downto 0);
+--                B(test_count_int) <= RAND_NUM(7 downto 4);
                 A(test_count_int) <= "1000";
                 B(test_count_int) <= "0001";
                 --store student answer to RAM
@@ -124,13 +125,13 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
                 --start 17 sec process
                 test_count_int := test_count_int + 1;
                 test_count <= test_count + 1;
-                LED7 <= '1';--debug statement delete at implementation
+--                LED7 <= '1';--debug statement delete at implementation
                 
             end if;
         elsif test_count = "100" then
             --flash led7 and 8
-            LED7 <= '1';
-            LED8 <= '1';
+            LED7 <= clk_slow;
+            LED8 <= clk_slow;
 --            if RESET = '1' then
 --                --set test_count to zero (which should start over the process)
 --                test_count_int := 0;
@@ -142,6 +143,8 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
             --set test_count to zero (which should start over the process)
             test_count_int := 0;
             test_count <= "000";
+            --clear all RAM
+            
         end if;
         
     end process logic_sequence;
