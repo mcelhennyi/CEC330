@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Mon Sep 28 01:17:23 2015
-| Host             : IanMcElhenny-PC running 64-bit major release  (build 9200)
+| Date             : Mon Sep 28 12:08:31 2015
+| Host             : IanMcElhenny-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : 
 | Design           : Top
 | Device           : xc7a100tcsg324-1
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 22.216 (Junction temp exceeded!) |
-| Dynamic (W)              | 21.419                           |
+| Total On-Chip Power (W)  | 22.308 (Junction temp exceeded!) |
+| Dynamic (W)              | 21.511                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -49,17 +49,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.795 |      328 |       --- |             --- |
-|   LUT as Logic |     0.706 |       88 |     63400 |            0.14 |
-|   CARRY4       |     0.043 |       20 |     15850 |            0.13 |
-|   Register     |     0.026 |      162 |    126800 |            0.13 |
-|   F7/F8 Muxes  |     0.013 |       21 |     63400 |            0.03 |
+| Slice Logic    |     0.755 |      272 |       --- |             --- |
+|   LUT as Logic |     0.701 |       80 |     63400 |            0.13 |
+|   CARRY4       |     0.031 |       15 |     15850 |            0.09 |
+|   Register     |     0.018 |      137 |    126800 |            0.11 |
 |   BUFG         |     0.006 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |     1.359 |      269 |       --- |             --- |
-| I/O            |    19.264 |       32 |       210 |           15.24 |
+|   Others       |     0.000 |       12 |       --- |             --- |
+| Signals        |     1.174 |      261 |       --- |             --- |
+| I/O            |    19.582 |       32 |       210 |           15.24 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    22.216 |          |           |                 |
+| Total          |    22.308 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,9 +68,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     2.762 |       2.199 |      0.563 |
-| Vccaux    |       1.800 |     0.797 |       0.704 |      0.093 |
-| Vcco33    |       3.300 |     5.444 |       5.440 |      0.004 |
+| Vccint    |       1.000 |     2.536 |       1.973 |      0.563 |
+| Vccaux    |       1.800 |     0.809 |       0.716 |      0.093 |
+| Vcco33    |       3.300 |     5.534 |       5.530 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,13 +135,12 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| Top             |    21.419 |
-|   Seven_seg_map |     0.331 |
-|   divider_map   |     0.106 |
-|   logic_map     |     1.324 |
-|   random_map    |     0.184 |
-|   sequencer_map |     0.166 |
-|     flag_15_reg |     0.004 |
+| Top             |    21.511 |
+|   Seven_seg_map |     0.286 |
+|   divider_map   |     0.077 |
+|   logic_map     |     1.378 |
+|   sequencer_map |     0.146 |
+|     flag_15_reg |     0.006 |
 +-----------------+-----------+
 
 

@@ -95,8 +95,8 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
                 --store A1 and B1 to RAM
 --                A(test_count_int) <= RAND_NUM(3 downto 0);
 --                B(test_count_int) <= RAND_NUM(7 downto 4);
-                A(test_count_int) <= "1000";
-                B(test_count_int) <= "0001";
+                A(test_count_int) <= "1" + test_count;
+                B(test_count_int) <= "0" + test_count;
                 --store student answer to RAM
                 S(test_count_int) <= SW;
                 --display A1
@@ -128,7 +128,7 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
 --                LED7 <= '1';--debug statement delete at implementation
                 
             end if;
-        elsif test_count = "100" then
+        elsif test_count >= "100" then
             --flash led7 and 8
             LED7 <= clk_slow;
             LED8 <= clk_slow;
