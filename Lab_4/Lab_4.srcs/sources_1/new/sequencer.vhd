@@ -40,6 +40,7 @@ entity sequencer is
            flag_0 : out STD_LOGIC;
            flag_15 : out STD_LOGIC;
            flag_17 : out STD_LOGIC;
+           test_count : out STD_LOGIC_VECTOR (2 downto 0);
            led15 : out STD_LOGIC
            );
 end sequencer;
@@ -47,30 +48,35 @@ end sequencer;
 architecture Behavioral of sequencer is
 
 signal state_counter : STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000"; 
+signal counter_for_logic : STD_LOGIC_VECTOR (2 DOWNTO 0) := "000";
 
 begin
 
 sequence_counter: process(clk_slow, reset, sw_15)
     begin
-        --pause switch
-        if sw_15 = '0' then
-            led15 <= '0';
-            --increments the state counter every slow clock cycle
-            if (rising_edge(clk_slow)) then
-                state_counter <= state_counter +1;
+        if counter_for_logic < "100" then
+            --pause switch
+            if sw_15 = '0' then
+                led15 <= '0';
+                --increments the state counter every slow clock cycle
+                if (rising_edge(clk_slow)) then
+                    state_counter <= state_counter +1;
+                end if;
+                
+                if state_counter >= "10001" then --if the count is 17 set to zero
+                    state_counter <=  "00000";
+                    counter_for_logic <= counter_for_logic + 1;
+                    test_count <= counter_for_logic;
+                end if;
+            elsif sw_15 = '1' then
+                --flash led 15
+                led15 <= clk_slow;
             end if;
-            
-            if state_counter >= "10001" then --if the count is 17 set to zero
-                state_counter <=  "00000";
-            end if;
-        elsif sw_15 = '1' then
-            --flash led 15
-            led15 <= clk_slow;
         end if;
-        
         --reset to reset the state to the first state
         if reset = '1' then
             state_counter <= "00000";
+            test_count <= "000";
         end if;
 end process sequence_counter;
 

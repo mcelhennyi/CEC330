@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon Sep 28 12:07:51 2015
-| Host         : IanMcElhenny-PC running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon Sep 28 15:21:46 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
 | Device       : xc7a100t
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    19 |
-| Minimum Number of register sites lost to control set restrictions |    71 |
+| Number of unique control sets                                     |    23 |
+| Minimum Number of register sites lost to control set restrictions |    84 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              94 |           31 |
+| No           | No                    | No                     |             106 |           47 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              38 |           13 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |               5 |            4 |
+| Yes          | No                    | No                     |              32 |            8 |
 | Yes          | No                    | Yes                    |               5 |            2 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -45,28 +45,32 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------+------------------------------+----------------------------------------+------------------+----------------+
-|            Clock Signal            |         Enable Signal        |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
-+------------------------------------+------------------------------+----------------------------------------+------------------+----------------+
-|  sequencer_map/flag_15_reg/G0      |                              |                                        |                1 |              1 |
-|  sequencer_map/flag_17_reg_i_1_n_1 |                              | sequencer_map/ltOp                     |                1 |              1 |
-|  sequencer_map/flag_00             |                              | sequencer_map/ltOp                     |                1 |              1 |
-|  logic_map/Q[0]                    |                              | logic_map/ltOp                         |                1 |              1 |
-|  divider_map/out[0]                |                              |                                        |                3 |              3 |
-|  logic_map/C_reg[3][3]_i_1_n_1     |                              |                                        |                1 |              4 |
-|  logic_map/C_reg[2][3]_i_1_n_1     |                              |                                        |                1 |              4 |
-|  logic_map/C_reg[1][3]_i_1_n_1     |                              |                                        |                1 |              4 |
-|  logic_map/C_reg[0][3]_i_2_n_1     |                              |                                        |                1 |              4 |
-|  divider_map/CLK_OUT_SLOW          | sequencer_map/state_counter0 | sequencer_map/state_counter[4]_i_3_n_1 |                2 |              5 |
-|  logic_map/B_reg[3][2]_i_1_n_1     |                              |                                        |                2 |              6 |
-|  logic_map/B_reg[2][2]_i_1_n_1     |                              |                                        |                2 |              6 |
-|  logic_map/B_reg[1][2]_i_1_n_1     |                              |                                        |                2 |              6 |
-|  logic_map/B_reg[0][2]_i_1_n_1     |                              |                                        |                2 |              6 |
-|  sequencer_map/E[0]                |                              |                                        |                3 |              7 |
-|  sequencer_map/SEG[2]_1[0]         |                              |                                        |                3 |              8 |
-|  sequencer_map/SEG[2][0]           |                              |                                        |                2 |              8 |
-|  CLK_IN_IBUF_BUFG                  |                              |                                        |                7 |             27 |
-|  n_0_15_BUFG                       |                              | BTNC_IBUF                              |               10 |             35 |
-+------------------------------------+------------------------------+----------------------------------------+------------------+----------------+
++------------------------------------------+------------------------------+----------------------------------------+------------------+----------------+
+|               Clock Signal               |         Enable Signal        |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++------------------------------------------+------------------------------+----------------------------------------+------------------+----------------+
+|  sequencer_map/flag_15_reg/G0            |                              |                                        |                1 |              1 |
+|  test_count_BUFG[2]                      |                              | sequencer_map/ltOp                     |                1 |              1 |
+| ~sequencer_map/counter_for_logic[2]      |                              |                                        |                1 |              1 |
+|  sequencer_map/flag_00                   |                              | sequencer_map/ltOp_0                   |                1 |              1 |
+|  sequencer_map/FLAG_an2_out              |                              |                                        |                1 |              1 |
+|  sequencer_map/test_count_reg[2]_i_1_n_0 |                              |                                        |                2 |              3 |
+|  sequencer_map/test_count_reg[2]_i_1_n_0 |                              | BTNC_IBUF                              |                2 |              3 |
+|  divider_map/O28[0]                      |                              |                                        |                2 |              3 |
+|  sequencer_map/SEG[2]_9[0]               |                              |                                        |                1 |              4 |
+|  sequencer_map/SEG[2]_6[0]               |                              |                                        |                1 |              4 |
+|  sequencer_map/SEG[2]_4[0]               |                              |                                        |                1 |              4 |
+|  sequencer_map/SEG[2]_11[0]              |                              |                                        |                3 |              4 |
+|  sequencer_map/SEG[2]_10[0]              |                              |                                        |                2 |              4 |
+|  sequencer_map/SEG[2]_1[0]               |                              |                                        |                1 |              4 |
+|  CLK_OUT_SLOW_BUFG                       | sequencer_map/state_counter0 | sequencer_map/state_counter[4]_i_3_n_0 |                2 |              5 |
+|  sequencer_map/E[0]                      |                              |                                        |                2 |              6 |
+|  sequencer_map/SEG[2]_8[0]               |                              |                                        |                5 |              8 |
+|  sequencer_map/SEG[2]_7[0]               |                              |                                        |                5 |              8 |
+|  sequencer_map/SEG[2]_5[0]               |                              |                                        |                4 |              8 |
+|  sequencer_map/SEG[2]_2[0]               |                              |                                        |                4 |              8 |
+|  sequencer_map/SEG[2]_12[0]              |                              |                                        |                4 |              8 |
+|  CLK_IN_IBUF_BUFG                        |                              |                                        |                7 |             27 |
+|  CLK_OUT_SLOW_BUFG                       | logic_map/review[0]_i_1_n_0  |                                        |                8 |             32 |
++------------------------------------------+------------------------------+----------------------------------------+------------------+----------------+
 
 

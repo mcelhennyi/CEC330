@@ -22,6 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -34,6 +35,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Logic is
     Port ( RAND_NUM : in STD_LOGIC_VECTOR (7 downto 0);
+           test_count : in STD_LOGIC_VECTOR (2 downto 0);
            FLAG_0 : in STD_LOGIC;
            FLAG_15 : in STD_LOGIC;
            FLAG_17 : in STD_LOGIC;
@@ -58,12 +60,10 @@ end Logic;
 
 architecture Behavioral of Logic is
 
-    signal test_count : STD_LOGIC_VECTOR (2 downto 0) := "000";
-
     type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (3 downto 0); --creates the width of a single part
 --    type AB_array is array (3 downto 0) of AB_values; --puts all the parts in a vector of 4 values
-    signal A : AB_values;
-    signal B : AB_values;
+    signal A : AB_values := ("0100", "0010", "1100", "0110");
+    signal B : AB_values := ("0011", "1110", "1000", "0111");
     
     type SC_values is array (3 downto 0) of STD_LOGIC_VECTOR (7 downto 0); --creates the width of a single part
 
@@ -77,7 +77,9 @@ architecture Behavioral of Logic is
 begin
 
 logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
-    variable test_count_int : integer := 0; --index of iteration
+    --if you need to cast test_count to int and use instead of 'test_count_int'
+  --  variable test_count_int : integer := 0; --index of iteration 
+    variable review : integer := 0; --index of the review mode
 --    variable A : AB_array;
 --    variable B : AB_array;
 --    variable S : SC_array;
@@ -95,36 +97,35 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
                 --store A1 and B1 to RAM
 --                A(test_count_int) <= RAND_NUM(3 downto 0);
 --                B(test_count_int) <= RAND_NUM(7 downto 4);
-                A(test_count_int) <= "1" + test_count;
-                B(test_count_int) <= "0" + test_count;
+--                A(test_count_int) <= "1" + test_count;
+--                B(test_count_int) <= "0" + test_count;
                 --store student answer to RAM
-                S(test_count_int) <= SW;
-                --display A1
-                Disp4 <= A(test_count_int);
-                --display B1
-                Disp2 <= B(test_count_int);
+                S(to_integer(signed(test_count))) <= SW;
+                --display A
+                Disp4 <= A(to_integer(signed(test_count)));
+                --display B
+                Disp2 <= B(to_integer(signed(test_count)));
                 --display sw Student's Answer
                 Disp7 <= SW(3 downto 0);
                 Disp8 <= SW(7 downto 4);           
             elsif FLAG_15 = '1' then
                 --display A1
-                Disp4 <= A(test_count_int);--keeps these displays on
+                Disp4 <= A(to_integer(signed(test_count)));--keeps these displays on
                 --display B1
-                Disp2 <= B(test_count_int);
+                Disp2 <= B(to_integer(signed(test_count)));
                 
                 --start 15 sec process
                 --turn on answer display
                 FLAG_an <= '1';
                 --get  actual answer and store actual answer to RAM
-                C(test_count_int) <= A(test_count_int) + B(test_count_int);
-                sum <= C(test_count_int);
+                C(to_integer(signed(test_count))) <= A(to_integer(signed(test_count))) + B(to_integer(signed(test_count)));
+                sum <= C(to_integer(signed(test_count)));
                 -- display answer
                 Disp6 <= sum(7 downto 4);
                 Disp5 <= sum(3 downto 0);
             elsif FLAG_17 = '1' then--it seems not to be running this at all now?
                 --start 17 sec process
-                test_count_int := test_count_int + 1;
-                test_count <= test_count + 1;
+               -- test_count_int := test_count_int + 1;
 --                LED7 <= '1';--debug statement delete at implementation
                 
             end if;
@@ -132,20 +133,36 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
             --flash led7 and 8
             LED7 <= clk_slow;
             LED8 <= clk_slow;
---            if RESET = '1' then
---                --set test_count to zero (which should start over the process)
---                test_count_int := 0;
---                test_count <= "000";
---            end if;
+            
+            if (rising_edge(clk_slow)) then
+                if BTNU = '1' then
+                    if review < 3 then
+                        review := review + 1;
+                    end if;
+                elsif BTND = '1' then
+                    if review > 0 then
+                        review := review - 1;
+                    end if;
+                end if;
+            end if;
+            --display A
+            Disp4 <= A(review);
+            --display B
+            Disp2 <= B(review);
+            --
+            Disp5 <= C(review)(3 downto 0);
+            Disp6 <= C(review)(7 downto 4);
+            Disp7 <= S(review)(3 downto 0);
+            Disp8 <= S(review)(7 downto 4);  
         end if;
         
-        if RESET = '1' then
-            --set test_count to zero (which should start over the process)
-            test_count_int := 0;
-            test_count <= "000";
-            --clear all RAM
+--        if RESET = '1' then
+--            --set test_count to zero (which should start over the process)
+--            test_count_int := 0;
+--            test_count <= "000";
+--            --clear all RAM
             
-        end if;
+--        end if;
         
     end process logic_sequence;
 

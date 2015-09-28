@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon Sep 28 12:08:31 2015
-| Host         : IanMcElhenny-PC running 64-bit Service Pack 1  (build 7601)
+| Date         : Mon Sep 28 15:22:23 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_timing_summary_routed.rpt -rpx Top_timing_summary_routed.rpx
 | Design       : Top
 | Device       : 7a100t-csg324
@@ -52,91 +52,33 @@ Table of Contents
 --------------------
  There are 27 register/latch pins with no clock driven by root clock pin: CLK_IN (HIGH)
 
+ There are 6 register/latch pins with no clock driven by root clock pin: SW15 (HIGH)
+
  There are 3 register/latch pins with no clock driven by root clock pin: divider_map/register_counter_reg[14]/C (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: divider_map/register_counter_reg[26]/C (HIGH)
+ There are 37 register/latch pins with no clock driven by root clock pin: divider_map/register_counter_reg[26]/C (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[0]/G (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: sequencer_map/counter_for_logic_reg[2]/G (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[10]/G (HIGH)
+ There are 71 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_0_reg/G (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[11]/G (HIGH)
+ There are 31 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_15_reg/L7/G (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[12]/G (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[0]/C (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[13]/G (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[1]/C (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[14]/G (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[2]/C (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[15]/G (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[3]/C (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[16]/G (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[4]/C (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[17]/G (HIGH)
+ There are 48 register/latch pins with no clock driven by root clock pin: sequencer_map/test_count_reg[0]/G (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[18]/G (HIGH)
+ There are 48 register/latch pins with no clock driven by root clock pin: sequencer_map/test_count_reg[1]/G (HIGH)
 
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[19]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[1]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[20]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[21]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[22]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[23]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[24]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[25]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[26]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[27]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[28]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[29]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[2]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[30]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[31]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[3]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[4]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[5]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[6]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[7]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[8]/G (HIGH)
-
- There are 40 register/latch pins with no clock driven by root clock pin: logic_map/test_count_int_reg[9]/G (HIGH)
-
- There are 98 register/latch pins with no clock driven by root clock pin: logic_map/test_count_reg[2]/G (HIGH)
-
- There are 98 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_0_reg/G (HIGH)
-
- There are 66 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_15_reg/L7/G (HIGH)
-
- There are 35 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_17_reg/G (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[0]/C (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[1]/C (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[2]/C (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[3]/C (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[4]/C (HIGH)
+ There are 72 register/latch pins with no clock driven by root clock pin: sequencer_map/test_count_reg[2]/G (HIGH)
 
 
 2. checking constant_clock
@@ -151,14 +93,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 184 pins that are not constrained for maximum delay. (HIGH)
+ There are 194 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 11 input ports with no input delay specified. (HIGH)
+ There are 13 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
@@ -199,7 +141,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 16 combinational latch loops in the design through latch input (HIGH)
+ There are 3 combinational latch loops in the design through latch input (HIGH)
 
 
 

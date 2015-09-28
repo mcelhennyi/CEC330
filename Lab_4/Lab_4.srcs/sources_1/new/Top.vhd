@@ -57,6 +57,7 @@ signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
 
+signal test_count : STD_LOGIC_VECTOR (2 downto 0) := "000";
 signal clk_slow : STD_LOGIC := '0';--The one Hz clock
 signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and cathode counter
 signal rand_num : STD_LOGIC_VECTOR (7 downto 0);
@@ -93,6 +94,7 @@ end component Divider;
 --
 component Logic
     Port ( RAND_NUM : in STD_LOGIC_VECTOR (7 downto 0);
+           test_count : in STD_LOGIC_VECTOR (2 downto 0);
            FLAG_0 : in STD_LOGIC;
            FLAG_15 : in STD_LOGIC;
            FLAG_17 : in STD_LOGIC;
@@ -122,6 +124,7 @@ component sequencer
            flag_0 : out STD_LOGIC;
            flag_15 : out STD_LOGIC;
            flag_17 : out STD_LOGIC;
+           test_count : out STD_LOGIC_VECTOR (2 downto 0);
            led15 : out STD_LOGIC
            );
 end component sequencer;
@@ -159,6 +162,7 @@ divider_map : Divider
                 
 logic_map : Logic 
     port map ( RAND_NUM => rand_num,
+               test_count => test_count,
                FLAG_0 => flag_0,
                FLAG_15 => flag_15,
                FLAG_17 => flag_17,
@@ -187,6 +191,7 @@ sequencer_map: sequencer
                flag_0 => flag_0,
                flag_15 => flag_15,
                flag_17 => flag_17,
+               test_count => test_count,
                led15 => LED15
                );
 
