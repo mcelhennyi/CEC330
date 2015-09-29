@@ -41,7 +41,9 @@ entity sequencer is
            flag_15 : out STD_LOGIC;
            flag_17 : out STD_LOGIC;
            test_count : out STD_LOGIC_VECTOR (2 downto 0);
-           led15 : out STD_LOGIC
+           led15 : out STD_LOGIC;
+           LED7 : out STD_LOGIC;
+           LED8 : out STD_LOGIC
            );
 end sequencer;
 
@@ -54,56 +56,63 @@ begin
 
 sequence_counter: process(clk_slow, reset, sw_15)
     begin
-        if counter_for_logic < "100" then
-            --pause switch
-            if sw_15 = '0' then
-                led15 <= '0';
-                --increments the state counter every slow clock cycle
-                if (rising_edge(clk_slow)) then
-                    state_counter <= state_counter +1;
-                end if;
-                
-                if state_counter >= "10001" then --if the count is 17 set to zero
-                    state_counter <=  "00000";
-                    counter_for_logic <= counter_for_logic + 1;
-                    test_count <= counter_for_logic;
-                end if;
-            elsif sw_15 = '1' then
-                --flash led 15
-                led15 <= clk_slow;
-            end if;
-        end if;
-        --reset to reset the state to the first state
+        --reset statement
         if reset = '1' then
+            --reset all counters to zero which will reinitiate whole process
             state_counter <= "00000";
+            counter_for_logic <= "000";
             test_count <= "000";
-        end if;
-end process sequence_counter;
-
-sequence: process(clk_slow, reset, sw_15)
-    begin     
-
-        if state_counter < "01111" then
-            --flag start state
-            flag_0 <= '1';
-            flag_17 <= '0';
-            flag_15 <= '0';
-            --led15 <= '1'; --debug statement delete at implementation
-        elsif state_counter >= "01111" and state_counter < "10001" then -->= 15 and < 17
-            --flag 15 seconds state
-            flag_0 <= '0';
-            flag_15 <= '1';
-            --led15 <= '0'; --debug statement delete at implementation
-        elsif state_counter >= "1000" then
-            --flag 17 seconds state
-            flag_15 <= '0';
---            if (rising_edge(clk_slow)) then
---                flag_17 <= '1';
---            end if;            
-            flag_17 <= '1';
---            led15 <= '1'; --debug statement delete at implementation
-            --state_counter <= "00000";
+        else
+            if counter_for_logic < "100" then 
+                ----------------
+                --TESTING MODE--
+                ----------------
+                if sw_15 = '1' then --sw if statement to pause the process
+                    --blink LED
+                    led15 <= clk_slow;
+                else
+                    --turn off LED 15  
+                    led15 <= '0';
+                    --increment timer
+                    if (rising_edge(clk_slow)) then
+                        state_counter <= state_counter +1;
+                        if state_counter = "10001" then
+                            --increment counter for logic
+                            counter_for_logic <= counter_for_logic + 1;
+                            test_count <= counter_for_logic;
+                            state_counter <= "00000";                        
+                        end if;
+                    end if;
+                    
+                    if state_counter < "01111" then --less than 15
+                        --flag start state
+                        flag_0 <= '1';
+                        flag_15 <= '0';
+                        flag_17 <= '0';
+                        --Light LED 7 and 8 for test mode
+                        LED7 <= '1';
+                        LED8 <= '1';
+                    elsif state_counter >= "01111" and state_counter < "10001" then -->= 15 and < 17
+                        --flag 15 seconds state
+                        flag_0 <= '0';
+                        flag_15 <= '1';   
+                        flag_17 <= '0';
+                        --turn off LED7 and 8 for display during test mode
+                        LED7 <= '0';
+                        LED8 <= '0';
+                    end if;
+                end if;
+            else --counter is 4 or more
+                ----------------
+                --LISTING MODE--
+                ----------------
+                --do not increment counters or reset
+                --flash LED 7 and LED 8    
+                LED7 <= clk_slow;
+                LED8 <= clk_slow;
+            end if;  
         end if;
         
-    end process sequence;
+end process sequence_counter;
+
 end Behavioral;

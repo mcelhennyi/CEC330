@@ -49,8 +49,6 @@ entity Logic is
            Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
-           LED7 : out STD_LOGIC;
-           LED8 : out STD_LOGIC;
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
            RESET : in STD_LOGIC;
@@ -60,15 +58,11 @@ end Logic;
 
 architecture Behavioral of Logic is
 
-    type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (3 downto 0); --creates the width of a single part
---    type AB_array is array (3 downto 0) of AB_values; --puts all the parts in a vector of 4 values
+    type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (3 downto 0); --
     signal A : AB_values := ("0100", "0010", "1100", "0110");
     signal B : AB_values := ("0011", "1110", "1000", "0111");
     
-    type SC_values is array (3 downto 0) of STD_LOGIC_VECTOR (7 downto 0); --creates the width of a single part
-
---    type SC_values is array (7 downto 0) of STD_LOGIC_VECTOR;
---    type SC_array is array(3 downto 0) of SC_values; 
+    type SC_values is array (3 downto 0) of STD_LOGIC_VECTOR (7 downto 0); --
     signal S : SC_values;
     signal C : SC_values;
         
@@ -76,64 +70,51 @@ architecture Behavioral of Logic is
 
 begin
 
-logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
-    --if you need to cast test_count to int and use instead of 'test_count_int'
-  --  variable test_count_int : integer := 0; --index of iteration 
-    variable review : integer := 0; --index of the review mode
---    variable A : AB_array;
---    variable B : AB_array;
---    variable S : SC_array;
---    variable C : SC_array;
+logic_sequence: process(FLAG_0, FLAG_15, RESET, clk_slow, test_count)--add btnc
 
+variable review : integer := 1; --index of the review mode
+variable index : integer := to_integer(signed(test_count)); --makes integer value of test count from sequencer
+    
     begin
-    --add if statment to clear test_count if btnc is pressed
-        if test_count < "100" then
-            LED7 <= '0';
-            LED8 <= '0';
+        if test_count < "100" then 
+        ----------------
+        --Testing mode--
+        ----------------
             if FLAG_0 = '1' then
-                --start process
                 --turn off correct answer display
                 FLAG_an <= '0';
                 --store A1 and B1 to RAM
---                A(test_count_int) <= RAND_NUM(3 downto 0);
---                B(test_count_int) <= RAND_NUM(7 downto 4);
---                A(test_count_int) <= "1" + test_count;
---                B(test_count_int) <= "0" + test_count;
+    --                A(test_count_int) <= RAND_NUM(3 downto 0);
+    --                B(test_count_int) <= RAND_NUM(7 downto 4);
+    --                A(test_count_int) <= "1" + test_count;
+    --                B(test_count_int) <= "0" + test_count;
                 --store student answer to RAM
-                S(to_integer(signed(test_count))) <= SW;
+                S(index) <= SW;
                 --display A
-                Disp4 <= A(to_integer(signed(test_count)));
+                Disp4 <= A(index);
                 --display B
-                Disp2 <= B(to_integer(signed(test_count)));
+                Disp2 <= B(index);
                 --display sw Student's Answer
                 Disp7 <= SW(3 downto 0);
                 Disp8 <= SW(7 downto 4);           
             elsif FLAG_15 = '1' then
                 --display A1
-                Disp4 <= A(to_integer(signed(test_count)));--keeps these displays on
+                Disp4 <= A(index);--keeps these displays on
                 --display B1
-                Disp2 <= B(to_integer(signed(test_count)));
-                
-                --start 15 sec process
+                Disp2 <= B(index);
                 --turn on answer display
                 FLAG_an <= '1';
                 --get  actual answer and store actual answer to RAM
-                C(to_integer(signed(test_count))) <= A(to_integer(signed(test_count))) + B(to_integer(signed(test_count)));
-                sum <= C(to_integer(signed(test_count)));
+                C(index) <= A(index) + B(index);
+                sum <= C(index);
                 -- display answer
                 Disp6 <= sum(7 downto 4);
                 Disp5 <= sum(3 downto 0);
-            elsif FLAG_17 = '1' then--it seems not to be running this at all now?
-                --start 17 sec process
-               -- test_count_int := test_count_int + 1;
---                LED7 <= '1';--debug statement delete at implementation
-                
             end if;
-        elsif test_count >= "100" then
-            --flash led7 and 8
-            LED7 <= clk_slow;
-            LED8 <= clk_slow;
-            
+        else 
+        ----------------
+        --listing mode--
+        ----------------
             if (rising_edge(clk_slow)) then
                 if BTNU = '1' then
                     if review < 3 then
@@ -149,21 +130,12 @@ logic_sequence: process(FLAG_0, FLAG_15, FLAG_17,RESET)--add btnc
             Disp4 <= A(review);
             --display B
             Disp2 <= B(review);
-            --
+            --display correct and student answer
             Disp5 <= C(review)(3 downto 0);
             Disp6 <= C(review)(7 downto 4);
             Disp7 <= S(review)(3 downto 0);
-            Disp8 <= S(review)(7 downto 4);  
+            Disp8 <= S(review)(7 downto 4); 
         end if;
-        
---        if RESET = '1' then
---            --set test_count to zero (which should start over the process)
---            test_count_int := 0;
---            test_count <= "000";
---            --clear all RAM
-            
---        end if;
-        
-    end process logic_sequence;
+end process logic_sequence;
 
 end Behavioral;

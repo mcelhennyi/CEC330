@@ -108,8 +108,6 @@ component Logic
            Disp6 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp7 : out STD_LOGIC_VECTOR (3 downto 0);
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
-           LED7 : out STD_LOGIC;
-           LED8 : out STD_LOGIC;
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
            RESET : in STD_LOGIC;
@@ -125,7 +123,9 @@ component sequencer
            flag_15 : out STD_LOGIC;
            flag_17 : out STD_LOGIC;
            test_count : out STD_LOGIC_VECTOR (2 downto 0);
-           led15 : out STD_LOGIC
+           led15 : out STD_LOGIC;
+           LED7 : out STD_LOGIC;
+           LED8 : out STD_LOGIC
            );
 end component sequencer;
 
@@ -176,8 +176,6 @@ logic_map : Logic
                Disp6 => Disp6,
                Disp7 => Disp7,
                Disp8 => Disp8,
-               LED7 => LED7,
-               LED8 => LED8,
                BTNU => BTNU,
                BTND => BTND,
                RESET => BTNC,
@@ -192,7 +190,9 @@ sequencer_map: sequencer
                flag_15 => flag_15,
                flag_17 => flag_17,
                test_count => test_count,
-               led15 => LED15
+               led15 => LED15,
+               LED7 => LED7,
+               LED8 => LED8
                );
 
 random_map: random
