@@ -72,7 +72,7 @@ begin
 
 logic_sequence: process(FLAG_0, FLAG_15, RESET, clk_slow, test_count)--add btnc
 
-variable review : integer := 1; --index of the review mode
+variable review : integer := 0; --index of the review mode
 variable index : integer := to_integer(signed(test_count)); --makes integer value of test count from sequencer
     
     begin
