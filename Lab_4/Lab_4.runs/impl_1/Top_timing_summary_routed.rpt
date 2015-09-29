@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon Sep 28 23:41:43 2015
-| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
+| Date         : Tue Sep 29 14:00:49 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_timing_summary_routed.rpt -rpx Top_timing_summary_routed.rpx
 | Design       : Top
 | Device       : 7a100t-csg324
@@ -50,37 +50,35 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 4 register/latch pins with no clock driven by root clock pin: BTNC (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: BTNC (HIGH)
 
  There are 27 register/latch pins with no clock driven by root clock pin: CLK_IN (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: SW15 (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: SW15 (HIGH)
 
  There are 3 register/latch pins with no clock driven by root clock pin: divider_map/register_counter_reg[14]/C (HIGH)
 
- There are 43 register/latch pins with no clock driven by root clock pin: divider_map/register_counter_reg[26]/C (HIGH)
+ There are 40 register/latch pins with no clock driven by root clock pin: divider_map/register_counter_reg[26]/C (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: sequencer_map/counter_for_logic_reg[2]/C (HIGH)
+ There are 44 register/latch pins with no clock driven by root clock pin: sequencer_map/counter_for_logic_reg[0]/C (HIGH)
 
- There are 71 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_0_reg/G (HIGH)
+ There are 44 register/latch pins with no clock driven by root clock pin: sequencer_map/counter_for_logic_reg[1]/C (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_15_reg/G (HIGH)
+ There are 65 register/latch pins with no clock driven by root clock pin: sequencer_map/counter_for_logic_reg[2]/C (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[0]/C (HIGH)
+ There are 60 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_0_reg/G (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[1]/C (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: sequencer_map/flag_15_reg/G (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[2]/C (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[0]/C (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[3]/C (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[1]/C (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[4]/C (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[2]/C (HIGH)
 
- There are 48 register/latch pins with no clock driven by root clock pin: sequencer_map/test_count_reg[0]/C (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[3]/C (HIGH)
 
- There are 48 register/latch pins with no clock driven by root clock pin: sequencer_map/test_count_reg[1]/C (HIGH)
-
- There are 71 register/latch pins with no clock driven by root clock pin: sequencer_map/test_count_reg[2]/C (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: sequencer_map/state_counter_reg[4]/C (HIGH)
 
 
 2. checking constant_clock
@@ -95,7 +93,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 202 pins that are not constrained for maximum delay. (HIGH)
+ There are 183 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

@@ -79,7 +79,6 @@ sequence_counter: process(clk_slow, reset, sw_15)
                         if state_counter = "10001" then
                             --increment counter for logic
                             counter_for_logic <= counter_for_logic + 1;
-                            test_count <= counter_for_logic;
                             state_counter <= "00000";                        
                         end if;
                     end if;
@@ -108,11 +107,12 @@ sequence_counter: process(clk_slow, reset, sw_15)
                 ----------------
                 --do not increment counters or reset
                 --flash LED 7 and LED 8    
-                LED7 <= clk_slow;
+                LED7 <= not clk_slow;
                 LED8 <= clk_slow;
             end if;  
         end if;
         
+        test_count <= counter_for_logic;
 end process sequence_counter;
 
 end Behavioral;

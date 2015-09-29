@@ -58,9 +58,9 @@ end Logic;
 
 architecture Behavioral of Logic is
 
-    type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (3 downto 0); --
-    signal A : AB_values := ("0100", "0010", "1100", "0110");
-    signal B : AB_values := ("0011", "1110", "1000", "0111");
+    type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (4 downto 0); --
+    signal A : AB_values := ("01100", "00001", "01110", "01111");
+    signal B : AB_values := ("01100", "00101", "01110", "01111");
     
     type SC_values is array (3 downto 0) of STD_LOGIC_VECTOR (7 downto 0); --
     signal S : SC_values;
@@ -91,25 +91,30 @@ variable index : integer := to_integer(signed(test_count)); --makes integer valu
                 --store student answer to RAM
                 S(index) <= SW;
                 --display A
-                Disp4 <= A(index);
+                Disp4 <= A(index)(3 downto 0);
                 --display B
-                Disp2 <= B(index);
+                Disp2 <= B(index)(3 downto 0);
                 --display sw Student's Answer
                 Disp7 <= SW(3 downto 0);
-                Disp8 <= SW(7 downto 4);           
+                Disp8 <= SW(7 downto 4);   
+                --get  actual answer and store actual answer to RAM
+                C(index) <= A(index) + B(index);        
             elsif FLAG_15 = '1' then
                 --display A1
-                Disp4 <= A(index);--keeps these displays on
+                Disp4 <= A(index)(3 downto 0);--keeps these displays on
                 --display B1
-                Disp2 <= B(index);
+                Disp2 <= B(index)(3 downto 0);
                 --turn on answer display
                 FLAG_an <= '1';
                 --get  actual answer and store actual answer to RAM
-                C(index) <= A(index) + B(index);
-                sum <= C(index);
-                -- display answer
-                Disp6 <= sum(7 downto 4);
-                Disp5 <= sum(3 downto 0);
+--                C(index) <= A(index) + B(index);
+--                sum <= C(index);
+--                -- display answer
+--                Disp6 <= sum(7 downto 4);
+--                Disp5 <= sum(3 downto 0);
+                Disp6 <= C(index)(7 downto 4);
+                --Disp6 <= "0001";
+                Disp5 <= C(index)(3 downto 0);
             end if;
         else 
         ----------------
@@ -127,14 +132,17 @@ variable index : integer := to_integer(signed(test_count)); --makes integer valu
                 end if;
             end if;
             --display A
-            Disp4 <= A(review);
+            Disp4 <= A(review)(3 downto 0);
             --display B
-            Disp2 <= B(review);
+            Disp2 <= B(review)(3 downto 0);
             --display correct and student answer
+            FLAG_an <= '1';
             Disp5 <= C(review)(3 downto 0);
             Disp6 <= C(review)(7 downto 4);
             Disp7 <= S(review)(3 downto 0);
             Disp8 <= S(review)(7 downto 4); 
+--            Disp7 <= "1111";
+--            Disp8 <= "1111";
         end if;
 end process logic_sequence;
 

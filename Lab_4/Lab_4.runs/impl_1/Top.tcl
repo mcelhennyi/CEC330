@@ -51,7 +51,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   open_checkpoint Top_routed.dcp
-  set_property webtalk.parent_dir F:/CEC330/Lab_4/Lab_4.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Austin/Documents/CEC330/Lab_4/Lab_4.cache/wt [current_project]
   write_bitstream -force Top.bit 
   catch { write_sysdef -hwdef Top.hwdef -bitfile Top.bit -meminfo Top.mmi -ltxfile debug_nets.ltx -file Top.sysdef }
   close_msg_db -file write_bitstream.pb

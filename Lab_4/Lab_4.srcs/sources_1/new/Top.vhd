@@ -198,6 +198,6 @@ sequencer_map: sequencer
 random_map: random
       port map ( clk_in => CLK_IN,
                  rand_out => rand_num
-                );
+                 );
 
 end Behavioral;
