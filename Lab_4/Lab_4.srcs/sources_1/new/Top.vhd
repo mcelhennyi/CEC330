@@ -88,12 +88,12 @@ component Divider
     Port ( CLK_IN : in STD_LOGIC;
            CLK_OUT_SLOW : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC
---           RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0)
+--           RAND_OUT : out STD_LOGIC_VECTOR (7 downto 0) --not being used
            );
 end component Divider;
---
+--Does all of the logic for the program depending on what the sequencer tells it to do
 component Logic
-    Port ( RAND_NUM : in STD_LOGIC_VECTOR (7 downto 0);
+    Port ( --RAND_NUM : in STD_LOGIC_VECTOR (7 downto 0); --not being used
            test_count : in STD_LOGIC_VECTOR (2 downto 0);
            FLAG_0 : in STD_LOGIC;
            FLAG_15 : in STD_LOGIC;
@@ -110,11 +110,11 @@ component Logic
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
-           RESET : in STD_LOGIC;
+           --RESET : in STD_LOGIC; --not being used
            clk_slow: in STD_LOGIC
            );
 end component Logic;
---
+--Controls the Logic module and the LEDs
 component sequencer
     Port ( reset : in STD_LOGIC;
            clk_slow : in STD_LOGIC;
@@ -129,11 +129,12 @@ component sequencer
            );
 end component sequencer;
 
-component random
-      Port ( clk_in : in STD_LOGIC;
-             rand_out : out STD_LOGIC_VECTOR (7 downto 0)
-            );
-end component random;
+--not being used
+--component random
+--      Port ( clk_in : in STD_LOGIC;
+--             rand_out : out STD_LOGIC_VECTOR (7 downto 0)
+--            );
+--end component random;
 
 begin
 --maps the driver 
@@ -157,11 +158,11 @@ divider_map : Divider
      port map ( CLK_IN  => CLK_IN,
                 CLK_OUT_slow => clk_slow,
                 CLK_OUT_an => clk_an
---                RAND_OUT => rand_num
+--                RAND_OUT => rand_num --not being used
                 );
                 
 logic_map : Logic 
-    port map ( RAND_NUM => rand_num,
+    port map ( --RAND_NUM => rand_num, --not being used
                test_count => test_count,
                FLAG_0 => flag_0,
                FLAG_15 => flag_15,
@@ -178,7 +179,7 @@ logic_map : Logic
                Disp8 => Disp8,
                BTNU => BTNU,
                BTND => BTND,
-               RESET => BTNC,
+               --RESET => BTNC, --not being used
                clk_slow => clk_slow
                );
                
@@ -195,9 +196,10 @@ sequencer_map: sequencer
                LED8 => LED8
                );
 
-random_map: random
-      port map ( clk_in => CLK_IN,
-                 rand_out => rand_num
-                 );
+--not being used
+--random_map: random 
+--      port map ( clk_in => CLK_IN,
+--                 rand_out => rand_num
+--                 );
 
 end Behavioral;

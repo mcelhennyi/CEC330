@@ -57,12 +57,7 @@ architecture Behavioral of Seven_seg_driver is
     type an_array is array(1 to 8) of STD_LOGIC_VECTOR (7 downto 0) ; 
     signal an : an_array := ("11111110","11111101","11111011","11110111","11101111","11011111","10111111","01111111");
                           --  disp1      disp2      disp3      disp4      disp5      disp6      disp7      disp8
---    signal an_OFF : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11111111";
-    --^ what is this? -Ian
-    -- it was just a constant value so i didnt have to type "11111111" every time i wanted to turn off a display -Austin
-    
-    
-    
+   
 begin
 --These anodes are not used and are set to be off
 an(1) <= "11111111";

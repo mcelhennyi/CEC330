@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Tue Sep 29 14:00:50 2015
+| Date              : Wed Sep 30 11:16:02 2015
 | Host              : Austin-MBP running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Top_clock_utilization_routed.rpt
 | Design            : Top
@@ -74,7 +74,7 @@ Table of Contents
 |     3 | sequencer_map/LED7_reg_i_2           | sequencer_map/LED7_reg_i_2_n_0   |    2 |     1 |    no |
 |     4 | sequencer_map/flag_0_reg_i_2         | sequencer_map/flag_0_reg_i_2_n_0 |    2 |     1 |    no |
 |     5 | sequencer_map/Disp2_reg[3]_i_2       | sequencer_map/SEG[2]_6           |    3 |     1 |    no |
-|     6 | divider_map/register_counter_reg[14] | divider_map/O29[0]               |    4 |     3 |    no |
+|     6 | divider_map/register_counter_reg[14] | divider_map/O28[0]               |    4 |     3 |    no |
 |     7 | sequencer_map/Disp5_reg[3]_i_2       | sequencer_map/E[0]               |    4 |     4 |    no |
 |     8 | sequencer_map/Disp7_reg[3]_i_2       | sequencer_map/SEG[2]_7[0]        |    8 |     3 |    no |
 |     9 | sequencer_map/C_reg[2][3]_i_1        | sequencer_map/SEG[2]_1[0]        |   11 |     6 |    no |
@@ -151,11 +151,11 @@ add_cells_to_pblock [get_pblocks  {CLKAG_CLK_OUT_SLOW_BUFG}] [get_cells -filter 
 resize_pblock [get_pblocks {CLKAG_CLK_OUT_SLOW_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "divider_map/O29[0]" driven by instance "divider_map/register_counter_reg[14]" located at site "SLICE_X1Y77"
+# Clock net "divider_map/O28[0]" driven by instance "divider_map/register_counter_reg[14]" located at site "SLICE_X1Y77"
 #startgroup
-create_pblock {CLKAG_divider_map/O29[0]}
-add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/O29[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/O29[0]"}]]]
-resize_pblock [get_pblocks {CLKAG_divider_map/O29[0]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_divider_map/O28[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/O28[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/O28[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_divider_map/O28[0]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
 # Clock net "logic_map/FLAG_an_reg/G0" driven by instance "logic_map/FLAG_an_reg/L3_2" located at site "SLICE_X3Y75"

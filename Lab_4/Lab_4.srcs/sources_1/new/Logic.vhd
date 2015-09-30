@@ -34,7 +34,7 @@ use ieee.numeric_std.ALL;
 --use UNISIM.VComponents.all;
 
 entity Logic is
-    Port ( RAND_NUM : in STD_LOGIC_VECTOR (7 downto 0);
+    Port ( --RAND_NUM : in STD_LOGIC_VECTOR (7 downto 0); --not being used
            test_count : in STD_LOGIC_VECTOR (2 downto 0);
            FLAG_0 : in STD_LOGIC;
            FLAG_15 : in STD_LOGIC;
@@ -51,26 +51,26 @@ entity Logic is
            Disp8 : out STD_LOGIC_VECTOR (3 downto 0);
            BTNU : in STD_LOGIC;
            BTND : in STD_LOGIC;
-           RESET : in STD_LOGIC;
+--           RESET : in STD_LOGIC; --not being used
            clk_slow : in STD_LOGIC
            );
 end Logic;
 
 architecture Behavioral of Logic is
 
+    --makes an array for the A and B values
     type AB_values is array (3 downto 0) of STD_LOGIC_VECTOR (4 downto 0); --
     signal A : AB_values := ("01100", "00001", "01110", "01111");
     signal B : AB_values := ("01100", "00101", "01110", "01111");
     
+    --makes an array for the student and correct answer values
     type SC_values is array (3 downto 0) of STD_LOGIC_VECTOR (7 downto 0); --
     signal S : SC_values;
     signal C : SC_values;
-        
-    signal sum : STD_LOGIC_VECTOR (7 DOWNTO 0) := x"00"; --temp sum each iteration
 
 begin
 
-logic_sequence: process(FLAG_0, FLAG_15, RESET, clk_slow, test_count)--add btnc
+logic_sequence: process(FLAG_0, FLAG_15, clk_slow, test_count)
 
 variable review : integer := 0; --index of the review mode
 variable index : integer := to_integer(signed(test_count)); --makes integer value of test count from sequencer
@@ -83,11 +83,6 @@ variable index : integer := to_integer(signed(test_count)); --makes integer valu
             if FLAG_0 = '1' then
                 --turn off correct answer display
                 FLAG_an <= '0';
-                --store A1 and B1 to RAM
-    --                A(test_count_int) <= RAND_NUM(3 downto 0);
-    --                B(test_count_int) <= RAND_NUM(7 downto 4);
-    --                A(test_count_int) <= "1" + test_count;
-    --                B(test_count_int) <= "0" + test_count;
                 --store student answer to RAM
                 S(index) <= SW;
                 --display A
@@ -106,20 +101,15 @@ variable index : integer := to_integer(signed(test_count)); --makes integer valu
                 Disp2 <= B(index)(3 downto 0);
                 --turn on answer display
                 FLAG_an <= '1';
-                --get  actual answer and store actual answer to RAM
---                C(index) <= A(index) + B(index);
---                sum <= C(index);
---                -- display answer
---                Disp6 <= sum(7 downto 4);
---                Disp5 <= sum(3 downto 0);
+                -- display answer
                 Disp6 <= C(index)(7 downto 4);
-                --Disp6 <= "0001";
                 Disp5 <= C(index)(3 downto 0);
             end if;
         else 
         ----------------
         --listing mode--
         ----------------
+            --Buttons Up and Down work off of the 1Hz clock signal
             if (rising_edge(clk_slow)) then
                 if BTNU = '1' then
                     if review < 3 then
@@ -141,8 +131,6 @@ variable index : integer := to_integer(signed(test_count)); --makes integer valu
             Disp6 <= C(review)(7 downto 4);
             Disp7 <= S(review)(3 downto 0);
             Disp8 <= S(review)(7 downto 4); 
---            Disp7 <= "1111";
---            Disp8 <= "1111";
         end if;
 end process logic_sequence;
 

@@ -54,7 +54,7 @@ counter: process(CLK_IN)
         end if;
     end process counter;
     
-CLK_OUT_SLOW <= register_counter(26);--Slow 1Hz clock--26
+CLK_OUT_SLOW <= register_counter(26);--Slow 1Hz clock
 CLK_OUT_AN <= register_counter(14);--About 70Hz for display switching
 --RAND_OUT <= register_counter(15 downto 8);
 
