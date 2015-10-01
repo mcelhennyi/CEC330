@@ -58,11 +58,17 @@ signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
 signal clk_slow : STD_LOGIC := '0';--The one Hz clock
 signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and cathode counter
 
-signal ram_address : STD_LOGIC_VECTOR (3 downto 0);
+signal mem_addr : STD_LOGIC_VECTOR (3 downto 0);
 signal data_to_ram : STD_LOGIC_VECTOR (7 downto 0);
 signal write_enabled : STD_LOGIC;
 signal read_endabled : STD_LOGIC;
 signal data_from_ram : STD_LOGIC_VECTOR (7 downto 0);
+
+signal go_up : STD_LOGIC;
+signal go_down : STD_LOGIC;
+
+type FSM_state_type is (st1_wait, st2_go_up, st3_go_down, st4_write, st5_read_instr, st6_read_op_A_B, st7_store_reg_A, st8_store_reg_B, st9_execute, st10_write_result); 
+signal state, next_state : FSM_state_type;
 
 --Drives the seven segment displays
 component Seven_seg_driver
@@ -99,23 +105,12 @@ component Memory
            );
 end component Memory;
 
---component Memory_controller
---    Port ( BTNC : in STD_LOGIC;
---           BTNU : in STD_LOGIC;
---           BTND : in STD_LOGIC;
---           SW : in STD_LOGIC_VECTOR (7 downto 0);
---           CLK_SLOW : in STD_LOGIC;
---           address_out : out STD_LOGIC_VECTOR (3 downto 0);
---           data_out : out STD_LOGIC_VECTOR (7 downto 0)
---           );
---end component Memory_controller;
-
 begin
 --maps the driver 
 Seven_seg_map : Seven_seg_driver
      port map ( CLK_AN => clk_an,
-                Disp1 => Disp1,
-                Disp2 => Disp2,
+                Disp1 => data_from_ram(3 downto 0),
+                Disp2 => data_from_ram(7 downto 4),
                 Disp3 => Disp3,
                 Disp4 => Disp4,
                 Disp5 => Disp5,
@@ -136,23 +131,118 @@ divider_map : Divider
 --
 memory_map : Memory
     port map ( CLK => CLK_IN,
-               address => ram_address,
+               address => mem_addr,
                data_in => data_to_ram,
                wr => write_enabled,
                read => read_endabled,
                data_out => data_from_ram
                );
---
---memory_controller_map : Memory_controller
---    port map ( BTNC => BTNC,
---               BTNU => BTNU,
---               BTND => BTND,
---               SW => SW,
---               CLK_SLOW => clk_slow,
---               address_out => ram_address,
---               data_out => data_to_ram
---               );
---
+------------------------------------------------------------------
 
+	Address_Coding : process (clk_slow, go_up, go_down)	
+		begin
+			if rising_edge(clk_slow) then
+				if go_up = '1' then
+					mem_addr <= mem_addr + 1;
+				elsif go_down = '1' then 
+					mem_addr <= mem_addr - 1;
+				end if;	
+			end if;	
+		end process address_coding;
+	
+------------------------------------------------------------
+   SYNC_PROC: process (CLK_IN)
+   begin
+      if (CLK_IN'event and CLK_IN = '1') then
+--         if (RESET = '0') then
+--            state <= st1_wait;
+--         else
+            state <= next_state;
+--         end if;        
+      end if;
+   end process;
+
+   OUTPUT_DECODE: process (state)
+   begin
+      case state is
+			when st1_wait =>
+				mem_wren <= '0';
+				go_up <= '0';
+				go_down	<= '0';
+			when st2_go_up =>
+				mem_wren <= '0';
+				go_up <= '1';
+				go_down	<= '0';
+			when st3_go_down =>
+				mem_wren <= '0';
+				go_up <= '0';
+				go_down	<= '1';
+			when st4_write =>
+                mem_wren <= '1';
+                go_up <= '0';
+                go_down <= '0';
+			when st5_read_instr =>
+			
+			when st6_read_op_A_B =>
+			
+			when st7_store_reg_A =>
+			
+			when st8_store_reg_B =>
+			
+			when st9_execute =>
+			
+			when st10_write_result =>
+			 
+			when others => null;
+      end case;
+   end process;
+ 
+   NEXT_STATE_DECODE: process (state, BTN_C, BTN_U, BTN_D)
+   begin
+      next_state <= state;  
+      
+    case (state) is
+        when st1_wait =>
+            if BTNC = '1' then
+				next_state <= st4_write;
+			elsif BTNU = '1' then
+                nextstate <= st2_go_up;
+			elsif BTND = '1' then
+               next_state <= st3_go_down;
+            end if; 
+        when st2go_up =>
+			if BTN_U = '0' then
+			   next_state <= st1_wait;
+			end if;
+		when st3_go_down =>
+            if BTN_D = '0' then
+				next_state <= st1_wait;
+			end if;
+	    when st4_write =>
+            next_state <= st1_wait;
+            
+        when st5_read_instr =>
+            next_state <= st1_wait;       
+            
+        when st6_read_op_A_B =>
+            next_state <= st1_wait;
+            
+        when st7_store_reg_A =>
+            next_state <= st8_store_reg_B;
+            
+        when st8_store_reg_B =>
+            next_state <= st9_execute;
+            
+        when st9_execute =>
+            next_state <= st10_write_result;
+            
+        when st10_write_result =>
+            next_state <= st1_wait;
+            
+        when others =>
+            next_state <= st1_wait;
+            
+      end case;      
+   end process;
 
 end Behavioral;
