@@ -60,15 +60,24 @@ signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and 
 
 signal mem_addr : STD_LOGIC_VECTOR (3 downto 0);
 signal data_to_ram : STD_LOGIC_VECTOR (7 downto 0);
-signal write_enabled : STD_LOGIC;
-signal read_endabled : STD_LOGIC;
+signal mem_wren  : STD_LOGIC;
 signal data_from_ram : STD_LOGIC_VECTOR (7 downto 0);
 
 signal go_up : STD_LOGIC;
 signal go_down : STD_LOGIC;
 
-type FSM_state_type is (st1_wait, st2_go_up, st3_go_down, st4_write, st5_read_instr, st6_read_op_A_B, st7_store_reg_A, st8_store_reg_B, st9_execute, st10_write_result); 
+type FSM_state_type is (st1_wait, st2_go_up, st3_go_down, st4_write, st5_read_instr, 
+st6_read_op_A_B, st6_5_change_mem, st7_store_reg_A,st7_5_change_mem, st8_store_reg_B, 
+st9_execute, st10_write_result); 
 signal state, next_state : FSM_state_type;
+
+signal EE : STD_LOGIC;
+signal INSTR : STD_LOGIC_VECTOR (3 downto 0);
+signal OP_A : STD_LOGIC_VECTOR (3 downto 0);
+signal OP_B : STD_LOGIC_VECTOR (3 downto 0);
+
+signal REG_A : STD_LOGIC_VECTOR (7 downto 0);
+signal REG_B : STD_LOGIC_VECTOR (7 downto 0);
 
 --Drives the seven segment displays
 component Seven_seg_driver
@@ -111,8 +120,8 @@ Seven_seg_map : Seven_seg_driver
      port map ( CLK_AN => clk_an,
                 Disp1 => data_from_ram(3 downto 0),
                 Disp2 => data_from_ram(7 downto 4),
-                Disp3 => Disp3,
-                Disp4 => Disp4,
+                Disp3 => mem_addr,
+                Disp4 => INSTR,
                 Disp5 => Disp5,
                 Disp6 => Disp6,
                 Disp7 => Disp7,
@@ -133,7 +142,7 @@ memory_map : Memory
     port map ( CLK => CLK_IN,
                address => mem_addr,
                data_in => data_to_ram,
-               wr => write_enabled,
+               wr => mem_wren,
                read => read_endabled,
                data_out => data_from_ram
                );
@@ -169,30 +178,69 @@ memory_map : Memory
 				mem_wren <= '0';
 				go_up <= '0';
 				go_down	<= '0';
+				EE <= '0';
 			when st2_go_up =>
 				mem_wren <= '0';
 				go_up <= '1';
 				go_down	<= '0';
+				EE <= '0';
 			when st3_go_down =>
 				mem_wren <= '0';
 				go_up <= '0';
 				go_down	<= '1';
+				EE <= '0';
 			when st4_write =>
                 mem_wren <= '1';
                 go_up <= '0';
                 go_down <= '0';
+                EE <= '0';
 			when st5_read_instr =>
-			
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+			    EE <= '0';
+			    INSTR <= SW(7 downto 4);--
 			when st6_read_op_A_B =>
-			
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+			    EE <= '0';
+			    OP_A <=  SW(7 downto 4);--
+			    OP_B <=  SW(3 downto 0);--
+			when st6_5_change_mem =>
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+                EE <= '0';
+			    mem_addr <= OP_A;
 			when st7_store_reg_A =>
-			
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+			    EE <= '0';
+			    REG_A <= data_from_ram;
+			when st7_5_change_mem =>
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+                EE <= '0';
+                mem_addr <= OP_B;    
 			when st8_store_reg_B =>
-			
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+			    EE <= '0';
+			    REG_B <= data_from_ram;
 			when st9_execute =>
-			
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+			    EE <= '1';
 			when st10_write_result =>
-			 
+			    mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+			    EE <= '0';
 			when others => null;
       end case;
    end process;
@@ -203,12 +251,16 @@ memory_map : Memory
       
     case (state) is
         when st1_wait =>
-            if BTNC = '1' then
-				next_state <= st4_write;
-			elsif BTNU = '1' then
+            if BTNU = '1' then
                 nextstate <= st2_go_up;
 			elsif BTND = '1' then
-               next_state <= st3_go_down;
+                next_state <= st3_go_down;
+            elsif BTNC = '1' then
+                next_state <= st4_write;
+            elsif BTNL = '1' then
+                next_state <= st5_read_instr;
+            elsif BTNR = '1' then
+                next_state <= st6_read_op_A_B;
             end if; 
         when st2go_up =>
 			if BTN_U = '0' then
@@ -219,26 +271,23 @@ memory_map : Memory
 				next_state <= st1_wait;
 			end if;
 	    when st4_write =>
-            next_state <= st1_wait;
-            
+            next_state <= st1_wait;          
         when st5_read_instr =>
-            next_state <= st1_wait;       
-            
+            next_state <= st1_wait;                 
         when st6_read_op_A_B =>
-            next_state <= st1_wait;
-            
+            next_state <= st6_5_change_mem;  
+        when st6_5_change_mem  
+            next_state <= st7_store_reg_A; 
         when st7_store_reg_A =>
-            next_state <= st8_store_reg_B;
-            
+            next_state <= st7_5_change_mem; 
+        when st7_5_change_mem
+            next_state <= st8_store_reg_B;         
         when st8_store_reg_B =>
-            next_state <= st9_execute;
-            
+            next_state <= st9_execute;          
         when st9_execute =>
-            next_state <= st10_write_result;
-            
+            next_state <= st10_write_result;           
         when st10_write_result =>
             next_state <= st1_wait;
-            
         when others =>
             next_state <= st1_wait;
             

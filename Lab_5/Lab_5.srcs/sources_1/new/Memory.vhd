@@ -60,24 +60,6 @@ variable index_address : integer := to_integer(signed(address)); --makes integer
         end if;
 
     data_out <= RAM(index_address);
-                
---        --Buttons Up and Down work off of the 1Hz clock signal
---        if (rising_edge(CLK_SLOW)) then
---            if BTNU = '1' then
---                if address < "1111" then
---                    address <= address + 1;
---                else
---                    address <= "0000";
---                end if;
---            elsif BTND = '1' then
---                if review > "0000" then
---                    address <= address - 1;
---                else
---                    address <= "1111";
---                end if;
---            end if;
---        end if;
---        --
 
     end process memory_control;        
 
