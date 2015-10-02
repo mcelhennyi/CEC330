@@ -34,11 +34,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Execute is
     Port ( reg_a : in STD_LOGIC_VECTOR (7 downto 0);
            reg_b : in STD_LOGIC_VECTOR (7 downto 0);
-           instr : in STD_LOGIC_VECTOR (2 downto 0);
+           instr : in STD_LOGIC_VECTOR (3 downto 0);
            ee : in STD_LOGIC;
            out_value : out STD_LOGIC_VECTOR (7 downto 0);
            store_a : out STD_LOGIC
-          );
+           );
 end Execute;
 
 architecture Behavioral of Execute is
@@ -86,12 +86,12 @@ if ee = '1' then
             out_value <= not(reg_a xor reg_b);
             store_a <= '0';
         when others => 
-            out_value <= "0000";
+            out_value <= "00000000";
             store_a <= '1';
     end case;
 end if;
     
-end process logic_state;
+end process logic_switch;
 
 
 

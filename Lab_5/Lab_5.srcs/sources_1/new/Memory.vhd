@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -35,7 +36,7 @@ entity Memory is
     Port ( CLK : in STD_LOGIC;
            address : in STD_LOGIC_VECTOR (3 downto 0);
            data_in : in STD_LOGIC_VECTOR (7 downto 0);
-           WE : in STD_LOGIC;
+           we : in STD_LOGIC;
            data_out : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end Memory;
@@ -49,17 +50,17 @@ architecture Behavioral of Memory is
 begin
 
 memory_control: process(CLK)
-variable index_address : integer := to_integer(signed(address)); --makes integer value of test count from sequencer
+--variable index_address : integer := to_integer(signed(address)); --makes integer value of test count from sequencer
   
     begin
     
         if (CLK'event and CLK = '1') then
-            if (WE = '1') then
-                RAM(index_address) <= data_in;
+            if (we = '1') then
+                RAM(conv_integer(address)) <= data_in;
             end if;
         end if;
 
-    data_out <= RAM(index_address);
+    data_out <= RAM(conv_integer(address));
 
     end process memory_control;        
 

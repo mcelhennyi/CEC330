@@ -1,0 +1,66 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Thu Oct 01 20:55:23 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    13 |
+| Minimum Number of register sites lost to control set restrictions |    36 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              84 |           29 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               8 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+-------------------------------------+------------------+------------------+----------------+
+|         Clock Signal         |            Enable Signal            | Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------------------+-------------------------------------+------------------+------------------+----------------+
+|  divider_map/CLK_AN          |                                     |                  |                1 |              3 |
+|  mem_addr_reg[3]_i_2_n_0     |                                     |                  |                1 |              4 |
+|  INSTR_reg[3]_i_1_n_0        |                                     |                  |                2 |              4 |
+|  CLK_IN_IBUF_BUFG            | FSM_sequential_state_reg[3]_i_1_n_0 |                  |                3 |              4 |
+|  divider_map/CLK             | mem_addr_counter[3]_i_1_n_0         |                  |                1 |              4 |
+|  mem_address_mux_reg_i_2_n_0 |                                     |                  |                2 |              5 |
+|  data_to_ram_reg[7]_i_2_n_0  |                                     |                  |                2 |              8 |
+|  REG_B_reg[7]_i_1_n_0        |                                     |                  |                4 |              8 |
+|  REG_A_reg[7]_i_1_n_0        |                                     |                  |                3 |              8 |
+|  OP_A_reg[3]_i_1_n_0         |                                     |                  |                4 |              8 |
+|  CLK_IN_IBUF_BUFG            | mem_wren                            |                  |                2 |              8 |
+|  EE                          |                                     |                  |                3 |              9 |
+|  CLK_IN_IBUF_BUFG            |                                     |                  |                7 |             27 |
++------------------------------+-------------------------------------+------------------+------------------+----------------+
+
+

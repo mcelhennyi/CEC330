@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -68,7 +69,7 @@ signal go_down : STD_LOGIC;
 
 type FSM_state_type is (st1_wait, st2_go_up, st3_go_down, st4_write, st5_read_instr, 
 st6_read_op_A_B, st6_5_change_mem, st7_store_reg_A,st7_5_change_mem, st8_store_reg_B, 
-st9_execute, st10_write_result); 
+st9_execute, st9_5_set_result_address, st10_write_result); 
 signal state, next_state : FSM_state_type;
 
 signal EE : STD_LOGIC;
@@ -78,6 +79,12 @@ signal OP_B : STD_LOGIC_VECTOR (3 downto 0);
 
 signal REG_A : STD_LOGIC_VECTOR (7 downto 0);
 signal REG_B : STD_LOGIC_VECTOR (7 downto 0);
+signal OUT_VALUE : STD_LOGIC_VECTOR (7 downto 0);
+signal STORE_A : STD_LOGIC;
+
+signal mem_address_mux : STD_LOGIC;
+signal mem_address_input : STD_LOGIC_VECTOR (3 downto 0);
+signal mem_addr_counter : STD_LOGIC_VECTOR (3 downto 0);
 
 --Drives the seven segment displays
 component Seven_seg_driver
@@ -108,11 +115,20 @@ component Memory
     Port ( CLK : in STD_LOGIC;
            address : in STD_LOGIC_VECTOR (3 downto 0);
            data_in : in STD_LOGIC_VECTOR (7 downto 0);
-           wr : in STD_LOGIC;
-           read : in STD_LOGIC;
+           we : in STD_LOGIC;
            data_out : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end component Memory;
+
+component Execute
+    Port ( reg_a : in STD_LOGIC_VECTOR (7 downto 0);
+           reg_b : in STD_LOGIC_VECTOR (7 downto 0);
+           instr : in STD_LOGIC_VECTOR (3 downto 0);
+           ee : in STD_LOGIC;
+           out_value : out STD_LOGIC_VECTOR (7 downto 0);
+           store_a : out STD_LOGIC
+           );
+end component Execute;
 
 begin
 --maps the driver 
@@ -120,13 +136,13 @@ Seven_seg_map : Seven_seg_driver
      port map ( CLK_AN => clk_an,
                 Disp1 => data_from_ram(3 downto 0),
                 Disp2 => data_from_ram(7 downto 4),
-                Disp3 => mem_addr,
+                Disp3 => mem_address_input,
                 Disp4 => INSTR,
                 Disp5 => Disp5,
                 Disp6 => Disp6,
                 Disp7 => Disp7,
                 Disp8 => Disp8,
-                FLAG_an => flag_an,
+                --FLAG_an => flag_an,
                 Display_out => SEG,
                 AN_out => AN
                 );         
@@ -140,27 +156,43 @@ divider_map : Divider
 --
 memory_map : Memory
     port map ( CLK => CLK_IN,
-               address => mem_addr,
+               address => mem_address_input,
                data_in => data_to_ram,
-               wr => mem_wren,
-               read => read_endabled,
+               we => mem_wren,
                data_out => data_from_ram
                );
+               
+execute_map : Execute
+   port map ( reg_a => REG_A,
+              reg_b => REG_B,
+              instr => INSTR,
+              ee => EE,
+              out_value => OUT_VALUE,
+              store_a => STORE_A
+              );
 ------------------------------------------------------------------
 
-	Address_Coding : process (clk_slow, go_up, go_down)	
-		begin
-			if rising_edge(clk_slow) then
-				if go_up = '1' then
-					mem_addr <= mem_addr + 1;
-				elsif go_down = '1' then 
-					mem_addr <= mem_addr - 1;
-				end if;	
-			end if;	
-		end process address_coding;
-	
+Address_Coding: process (clk_slow, go_up, go_down)	
+    begin
+        if rising_edge(clk_slow) then
+            if go_up = '1' then
+                mem_addr_counter  <= mem_addr_counter  + 1;
+            elsif go_down = '1' then 
+                mem_addr_counter  <= mem_addr_counter  - 1;
+            end if;	
+        end if;	
+    end process address_coding;
+		
+Mem_mux: process (mem_address_mux)
+    begin
+        if mem_address_mux = '1' then
+            mem_address_input <= mem_addr_counter; 
+        elsif mem_address_mux = '0' then
+            mem_address_input <= mem_addr;
+        end if;
+	end process Mem_mux;
 ------------------------------------------------------------
-   SYNC_PROC: process (CLK_IN)
+SYNC_PROC: process (CLK_IN)
    begin
       if (CLK_IN'event and CLK_IN = '1') then
 --         if (RESET = '0') then
@@ -175,32 +207,39 @@ memory_map : Memory
    begin
       case state is
 			when st1_wait =>
+			    mem_address_mux <= '1';
 				mem_wren <= '0';
 				go_up <= '0';
 				go_down	<= '0';
 				EE <= '0';
+				data_to_ram <= SW;
 			when st2_go_up =>
+			    mem_address_mux <= '1';
 				mem_wren <= '0';
 				go_up <= '1';
 				go_down	<= '0';
 				EE <= '0';
 			when st3_go_down =>
+			    mem_address_mux <= '1';
 				mem_wren <= '0';
 				go_up <= '0';
 				go_down	<= '1';
 				EE <= '0';
 			when st4_write =>
+			    mem_address_mux <= '1';
                 mem_wren <= '1';
                 go_up <= '0';
                 go_down <= '0';
                 EE <= '0';
 			when st5_read_instr =>
+			    mem_address_mux <= '1';
 			    mem_wren <= '0';
                 go_up <= '0';
-                go_down    <= '0';
+                go_down <= '0';
 			    EE <= '0';
 			    INSTR <= SW(7 downto 4);--
 			when st6_read_op_A_B =>
+			    mem_address_mux <= '1';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
@@ -208,36 +247,54 @@ memory_map : Memory
 			    OP_A <=  SW(7 downto 4);--
 			    OP_B <=  SW(3 downto 0);--
 			when st6_5_change_mem =>
+			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
                 EE <= '0';
 			    mem_addr <= OP_A;
 			when st7_store_reg_A =>
+			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
 			    EE <= '0';
 			    REG_A <= data_from_ram;
 			when st7_5_change_mem =>
+			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
                 EE <= '0';
                 mem_addr <= OP_B;    
 			when st8_store_reg_B =>
+			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
 			    EE <= '0';
 			    REG_B <= data_from_ram;
 			when st9_execute =>
+			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
 			    EE <= '1';
+            when st9_5_set_result_address =>
+                mem_address_mux <= '0';
+                mem_wren <= '0';
+                go_up <= '0';
+                go_down    <= '0';
+                EE <= '0';
+                if (STORE_A = '1') then
+                    mem_addr <= OP_A;
+                elsif (STORE_A = '0') then
+                    mem_addr <= OP_B;
+                end if;   
+                data_to_ram <= OUT_VALUE;
 			when st10_write_result =>
-			    mem_wren <= '0';
+			    mem_address_mux <= '0';
+			    mem_wren <= '1';
                 go_up <= '0';
                 go_down    <= '0';
 			    EE <= '0';
@@ -245,14 +302,14 @@ memory_map : Memory
       end case;
    end process;
  
-   NEXT_STATE_DECODE: process (state, BTN_C, BTN_U, BTN_D)
+   NEXT_STATE_DECODE: process (state, BTNC, BTNU, BTND)
    begin
       next_state <= state;  
       
     case (state) is
         when st1_wait =>
             if BTNU = '1' then
-                nextstate <= st2_go_up;
+                next_state <= st2_go_up;
 			elsif BTND = '1' then
                 next_state <= st3_go_down;
             elsif BTNC = '1' then
@@ -262,30 +319,38 @@ memory_map : Memory
             elsif BTNR = '1' then
                 next_state <= st6_read_op_A_B;
             end if; 
-        when st2go_up =>
-			if BTN_U = '0' then
+        when st2_go_up =>
+			if BTNU = '0' then
 			   next_state <= st1_wait;
 			end if;
 		when st3_go_down =>
-            if BTN_D = '0' then
+            if BTND = '0' then
 				next_state <= st1_wait;
 			end if;
 	    when st4_write =>
-            next_state <= st1_wait;          
+	        if BTNC = '0' then
+                next_state <= st1_wait;     
+            end if;     
         when st5_read_instr =>
-            next_state <= st1_wait;                 
+            if BTNL = '0' then
+                next_state <= st1_wait;  
+            end if;               
         when st6_read_op_A_B =>
-            next_state <= st6_5_change_mem;  
-        when st6_5_change_mem  
+            if BTNR = '0' then
+                next_state <= st6_5_change_mem;  
+            end if;
+        when st6_5_change_mem =>
             next_state <= st7_store_reg_A; 
         when st7_store_reg_A =>
             next_state <= st7_5_change_mem; 
-        when st7_5_change_mem
+        when st7_5_change_mem =>
             next_state <= st8_store_reg_B;         
         when st8_store_reg_B =>
             next_state <= st9_execute;          
         when st9_execute =>
-            next_state <= st10_write_result;           
+            next_state <= st9_5_set_result_address;  
+        when st9_5_set_result_address =>
+            next_state <= st10_write_result;     
         when st10_write_result =>
             next_state <= st1_wait;
         when others =>
