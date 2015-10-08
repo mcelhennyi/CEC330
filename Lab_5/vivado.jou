@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Oct 08 17:35:03 2015
+# Process ID: 4308
+# Log file: C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/vivado.log
+# Journal file: C:/Users/Ian McElhenny/Documents/CEC330/Lab_5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.xpr}
+file mkdir C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new
+file mkdir C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new
+file mkdir C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new
+file mkdir C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new
+file mkdir C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new
+file mkdir {C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new}
+close [ open {C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new/Memory_tb.vhd} w ]
+add_files -fileset sim_1 {{C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new/Memory_tb.vhd}}
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source Top.tcl
+set_property simulator_language VHDL [current_project]
+close_sim
+launch_simulation
+source Top.tcl
+close_sim
+launch_simulation
+source Top.tcl
+close_sim
+launch_simulation
+source Top.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Memory_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source Memory_tb.tcl
+add_bp {C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new/Memory_tb.vhd} 90
+remove_bps -file {C:/Users/Ian McElhenny/Documents/CEC330/Lab_5/Lab_5.srcs/sim_1/new/Memory_tb.vhd} -line 90
