@@ -50,8 +50,6 @@ architecture Behavioral of Memory is
 begin
 
 memory_control: process(CLK)
---variable index_address : integer := to_integer(signed(address)); --makes integer value of test count from sequencer
-  
     begin
     
         if (CLK'event and CLK = '1') then

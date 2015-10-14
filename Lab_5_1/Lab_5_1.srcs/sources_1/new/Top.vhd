@@ -47,6 +47,7 @@ end Top;
 
 architecture Behavioral of Top is
 
+--display signals for the seven segment displays
 signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp2 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);
@@ -55,40 +56,37 @@ signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
-
+--Clock signals from the divider
 signal clk_slow : STD_LOGIC := '0';--The one Hz clock
 signal clk_an : STD_LOGIC;-- Clock that is around 70Hz going to the annodes and cathode counter
 signal clk_state : STD_LOGIC;
-
+--data to and from Memory
 signal mem_addr : STD_LOGIC_VECTOR (3 downto 0);
 signal data_to_ram : STD_LOGIC_VECTOR (7 downto 0);
 signal mem_wren  : STD_LOGIC;
 signal data_from_ram : STD_LOGIC_VECTOR (7 downto 0);
-
+--Signals to control movement through the Memory
 signal go_up : STD_LOGIC;
 signal go_down : STD_LOGIC;
-
+--States for the FSM
 type FSM_state_type is (st1_wait, st2_go_up, st3_go_down, st4_write, st5_read_instr, 
 st6_read_op_A_B, st6_5_change_mem, st7_store_reg_A,st7_5_change_mem, st8_store_reg_B, 
 st9_execute, st9_5_set_result_address, st10_write_result); 
 signal state, next_state : FSM_state_type;
-
-signal EE : STD_LOGIC;
+--signals to and from the Execute module
+signal EE : STD_LOGIC;--Enable bit for the execute module
 signal INSTR : STD_LOGIC_VECTOR (3 downto 0);
 signal OP_A : STD_LOGIC_VECTOR (3 downto 0);
 signal OP_B : STD_LOGIC_VECTOR (3 downto 0);
-
 signal REG_A : STD_LOGIC_VECTOR (7 downto 0);
 signal REG_B : STD_LOGIC_VECTOR (7 downto 0);
 signal OUT_VALUE : STD_LOGIC_VECTOR (7 downto 0);
+signal store_location : STD_LOGIC_VECTOR (3 downto 0);
 signal STORE_A : STD_LOGIC;
-
+--signals for the memory addresses
 signal mem_address_mux : STD_LOGIC;
 signal mem_address_input : STD_LOGIC_VECTOR (3 downto 0);
 signal mem_addr_counter : STD_LOGIC_VECTOR (3 downto 0);
-
-signal store_location : STD_LOGIC_VECTOR (3 downto 0);
---signal keep_instr : STD_LOGIC_VECTOR (3 downto 0) := x"0";
 
 --Drives the seven segment displays
 component Seven_seg_driver
@@ -115,7 +113,8 @@ component Divider
            CLK_OUT_STATE : out STD_LOGIC
            );
 end component Divider;
---
+--Acts as memory, take data in and address and stores the value to memory when it is enambled,
+--also has an output of the current location in mory
 component Memory
     Port ( CLK : in STD_LOGIC;
            address : in STD_LOGIC_VECTOR (3 downto 0);
@@ -124,7 +123,8 @@ component Memory
            data_out : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end component Memory;
-
+--Does specific operation on two values from the memory that are selected according to the 
+--instruction given, aslo gives the output and the location to store the value.
 component Execute
     Port ( reg_a : in STD_LOGIC_VECTOR (7 downto 0);
            reg_b : in STD_LOGIC_VECTOR (7 downto 0);
@@ -161,7 +161,7 @@ divider_map : Divider
 --                RAND_OUT => rand_num --not being used
                 CLK_OUT_STATE => clk_state
                 );
---
+--mamps memory to signals to be used in the Top module
 memory_map : Memory
     port map ( CLK => CLK_IN,
                address => mem_address_input,
@@ -169,7 +169,7 @@ memory_map : Memory
                we => mem_wren,
                data_out => data_from_ram
                );
-               
+--mamps execute to signals to be used in the Top module               
 execute_map : Execute
    port map ( reg_a => REG_A,
               reg_b => REG_B,
@@ -181,7 +181,7 @@ execute_map : Execute
               store_location => store_location
               );
 ------------------------------------------------------------------
-
+--controls the current memory location depending on two variables and moves at a 1Hz clock rate
 Address_Coding: process (clk_slow, go_up, go_down)	
     begin
         if rising_edge(clk_slow) then
@@ -192,7 +192,7 @@ Address_Coding: process (clk_slow, go_up, go_down)
             end if;	
         end if;	
     end process address_coding;
-		
+--A Mux to decide on which memory address is being sent to Memory
 Mem_mux: process (mem_address_mux)
     begin
         if mem_address_mux = '1' then
@@ -202,6 +202,7 @@ Mem_mux: process (mem_address_mux)
         end if;
 	end process Mem_mux;
 ------------------------------------------------------------
+--Switches the state to the next state every clock cycle of CLK_IN
 SYNC_PROC: process (CLK_IN)
    begin
       if (clk_state'event and clk_state = '1') then
@@ -212,7 +213,7 @@ SYNC_PROC: process (CLK_IN)
 --         end if;        
       end if;
    end process;
-
+--The operations of eache state
    OUTPUT_DECODE: process (state)
    begin
       case state is
@@ -305,7 +306,6 @@ SYNC_PROC: process (CLK_IN)
 --                    if (STORE_A = '0') then
 --                        mem_addr <= OP_B;
 --                    end if;   
-
                 data_to_ram <= OUT_VALUE;
 			when st10_write_result =>
 			    mem_address_mux <= '0';
@@ -316,8 +316,9 @@ SYNC_PROC: process (CLK_IN)
 			when others => null;
       end case;
    end process OUTPUT_DECODE;
- 
-   NEXT_STATE_DECODE: process (state, BTNC, BTNU, BTND)
+
+--Chooses the next state depending on button presses
+   NEXT_STATE_DECODE: process (state, BTNC, BTNU, BTND, BTNL, BTNR)
    begin
       next_state <= state;  
       

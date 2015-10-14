@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Wed Oct 14 14:22:02 2015
+| Date              : Wed Oct 14 18:49:02 2015
 | Host              : Austin-MBP running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Top_clock_utilization_routed.rpt
 | Design            : Top
@@ -71,7 +71,7 @@ Table of Contents
 |     1 | INSTR_reg[3]_i_1                     | INSTR_reg[3]_i_1_n_0                |    4 |     1 |    no |
 |     2 | divider_map/register_counter_reg[14] | divider_map/CLK_AN                  |    4 |     2 |    no |
 |     3 | mem_addr_reg[3]_i_2                  | mem_addr_reg[3]_i_2_n_0             |    4 |     1 |    no |
-|     4 | divider_map/register_counter_reg[4]  | divider_map/CLK                     |    5 |     3 |    no |
+|     4 | divider_map/register_counter_reg[6]  | divider_map/CLK                     |    5 |     3 |    no |
 |     5 | divider_map/register_counter_reg[26] | divider_map/mem_addr_counter_reg[3] |    5 |     2 |    no |
 |     6 | mem_address_mux_reg_i_2              | mem_address_mux_reg_i_2_n_0         |    5 |     3 |    no |
 |     7 | OP_A_reg[3]_i_1                      | OP_A_reg[3]_i_1_n_0                 |    8 |     4 |    no |
@@ -182,7 +182,7 @@ add_cells_to_pblock [get_pblocks  {CLKAG_data_to_ram_reg[7]_i_2_n_0}] [get_cells
 resize_pblock [get_pblocks {CLKAG_data_to_ram_reg[7]_i_2_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "divider_map/CLK" driven by instance "divider_map/register_counter_reg[4]" located at site "SLICE_X0Y76"
+# Clock net "divider_map/CLK" driven by instance "divider_map/register_counter_reg[6]" located at site "SLICE_X0Y76"
 #startgroup
 create_pblock {CLKAG_divider_map/CLK}
 add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/CLK"}]]]

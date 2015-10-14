@@ -57,7 +57,7 @@ counter: process(CLK_IN)
     
 CLK_OUT_SLOW <= register_counter(26);--Slow 1Hz clock
 CLK_OUT_AN <= register_counter(14);--About 70Hz for display switching
-CLK_OUT_STATE <= register_counter(4); 
+CLK_OUT_STATE <= register_counter(6);--781,250HZ for switching states
 --RAND_OUT <= register_counter(15 downto 8);
 
 end Behavioral;

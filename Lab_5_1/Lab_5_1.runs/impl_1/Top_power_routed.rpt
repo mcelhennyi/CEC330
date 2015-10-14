@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Wed Oct 14 14:22:02 2015
+| Date             : Wed Oct 14 18:49:02 2015
 | Host             : Austin-MBP running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : Top
@@ -30,9 +30,9 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 20.052 (Junction temp exceeded!) |
-| Dynamic (W)              | 19.420                           |
-| Device Static (W)        | 0.632                            |
+| Total On-Chip Power (W)  | 20.060 (Junction temp exceeded!) |
+| Dynamic (W)              | 19.427                           |
+| Device Static (W)        | 0.633                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
 | Junction Temperature (C) | 116.5                            |
@@ -49,18 +49,18 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |     0.576 |      222 |       --- |             --- |
-|   LUT as Logic           |     0.536 |       78 |     63400 |            0.12 |
+| Slice Logic              |     0.573 |      222 |       --- |             --- |
+|   LUT as Logic           |     0.532 |       78 |     63400 |            0.12 |
 |   Register               |     0.016 |       95 |    126800 |            0.07 |
 |   CARRY4                 |     0.014 |        7 |     15850 |            0.04 |
 |   BUFG                   |     0.006 |        1 |        32 |            3.13 |
 |   LUT as Distributed RAM |     0.005 |        8 |     19000 |            0.04 |
 |   F7/F8 Muxes            |    <0.001 |        1 |     63400 |           <0.01 |
 |   Others                 |     0.000 |       11 |       --- |             --- |
-| Signals                  |     0.851 |      208 |       --- |             --- |
+| Signals                  |     0.862 |      208 |       --- |             --- |
 | I/O                      |    17.992 |       30 |       210 |           14.29 |
-| Static Power             |     0.632 |          |           |                 |
-| Total                    |    20.052 |          |           |                 |
+| Static Power             |     0.633 |          |           |                 |
+| Total                    |    20.060 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.919 |       1.484 |      0.435 |
+| Vccint    |       1.000 |     1.926 |       1.491 |      0.435 |
 | Vccaux    |       1.800 |     0.732 |       0.657 |      0.075 |
 | Vcco33    |       3.300 |     5.081 |       5.077 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -137,18 +137,18 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| Top                  |    19.420 |
-|   Seven_seg_map      |     0.564 |
-|   divider_map        |     0.102 |
-|   execute_map        |     0.161 |
+| Top                  |    19.427 |
+|   Seven_seg_map      |     0.563 |
+|   divider_map        |     0.104 |
+|   execute_map        |     0.159 |
 |   memory_map         |     0.170 |
 |     RAM_reg_0_15_0_0 |     0.004 |
-|     RAM_reg_0_15_1_1 |     0.004 |
+|     RAM_reg_0_15_1_1 |     0.005 |
 |     RAM_reg_0_15_2_2 |     0.004 |
-|     RAM_reg_0_15_3_3 |     0.005 |
+|     RAM_reg_0_15_3_3 |     0.004 |
 |     RAM_reg_0_15_4_4 |     0.004 |
-|     RAM_reg_0_15_5_5 |     0.004 |
-|     RAM_reg_0_15_6_6 |     0.004 |
+|     RAM_reg_0_15_5_5 |     0.005 |
+|     RAM_reg_0_15_6_6 |     0.005 |
 |     RAM_reg_0_15_7_7 |     0.004 |
 +----------------------+-----------+
 
