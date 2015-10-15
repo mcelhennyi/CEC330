@@ -206,11 +206,7 @@ Mem_mux: process (mem_address_mux)
 SYNC_PROC: process (CLK_IN)
    begin
       if (clk_state'event and clk_state = '1') then
---         if (RESET = '0') then
---            state <= st1_wait;
---         else
             state <= next_state;
---         end if;        
       end if;
    end process;
 --The operations of eache state
@@ -225,24 +221,28 @@ SYNC_PROC: process (CLK_IN)
 				EE <= '0';
 				data_to_ram <= SW;
 				--INSTR <= keep_instr;
+            --go up through register
 			when st2_go_up =>
 			    mem_address_mux <= '1';
 				mem_wren <= '0';
 				go_up <= '1';
 				go_down	<= '0';
 				EE <= '0';
+            --go down through register
 			when st3_go_down =>
 			    mem_address_mux <= '1';
 				mem_wren <= '0';
 				go_up <= '0';
 				go_down	<= '1';
 				EE <= '0';
+			--write to register
 			when st4_write =>
 			    mem_address_mux <= '1';
                 mem_wren <= '1';
                 go_up <= '0';
                 go_down <= '0';
                 EE <= '0';
+            --save instruction
 			when st5_read_instr =>
 			    mem_address_mux <= '1';
 			    mem_wren <= '0';
@@ -251,6 +251,7 @@ SYNC_PROC: process (CLK_IN)
 			    EE <= '0';
 			    INSTR <= SW(7 downto 4);--
 			    --keep_instr <= SW(7 downto 4);--
+			--press right button to execute process
 			when st6_read_op_A_B =>
 			    mem_address_mux <= '1';
 			    mem_wren <= '0';
@@ -259,41 +260,41 @@ SYNC_PROC: process (CLK_IN)
 			    EE <= '0';
 			    OP_A <=  SW(7 downto 4);--
 			    OP_B <=  SW(3 downto 0);--
-			when st6_5_change_mem =>
+			when st6_5_change_mem => --sets memory address for op a
 			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
                 EE <= '0';
 			    mem_addr <= OP_A;
-			when st7_store_reg_A =>
+			when st7_store_reg_A =>--stores in register  op a value
 			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
 			    EE <= '0';
 			    REG_A <= data_from_ram;
-			when st7_5_change_mem =>
+			when st7_5_change_mem =>--sets memory address for op b
 			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down    <= '0';
                 EE <= '0';
                 mem_addr <= OP_B;    
-			when st8_store_reg_B =>
+			when st8_store_reg_B =>--sets memory address for op b
 			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down <= '0';
 			    EE <= '0';
 			    REG_B <= data_from_ram;
-			when st9_execute =>
+			when st9_execute => --executes the execute module
 			    mem_address_mux <= '0';
 			    mem_wren <= '0';
                 go_up <= '0';
                 go_down <= '0';
 			    EE <= '1';
-            when st9_5_set_result_address =>
+            when st9_5_set_result_address => --sets address to result address from execute module
                 mem_address_mux <= '0';
                 mem_wren <= '0';
                 go_up <= '0';
@@ -307,7 +308,7 @@ SYNC_PROC: process (CLK_IN)
 --                        mem_addr <= OP_B;
 --                    end if;   
                 data_to_ram <= OUT_VALUE;
-			when st10_write_result =>
+			when st10_write_result => --writes result to memory
 			    mem_address_mux <= '0';
 			    mem_wren <= '1';
                 go_up <= '0';
@@ -322,6 +323,7 @@ SYNC_PROC: process (CLK_IN)
    begin
       next_state <= state;  
       
+    --state case statement to change a state on rising edge  
     case (state) is
         when st1_wait =>
             if BTNU = '1' then

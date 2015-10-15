@@ -1,0 +1,266 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 1660
+
+Current time: 	10/14/15 9:17:24 PM EDT
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1360x768
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Ian McElhenny
+User directory: F:/CEC330/Lab_5_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/Ian McElhenny/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/Ian McElhenny/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	215 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 450 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: F:\CEC330\Lab_5_1\Lab_5_1.xpr. Version: Vivado v2015.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 46 MB (+45329kb) [00:00:03]
+// [Engine Memory]: 392 MB (+259213kb) [00:00:03]
+// [GUI Memory]: 69 MB (+21994kb) [00:00:04]
+// [Engine Memory]: 411 MB (+230kb) [00:00:04]
+// [Engine Memory]: 443 MB (+11696kb) [00:00:04]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project F:/CEC330/Lab_5_1/Lab_5_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Austin/Documents/CEC330/Lab_5_1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Lab_5_1; location: F:/CEC330/Lab_5_1; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 461 MB. GUI used memory: 31 MB. Current time: 10/14/15 9:17:26 PM EDT
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd), execute_map - Execute - Behavioral (Execute.vhd)]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd), execute_map - Execute - Behavioral (Execute.vhd)]", 5, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top - Behavioral (Top.vhd)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// [Engine Memory]: 468 MB (+2334kb) [00:00:23]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 2, false, true); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+selectCodeEditor("Top.vhd", 290, 267); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top.vhd", 217, 367); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 218, 389); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top.vhd", 203, 342); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 207, 312); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 84, 327); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 79, 338); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 28 seconds
+selectCodeEditor("Top.vhd", 303, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top.vhd", 330, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 332, 148); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 120, 327); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 20 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Wed Oct 14 21:19:50 2015] Launched synth_1... Run output will be captured here: F:/CEC330/Lab_5_1/Lab_5_1.runs/synth_1/runme.log [Wed Oct 14 21:19:50 2015] Launched impl_1... Run output will be captured here: F:/CEC330/Lab_5_1/Lab_5_1.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// [GUI Memory]: 73 MB (+630kb) [00:05:21]
+// Elapsed time: 249 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Wed Oct 14 21:24:00 2015] Launched impl_1... Run output will be captured here: F:/CEC330/Lab_5_1/Lab_5_1.runs/impl_1/runme.log 
+// HMemoryUtils.trashcanNow. Engine heap size: 482 MB. GUI used memory: 33 MB. Current time: 10/14/15 9:24:01 PM EDT
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 97 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 26, true); // w:Y (v:H, cl:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Open Target]", 27, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+// [Engine Memory]: 491 MB (+309kb) [00:08:19]
+selectMenuItem((HResource) null, "localhost:3121,xilinx_tcf/Digilent/210292696671A,PARAM.FREQUENCY:15000000"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// cp:P (cl:JFrame):  Open Hardware Target : addNotify
+// Tcl Message: connect_hw_server -url localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2015.2   **** Build date : Jun 26 2015-16:56:39     ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 773.598 ; gain = 0.000 
+// Tcl Message: current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210292696671A] 
+// TclEventType: HW_TARGET_CHANGE
+// Tcl Message: set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210292696671A] 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696671A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {F:/CEC330/Lab_5_1/Lab_5_1.runs/impl_1/Top.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: current_hw_device [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Open Hardware Target"); // cp:P (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 516 MB. GUI used memory: 35 MB. Current time: 10/14/15 9:25:46 PM EDT
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// [Engine Memory]: 517 MB (+582kb) [00:08:28]
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+applyEnter(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, "F:/CEC330/Lab_5_1/Lab_5_1.runs/impl_1/Top.bit"); // ao:JTextField (aS:JPanel, aC:ag)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {F:/CEC330/Lab_5_1/Lab_5_1.runs/impl_1/Top.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 539 MB. GUI used memory: 36 MB. Current time: 10/14/15 9:27:16 PM EDT
+// Elapsed time: 328 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1, false, true); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+// [GUI Memory]: 81 MB (+5087kb) [00:14:04]
+selectCodeEditor("Top.vhd", 299, 291); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top.vhd", 259, 299); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 281, 425); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 279, 422); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 268, 413); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 268, 413, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top.vhd", 384, 414); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 384, 414, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top.vhd", 303, 412); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 388, 421); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 244, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 352, 260); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 345, 259); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 345, 259, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top.vhd", 450, 266); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 245, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 275, 454); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 257, 87); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 302, 334); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// [Engine Memory]: 545 MB (+2671kb) [00:15:07]
+selectCodeEditor("Top.vhd", 496, 447); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 31 seconds
+selectCodeEditor("Top.vhd", 326, 312); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 24 seconds
+selectCodeEditor("Top.vhd", 274, 349); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 20 seconds
+selectCodeEditor("Top.vhd", 149, 337); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 148, 347); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 148, 348, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top.vhd", 149, 348); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 121, 313); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 121, 313, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top.vhd", 121, 313); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 133, 292); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 133, 292, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top.vhd", 135, 293); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 129, 273); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 129, 273, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top.vhd", 129, 273); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
