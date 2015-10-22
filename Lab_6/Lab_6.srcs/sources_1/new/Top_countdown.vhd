@@ -44,6 +44,16 @@ architecture Behavioral of Top_countdown is
 -----------------------------------
 --Signals--------------------------
 -----------------------------------
+--display signals for the seven segment displays
+signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp2 : STD_LOGIC_VECTOR (3 downto 0);
+--signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);
+--signal Disp4 : STD_LOGIC_VECTOR (3 downto 0);
+--signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
+--signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
+--signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
+--signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
+
 signal clk_slow : STD_LOGIC := '0'; --The one Hz clock
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
 signal clk_state : STD_LOGIC; --Clock to change State Machine
@@ -71,6 +81,30 @@ component PWM
            PWM_OUT : out STD_LOGIC
            );
 end component PWM;
+--Drives the seven segment displays
+component Seven_seg_driver
+    Port ( CLK_AN : in STD_LOGIC;
+           Disp1 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           Disp2 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+--           Disp3 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+--           Disp4 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+--           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
+--           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
+--           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
+--           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
+--           FLAG_an : in STD_LOGIC;
+           Display_out : out STD_LOGIC_VECTOR (7 DOWNTO 0);
+           AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
+           );
+end component Seven_seg_driver;
+--
+component Binary_to_decimal
+    Port ( CLK_IN : in STD_LOGIC;
+           BINARY_IN : in STD_LOGIC_VECTOR (4 DOWNTO 0);
+           DEC_OUT_1 : out STD_LOGIC_VECTOR (3 DOWNTO 0);
+           DEC_OUT_2 : out STD_LOGIC_VECTOR (3 DOWNTO 0)
+           );
+end component Binary_to_decimal;
 
 begin
 ------------------------------------
@@ -78,16 +112,40 @@ begin
 ------------------------------------
 -- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
 divider_map: Divider
-     port map ( CLK_IN  => CLK_IN,
-                CLK_OUT_SLOW => clk_slow,
-                CLK_OUT_AN => clk_an,
-                CLK_OUT_STATE => clk_state
-              );
+    port map ( CLK_IN  => CLK_IN,
+               CLK_OUT_SLOW => clk_slow,
+               CLK_OUT_AN => clk_an,
+               CLK_OUT_STATE => clk_state
+               );
+--
 pwm_map: PWM
     port map ( CLK_IN => pwm_clk,
                PWM_LEVEL => pwm_level,
                PWM_OUT => pwm_out
-              );
+               );  
+--maps the driver 
+Seven_seg_map: Seven_seg_driver
+    port map ( CLK_AN => clk_an,
+               Disp1 => Disp1,
+               Disp2 => Disp2,
+--               Disp3 => Disp3,
+--               Disp4 => Disp4,
+--               Disp5 => Disp5,
+--               Disp6 => Disp6,
+--               Disp7 => Disp7,
+--               Disp8 => Disp8,
+--               FLAG_an => flag_an,
+               Display_out => SEG,
+               AN_out => AN
+               );  
+--convert a binary number less than 20 to a 2 digit decimal number
+Converter: Binary_to_decimal
+    port map ( CLK_IN => CLK_IN,
+               BINARY_IN => timer,
+               DEC_OUT_1 => Disp1,
+               DEC_OUT_2 => Disp2
+               );
+
 ------------------------------------
 --State Machine Code----------------
 ------------------------------------
