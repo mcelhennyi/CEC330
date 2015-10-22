@@ -1,0 +1,477 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 11728
+
+Current time: 	10/22/15 3:10:29 PM EDT
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1440x900
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Austin
+User directory: C:/Users/Austin/Documents/CEC330/Lab_6
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	225 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 448 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.xpr. Version: Vivado v2015.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.xpr 
+// Tcl Message: open_project C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'F:/CEC330/Lab_6' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [GUI Memory]: 29 MB (+27994kb) [00:00:05]
+// [Engine Memory]: 385 MB (+252004kb) [00:00:05]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 59 MB (+29359kb) [00:00:06]
+// [GUI Memory]: 68 MB (+7134kb) [00:00:07]
+// [Engine Memory]: 411 MB (+6984kb) [00:00:07]
+// [Engine Memory]: 445 MB (+14370kb) [00:00:07]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 448 MB. GUI used memory: 29 MB. Current time: 10/22/15 3:10:30 PM EDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Lab_6; location: C:/Users/Austin/Documents/CEC330/Lab_6; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 770.102 ; gain = 181.266 
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Divider - Behavioral (Divider.vhd)]", 3, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Divider - Behavioral (Divider.vhd)]", 3, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PWM - Behavioral (PWM.vhd)]", 4, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PWM - Behavioral (PWM.vhd)]", 4, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectButton(PAResourceEtoH.FileSetPanel_0_CRITICAL_WARNING, "40 critical warnings"); // i:l (CommandBar:DockableBar, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;104;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. ]", 2); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:118]. ]", 4, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;118;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:122]. ]", 5, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;122;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:122]. ]", 5, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;122;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:126]. ]", 6, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;126;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:126]. ]", 6, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;126;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:130]. ]", 7, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;130;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:134]. ]", 8, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;134;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. ]", 23); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:126]. ]", 27, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;126;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near =. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:130]. ]", 28, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;130;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// [GUI Memory]: 74 MB (+1921kb) [00:01:19]
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Divider - Behavioral (Divider.vhd)]", 3, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, PWM - Behavioral (PWM.vhd)]", 4, false); // A:k (H:JPanel, cl:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Divider.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 470 MB. GUI used memory: 33 MB. Current time: 10/22/15 3:12:14 PM EDT
+// [Engine Memory]: 470 MB (+2514kb) [00:01:53]
+// Elapsed time: 475 seconds
+selectCodeEditor("Top_countdown.vhd", 307, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 78 MB (+909kb) [00:11:33]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 385 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Divider.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 279, 180); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 292, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top_countdown.vhd", 337, 207); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 270, 111); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 208, 176); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 79 seconds
+selectCodeEditor("Top_countdown.vhd", 196, 142); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 59 seconds
+selectCodeEditor("Top_countdown.vhd", 97, 195); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor("Top_countdown.vhd", 117, 146); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 28 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "timer"); // o:ao (f:JComboBox, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 156, 217); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 152, 215); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 49 seconds
+selectCodeEditor("Top_countdown.vhd", 160, 214); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 152, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 153, 250); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 152, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 155, 234); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 155, 262); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 151, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 153, 249); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 153, 212); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 152, 280); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 153, 294); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 156, 313); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 154, 228); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 153, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 83 MB (+535kb) [00:21:23]
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 157, 367); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 154, 335); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 154, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;104;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 168, 179); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 14 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. ]", 4, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;104;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. ]", 4, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;104;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near LED. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:127]. ]", 8, false, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near elsif. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:109]. ]", 5, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;109;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:104]. , [HDL 9-806] Syntax error near elsif. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:109]. ]", 5, false, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("Top_countdown.vhd", 145, 277); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 192, 276); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 140, 278); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 489, 286); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 60 seconds
+selectCodeEditor("Top_countdown.vhd", 123, 145); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 123, 212); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 120, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 119, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 126, 301); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 122, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 111, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor("Top_countdown.vhd", 99, 109); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 98, 174); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 98, 244); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 97, 261); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 98, 294); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 97, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 98, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 99, 347); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 96, 362); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 98, 273); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 94, 347); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 98, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 97, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 97, 345); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 101, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 101, 327); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 23 seconds
+selectCodeEditor("Top_countdown.vhd", 685, 225); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 12 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:105]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;105;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("Top_countdown.vhd", 154, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 50 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near if. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:105]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;105;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Divider.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_countdown.vhd", 233, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 15 seconds
+selectCodeEditor("Top_countdown.vhd", 146, 160); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // A:k (H:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near timer. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:111]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;111;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 174, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 105, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 194, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 20 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near LED. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:121]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;121;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 230, 181); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 265, 180); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("PWM.vhd", 264, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Divider.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_countdown.vhd", 299, 207); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 87 MB (+2kb) [00:29:45]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 109 seconds
+selectCodeEditor("Top_countdown.vhd", 84, 216); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 79, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 83, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 84, 250); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 85, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 86, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 85, 297); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 83, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 83, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 84, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 84, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 84, 284); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 85, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 83, 262); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 84, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 83, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 470 MB. GUI used memory: 37 MB. Current time: 10/22/15 3:42:16 PM EDT
+selectCodeEditor("Top_countdown.vhd", 86, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 83, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:122]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;122;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:122]. ]", 2, true, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click - Node
+selectCodeEditor("Top_countdown.vhd", 312, 139); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 291, 205); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 247, 274); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 247, 349); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 248, 365); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 249, 333); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 251, 345); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 247, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 248, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 248, 295); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 247, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 243, 329); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 245, 299); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 247, 313); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 246, 329); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 248, 360); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:182]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;182;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:182]. ]", 2, true, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:182]. ]", 2, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;182;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:182]. ]", 2, true, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:182]. ]", 2); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:182]. , [HDL 9-806] Syntax error near case. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:292]. ]", 3, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;292;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_countdown.vhd", 92, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near =>. [C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd:182]. ]", 2, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\Lab_6\Lab_6.srcs\sources_1\new\Top_countdown.vhd;-;;-;16;-;line;-;182;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor("Top_countdown.vhd", 55, 284); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top_countdown.vhd", 91, 110); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 176, 125); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_countdown.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_countdown.vhd", 136, 71); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_countdown.vhd", 207, 212); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 52, 179); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 68, 213); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_countdown.vhd", 185, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 187, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("Top_countdown.vhd", 85, 217); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 63, 181); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 30 seconds
+selectCodeEditor("Top_countdown.vhd", 310, 149); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH

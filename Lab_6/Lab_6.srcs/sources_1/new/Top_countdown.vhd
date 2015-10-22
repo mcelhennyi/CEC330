@@ -51,6 +51,7 @@ signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
 signal pwm_level : STD_LOGIC_VECTOR (7 DOWNTO 0) := x"00"; --level of pwm
 signal pwm_out : STD_LOGIC; --one bit value for pwm signal to LEDs
+signal timer : STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000"; --count down timer variable
 
 -----------------------------------
 --COMPONETS------------------------
@@ -98,92 +99,93 @@ pwm_map: PWM
 --      end if;
 --   end process SYNC_PROC;
 --Counts for the 16 second timer
-timer: process(CLK_SLOW)
+timer: process(CLK_SLOW)---------should try to use the fast clock here to see if it fixes the problem below
     begin
-        if BNTC = '0'
-            if timer > 0 then
+        if BNTC = '0' then-----------------------------------this will not be immediate all the time 
+            if timer > "00000" then
                 if(rising_edge(CLK_SLOW)) then 
                     timer <= timer - 1; 
                 end if;
             end if;
-        elsif BTNC = '1'
-            timer <= "1111"; 
+        elsif BTNC = '1' then
+            timer <= "10000"; 
+        end if;
     end process timer;
 --The operations of each state
 output_driver: process (CLK_SLOW)
 begin
   case timer is
-        when "1111" => --16
+        when "10000" => --16
             -- 0%
-            pwm_level = "00000000"
-            LED(8 downto 7) <= pwm_out;  
-        when "1110" => --15
+            pwm_level <= "00000000";
+            --LED(8 downto 7) <= pwm_out;  --one bit assigned to 2 bits
+        when "01111" => --15
             -- 6.25%
-            pwm_level = "00010000" 
-            LED(8 downto 7) <= pwm_out;  
-        when "1101" => --14
+            pwm_level <= "00010000";
+            --LED(8 downto 7) <= pwm_out;  
+        when "01110" => --14
             -- 12.5%
-            pwm_level = "00100000"
-            LED(9 downto 6) <= pwm_out;  
-        when "1100" => --13
+            pwm_level <= "00100000";
+            --LED(9 downto 6) <= pwm_out;  
+        when "01101" => --13
             -- 18.75%
-            pwm_level = "00110000"
-            LED(9 downto 6) <= pwm_out;  
-        when "1011" => --12
+            pwm_level <= "00110000";
+            --LED(9 downto 6) <= pwm_out;  
+        when "01100" => --12
             -- 25%
-            pwm_level = "01000000"
-            LED(10 downto 5) <= pwm_out;  
-        when "1011" => --11
+            pwm_level <= "01000000";
+            --LED(10 downto 5) <= pwm_out;  
+        when "01011" => --11
             -- 31.25%
-            pwm_level = "01010000"
-            LED(10 downto 5) <= pwm_out;  
-        when "1010" => --10
+            pwm_level <= "01010000";
+            --LED(10 downto 5) <= pwm_out;  
+        when "01010" => --10
             -- 37.5%
-            pwm_level = "01100000"
-            LED(11 downto 4) <= pwm_out;  
-        when "1001" => --9
+            pwm_level <= "01100000";
+            --LED(11 downto 4) <= pwm_out;  
+        when "01001" => --9
             -- 43.75%
-            pwm_level = "01110000"
-            LED(11 downto 4) <= pwm_out;  
-        when "1000" => --8
+            pwm_level <= "01110000";
+            --LED(11 downto 4) <= pwm_out;  
+        when "01000" => --8
             -- 50%
-            pwm_level = "10000000"
-            LED(12 downto 3) <= pwm_out;  
-        when "0111" => --7
+            pwm_level <= "10000000";
+            --LED(12 downto 3) <= pwm_out;  
+        when "00111" => --7
             -- 56.25%
-            pwm_level = "10010000"
-            LED(12 downto 3) <= pwm_out;  
-        when "0110" => --6
+            pwm_level <= "10010000";
+            --LED(12 downto 3) <= pwm_out;  
+        when "00110" => --6
             -- 62.5%
-            pwm_level = "10100000"
-            LED(13 downto 2) <= pwm_out;  
-        when "0101" => --5
+            pwm_level <= "10100000";
+            --LED(13 downto 2) <= pwm_out;  
+        when "00101" => --5
             -- 68.75%
-            pwm_level = "10110000"
-            LED(13 downto 2) <= pwm_out;  
-        when "0100" => --4
+            pwm_level <= "10110000";
+            --LED(13 downto 2) <= pwm_out;  
+        when "00100" => --4
             -- 75%
-            pwm_level = "11000000"
-            LED(14 downto 1) <= pwm_out;  
-        when "0011" => --3
+            pwm_level <= "11000000";
+            --LED(14 downto 1) <= pwm_out;  
+        when "00011" => --3
             -- 81.25%
-            pwm_level = "11010000"
-            LED(14 downto 1) <= pwm_out;  
-        when "0010" => --2
+            pwm_level <= "11010000";
+            --LED(14 downto 1) <= pwm_out;  
+        when "00010" => --2
             -- 87.5%
-            pwm_level = "11100000"
-            LED(15 downto 0) <= pwm_out;  
-        when "0001" => --1
+            pwm_level <= "11100000";
+            --LED(15 downto 0) <= pwm_out;  
+        when "00001" => --1
             --93.75%
-            pwm_level = "11110000"
-            LED(15 downto 0) <= pwm_out;  
-        when "0000" => --0
+            pwm_level <= "11110000";
+            --LED(15 downto 0) <= pwm_out;  
+        when "00000" => --0
             -- 100%
-            pwm_level = "11111111"
-            LED(15 downto 0) <= pwm_out;  
+            pwm_level <= "11111111";
+            --LED(15 downto 0) <= pwm_out;  
         when others => null;
   end case;
-end process OUTPUT_DECODE;
+end process output_driver;
 
 ----Chooses the next state depending on button presses
 --NEXT_STATE_DECODE: process (state, BTNC, BTNU, BTND, BTNL, BTNR)
@@ -287,8 +289,8 @@ end process OUTPUT_DECODE;
 --        when others =>
 --            next_state <= st1_wait;
             
-    end case;      
-end process;
+--    end case;      
+--end process;
                 
 
 
