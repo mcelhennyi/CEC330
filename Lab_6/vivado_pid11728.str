@@ -1203,3 +1203,257 @@ selectCodeEditor("Top_countdown.vhd", 88, 225); // bj:J (JPanel:JComponent, cl:J
 // TclEventType: DG_UPDATE_GRAPH
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 500 MB. GUI used memory: 43 MB. Current time: 10/22/15 5:03:48 PM EDT
+// Elapsed time: 1313 seconds
+selectCodeEditor("Top_countdown.vhd", 743, 143); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 151, 145); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 709, 180); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 53 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 4); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Binary_to_decimal.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F:b
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 196, 213); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 93 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 209, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 226, 247); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 170 seconds
+selectCodeEditor("Top_countdown.vhd", 314, 149); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 281, 215); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 273, 274); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("Top_countdown.vhd", 283, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top_countdown.vhd", 243, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 22 seconds
+selectCodeEditor("Top_countdown.vhd", 165, 28); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top_countdown.vhd", 176, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 159 seconds
+selectCodeEditor("Top_countdown.vhd", 107, 129); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 106, 196); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_countdown.vhd", 105, 53); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 64, 147); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_countdown.vhd", 197, 194); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 121, 206); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 118, 225); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Binary_to_decimal.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 84 seconds
+selectCodeEditor("Top_countdown.vhd", 217, 196); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 202, 235); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 200, 158); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 125 seconds
+selectCodeEditor("Top_countdown.vhd", 274, 180); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 189, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 189, 181); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 194, 179); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_countdown.vhd", 198, 112); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 226, 105); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 197, 110); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 190, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("Top_countdown.vhd", 197, 147); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 195, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 330, 301); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 130, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 306, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 305, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 313, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 89, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 266, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 144, 249); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 41, 333); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 42, 352); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Binary_to_decimal.vhd", 157, 336); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 139, 346); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Binary_to_decimal.vhd", 142, 327); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Binary_to_decimal.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 171, 81); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Binary_to_decimal.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top_countdown.vhd", 131, 151); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 105, 163); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 272, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 154, 163); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 268, 161); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 105 seconds
+selectCodeEditor("Top_countdown.vhd", 121, 150); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("PWM.vhd", 220, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("PWM.vhd", 243, 329); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("PWM.vhd", 207, 351); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("PWM.vhd", 162, 190); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 49 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 83, 124); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 102, 150); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 282, 144); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 27 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("PWM.vhd", 228, 233); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("PWM.vhd", 244, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("PWM.vhd", 132, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 500 MB. GUI used memory: 40 MB. Current time: 10/22/15 5:33:49 PM EDT
+// Elapsed time: 707 seconds
+selectCodeEditor("PWM.vhd", 183, 222); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("PWM.vhd", 267, 237); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("PWM.vhd", 295, 235); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 33 seconds
+selectCodeEditor("PWM.vhd", 247, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("PWM.vhd", 248, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PWM.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 222, 90); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 223, 165); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_countdown.vhd", 227, 227); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 53 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_countdown - Behavioral (Top_countdown.vhd), Converter - Binary_to_decimal - Behavioral (Binary_to_decimal.vhd)]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_countdown - Behavioral (Top_countdown.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_countdown - Behavioral (Top_countdown.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_countdown - Behavioral (Top_countdown.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// Elapsed time: 95 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Divider.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_countdown.vhd", 4); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 25 seconds
+selectCodeEditor("Divider.vhd", 191, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 139 seconds
+selectCodeEditor("Divider.vhd", 267, 273); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 192, 286); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 541, 350); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 43 seconds
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor("Divider.vhd", 369, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 92 seconds
+selectCodeEditor("Divider.vhd", 279, 334); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 42 seconds
+selectCodeEditor("Divider.vhd", 84, 350); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 274, 328); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 244, 330); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 29 seconds
+selectCodeEditor("Divider.vhd", 442, 336); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Divider.vhd", 233, 327); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 176, 369); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 293, 380); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 275, 360); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Divider.vhd", 310, 309); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 120 seconds
+selectCodeEditor("Divider.vhd", 619, 278); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 574, 280); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 588, 284); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 160, 318); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor("Divider.vhd", 286, 59); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 490, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 483, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 475, 166); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 468, 161); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 463, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 456, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 411, 158); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 30 seconds
+selectCodeEditor("Divider.vhd", 127, 73); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 135, 249); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 34 seconds
+selectCodeEditor("Divider.vhd", 191, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 215, 230); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 235, 266); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 194, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 159, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Divider.vhd", 406, 22); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 411, 25); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 420, 28); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 483, 80); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("Divider.vhd", 210, 73); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 152, 91); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Divider.vhd", 127, 94); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 181, 322); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 129, 317); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 251, 312); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 459, 328); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Divider.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Divider.vhd", 221, 350); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH

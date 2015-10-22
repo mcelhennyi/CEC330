@@ -157,9 +157,9 @@ Converter: Binary_to_decimal
 --      end if;
 --   end process SYNC_PROC;
 --Counts for the 16 second timer
-timer: process(CLK_SLOW)---------should try to use the fast clock here to see if it fixes the problem below
+timer: process(CLK_IN)
     begin
-        if BNTC = '0' then-----------------------------------this will not be immediate all the time 
+        if BNTC = '0' then
             if timer > "00000" then
                 if(rising_edge(CLK_SLOW)) then 
                     timer <= timer - 1; 
@@ -175,19 +175,19 @@ begin
   case timer is
         when "10000" => --16
             -- 0%
-            pwm_level <= "00000000";
+            pwm_level <= "00000000";--16
             --LED(8 downto 7) <= pwm_out;  --one bit assigned to 2 bits
         when "01111" => --15
             -- 6.25%
-            pwm_level <= "00010000";
+            pwm_level <= "00010000";--32
             --LED(8 downto 7) <= pwm_out;  
         when "01110" => --14
             -- 12.5%
-            pwm_level <= "00100000";
+            pwm_level <= "00100000";--48
             --LED(9 downto 6) <= pwm_out;  
         when "01101" => --13
             -- 18.75%
-            pwm_level <= "00110000";
+            pwm_level <= "00110000";--64
             --LED(9 downto 6) <= pwm_out;  
         when "01100" => --12
             -- 25%
