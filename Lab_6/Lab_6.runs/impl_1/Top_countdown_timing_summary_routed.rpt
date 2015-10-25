@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Thu Oct 22 19:04:45 2015
+| Date         : Sun Oct 25 15:07:11 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_countdown_timing_summary_routed.rpt -rpx Top_countdown_timing_summary_routed.rpx
 | Design       : Top_countdown
@@ -54,8 +54,6 @@ Table of Contents
 
  There are 3 register/latch pins with no clock driven by root clock pin: divider_map/register_counter_reg[14]/C (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: timer_reg[4]/Q (HIGH)
-
 
 2. checking constant_clock
 --------------------------
@@ -69,7 +67,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 22 pins that are not constrained for maximum delay. (HIGH)
+ There are 18 pins that are not constrained for maximum delay. (HIGH)
 
  There are 3 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
 
@@ -83,7 +81,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 9 ports with no output delay specified. (HIGH)
+ There are 8 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -102,7 +100,7 @@ Table of Contents
 
 9. checking loops
 -----------------
- There are 4 combinational loops in the design. (HIGH)
+ There are 0 combinational loops in the design.
 
 
 10. checking partial_input_delay
@@ -117,7 +115,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 4 combinational latch loops in the design through latch input (HIGH)
+ There are 0 combinational latch loops in the design through latch input
 
 
 

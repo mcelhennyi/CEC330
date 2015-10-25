@@ -49,18 +49,18 @@ signal dec_2_middle : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000"; --Same size as DE
 begin
 
 convert_to_decimal: process(CLK_IN,BINARY_IN)
+variable dec_1_middle : STD_LOGIC_VECTOR (4 DOWNTO 0); --Same size as the binary in
+variable dec_2_middle : STD_LOGIC_VECTOR (3 DOWNTO 0); --Same size as DEC_OUT_2
     begin
-        dec_1_middle <= BINARY_IN;
+        dec_1_middle := BINARY_IN;
+        dec_2_middle := "0000";
         --would need to use a while loop and more statements if the value was going to be bigger than 19
-        if Binary_in > "1001" then
-            dec_1_middle <= dec_1_middle - "1010";
-            dec_2_middle <= dec_2_middle + 1;
-        elsif Binary_in < "1010" then
-            dec_1_middle <= BINARY_IN;
+        if dec_1_middle > "1001" then
+            dec_1_middle := dec_1_middle - "01010";
+            dec_2_middle := dec_2_middle + 1;
         end if;
+        
+        DEC_OUT_1 <= dec_1_middle(3 downto 0);
+        DEC_OUT_2 <= dec_2_middle;
     end process convert_to_decimal;
-
-DEC_OUT_1 <= dec_1_middle(3 downto 0);
-DEC_OUT_2 <= dec_2_middle;
-
 end Behavioral;

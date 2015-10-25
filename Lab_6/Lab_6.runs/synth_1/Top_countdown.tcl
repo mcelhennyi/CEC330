@@ -14,10 +14,10 @@ set_property parent.project_path C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.xp
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 read_vhdl -library xil_defaultlib {
+  C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Binary_to_decimal.vhd
   C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Seven_seg_driver.vhd
   C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/PWM.vhd
   C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Divider.vhd
-  C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Binary_to_decimal.vhd
   C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/sources_1/new/Top_countdown.vhd
 }
 read_xdc C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/constrs_1/new/Lab_6_constraints.xdc

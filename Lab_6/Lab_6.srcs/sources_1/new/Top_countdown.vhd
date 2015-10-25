@@ -188,7 +188,7 @@ timer2: process(CLK_IN)
         end if;
     end process timer2;
 --The operations of each state
-output_driver: process (CLK_SLOW)
+output_driver: process (CLK_SLOW,timer)
 begin
   case timer is
         when "10000" => --16
