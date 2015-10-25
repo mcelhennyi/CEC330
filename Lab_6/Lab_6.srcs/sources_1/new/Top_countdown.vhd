@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -47,14 +49,15 @@ architecture Behavioral of Top_countdown is
 --display signals for the seven segment displays
 signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp2 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp4 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp4 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
 
 signal clk_slow : STD_LOGIC := '0'; --The one Hz clock
+signal clk_16Hz : STD_LOGIC := '0'; --16Hz clock
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
 signal clk_state : STD_LOGIC; --Clock to change State Machine
 signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
@@ -69,7 +72,8 @@ signal timer : STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000"; --count down timer vari
 --Divides the clock into a 1hz slow signal and a ~70hz signal for the display switching
 component Divider
     Port ( CLK_IN : in STD_LOGIC;
-           CLK_OUT_SLOW : out STD_LOGIC;
+           CLK_OUT_1Hz : out STD_LOGIC;
+           CLK_OUT_16Hz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
            CLK_OUT_STATE : out STD_LOGIC
            );
@@ -86,12 +90,12 @@ component Seven_seg_driver
     Port ( CLK_AN : in STD_LOGIC;
            Disp1 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
            Disp2 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
---           Disp3 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
---           Disp4 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
---           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp3 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           Disp4 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
 --           FLAG_an : in STD_LOGIC;
            Display_out : out STD_LOGIC_VECTOR (7 DOWNTO 0);
            AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
@@ -113,13 +117,14 @@ begin
 -- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
 divider_map: Divider
     port map ( CLK_IN  => CLK_IN,
-               CLK_OUT_SLOW => clk_slow,
+               CLK_OUT_1Hz => clk_slow,
+               CLK_OUT_16Hz => clk_16Hz,
                CLK_OUT_AN => clk_an,
                CLK_OUT_STATE => clk_state
                );
 --
 pwm_map: PWM
-    port map ( CLK_IN => pwm_clk,
+    port map ( CLK_IN => clk_16Hz,
                PWM_LEVEL => pwm_level,
                PWM_OUT => pwm_out
                );  
@@ -128,12 +133,12 @@ Seven_seg_map: Seven_seg_driver
     port map ( CLK_AN => clk_an,
                Disp1 => Disp1,
                Disp2 => Disp2,
---               Disp3 => Disp3,
---               Disp4 => Disp4,
---               Disp5 => Disp5,
---               Disp6 => Disp6,
---               Disp7 => Disp7,
---               Disp8 => Disp8,
+               Disp3 => Disp3,
+               Disp4 => Disp4,
+               Disp5 => Disp5,
+               Disp6 => Disp6,
+               Disp7 => Disp7,
+               Disp8 => Disp8,
 --               FLAG_an => flag_an,
                Display_out => SEG,
                AN_out => AN
@@ -157,9 +162,9 @@ Converter: Binary_to_decimal
 --      end if;
 --   end process SYNC_PROC;
 --Counts for the 16 second timer
-timer: process(CLK_IN)
+timer1: process(CLK_IN)
     begin
-        if BNTC = '0' then
+        if BTNC = '0' then
             if timer > "00000" then
                 if(rising_edge(CLK_SLOW)) then 
                     timer <= timer - 1; 
@@ -168,79 +173,88 @@ timer: process(CLK_IN)
         elsif BTNC = '1' then
             timer <= "10000"; 
         end if;
-    end process timer;
+    end process timer1;
+--
+timer2: process(CLK_IN)
+    begin
+        if BTNC = '0' then
+            if pwm_level /= x"ff" then
+                if(rising_edge(clk_16Hz)) then 
+                    pwm_level <= pwm_level + '1';
+                end if;
+            end if;
+        elsif BTNC = '1' then
+               pwm_level <= x"00";  
+        end if;
+    end process timer2;
 --The operations of each state
 output_driver: process (CLK_SLOW)
 begin
   case timer is
         when "10000" => --16
             -- 0%
-            pwm_level <= "00000000";--16
-            --LED(8 downto 7) <= pwm_out;  --one bit assigned to 2 bits
+            LED(8 downto 7) <= pwm_out & pwm_out;
         when "01111" => --15
             -- 6.25%
-            pwm_level <= "00010000";--32
-            --LED(8 downto 7) <= pwm_out;  
+            LED(8 downto 7) <= pwm_out & pwm_out;  
         when "01110" => --14
             -- 12.5%
-            pwm_level <= "00100000";--48
-            --LED(9 downto 6) <= pwm_out;  
+            
+            LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01101" => --13
             -- 18.75%
-            pwm_level <= "00110000";--64
-            --LED(9 downto 6) <= pwm_out;  
+            
+            LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out; 
         when "01100" => --12
             -- 25%
-            pwm_level <= "01000000";
-            --LED(10 downto 5) <= pwm_out;  
+            
+            LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01011" => --11
             -- 31.25%
-            pwm_level <= "01010000";
-            --LED(10 downto 5) <= pwm_out;  
+            
+             LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;    
         when "01010" => --10
             -- 37.5%
-            pwm_level <= "01100000";
-            --LED(11 downto 4) <= pwm_out;  
+           
+            LED(11 downto 4) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01001" => --9
             -- 43.75%
-            pwm_level <= "01110000";
-            --LED(11 downto 4) <= pwm_out;  
+           
+            LED(11 downto 4) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01000" => --8
             -- 50%
-            pwm_level <= "10000000";
-            --LED(12 downto 3) <= pwm_out;  
+            
+            LED(12 downto 3) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00111" => --7
             -- 56.25%
-            pwm_level <= "10010000";
-            --LED(12 downto 3) <= pwm_out;  
+            
+            LED(12 downto 3) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "00110" => --6
             -- 62.5%
-            pwm_level <= "10100000";
-            --LED(13 downto 2) <= pwm_out;  
+            LED(13 downto 2) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
         when "00101" => --5
             -- 68.75%
-            pwm_level <= "10110000";
-            --LED(13 downto 2) <= pwm_out;  
+            LED(13 downto 2) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00100" => --4
             -- 75%
-            pwm_level <= "11000000";
-            --LED(14 downto 1) <= pwm_out;  
+            
+            LED(14 downto 1) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00011" => --3
             -- 81.25%
-            pwm_level <= "11010000";
-            --LED(14 downto 1) <= pwm_out;  
+            
+            LED(14 downto 1) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "00010" => --2
             -- 87.5%
-            pwm_level <= "11100000";
-            --LED(15 downto 0) <= pwm_out;  
+            
+            LED(15 downto 0) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00001" => --1
             --93.75%
-            pwm_level <= "11110000";
-            --LED(15 downto 0) <= pwm_out;  
+            
+            LED(15 downto 0) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00000" => --0
             -- 100%
-            pwm_level <= "11111111";
-            --LED(15 downto 0) <= pwm_out;  
+            
+            LED(15 downto 0) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when others => null;
   end case;
 end process output_driver;

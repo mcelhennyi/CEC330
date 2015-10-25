@@ -25,6 +25,8 @@ update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+<<<<<<< HEAD
+=======
 update_compile_order -fileset sim_1
 file mkdir C:/Users/Ian McElhenny/Documents/CEC330/ClockTest/ClockTest.srcs/constrs_1
 file mkdir C:/Users/Ian McElhenny/Documents/CEC330/ClockTest/ClockTest.srcs/constrs_1
@@ -36,8 +38,55 @@ file mkdir C:/Users/Ian McElhenny/Documents/CEC330/ClockTest/ClockTest.srcs/cons
 file mkdir {C:/Users/Ian McElhenny/Documents/CEC330/ClockTest/ClockTest.srcs/constrs_1/new}
 close [ open {C:/Users/Ian McElhenny/Documents/CEC330/ClockTest/ClockTest.srcs/constrs_1/new/master.xdc} w ]
 add_files -fileset constrs_1 {{C:/Users/Ian McElhenny/Documents/CEC330/ClockTest/ClockTest.srcs/constrs_1/new/master.xdc}}
+>>>>>>> 21a9f56ee7aa61ba8ca014f3ad90af1eb13ee4c2
 launch_runs impl_1
 wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1
 wait_on_run impl_1
+<<<<<<< HEAD
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reorder_files -fileset constrs_1 -after C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/constrs_1/new/Lab_6_constraints.xdc C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.srcs/constrs_1/new/Lab_6_constraints.xdc
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+=======
+>>>>>>> 21a9f56ee7aa61ba8ca014f3ad90af1eb13ee4c2

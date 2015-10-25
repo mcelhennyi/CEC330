@@ -37,12 +37,12 @@ entity Seven_seg_driver is
     Port ( CLK_AN : in STD_LOGIC;
            Disp1 : in STD_LOGIC_VECTOR (3 downto 0);
            Disp2 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp3 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp4 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp3 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp4 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
 --           FLAG_an : in STD_LOGIC;
            Display_out : out STD_LOGIC_VECTOR (7 downto 0);
            AN_out : out STD_LOGIC_VECTOR (7 downto 0)
@@ -87,7 +87,7 @@ counter: process(CLK_AN)
 --decides which digit to decode based on count
 WITH Disp_counter SELECT
     Display <= Disp1 WHEN "000", 
-               Disp2 WHEN "001", 
+               Disp2 WHEN "001",
                Disp3 WHEN "010", 
                Disp4 WHEN "011",
                Disp5 WHEN "100",

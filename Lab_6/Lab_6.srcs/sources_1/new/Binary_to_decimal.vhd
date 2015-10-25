@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -54,11 +56,11 @@ convert_to_decimal: process(CLK_IN,BINARY_IN)
             dec_1_middle <= dec_1_middle - "1010";
             dec_2_middle <= dec_2_middle + 1;
         elsif Binary_in < "1010" then
-            dec_1_middle <= BINARY_IN(3 downto 0);
+            dec_1_middle <= BINARY_IN;
         end if;
     end process convert_to_decimal;
 
-DEC_OUT_1 <= dec_1_middle;
+DEC_OUT_1 <= dec_1_middle(3 downto 0);
 DEC_OUT_2 <= dec_2_middle;
 
 end Behavioral;
