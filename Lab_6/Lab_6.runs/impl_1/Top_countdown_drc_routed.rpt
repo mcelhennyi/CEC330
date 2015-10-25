@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sun Oct 25 15:07:11 2015
-| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Date         : Sun Oct 25 18:59:10 2015
+| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
+             Violations found: 9
 
 2. REPORT DETAILS
 -----------------
@@ -35,6 +35,46 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net g0_b10_n_0 is a gated clock net sourced by a combinational pin g0_b10/O, cell g0_b10. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net g0_b11_n_0 is a gated clock net sourced by a combinational pin g0_b11/O, cell g0_b11. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net g0_b12_n_0 is a gated clock net sourced by a combinational pin g0_b12/O, cell g0_b12. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net g0_b13_n_0 is a gated clock net sourced by a combinational pin g0_b13/O, cell g0_b13. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net g0_b14_n_0 is a gated clock net sourced by a combinational pin g0_b14/O, cell g0_b14. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net g0_b15_n_0 is a gated clock net sourced by a combinational pin g0_b15/O, cell g0_b15. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net g0_b8_n_0 is a gated clock net sourced by a combinational pin g0_b8/O, cell g0_b8. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net g0_b9_n_0 is a gated clock net sourced by a combinational pin g0_b9/O, cell g0_b9. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
