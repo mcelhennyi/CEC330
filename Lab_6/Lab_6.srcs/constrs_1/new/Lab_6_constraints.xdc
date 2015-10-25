@@ -41,5 +41,6 @@ set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { AN[7] 
 ##Buttons
 set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 } [get_ports { BTNC }]; #IO_L9P_T1_DQS_14 Sch=btnc
 
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets BTNC_IBUF];
 
-set_property SEVERITY {Warning} [get_drc_checks LUTLP-1]
+#set_property SEVERITY {Warning} [get_drc_checks LUTLP-1]

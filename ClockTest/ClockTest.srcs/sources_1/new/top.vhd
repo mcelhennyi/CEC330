@@ -41,10 +41,10 @@ end Divider;
 architecture Behavioral of Divider is
 
 signal counter1Hz : STD_LOGIC_VECTOR (31 DOWNTO 0) := x"00000000";
-signal clk_out1Hz : STD_LOGIC := 0;
+signal clk_out1Hz : STD_LOGIC := '0';
 
 signal counter16Hz : STD_LOGIC_VECTOR (23 DOWNTO 0) := x"000000";
-signal clk_out16Hz : STD_LOGIC := 0;
+signal clk_out16Hz : STD_LOGIC := '0';
 
 begin
 
