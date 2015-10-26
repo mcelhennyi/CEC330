@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sun Oct 25 20:24:05 2015
+| Date         : Mon Oct 26 14:46:45 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_io -file Top_countdown_io_placed.rpt
 | Design       : Top_countdown

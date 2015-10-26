@@ -60,12 +60,12 @@ architecture Behavioral of Seven_seg_driver is
    
 begin
 --These anodes are not used and are set to be off
---an(3) <= "11111111";
---an(4) <= "11111111";
---an(5) <= "11111111";
---an(6) <= "11111111";
---an(7) <= "11111111";
---an(8) <= "11111111";
+an(3) <= "11111111";
+an(4) <= "11111111";
+an(5) <= "11111111";
+an(6) <= "11111111";
+an(7) <= "11111111";
+an(8) <= "11111111";
 --anodes are off if FLAG_an is 0, else they are on
 --anode_states: process(CLK_AN, FLAG_an)
 --    begin
@@ -96,8 +96,8 @@ WITH Disp_counter SELECT
                Disp8 WHEN "111";
 --decides which 7 segment display to turn on based on count
 WITH Disp_counter SELECT
-    AN_out <= "11111110" WHEN "000", --Display1 on
-              "11111101" WHEN "001", --Display2 on
+    AN_out <= an(1) WHEN "000", --Display1 on
+              an(2) WHEN "001", --Display2 on
               an(3) WHEN "010", --Display3 on
               an(4) WHEN "011", --Display4 on
               an(5) WHEN "100", --Display5 on

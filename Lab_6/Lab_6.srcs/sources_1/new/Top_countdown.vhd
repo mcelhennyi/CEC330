@@ -196,75 +196,45 @@ timer2: process(CLK_IN, clk_16Hz)
         end if;
     end process timer2;
 --The operations of each state
-output_driver: process (CLK_SLOW,timer)
+output_driver: process (CLK_IN,timer)
 begin
   case timer is
         when "10000" => --16
-            -- 0%
             LED(8 downto 7) <= pwm_out & pwm_out;
             LED(15 downto 9) <= "0000000";
             LED(6 downto 0) <= "0000000";
         when "01111" => --15
-            -- 6.25%
             LED(8 downto 7) <= pwm_out & pwm_out;  
         when "01110" => --14
-            -- 12.5%
-            
             LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01101" => --13
-            -- 18.75%
-            
             LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out; 
         when "01100" => --12
-            -- 25%
-            
             LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01011" => --11
-            -- 31.25%
-            
-             LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;    
+            LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;    
         when "01010" => --10
-            -- 37.5%
-           
-            LED(11 downto 4) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            LED(11 downto 4) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01001" => --9
-            -- 43.75%
-           
-            LED(11 downto 4) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            LED(11 downto 4) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "01000" => --8
-            -- 50%
-            
-            LED(12 downto 3) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            LED(12 downto 3) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
         when "00111" => --7
-            -- 56.25%
-            
-            LED(12 downto 3) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            LED(12 downto 3) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "00110" => --6
-            -- 62.5%
-            LED(13 downto 2) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
+            LED(13 downto 2) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
         when "00101" => --5
-            -- 68.75%
-            LED(13 downto 2) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            LED(13 downto 2) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00100" => --4
-            -- 75%
-            
-            LED(14 downto 1) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            LED(14 downto 1) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00011" => --3
-            -- 81.25%
-            
-            LED(14 downto 1) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            LED(14 downto 1) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
         when "00010" => --2
-            -- 87.5%
-            
-            LED(15 downto 0) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00001" => --1
-            --93.75%
-            
-            LED(15 downto 0) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when "00000" => --0
-            -- 100%
-            
-            LED(15 downto 0) <=  pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
         when others => null;
   end case;
 end process output_driver;
