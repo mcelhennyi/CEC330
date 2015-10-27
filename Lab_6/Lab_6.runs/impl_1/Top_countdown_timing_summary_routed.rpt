@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sun Oct 25 18:59:10 2015
-| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
+| Date         : Mon Oct 26 14:47:23 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_countdown_timing_summary_routed.rpt -rpx Top_countdown_timing_summary_routed.rpx
 | Design       : Top_countdown
 | Device       : 7a100t-csg324
@@ -56,7 +56,7 @@ Table of Contents
 
  There are 5 register/latch pins with no clock driven by root clock pin: divider_map/clk_out1Hz_reg/C (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: divider_map/clk_out50Hz_reg/C (HIGH)
+ There are 11 register/latch pins with no clock driven by root clock pin: divider_map/clk_out50Hz_reg/C (HIGH)
 
  There are 8 register/latch pins with no clock driven by root clock pin: timer_reg[0]/C (HIGH)
 
@@ -81,7 +81,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 186 pins that are not constrained for maximum delay. (HIGH)
+ There are 189 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -95,7 +95,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 23 ports with no output delay specified. (HIGH)
+ There are 25 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

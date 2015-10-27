@@ -103,7 +103,7 @@ counter1: process(CLK_IN)
 CLK_OUT_1Hz <= clk_out1Hz;--Slow 1Hz clock
 CLK_OUT_16Hz <= clk_out16Hz;--16Hz clock
 CLK_OUT_50Hz <= clk_out50Hz; --PWM refresh clock for LEDS
-CLK_OUT_AN <= register_counter(14);--About 70Hz for display switching
-CLK_OUT_STATE <= register_counter(4); --Counter to change a state machine
+CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
+CLK_OUT_STATE <= clk_out50Hz; --Counter to change a state machine
 
 end Behavioral;
