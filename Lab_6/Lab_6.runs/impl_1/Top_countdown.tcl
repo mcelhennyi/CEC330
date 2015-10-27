@@ -48,10 +48,9 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   open_checkpoint Top_countdown_routed.dcp
-  set_property webtalk.parent_dir C:/Users/Austin/Documents/CEC330/Lab_6/Lab_6.cache/wt [current_project]
+  set_property webtalk.parent_dir F:/CEC330/Lab_6/Lab_6.cache/wt [current_project]
   write_bitstream -force Top_countdown.bit 
   catch { write_sysdef -hwdef Top_countdown.hwdef -bitfile Top_countdown.bit -meminfo Top_countdown.mmi -ltxfile debug_nets.ltx -file Top_countdown.sysdef }
   close_msg_db -file write_bitstream.pb
