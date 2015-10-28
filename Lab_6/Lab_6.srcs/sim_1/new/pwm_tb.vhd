@@ -50,7 +50,7 @@ end component PWM;
     --Outputs
     signal pwm_out :  STD_LOGIC;
     --Clock Period
-    constant CLK_period : time := 200 ms;
+    constant CLK_period : time := 200000000 ns;
     
 begin
 uut: PWM
@@ -72,9 +72,9 @@ stim_proc: process
 begin
 --set level
     pwm_level <= "11111111";
-    wait for 400 ms;
+    wait for 400000000 ns;
     pwm_level <= "00000000";
-    wait for 400 ms;
+    wait for 400000000 ns;
     pwm_level <= "10000000";
     wait;
     
