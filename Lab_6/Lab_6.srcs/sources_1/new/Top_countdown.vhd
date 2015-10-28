@@ -82,7 +82,7 @@ component Divider
            CLK_OUT_STATE : out STD_LOGIC
            );
 end component Divider;
-
+--takes clock in and a level for the pmw and has an output PMW clock.
 component PWM
     Port ( CLK_IN : in STD_LOGIC;
            PWM_LEVEL : in STD_LOGIC_VECTOR (7 downto 0);
@@ -105,7 +105,7 @@ component Seven_seg_driver
            AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
            );
 end component Seven_seg_driver;
---
+--converts 5 bit binary number to two 4 bit bcd number for a decimal representation
 component Binary_to_decimal
     Port ( CLK_IN : in STD_LOGIC;
            BINARY_IN : in STD_LOGIC_VECTOR (4 DOWNTO 0);
@@ -116,8 +116,6 @@ end component Binary_to_decimal;
 
 begin
 button_center <= BTNC;
---timer <= "0000" & clk_slow;
-
 ------------------------------------
 --PORT MAPS-------------------------
 ------------------------------------
@@ -130,7 +128,7 @@ divider_map: Divider
                CLK_OUT_AN => clk_an,
                CLK_OUT_STATE => clk_state
                );
---
+--maps the pmw module
 pwm_map: PWM
     port map ( CLK_IN => clk_50Hz,
                PWM_LEVEL => pwm_level,
@@ -160,16 +158,9 @@ Converter: Binary_to_decimal
                );
 
 ------------------------------------
---State Machine Code----------------
+--LED Control Code----------------
 ------------------------------------
-----Switches the state to the next state every clock cycle of CLK_IN
---SYNC_PROC: process (CLK_IN)
---   begin
---      if (clk_state'event and clk_state = '1') then
---            state <= next_state;
---      end if;
---   end process SYNC_PROC;
---Counts for the 16 second timer
+--Decrements the timer at a 1 Hz rate to controll which LEDs are on
 timer1: process(CLK_IN, clk_slow)
     begin
         if button_center = '0' then
@@ -182,7 +173,7 @@ timer1: process(CLK_IN, clk_slow)
             timer <= "10000"; 
         end if;
     end process timer1;
---
+--Incrementing pmw level to increase the brightness of the LEDs
 timer2: process(CLK_IN, clk_16Hz)
     begin
         if button_center = '0' then
@@ -195,48 +186,47 @@ timer2: process(CLK_IN, clk_16Hz)
                pwm_level <= x"00";  
         end if;
     end process timer2;
---The operations of each state
+--LEDs are controlled by the timer signal and pmw_out 
 output_driver: process (CLK_IN,timer)
-begin
-  case timer is
-        when "10000" => --16
-            LED(8 downto 7) <= pwm_out & pwm_out;
-            LED(15 downto 9) <= "0000000";
-            LED(6 downto 0) <= "0000000";
-        when "01111" => --15
-            LED(8 downto 7) <= pwm_out & pwm_out;  
-        when "01110" => --14
-            LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out;  
-        when "01101" => --13
-            LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out; 
-        when "01100" => --12
-            LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
-        when "01011" => --11
-            LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;    
-        when "01010" => --10
-            LED(11 downto 4) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
-        when "01001" => --9
-            LED(11 downto 4) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
-        when "01000" => --8
-            LED(12 downto 3) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
-        when "00111" => --7
-            LED(12 downto 3) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
-        when "00110" => --6
-            LED(13 downto 2) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
-        when "00101" => --5
-            LED(13 downto 2) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
-        when "00100" => --4
-            LED(14 downto 1) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
-        when "00011" => --3
-            LED(14 downto 1) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
-        when "00010" => --2
-            LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
-        when "00001" => --1
-            LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
-        when "00000" => --0
-            LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
-        when others => null;
-  end case;
-end process output_driver;
-
+    begin
+      case timer is
+            when "10000" => --16
+                LED(8 downto 7) <= pwm_out & pwm_out;
+                LED(15 downto 9) <= "0000000";
+                LED(6 downto 0) <= "0000000";
+            when "01111" => --15
+                LED(8 downto 7) <= pwm_out & pwm_out;  
+            when "01110" => --14
+                LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out;  
+            when "01101" => --13
+                LED(9 downto 6) <= pwm_out & pwm_out & pwm_out & pwm_out; 
+            when "01100" => --12
+                LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            when "01011" => --11
+                LED(10 downto 5) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;    
+            when "01010" => --10
+                LED(11 downto 4) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            when "01001" => --9
+                LED(11 downto 4) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            when "01000" => --8
+                LED(12 downto 3) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
+            when "00111" => --7
+                LED(12 downto 3) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            when "00110" => --6
+                LED(13 downto 2) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;
+            when "00101" => --5
+                LED(13 downto 2) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            when "00100" => --4
+                LED(14 downto 1) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            when "00011" => --3
+                LED(14 downto 1) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out;  
+            when "00010" => --2
+                LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            when "00001" => --1
+                LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            when "00000" => --0
+                LED(15 downto 0) <= pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out & pwm_out; 
+            when others => null;
+      end case;
+    end process output_driver;
 end Behavioral;

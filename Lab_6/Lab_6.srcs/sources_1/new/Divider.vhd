@@ -44,14 +44,13 @@ end Divider;
 
 architecture Behavioral of Divider is
 
-signal register_counter : STD_LOGIC_VECTOR (26 DOWNTO 0) := "000" & x"000000";
-
+--1Hz counter signals
 signal counter1Hz : STD_LOGIC_VECTOR (26 DOWNTO 0) := "000" & x"000000";
 signal clk_out1Hz : STD_LOGIC := '0';
-
+--16Hz counter signals
 signal counter16Hz : STD_LOGIC_VECTOR (23 DOWNTO 0) := x"000000";
 signal clk_out16Hz : STD_LOGIC := '0';
-
+--50Hz counter signals
 signal counter50Hz : STD_LOGIC_VECTOR (12 DOWNTO 0) := "0000000000000";
 signal clk_out50Hz : STD_LOGIC := '0';
 
@@ -104,6 +103,7 @@ CLK_OUT_1Hz <= clk_out1Hz;--Slow 1Hz clock
 CLK_OUT_16Hz <= clk_out16Hz;--16Hz clock
 CLK_OUT_50Hz <= clk_out50Hz; --PWM refresh clock for LEDS
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
-CLK_OUT_STATE <= clk_out50Hz; --Counter to change a state machine
+--State counter is not being used
+CLK_OUT_STATE <= 0; --clk_out50Hz; --Counter to change a state machine
 
 end Behavioral;

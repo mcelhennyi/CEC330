@@ -43,6 +43,7 @@ end Binary_to_decimal;
 
 architecture Behavioral of Binary_to_decimal is
 
+--Middle signals used for figuring the decimal outputs
 signal dec_1_middle : STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000"; --Same size as the binary in
 signal dec_2_middle : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000"; --Same size as DEC_OUT_2
 
@@ -56,7 +57,7 @@ variable dec_2_middle : STD_LOGIC_VECTOR (3 DOWNTO 0); --Same size as DEC_OUT_2
         dec_2_middle := "0000";
         --would need to use a while loop and more statements if the value was going to be bigger than 19
         if dec_1_middle > "1001" then
-            dec_1_middle := dec_1_middle - "01010";
+            dec_1_middle := dec_1_middle - "1010";
             dec_2_middle := dec_2_middle + 1;
         end if;
         

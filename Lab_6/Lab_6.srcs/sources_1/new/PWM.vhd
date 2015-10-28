@@ -41,6 +41,7 @@ entity PWM is
 end PWM;
 
 architecture Behavioral of PWM is
+
 signal register_counter : STD_LOGIC_VECTOR (7 DOWNTO 0) := x"00"; --counter to compare pwm level to
 signal output : STD_LOGIC:= '0'; --momentary output value for pwm 
 
