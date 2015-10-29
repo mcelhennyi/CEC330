@@ -38,7 +38,7 @@ entity Top_serial is
            SEG : out STD_LOGIC_VECTOR (7 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0);
            SW : in STD_LOGIC_VECTOR (7 downto 0);
-           LED : in STD_LOGIC_VECTOR (7 downto 0)
+           LED : in STD_LOGIC_VECTOR (15 downto 0)
            );
 end Top_serial;
 
@@ -64,6 +64,8 @@ signal clk_state : STD_LOGIC; --Clock to change State Machine
 signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
 signal TXdone : STD_LOGIC;
+signal TXenable : STD_LOGIC;
+signal data : STD_LOGIC;
 
 --States for the FSM
 type FSM_state_type is (st1_wait, st2_save_data, st3_saved_wait, st4_transmit); 
@@ -143,12 +145,14 @@ OUTPUT_DECODE: process (state)
 begin
     case state is
         when st1_wait =>
-           
+           TXenable <= '0';
         when st2_save_data =>
-           
+            data <= SW; --port map
         when st3_saved_wait =>
-           
+            Disp1 <= data(3 downto 0);
+            Disp2 <= data(7 downto 4);
         when st4_transmit =>
+            TXenable <= '1'; --port map
            
         when others => null;
     end case;
