@@ -95,6 +95,34 @@ component Seven_seg_driver
 end component Seven_seg_driver;
 
 begin
+------------------------------------
+--PORT MAPS-------------------------
+------------------------------------
+-- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
+divider_map: Divider
+    port map ( CLK_IN  => CLK_IN,
+               CLK_OUT_1Hz => clk_slow,
+               CLK_OUT_16Hz => clk_16Hz,
+               CLK_OUT_50Hz => clk_50Hz,
+               CLK_OUT_AN => clk_an,
+               CLK_OUT_STATE => clk_state
+               );
+--maps the driver 
+Seven_seg_map: Seven_seg_driver
+    port map ( CLK_AN => clk_an,
+               Disp1 => Disp1,
+               Disp2 => Disp2,
+               Disp3 => Disp3,
+               Disp4 => Disp4,
+               Disp5 => Disp5,
+               Disp6 => Disp6,
+               Disp7 => Disp7,
+               Disp8 => Disp8,
+--               FLAG_an => flag_an,
+               Display_out => SEG,
+               AN_out => AN
+               ); 
+
 
 
 end Behavioral;
