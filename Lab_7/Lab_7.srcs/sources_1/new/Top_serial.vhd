@@ -35,10 +35,11 @@ entity Top_serial is
     Port ( CLK_IN : in STD_LOGIC;
            BTNC : in STD_LOGIC;
            BTNU : in STD_LOGIC;
-           SEG : out STD_LOGIC;
-           AN : out STD_LOGIC;
-           SW : in STD_LOGIC;
-           LED : in STD_LOGIC);
+           SEG : out STD_LOGIC_VECTOR (7 downto 0);
+           AN : out STD_LOGIC_VECTOR (7 downto 0);
+           SW : in STD_LOGIC_VECTOR (7 downto 0);
+           LED : in STD_LOGIC_VECTOR (7 downto 0)
+           );
 end Top_serial;
 
 architecture Behavioral of Top_serial is
@@ -62,7 +63,11 @@ signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and 
 signal clk_state : STD_LOGIC; --Clock to change State Machine
 signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
-signal button_center : STD_LOGIC;
+signal TXdone : STD_LOGIC;
+
+--States for the FSM
+type FSM_state_type is (st1_wait, st2_save_data, st3_saved_wait, st4_transmit); 
+signal state, next_state : FSM_state_type;
 
 -----------------------------------
 --COMPONETS------------------------
@@ -101,7 +106,7 @@ begin
 -- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
 divider_map: Divider
     port map ( CLK_IN  => CLK_IN,
-               CLK_OUT_1Hz => clk_slow,
+               CLK_OUT_1Hz => clk_1Hz,
                CLK_OUT_16Hz => clk_16Hz,
                CLK_OUT_50Hz => clk_50Hz,
                CLK_OUT_AN => clk_an,
@@ -122,7 +127,65 @@ Seven_seg_map: Seven_seg_driver
                Display_out => SEG,
                AN_out => AN
                ); 
+               
+------------------------------------
+--State Machine---------------------
+------------------------------------
+--Switches the state to the next state every clock cycle of CLK_IN
+SYNC_PROC: process (clk_state)
+begin
+    if (clk_state'event and clk_state = '1') then
+        state <= next_state;
+    end if;
+end process;
+--The operations of eache state
+OUTPUT_DECODE: process (state)
+begin
+    case state is
+        when st1_wait =>
+           
+        when st2_save_data =>
+           
+        when st3_saved_wait =>
+           
+        when st4_transmit =>
+           
+        when others => null;
+    end case;
+end process OUTPUT_DECODE;
 
+--Chooses the next state depending on button presses
+NEXT_STATE_DECODE: process (state, BTNC, BTNU)
+begin
+ next_state <= state;  
+ 
+--state case statement to change a state on rising edge  
+case (state) is
+    when st1_wait =>
+        if BTNU = '1' then
+           next_state <= st2_save_data;
+        end if; 
+        
+    when st2_save_data  =>
+        next_state <= st3_saved_wait;
+        
+    when st3_saved_wait  =>
+        if BTNU = '1' then
+           next_state <= st2_save_data;
+        elsif BTNC = '1' then
+           next_state <= st4_transmit;
+        end if; 
+            
+    when st4_transmit  =>
+        if TXdone = '1' then
+            next_state <= st1_wait;
+        end if;
+    
+    when others =>
+        next_state <= st1_wait;
+    
+    end case;      
+end process;
 
 
 end Behavioral;
