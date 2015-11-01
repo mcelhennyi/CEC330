@@ -76,6 +76,7 @@ begin
     pwm_level <= "00000000";
     wait for 400000000 ns;
     pwm_level <= "10000000";
+    wait for 400000000 ns;
     wait;
     
 end process stim_proc;
