@@ -58,14 +58,18 @@ signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
 
 signal clk_1Hz : STD_LOGIC := '0'; --The one Hz clock
 signal clk_16Hz : STD_LOGIC := '0'; --16Hz clock
-signal clk_50Hz : STD_LOGIC := '0'; --16Hz clock
+signal clk_50Hz : STD_LOGIC := '0'; --50Hz clock
+signal clk_100KHz : STD_LOGIC := '0'; --100KHz clock
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
 signal clk_state : STD_LOGIC; --Clock to change State Machine
 signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
-signal TXdone : STD_LOGIC;
-signal TXenable : STD_LOGIC;
-signal data : STD_LOGIC;
+signal tx_done : STD_LOGIC :=0;
+signal tx_enable : STD_LOGIC :=0;
+signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
+signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
+signal spi_clk : STD_LOGIC :=0;
+
 
 --States for the FSM
 type FSM_state_type is (st1_wait, st2_save_data, st3_saved_wait, st4_transmit); 
@@ -80,6 +84,7 @@ component Divider
            CLK_OUT_1Hz : out STD_LOGIC;
            CLK_OUT_16Hz : out STD_LOGIC;
            CLK_OUT_50Hz :  out STD_LOGIC;
+           CLK_OUT_100KHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
            CLK_OUT_STATE : out STD_LOGIC
            );
@@ -100,7 +105,16 @@ component Seven_seg_driver
            AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
            );
 end component Seven_seg_driver;
-
+--exports data on the SPI bus
+component SPI
+    Port ( SPI_CLK_IN : in STD_LOGIC;
+           SPI_CLK_OUT : out STD_LOGIC;
+           DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0);
+           DATA_IN : out STD_LOGIC_VECTOR (7 downto 0);
+           TX_ENABLE : in STD_LOGIC;
+           TX_DONE : out STD_LOGIC
+           );
+end component SPI;
 begin
 ------------------------------------
 --PORT MAPS-------------------------
@@ -111,6 +125,7 @@ divider_map: Divider
                CLK_OUT_1Hz => clk_1Hz,
                CLK_OUT_16Hz => clk_16Hz,
                CLK_OUT_50Hz => clk_50Hz,
+               CLK_OUT_100Khz => clk_100KHz,
                CLK_OUT_AN => clk_an,
                CLK_OUT_STATE => clk_state
                );
@@ -129,6 +144,15 @@ Seven_seg_map: Seven_seg_driver
                Display_out => SEG,
                AN_out => AN
                ); 
+--maps the spi bus
+SPI: SPI 
+    port map ( SPI_CLK_IN => clk_100KHz,
+               SPI_CLK_OUT => spi_clk;
+               DATA_OUT => tx_data,
+               DATA_IN => rx_data,
+               TX_ENABLE => tx_enable,
+               TX_DONE => tx_done
+               );
                
 ------------------------------------
 --State Machine---------------------
@@ -145,14 +169,14 @@ OUTPUT_DECODE: process (state)
 begin
     case state is
         when st1_wait =>
-           TXenable <= '0';
+           tx_enable <= '0';
         when st2_save_data =>
             data <= SW; --port map
         when st3_saved_wait =>
             Disp1 <= data(3 downto 0);
             Disp2 <= data(7 downto 4);
         when st4_transmit =>
-            TXenable <= '1'; --port map
+            tx_enable <= '1'; --port map
            
         when others => null;
     end case;
@@ -181,7 +205,7 @@ case (state) is
         end if; 
             
     when st4_transmit  =>
-        if TXdone = '1' then
+        if tx_done = '1' then
             next_state <= st1_wait;
         end if;
     
