@@ -42,7 +42,7 @@ entity Top_serial is
            );
 end Top_serial;
 
-architecture Behavioral of Top_serial is
+  architecture Behavioral of Top_serial is
 -----------------------------------
 --Signals--------------------------
 -----------------------------------
