@@ -37,6 +37,7 @@ entity Divider is
            CLK_OUT_1Hz : out STD_LOGIC;
            CLK_OUT_16Hz : out STD_LOGIC;
            CLK_OUT_50Hz :  out STD_LOGIC;
+           CLK_OUT_100KHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
            CLK_OUT_STATE : out STD_LOGIC
            );
@@ -53,8 +54,25 @@ signal clk_out16Hz : STD_LOGIC := '0';
 --50Hz counter signals
 signal counter50Hz : STD_LOGIC_VECTOR (12 DOWNTO 0) := "0000000000000";
 signal clk_out50Hz : STD_LOGIC := '0';
+--100KHz counter signals
+signal counter100KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := "0000000000";
+signal clk_out100KHz : STD_LOGIC := '0';
 
 begin
+--SPI bus 100KHz clock
+counter100K: process(CLK_IN)
+    begin
+        if (rising_edge(CLK_IN)) then
+            counter100KHz <= counter100KHz +1;
+            if counter100KHz = "0111110100" then
+                clk_out100KHz <= '1';
+            elsif counter100KHz = "1111101000" then
+                clk_out100KHz <= '0';
+                counter100KHz <= "0000000000";
+            end if;
+        end if;
+end process counter100K;
+
 --50Hz clock
 counter50: process(CLK_IN)
     begin
@@ -102,6 +120,7 @@ counter1: process(CLK_IN)
 CLK_OUT_1Hz <= clk_out1Hz;--Slow 1Hz clock
 CLK_OUT_16Hz <= clk_out16Hz;--16Hz clock
 CLK_OUT_50Hz <= clk_out50Hz; --PWM refresh clock for LEDS
+CLK_OUT_100KHz <= clk_out100KHz;--SPI bus clock
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
 --State counter is not being used
 CLK_OUT_STATE <= 0; --clk_out50Hz; --Counter to change a state machine
