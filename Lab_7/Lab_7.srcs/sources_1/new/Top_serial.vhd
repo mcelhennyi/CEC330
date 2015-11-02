@@ -68,6 +68,8 @@ signal tx_done : STD_LOGIC :=0;
 signal tx_enable : STD_LOGIC :=0;
 signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
 signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
+signal mosi : STD_LOGIC :=0;--output pin to slave
+signal miso : STD_LOGIC :=0;--input pin frome slave
 signal spi_clk : STD_LOGIC :=0;
 
 
@@ -111,6 +113,8 @@ component SPI
            SPI_CLK_OUT : out STD_LOGIC;
            DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0);
            DATA_IN : out STD_LOGIC_VECTOR (7 downto 0);
+           MOSI : out STD_LOGIC;--output pin to slave
+           MISO : in STD_LOGIC;--input pin frome slave
            TX_ENABLE : in STD_LOGIC;
            TX_DONE : out STD_LOGIC
            );
@@ -145,11 +149,13 @@ Seven_seg_map: Seven_seg_driver
                AN_out => AN
                ); 
 --maps the spi bus
-SPI: SPI 
+SPI_map: SPI 
     port map ( SPI_CLK_IN => clk_100KHz,
-               SPI_CLK_OUT => spi_clk;
+               SPI_CLK_OUT => spi_clk,
                DATA_OUT => tx_data,
                DATA_IN => rx_data,
+               MOSI => mosi,
+               MISO => miso,
                TX_ENABLE => tx_enable,
                TX_DONE => tx_done
                );
@@ -169,15 +175,23 @@ OUTPUT_DECODE: process (state)
 begin
     case state is
         when st1_wait =>
-           tx_enable <= '0';
+            tx_enable <= '0';
+            Disp7 <= tx_data(3 downto 0);--data from slave
+            Disp8 <= tx_data(7 downto 4);
+            LED(7 downto 0) <= tx_data; -- data from slave
+            LED(14) <= '1';
         when st2_save_data =>
-            data <= SW; --port map
+            rx_data <= SW;
+            LED(15) <= '1';
+            LED(14) <= '0';
         when st3_saved_wait =>
-            Disp1 <= data(3 downto 0);
-            Disp2 <= data(7 downto 4);
+            Disp1 <= rx_data(3 downto 0);--data to slave
+            Disp2 <= rx_data(7 downto 4);
+            LED(7 downto 0) <= rx_data; --show data from switches on LEDs
         when st4_transmit =>
-            tx_enable <= '1'; --port map
-           
+            tx_enable <= '1';
+            LED(15) <= '0';
+            LED(7 downto 0) <= tx_data; --show data as the transmition is happening
         when others => null;
     end case;
 end process OUTPUT_DECODE;
@@ -207,6 +221,7 @@ case (state) is
     when st4_transmit  =>
         if tx_done = '1' then
             next_state <= st1_wait;
+            tx_done <= '0';
         end if;
     
     when others =>

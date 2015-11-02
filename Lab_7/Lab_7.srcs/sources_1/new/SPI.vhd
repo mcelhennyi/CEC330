@@ -36,14 +36,18 @@ entity SPI is
            SPI_CLK_OUT : out STD_LOGIC;
            DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0);
            DATA_IN : out STD_LOGIC_VECTOR (7 downto 0);
+           MOSI : out STD_LOGIC;--output pin to slave
+           MISO : in STD_LOGIC;--input pin frome slave
            TX_ENABLE : in STD_LOGIC;
            TX_DONE : out STD_LOGIC
            );
 end SPI;
 
 architecture Behavioral of SPI is
+
 signal spi_clock : STD_LOGIC := '0';
 signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := DATA_IN;
 
 begin
 
@@ -53,16 +57,18 @@ SPI_CLOCK_ENABLE: process(SPI_CLK_IN, TX_ENABLE)
         if TX_ENABLE = '1' then
             if spi_counter <= "0111" then
                 if (rising_edge(SPI_CLK_IN)) then
-                     spi_counter => spi_counter + 1;
+                     spi_counter <= spi_counter + 1;
+                     serial_register <= serial_register(6 downto 0) & MISO;
                 end if;
-            elsif spi_counter = 8 then
-            
+            elsif spi_counter = "1000" then
+                
             end if;
         end if;
     end process SPI_CLOCK_ENABLE;
     
 --shift register triggered by the spi counter register
+MOSI <= serial_register(7);
+DATA_OUT <= serial_register;
+SPI_CLK_OUT <= spi_clock;
 
-
-SPI_CLOCK_OUT => spi_clock
 end Behavioral;
