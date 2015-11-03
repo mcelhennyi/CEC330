@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.xpr">
+<Project Version="7" Minor="5" Path="F:/CEC330/Lab_7/Lab_7.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a905caa7673a4240bf4df067d8fc1ee8"/>
