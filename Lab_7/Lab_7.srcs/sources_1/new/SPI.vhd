@@ -50,19 +50,26 @@ signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := DATA_IN;
 
 begin
+------------------------------------------------------not sure about having somthing rely on an output
+------------------------------------------------------dont like how all this is split up so much 
 --Creates one SPI clock that only has 8 rising edges
 SPI_CLOCK_OUT: process (TX_ENABLE)
     begin
-        if TX_ENABLE = '1' then 
-            SPI_CLK_OUT <= spi_clock; ------------------------------------------------needs work?
+--        if TX_ENABLE = '1' then 
+--            SPI_CLK_OUT <= spi_clock; ------------------------------------------------needs work?
+--        end if;
+        if TX_ENABLE = '1' then
+            SPI_CLK_OUT <= SPI_CLK_IN;
+        elsif TX_ENABLE = '0' then
+            SPI_CLK_OUT <= '0';
         end if;
 end process SPI_CLOCK_OUT; 
 
 --counter enabled by the tx_enable to shift the parallel data out on SPI bus
-SPI_CLOCK_ENABLE: process(SPI_CLK_IN, TX_ENABLE)
+SPI_CLOCK_ENABLE: process(SPI_CLK_OUT, TX_ENABLE)
     begin
         if TX_ENABLE = '1' then
-                if (rising_edge(SPI_CLK_IN)) then
+                if (rising_edge(SPI_CLK_OUT)) then
                      spi_counter <= spi_counter + 1;
                 end if;
         end if;
