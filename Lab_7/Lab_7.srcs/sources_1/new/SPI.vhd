@@ -54,7 +54,7 @@ begin
 SPI_CLOCK_OUT: process (TX_ENABLE)
     begin
         if TX_ENABLE = '1' then 
-            SPI_CLK_OUT <= spi_clock;
+            SPI_CLK_OUT <= spi_clock; ------------------------------------------------needs work?
         end if;
 end process SPI_CLOCK_OUT; 
 
@@ -80,9 +80,9 @@ STOP_TX: process(spi_counter)
 end process STOP_TX;
 
 --shifts data out every spi clock rising edge
-SHIFT_DATA: process(SPI_CLOCK_OUT)
+SHIFT_DATA: process(SPI_CLK_OUT)
     begin
-        if (rising_edge(SPI_CLOCK_OUT)) then 
+        if (rising_edge(SPI_CLK_OUT)) then 
             serial_register <= serial_register(6 downto 0) & MISO;
         end if;
 end process SHIFT_DATA;

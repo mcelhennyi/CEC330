@@ -161,6 +161,11 @@ SPI_map: SPI
                );
                
 ------------------------------------
+--Turning off unused LEDs-----------
+------------------------------------          
+LED (13 downto 8) <= "000000";        
+     
+------------------------------------
 --State Machine---------------------
 ------------------------------------
 --Switches the state to the next state every clock cycle of CLK_IN

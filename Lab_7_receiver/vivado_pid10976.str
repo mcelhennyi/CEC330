@@ -1,0 +1,149 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 10976
+
+Current time: 	11/5/15 1:50:12 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1440x900
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Austin
+User directory: C:/Users/Austin/Documents/CEC330/Lab_7_receiver
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	221 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 445 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Austin\Documents\CEC330\Lab_7_receiver\Lab_7_receiver.xpr. Version: Vivado v2015.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 47 MB (+46559kb) [00:00:03]
+// [Engine Memory]: 409 MB (+277314kb) [00:00:03]
+// [GUI Memory]: 59 MB (+10519kb) [00:00:04]
+// [Engine Memory]: 442 MB (+13227kb) [00:00:04]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project C:/Users/Austin/Documents/CEC330/Lab_7_receiver/Lab_7_receiver.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'F:/CEC330/Lab_7_receiver' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Lab_7_receiver; location: C:/Users/Austin/Documents/CEC330/Lab_7_receiver; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 450 MB. GUI used memory: 29 MB. Current time: 11/5/15 1:50:14 PM EST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd)]", 1); // A:k (H:JPanel, cl:JFrame)
+// [Engine Memory]: 478 MB (+15019kb) [00:00:18]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 478 MB. GUI used memory: 31 MB. Current time: 11/5/15 1:50:29 PM EST
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd), Seven_seg_map - Seven_seg_driver - Behavioral (Seven_seg_driver.vhd)]", 3, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd), Seven_seg_map - Seven_seg_driver - Behavioral (Seven_seg_driver.vhd)]", 3, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("top.vhd", 253, 206); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 317, 234); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 296, 247); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 288, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd), SPI_map - SPI_RX - Behavioral (SPI_RX.vhd)]", 4, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top - Behavioral (top.vhd), SPI_map - SPI_RX - Behavioral (SPI_RX.vhd)]", 4, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("SPI_RX.vhd", 98, 109); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("SPI_RX.vhd", 104, 124); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("SPI_RX.vhd", 93, 149); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("SPI_RX.vhd", 95, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("SPI_RX.vhd", 144, 93); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 25 seconds
+selectCodeEditor("SPI_RX.vhd", 442, 245); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("SPI_RX.vhd", 23, 336); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("SPI_RX.vhd", 169, 335); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Seven_seg_driver.vhd", 3); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 142, 161); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Seven_seg_driver.vhd", 363, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Seven_seg_driver.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 64 MB (+1861kb) [00:03:15]
+// Elapsed time: 25 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F:b
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI_RX.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// [GUI Memory]: 68 MB (+1135kb) [00:03:25]
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F:b
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI_RX.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("top.vhd", 245, 142); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 271, 77); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 239, 140); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("top.vhd", 208, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 215, 338); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 217, 352); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SPI_RX.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("top.vhd", 93, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 94, 165); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 96, 182); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 230, 180); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 114, 201); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 93, 200); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 104, 213); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("top.vhd", 107, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// [GUI Memory]: 72 MB (+79kb) [00:08:42]
+// [GUI Memory]: 75 MB (+29kb) [00:10:08]

@@ -34,8 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity SPI_RX is
     Port ( SCLK : in STD_LOGIC;
            DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0);
-           MOSI : out STD_LOGIC;--output pin to slave
-           MISO : in STD_LOGIC--input pin frome slave
+           MOSI : in STD_LOGIC;--output pin to slave
+           MISO : out STD_LOGIC--input pin frome slave
            );
 end SPI_RX;
 

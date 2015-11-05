@@ -122,6 +122,6 @@ CLK_OUT_16Hz <= clk_out16Hz;--16Hz clock
 CLK_OUT_50Hz <= clk_out50Hz; --PWM refresh clock for LEDS
 CLK_OUT_100KHz <= clk_out100KHz;--SPI bus clock
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
-CLK_OUT_STATE <= clk_out100KHz; --Counter to change a state machine
+CLK_OUT_STATE <= CLK_IN; --Counter to change a state machine
 
 end Behavioral;
