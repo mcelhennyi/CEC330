@@ -50,12 +50,12 @@ set rc [catch {
   create_msg_db init_design.pb
   debug::add_scope template.lib 1
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.xpr [current_project]
-  set_property ip_repo_paths c:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.cache/ip [current_project]
-  set_property ip_output_repo c:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.cache/ip [current_project]
-  add_files -quiet C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.runs/synth_1/Top_serial.dcp
-  read_xdc C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/constrs_1/new/Master.xdc
+  set_property webtalk.parent_dir F:/CEC330/Lab_7/Lab_7.cache/wt [current_project]
+  set_property parent.project_path F:/CEC330/Lab_7/Lab_7.xpr [current_project]
+  set_property ip_repo_paths f:/CEC330/Lab_7/Lab_7.cache/ip [current_project]
+  set_property ip_output_repo f:/CEC330/Lab_7/Lab_7.cache/ip [current_project]
+  add_files -quiet F:/CEC330/Lab_7/Lab_7.runs/synth_1/Top_serial.dcp
+  read_xdc F:/CEC330/Lab_7/Lab_7.srcs/constrs_1/new/Master.xdc
   link_design -top Top_serial -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

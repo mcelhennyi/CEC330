@@ -2,10 +2,10 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu Nov 05 21:05:32 2015
-# Process ID: 10216
-# Log file: C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.runs/impl_1/Top_serial.vdi
-# Journal file: C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.runs/impl_1\vivado.jou
+# Start of session at: Fri Nov 06 10:33:42 2015
+# Process ID: 5248
+# Log file: F:/CEC330/Lab_7/Lab_7.runs/impl_1/Top_serial.vdi
+# Journal file: F:/CEC330/Lab_7/Lab_7.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source Top_serial.tcl -notrace
 Design is defaulting to srcset: sources_1
@@ -15,8 +15,8 @@ INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2015.2
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/constrs_1/new/Master.xdc]
-Finished Parsing XDC File [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/constrs_1/new/Master.xdc]
+Parsing XDC File [F:/CEC330/Lab_7/Lab_7.srcs/constrs_1/new/Master.xdc]
+Finished Parsing XDC File [F:/CEC330/Lab_7/Lab_7.srcs/constrs_1/new/Master.xdc]
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -32,7 +32,7 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 458.484 ; gain = 3.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 457.031 ; gain = 2.945
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -40,36 +40,36 @@ Starting Logic Optimization Task
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 176f0dc5c
+Phase 1 Retarget | Checksum: 1758a26f0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 945.059 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 943.625 ; gain = 0.000
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-10] Eliminated 11 cells.
-Phase 2 Constant Propagation | Checksum: 160e8e03d
+Phase 2 Constant Propagation | Checksum: 1041ea3d7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 945.059 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 943.625 ; gain = 0.000
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 20 unconnected nets.
+INFO: [Opt 31-12] Eliminated 21 unconnected nets.
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-11] Eliminated 2 unconnected cells.
-Phase 3 Sweep | Checksum: 5e6dbf2b
+Phase 3 Sweep | Checksum: 1e80f07eb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 945.059 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 943.625 ; gain = 0.000
 
 Starting Connectivity Check Task
 ERROR: [Opt 31-37] Multi-driver net found in the design: SPI_map/<const0>.
 Resolution: Please modify the design to fix the error. Ensure that the specific net has only one driver. Once the design is modified, then re-run the Vivado flow.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 945.059 ; gain = 0.000
-Implement Debug Cores | Checksum: ea371c19
-Logic Optimization | Checksum: ea371c19
-Ending Logic Optimization Task | Checksum: 5e6dbf2b
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 943.625 ; gain = 0.000
+Implement Debug Cores | Checksum: 159c4013b
+Logic Optimization | Checksum: 159c4013b
+Ending Logic Optimization Task | Checksum: 1e80f07eb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 945.059 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 943.625 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 21 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
 opt_design failed
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 05 21:05:51 2015...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 06 10:33:58 2015...

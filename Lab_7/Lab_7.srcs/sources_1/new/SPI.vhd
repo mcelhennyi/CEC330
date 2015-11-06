@@ -36,8 +36,8 @@ use ieee.std_logic_arith.ALL;
 entity SPI is
     Port ( SPI_CLK_IN : in STD_LOGIC;
            SPI_CLK_OUT : out STD_LOGIC;
-           DATA_OUT : out STD_LOGIC_VECTOR (7 downto 0);
-           DATA_IN : in STD_LOGIC_VECTOR (7 downto 0);
+           DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master aka tx_data
+           DATA_IN : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master aka rx_data
            SAVED_DATA : in STD_LOGIC;
            MOSI : out STD_LOGIC;--output pin to slave
            MISO : in STD_LOGIC;--input pin frome slave
@@ -51,16 +51,19 @@ architecture Behavioral of SPI is
 signal spi_clock : STD_LOGIC := '0';
 signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal serial_buffer : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --used to avoid multi driven net
 
 begin
+
+serial_buffer <= DATA_OUT;
 
 SAVE_DATA: process(SAVED_DATA)
     begin
         if SAVED_DATA = '1' then
-            serial_register <= DATA_IN;
+            serial_register <= serial_buffer;
         end if;
 end process SAVE_DATA;
-
+    
 --Creates one SPI clock that only has 8 rising edges
 SPI: process (TX_ENABLE, SPI_CLK_IN)
     begin
@@ -90,7 +93,7 @@ end process STOP_TX;
 
 --shift register triggered by the spi counter register
 MOSI <= serial_register(7);
-DATA_OUT <= serial_register;
+DATA_IN <= serial_register;
 
 
 ------------------------------------------------------not sure about having somthing rely on an output
