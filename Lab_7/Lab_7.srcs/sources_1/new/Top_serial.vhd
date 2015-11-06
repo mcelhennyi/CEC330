@@ -71,10 +71,14 @@ signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
 signal tx_done : STD_LOGIC;
 signal tx_enable : STD_LOGIC := '0';
-signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
+signal received_data_for_displays : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 signal disconect : STD_LOGIC_VECTOR(7 downto 0);
-signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
+signal rx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal data_to_leds : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal led_mux : STD_LOGIC;
 signal saved_data : STD_LOGIC := '0';
+signal data_accepted : STD_LOGIC := '0';
 
 
 --States for the FSM
@@ -157,8 +161,8 @@ Seven_seg_map: Seven_seg_driver
 SPI_map: SPI 
     port map ( SPI_CLK_IN => clk_100KHz,
                SPI_CLK_OUT => SCLK,--Serial Pin OUT
-               --DATA_OUT => tx_data,
-               DATA_OUT => disconect,
+               DATA_OUT => tx_data,
+               --DATA_OUT => disconect,
                DATA_IN => rx_data,
                SAVED_DATA => saved_data,
                MOSI => MOSI,--Serial Pin OUT
@@ -190,24 +194,18 @@ begin
     case state is
         when st1_wait =>
             tx_enable <= '0';
-            Disp7 <= tx_data(3 downto 0);--data from slave
-            Disp8 <= tx_data(7 downto 4);
-            LED(7 downto 0) <= tx_data; -- data from slave
-            LED(14) <= '1';
+
         when st2_save_data =>
             saved_data <= '1';
-            rx_data <= SW;
-            LED(15) <= '1';
-            LED(14) <= '0';
+            data_accepted <= '1';
+
         when st3_saved_wait =>
             saved_data <= '0';
-            Disp1 <= rx_data(3 downto 0);--data to slave
-            Disp2 <= rx_data(7 downto 4);
-            LED(7 downto 0) <= rx_data; --show data from switches on LEDs
+
         when st4_transmit =>
             tx_enable <= '1';
-            LED(15) <= '0';
-            LED(7 downto 0) <= tx_data; --show data as the transmition is happening
+            data_accepted <= '0';
+
         when others => null;
     end case;
 end process OUTPUT_DECODE;
@@ -246,13 +244,46 @@ case (state) is
 end process;
 
 ------------------------------------
---stuff        ---------------------
+--state functions-------------------
 ------------------------------------
-save_data_state2: process(saved_data)
+state_functions: process(saved_data,tx_enable,tx_done,data_accepted)
     begin
-        if saved_data = '1' then
-            
+        
+        if saved_data = '1' then--data saved from switches
+            rx_data <= SW; 
+            led_mux <= '0';
         end if;
-end process save_data_state2;
+        
+        if data_accepted = '1' then--data sent to spi
+            LED(15) <= '1';
+            LED(14) <= '0';
+        elsif data_accepted = '0' then--transmistion started
+            LED(15) <= '0';
+        end if;
+        
+        --only updates the data from spi when transmission is done for displays 7 and 8
+        if tx_done = '1' then
+            received_data_for_displays <= tx_data;
+            led_mux <= '1';
+            LED(14) <= '1'; 
+        end if;
+        --chooses what value will be on the LEDs
+        if led_mux = '0' then
+            data_to_leds <= rx_data;--saved data from swithces
+        elsif led_mux = '1' then
+            data_to_leds <= tx_data;--data from slave
+        end if;
+        
+end process state_functions;
+
+--display 1 and 2 will always show the value of rx_data(the value taken from the swithes when BTNU is pressed)
+Disp1 <= rx_data(3 downto 0);
+Disp2 <= rx_data(7 downto 4);
+--These LEDs will show the same data as displays 1 and 2
+LED(7 downto 0) <= data_to_leds;
+--display 7 and 8 show the value from the slave
+Disp7 <= received_data_for_displays(3 downto 0);
+Disp8 <= received_data_for_displays(7 downto 4);
+
 
 end Behavioral;
