@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -38,7 +40,10 @@ entity Top_serial is
            SEG : out STD_LOGIC_VECTOR (7 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0);
            SW : in STD_LOGIC_VECTOR (7 downto 0);
-           LED : in STD_LOGIC_VECTOR (15 downto 0)
+           LED : out STD_LOGIC_VECTOR (15 downto 0);
+           MOSI : out STD_LOGIC;--Serial Pin JA-1
+           MISO : in STD_LOGIC;--Serial Pin Ja-2
+           SCLK : out STD_LOGIC--Serial Pin JA-3
            );
 end Top_serial;
 
@@ -64,13 +69,12 @@ signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and 
 signal clk_state : STD_LOGIC; --Clock to change State Machine
 signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
-signal tx_done : STD_LOGIC :=0;
-signal tx_enable : STD_LOGIC :=0;
-signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
+signal tx_done : STD_LOGIC;
+signal tx_enable : STD_LOGIC := '0';
+signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal disconect : STD_LOGIC_VECTOR(7 downto 0);
 signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
-signal mosi : STD_LOGIC :=0;--output pin to slave
-signal miso : STD_LOGIC :=0;--input pin frome slave
-signal spi_clk : STD_LOGIC :=0;
+signal saved_data : STD_LOGIC := '0';
 
 
 --States for the FSM
@@ -111,8 +115,9 @@ end component Seven_seg_driver;
 component SPI
     Port ( SPI_CLK_IN : in STD_LOGIC;
            SPI_CLK_OUT : out STD_LOGIC;
-           DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0);
-           DATA_IN : out STD_LOGIC_VECTOR (7 downto 0);
+           DATA_OUT : out STD_LOGIC_VECTOR (7 downto 0);
+           DATA_IN : in STD_LOGIC_VECTOR (7 downto 0);
+           SAVED_DATA : in STD_LOGIC;
            MOSI : out STD_LOGIC;--output pin to slave
            MISO : in STD_LOGIC;--input pin frome slave
            TX_ENABLE : in STD_LOGIC;
@@ -151,11 +156,13 @@ Seven_seg_map: Seven_seg_driver
 --maps the spi bus
 SPI_map: SPI 
     port map ( SPI_CLK_IN => clk_100KHz,
-               SPI_CLK_OUT => spi_clk,
-               DATA_OUT => tx_data,
+               SPI_CLK_OUT => SCLK,--Serial Pin OUT
+               --DATA_OUT => tx_data,
+               DATA_OUT => disconect,
                DATA_IN => rx_data,
-               MOSI => mosi,
-               MISO => miso,
+               SAVED_DATA => saved_data,
+               MOSI => MOSI,--Serial Pin OUT
+               MISO => MISO,--Serial Pin IN
                TX_ENABLE => tx_enable,
                TX_DONE => tx_done
                );
@@ -163,7 +170,9 @@ SPI_map: SPI
 ------------------------------------
 --Turning off unused LEDs-----------
 ------------------------------------          
-LED (13 downto 8) <= "000000";        
+LED (13 downto 8) <= "000000";    
+
+tx_data <= x"00";
      
 ------------------------------------
 --State Machine---------------------
@@ -186,10 +195,12 @@ begin
             LED(7 downto 0) <= tx_data; -- data from slave
             LED(14) <= '1';
         when st2_save_data =>
+            saved_data <= '1';
             rx_data <= SW;
             LED(15) <= '1';
             LED(14) <= '0';
         when st3_saved_wait =>
+            saved_data <= '0';
             Disp1 <= rx_data(3 downto 0);--data to slave
             Disp2 <= rx_data(7 downto 4);
             LED(7 downto 0) <= rx_data; --show data from switches on LEDs
@@ -226,7 +237,6 @@ case (state) is
     when st4_transmit  =>
         if tx_done = '1' then
             next_state <= st1_wait;
-            tx_done <= '0';
         end if;
     
     when others =>
@@ -235,5 +245,14 @@ case (state) is
     end case;      
 end process;
 
+------------------------------------
+--stuff        ---------------------
+------------------------------------
+save_data_state2: process(saved_data)
+    begin
+        if saved_data = '1' then
+            
+        end if;
+end process save_data_state2;
 
 end Behavioral;

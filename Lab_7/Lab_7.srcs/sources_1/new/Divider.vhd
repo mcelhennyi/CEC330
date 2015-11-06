@@ -52,10 +52,10 @@ signal clk_out1Hz : STD_LOGIC := '0';
 signal counter16Hz : STD_LOGIC_VECTOR (23 DOWNTO 0) := x"000000";
 signal clk_out16Hz : STD_LOGIC := '0';
 --50Hz counter signals
-signal counter50Hz : STD_LOGIC_VECTOR (12 DOWNTO 0) := "0000000000000";
+signal counter50Hz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
 signal clk_out50Hz : STD_LOGIC := '0';
 --100KHz counter signals
-signal counter100KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := "0000000000";
+signal counter100KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
 signal clk_out100KHz : STD_LOGIC := '0';
 
 begin
@@ -68,7 +68,7 @@ counter100K: process(CLK_IN)
                 clk_out100KHz <= '1';
             elsif counter100KHz = "1111101000" then
                 clk_out100KHz <= '0';
-                counter100KHz <= "0000000000";
+                counter100KHz <= '0' & x"000";
             end if;
         end if;
 end process counter100K;
@@ -82,7 +82,7 @@ counter50: process(CLK_IN)
                 clk_out50Hz <= '1';
             elsif counter50Hz = "1111010000100" then
                 clk_out50Hz <= '0';
-                counter50Hz <= "0000000000000";
+                counter50Hz <= '0' & x"000";
             end if;
         end if;
 end process counter50;

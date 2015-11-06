@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.std_logic_arith.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,11 +34,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity top is
-    Port ( 
-           MOSI : in STD_LOGIC;
-           MISO : out STD_LOGIC;
-           SCLK : in STD_LOGIC;
-           DISP : out STD_LOGIC_VECTOR (7 downto 0);
+    Port ( CLK_IN : in STD_LOGIC;
+           MOSI : in STD_LOGIC;--Serial Pin
+           MISO : out STD_LOGIC;--Serial Pin
+           SCLK : in STD_LOGIC;--Serial Pin
+           SEG : out STD_LOGIC_VECTOR (7 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0);
            LED : out STD_LOGIC_VECTOR (7 downto 0)
            );
@@ -59,9 +61,9 @@ signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
 
 signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
-signal mosi : STD_LOGIC :=0;--output pin to slave
-signal miso : STD_LOGIC :=0;--input pin frome slave
-signal spi_clk : STD_LOGIC :=0;
+--signal mosi : STD_LOGIC :=0;--output pin to slave
+--signal miso : STD_LOGIC :=0;--input pin frome slave
+--signal spi_clk : STD_LOGIC :=0;
 
 -----------------------------------
 --COMPONETS------------------------
@@ -88,15 +90,11 @@ component Seven_seg_driver
            );
 end component Seven_seg_driver;
 --exports data on the SPI bus
-component SPI
-    Port ( SPI_CLK_IN : in STD_LOGIC;
-           SPI_CLK_OUT : out STD_LOGIC;
-           DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0);
-           DATA_IN : out STD_LOGIC_VECTOR (7 downto 0);
-           MOSI : out STD_LOGIC;--output pin to slave
-           MISO : in STD_LOGIC;--input pin frome slave
-           TX_ENABLE : in STD_LOGIC;
-           TX_DONE : out STD_LOGIC
+component SPI_RX
+    Port ( SCLK : in STD_LOGIC;
+           DATA_OUT : out STD_LOGIC_VECTOR (7 downto 0);
+           MOSI : in STD_LOGIC;--output pin to slave
+           MISO : out STD_LOGIC--input pin frome slave
            );
 end component SPI;
 begin
@@ -124,11 +122,11 @@ Seven_seg_map: Seven_seg_driver
                ); 
 --maps the spi bus
 SPI_map: SPI_RX
-       port map ( SCLK => SCLK,
-                  DATA_OUT => rx_data,
-                  MOSI => MOSI,
-                  MISO => MISO
-                 );
+    port map ( SCLK => SCLK,
+               DATA_OUT => rx_data,
+               MOSI => MOSI,
+               MISO => MISO
+               );
 ------------------------------------
 --Logic-----------------------------
 ------------------------------------

@@ -60,12 +60,12 @@ architecture Behavioral of Seven_seg_driver is
    
 begin
 --These anodes are not used and are set to be off
-an(1) <= "11111111";
-an(2) <= "11111111";
 an(3) <= "11111111";
 an(4) <= "11111111";
 an(5) <= "11111111";
 an(6) <= "11111111";
+an(7) <= "11111111";
+an(8) <= "11111111";
 --anodes are off if FLAG_an is 0, else they are on
 --anode_states: process(CLK_AN, FLAG_an)
 --    begin
