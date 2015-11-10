@@ -40,10 +40,10 @@ entity Top_serial is
            SEG : out STD_LOGIC_VECTOR (7 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0);
            SW : in STD_LOGIC_VECTOR (7 downto 0);
-           LED : out STD_LOGIC_VECTOR (15 downto 0);
-           MOSI : out STD_LOGIC;--Serial Pin JA-1
-           MISO : in STD_LOGIC;--Serial Pin Ja-2
-           SCLK : out STD_LOGIC--Serial Pin JA-3
+           LED : out STD_LOGIC_VECTOR (15 downto 0)--;
+--           MOSI : out STD_LOGIC;--Serial Pin JA-1
+--           MISO : in STD_LOGIC;--Serial Pin Ja-2
+--           SCLK : out STD_LOGIC--Serial Pin JA-3
            );
 end Top_serial;
 
@@ -71,15 +71,20 @@ signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
 signal tx_done : STD_LOGIC;
 signal tx_enable : STD_LOGIC := '0';
-signal tx_data : STD_LOGIC_VECTOR(7 downto 0); --data to slave
+signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
+signal tx_data_copy : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
 signal received_data_for_displays : STD_LOGIC_VECTOR(7 downto 0) := x"00";
-signal disconect : STD_LOGIC_VECTOR(7 downto 0);
-signal rx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data from slave
+signal rx_data : STD_LOGIC_VECTOR(7 downto 0);-- := x"00"; --data from slave
 signal data_to_leds : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 signal led_mux : STD_LOGIC;
 signal saved_data : STD_LOGIC := '0';
 signal data_accepted : STD_LOGIC := '0';
 
+signal disconect_test : STD_LOGIC;--_VECTOR(7 downto 0);
+
+signal MOSI : STD_LOGIC;
+signal MISO : STD_LOGIC;
+signal SCLK : STD_LOGIC;
 
 --States for the FSM
 type FSM_state_type is (st1_wait, st2_prep_data, st2_5_save_data, st3_saved_wait, st4_transmit); 
@@ -160,6 +165,7 @@ Seven_seg_map: Seven_seg_driver
 SPI_map: SPI 
     port map ( SPI_CLK_IN => clk_100KHz,
                SPI_CLK_OUT => SCLK,--Serial Pin OUT
+               --SPI_CLK_OUT => disconect_test,
                DATA_OUT => tx_data, --data to slave
                DATA_IN => rx_data, --data from slave
                SAVED_DATA => saved_data,
@@ -174,7 +180,7 @@ SPI_map: SPI
 ------------------------------------          
 LED (13 downto 8) <= "000000";    
 
-rx_data <= x"00";
+--rx_data <= x"00";
      
 ------------------------------------
 --State Machine---------------------
@@ -197,6 +203,7 @@ begin
 
         when st2_prep_data =>
             tx_data <= SW; 
+            tx_data_copy <= SW;--testing to see if this helps
             saved_data <= '0';
             data_accepted <= '0';
             tx_enable <= '0';
@@ -208,7 +215,7 @@ begin
 
         when st3_saved_wait =>
             saved_data <= '0';
-            data_accepted <= '0';
+            data_accepted <= '1';          -------------------need to fix this stuff so that it matches the requirments
             tx_enable <= '0';
 
         when st4_transmit =>
@@ -236,7 +243,9 @@ case (state) is
         next_state <= st3_saved_wait;
         
     when st2_prep_data => 
-        next_state <= st2_5_save_data;
+        if BTNU = '0' then
+            next_state <= st2_5_save_data;
+        end if;
         
     when st3_saved_wait  =>
         if BTNU = '1' then
@@ -277,11 +286,13 @@ state_functions: process(saved_data,tx_enable,tx_done,data_accepted)
         if tx_done = '1' then
             received_data_for_displays <= rx_data;
             led_mux <= '1';
-            LED(14) <= '1'; 
+            if data_accepted = '0' then
+                LED(14) <= '1'; 
+            end if;
         end if;
         --chooses what value will be on the LEDs
         if led_mux = '0' then
-            data_to_leds <= tx_data;--saved data from swithces
+            data_to_leds <= tx_data_copy;--saved data from swithces
         elsif led_mux = '1' then
             data_to_leds <= rx_data;--data from slave
         end if;
@@ -289,8 +300,8 @@ state_functions: process(saved_data,tx_enable,tx_done,data_accepted)
 end process state_functions;
 
 --display 1 and 2 will always show the value of tx_data(the value taken from the swithes when BTNU is pressed)
-Disp1 <= tx_data(3 downto 0);
-Disp2 <= tx_data(7 downto 4);
+Disp1 <= tx_data_copy(3 downto 0);
+Disp2 <= tx_data_copy(7 downto 4);
 --These LEDs will show the same data as displays 1 and 2
 LED(7 downto 0) <= data_to_leds;
 --display 7 and 8 show the value from the slave
