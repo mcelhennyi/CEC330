@@ -40,10 +40,10 @@ entity Top_serial is
            SEG : out STD_LOGIC_VECTOR (7 downto 0);
            AN : out STD_LOGIC_VECTOR (7 downto 0);
            SW : in STD_LOGIC_VECTOR (7 downto 0);
-           LED : out STD_LOGIC_VECTOR (15 downto 0)--;
---           MOSI : out STD_LOGIC;--Serial Pin JA-1
---           MISO : in STD_LOGIC;--Serial Pin Ja-2
---           SCLK : out STD_LOGIC--Serial Pin JA-3
+           LED : out STD_LOGIC_VECTOR (15 downto 0);
+           MOSI : out STD_LOGIC;--Serial Pin JA-1
+           MISO : in STD_LOGIC;--Serial Pin Ja-2
+           SCLK : out STD_LOGIC--Serial Pin JA-3
            );
 end Top_serial;
 
@@ -80,11 +80,11 @@ signal led_mux : STD_LOGIC;
 signal saved_data : STD_LOGIC := '0';
 signal data_accepted : STD_LOGIC := '0';
 
-signal disconect_test : STD_LOGIC;--_VECTOR(7 downto 0);
+--signal disconect_test : STD_LOGIC;--_VECTOR(7 downto 0);
 
-signal MOSI : STD_LOGIC;
-signal MISO : STD_LOGIC;
-signal SCLK : STD_LOGIC;
+--signal MOSI : STD_LOGIC;
+--signal MISO : STD_LOGIC;
+--signal SCLK : STD_LOGIC;
 
 --States for the FSM
 type FSM_state_type is (st1_wait, st2_prep_data, st2_5_save_data, st3_saved_wait, st4_transmit); 
