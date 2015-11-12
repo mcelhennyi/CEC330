@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Tue Nov 10 15:27:49 2015
+| Date         : Thu Nov 12 18:24:33 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Top_serial_timing_summary_routed.rpt -rpx Top_serial_timing_summary_routed.rpx
 | Design       : Top_serial
@@ -62,41 +62,13 @@ Table of Contents
 
  There are 3 register/latch pins with no clock driven by root clock pin: FSM_onehot_state_reg[4]/C (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: SPI_map/TX_DONE_reg/C (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[0]/G (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[1]/G (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[2]/G (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[3]/G (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[4]/G (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[5]/G (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[6]/G (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SPI_map/serial_buffer_reg[7]/G (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: SPI_map/spi_counter_reg[0]/C (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: SPI_map/spi_counter_reg[1]/C (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: SPI_map/spi_counter_reg[2]/C (HIGH)
-
- There are 8 register/latch pins with no clock driven by root clock pin: SPI_map/spi_counter_reg[3]/C (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: data_accepted_reg/G (HIGH)
-
- There are 21 register/latch pins with no clock driven by root clock pin: divider_map/clk_out100KHz_reg/C (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: divider_map/clk_out100KHz_reg/C (HIGH)
 
  There are 3 register/latch pins with no clock driven by root clock pin: divider_map/clk_out50Hz_reg/C (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: saved_data_reg/G (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: saved_data_reg/G (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: tx_enable_reg/G (HIGH)
+ There is 1 register/latch pin with no clock (HIGH)
 
 
 2. checking constant_clock
@@ -111,9 +83,9 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 157 pins that are not constrained for maximum delay. (HIGH)
+ There are 104 pins that are not constrained for maximum delay. (HIGH)
 
- There are 0 pins that are not constrained for maximum delay due to constant clock.
+ There are 2 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
 
 
 5. checking no_input_delay
@@ -125,7 +97,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 23 ports with no output delay specified. (HIGH)
+ There are 22 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -159,7 +131,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 0 combinational latch loops in the design through latch input
+ There is 1 combinational latch loop in the design through latch input (HIGH)
 
 
 

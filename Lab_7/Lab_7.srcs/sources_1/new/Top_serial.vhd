@@ -215,7 +215,7 @@ begin
 
         when st3_saved_wait =>
             saved_data <= '0';
-            data_accepted <= '1';          -------------------need to fix this stuff so that it matches the requirments
+            data_accepted <= '1';         
             tx_enable <= '0';
 
         when st4_transmit =>
