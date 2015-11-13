@@ -122,6 +122,7 @@ end component Seven_seg_driver;
 --exports data on the SPI bus
 component SPI
     Port ( SPI_CLK_IN : in STD_LOGIC;
+           LED8 : out STD_LOGIC;
            SPI_CLK_OUT : out STD_LOGIC;
            DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master through MOSI
            DATA_IN : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master through MISO
@@ -164,6 +165,7 @@ Seven_seg_map: Seven_seg_driver
 --maps the spi bus
 SPI_map: SPI 
     port map ( SPI_CLK_IN => clk_100KHz,
+               LED8 => LED (8),
                SPI_CLK_OUT => SCLK,--Serial Pin OUT
                --SPI_CLK_OUT => disconect_test,
                DATA_OUT => tx_data, --data to slave
@@ -178,7 +180,7 @@ SPI_map: SPI
 ------------------------------------
 --Turning off unused LEDs-----------
 ------------------------------------          
-LED (13 downto 8) <= "000000";    
+LED (13 downto 9) <= "00000";    
 
 --rx_data <= x"00";
      

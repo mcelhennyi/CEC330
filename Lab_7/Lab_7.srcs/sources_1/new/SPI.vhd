@@ -35,6 +35,7 @@ use ieee.std_logic_arith.ALL;
 
 entity SPI is
     Port ( SPI_CLK_IN : in STD_LOGIC;
+           LED8 : out STD_LOGIC;
            SPI_CLK_OUT : out STD_LOGIC;
            DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master aka tx_data
            DATA_IN : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master aka rx_data
@@ -49,7 +50,7 @@ end SPI;
 architecture Behavioral of SPI is
 
 signal spi_clock : STD_LOGIC := '0';
-signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "1111";
+signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 signal serial_buffer : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --used to avoid multi driven net
 
@@ -71,19 +72,19 @@ end process SAVE_DATA;
 SPI: process (TX_ENABLE, SPI_CLK_IN,SAVED_DATA)
     begin
         if TX_ENABLE = '1' then
-            if spi_counter >= "0000" or spi_counter < "1000" then 
+           -- if spi_counter >= "0000" and spi_counter < "1000" then 
                 SPI_CLK_OUT <= SPI_CLK_IN;--Sclk_out is turned on
-            end if;
+            --end if;
             
-            if spi_counter = "1111" then
-                serial_register <= serial_buffer;
-                spi_counter <= "0000";
-                --serial_register <= DATA_OUT;
-            end if;
+--            if spi_counter = "1111" then
+--                serial_register <= serial_buffer;
+--                spi_counter <= "0000";
+--                --serial_register <= DATA_OUT;
+--            end if;
             
             if (rising_edge(SPI_CLK_IN)) then
                 --spi_counter <= spi_counter + 1;
-                if spi_counter >= "0000" or spi_counter < "1000" then
+                if spi_counter >= "0000" and spi_counter < "1000" then
                     serial_register <= serial_register(6 downto 0) & MISO;
                 end if;
                 
@@ -104,7 +105,7 @@ SPI: process (TX_ENABLE, SPI_CLK_IN,SAVED_DATA)
 end process SPI; 
 
 --Module to stop the transmission of the SPI data after 8 rising edges
-STOP_TX: process(SPI_CLK_IN)
+STOP_TX: process(SPI_CLK_IN,TX_ENABLE)
     begin
 --        if spi_counter = "1000" then
 --            TX_DONE <= '1';
@@ -112,15 +113,23 @@ STOP_TX: process(SPI_CLK_IN)
 --        else
 --            TX_DONE <= '0';
 --        end if;
+        if TX_ENABLE = '1' then
+            if (rising_edge(SPI_CLK_IN)) then
+                spi_counter <= spi_counter + 1;
+            end if;
+            
             if spi_counter = "1000" then
                    TX_DONE <= '1';
-                   spi_counter <= "1111";
+                   spi_counter <= "0000";
                elsif spi_counter < "1000" then
                    TX_DONE <= '0';
-                   spi_counter <= spi_counter + 1;
---                else
---                    spi_counter <= "0000";
+                   
+                   LED8 <= '1';
+                else
+                    --spi_counter <= "0000";
+                    LED8 <= '0';
                end if;
+          end if;
 end process STOP_TX;
 
 --shift register triggered by the spi counter register
