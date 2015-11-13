@@ -52,89 +52,185 @@ architecture Behavioral of SPI is
 signal spi_clock : STD_LOGIC := '0';
 signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
-signal serial_buffer : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --used to avoid multi driven net
+--signal serial_buffer : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --used to avoid multi driven net
 
 begin
 
---serial_buffer <= DATA_OUT;
-
-SAVE_DATA: process(SAVED_DATA)
-    begin
-        if SAVED_DATA = '1' then
-            serial_buffer <= DATA_OUT;
-
-            --serial_register <= serial_buffer;
-
-        end if;
-end process SAVE_DATA;
     
 --Creates one SPI clock that only has 8 rising edges
-SPI: process (TX_ENABLE, SPI_CLK_IN,SAVED_DATA)
+SPI_PROCESS: process (TX_ENABLE, SPI_CLK_IN)
     begin
         if TX_ENABLE = '1' then
-           -- if spi_counter >= "0000" and spi_counter < "1000" then 
-                SPI_CLK_OUT <= SPI_CLK_IN;--Sclk_out is turned on
-            --end if;
+            --Sclk_out is turned on
+            ---------------------------------------
+            SPI_CLK_OUT <= SPI_CLK_IN;-----if the clock is high when tx_enable goes high then the slave may see this as a rising edge?
+                                         --may be able to resolve this problem by taking out tx_enable fromthe porcess
             
---            if spi_counter = "1111" then
---                serial_register <= serial_buffer;
---                spi_counter <= "0000";
---                --serial_register <= DATA_OUT;
---            end if;
-            
-            if (rising_edge(SPI_CLK_IN)) then
-                --spi_counter <= spi_counter + 1;
-                if spi_counter >= "0000" and spi_counter < "1000" then
-                    serial_register <= serial_register(6 downto 0) & MISO;
-                end if;
-                
---                if spi_counter = "1000" then
---                    TX_DONE <= '1';
---                    spi_counter <= "1111";
---                elsif spi_counter < "1000" then
---                    TX_DONE <= '0';
---                    spi_counter <= spi_counter + 1;
-----                else
-----                    spi_counter <= "0000";
---                end if;
-            end if;
-            
-        elsif TX_ENABLE = '0' then
-            SPI_CLK_OUT <= '0';--Sclk_out is turned off
-        end if;
-end process SPI; 
-
---Module to stop the transmission of the SPI data after 8 rising edges
-STOP_TX: process(SPI_CLK_IN,TX_ENABLE)
-    begin
---        if spi_counter = "1000" then
---            TX_DONE <= '1';
---            spi_counter <= "0000";
---        else
---            TX_DONE <= '0';
---        end if;
-        if TX_ENABLE = '1' then
+            --Counter for controlling this module
+            ---------------------------------------
             if (rising_edge(SPI_CLK_IN)) then
                 spi_counter <= spi_counter + 1;
             end if;
             
-            if spi_counter = "1000" then
-                   TX_DONE <= '1';
-                   spi_counter <= "0000";
-               elsif spi_counter < "1000" then
-                   TX_DONE <= '0';
-                   
-                   LED8 <= '1';
+            --Checks counter
+            ---------------------------------------
+            if (rising_edge(SPI_CLK_IN)) then
+                if spi_counter >= "1000" then--may need to set this to "0111" but not sure yet
+                    TX_DONE <= '1';
+                    spi_counter <= "0000";
                 else
-                    --spi_counter <= "0000";
-                    LED8 <= '0';
-               end if;
-          end if;
-end process STOP_TX;
+                    TX_DONE <= '0';
+                end if;
+            end if;
+            
+            --Shifting the register
+            --------------------------------------
+            if (rising_edge(SPI_CLK_IN)) then
+                serial_register <= serial_register(6 downto 0) & MISO;
+            end if;
+            
+        elsif TX_ENABLE = '0' then
+            SPI_CLK_OUT <= '0';-----------Sclk_out is turned off
+            serial_register <= DATA_OUT;--Accepts the data to be transmitted
+            
+        end if;
+end process SPI_PROCESS; 
 
---shift register triggered by the spi counter register
-MOSI <= serial_register(7);
-DATA_IN <= serial_register;
+MOSI <= serial_register(7);---------------Output bit to slave
+DATA_IN <= serial_register;---------------Data recieved from slave after transmistion is done
+
+
+
+------------------------------------------
+--this is one idea but i think it wont work becuase i think we need the checks counter in the rising edge if statement
+------------------------------------------
+
+--SPI_PROCESS: process (TX_ENABLE, SPI_CLK_IN)
+--    begin
+--        if TX_ENABLE = '1' then
+--            --Sclk_out is turned on
+--            ---------------------------------------
+--            SPI_CLK_OUT <= SPI_CLK_IN;-----if the clock is high when tx_enable goes high then the slave may see this as a rising edge?
+--                                         --may be able to resolve this problem by taking out tx_enable fromthe porcess
+            
+--            --Counter for controlling this module
+--            ---------------------------------------
+--            if (rising_edge(SPI_CLK_IN)) then
+--                spi_counter <= spi_counter + 1;
+--            end if;
+            
+--            --Checks counter
+--            ---------------------------------------
+--            if spi_counter >= "1000" then--may need to set this to "0111" but not sure yet
+--                TX_DONE <= '1';
+--                spi_counter <= "0000";
+--            else
+--                TX_DONE <= '0';
+--            end if;
+            
+--            --Shifting the register
+--            --------------------------------------
+--            if (rising_edge(SPI_CLK_IN)) then
+--                serial_register <= serial_register(6 downto 0) & MISO;
+--            end if;
+            
+--        elsif TX_ENABLE = '0' then
+--            SPI_CLK_OUT <= '0';-----------Sclk_out is turned off
+--            serial_register <= DATA_OUT;--Accepts the data to be transmitted
+            
+--        end if;
+--end process SPI_PROCESS; 
+
+
+
+
+end Behavioral;
+
+
+
+
+
+
+
+
+-----------------------------------------
+--old ideas
+-----------------------------------------
+
+
+--SAVE_DATA: process(SAVED_DATA)
+--    begin
+--        if SAVED_DATA = '1' then
+--            serial_buffer <= DATA_OUT;
+
+--            --serial_register <= serial_buffer;
+
+--        end if;
+--end process SAVE_DATA;
+    
+----Creates one SPI clock that only has 8 rising edges
+--SPI: process (TX_ENABLE, SPI_CLK_IN,SAVED_DATA)
+--    begin
+--        if TX_ENABLE = '1' then
+--           -- if spi_counter >= "0000" and spi_counter < "1000" then 
+--                SPI_CLK_OUT <= SPI_CLK_IN;--Sclk_out is turned on
+--            --end if;
+            
+----            if spi_counter = "1111" then
+----                serial_register <= serial_buffer;
+----                spi_counter <= "0000";
+----                --serial_register <= DATA_OUT;
+----            end if;
+            
+--            if (rising_edge(SPI_CLK_IN)) then
+--                --spi_counter <= spi_counter + 1;
+--                if spi_counter >= "0000" and spi_counter < "1000" then
+--                    serial_register <= serial_register(6 downto 0) & MISO;
+--                end if;
+                
+----                if spi_counter = "1000" then
+----                    TX_DONE <= '1';
+----                    spi_counter <= "1111";
+----                elsif spi_counter < "1000" then
+----                    TX_DONE <= '0';
+----                    spi_counter <= spi_counter + 1;
+------                else
+------                    spi_counter <= "0000";
+----                end if;
+--            end if;
+            
+--        elsif TX_ENABLE = '0' then
+--            SPI_CLK_OUT <= '0';--Sclk_out is turned off
+--        end if;
+--end process SPI; 
+
+----Module to stop the transmission of the SPI data after 8 rising edges
+--STOP_TX: process(SPI_CLK_IN,TX_ENABLE)
+--    begin
+----        if spi_counter = "1000" then
+----            TX_DONE <= '1';
+----            spi_counter <= "0000";
+----        else
+----            TX_DONE <= '0';
+----        end if;
+--        if TX_ENABLE = '1' then
+--            if (rising_edge(SPI_CLK_IN)) then
+--                spi_counter <= spi_counter + 1;
+--            end if;
+            
+--            if spi_counter = "1000" then
+--                   TX_DONE <= '1';
+--                   spi_counter <= "0000";
+--               elsif spi_counter < "1000" then
+--                   TX_DONE <= '0';
+                   
+--                   LED8 <= '1';
+--                else
+--                    --spi_counter <= "0000";
+--                    LED8 <= '0';
+--               end if;
+--          end if;
+--end process STOP_TX;
 
 
 ------------------------------------------------------not sure about having somthing rely on an output
@@ -180,4 +276,4 @@ DATA_IN <= serial_register;
 --            serial_register <= serial_register(6 downto 0) & MISO;
 --        end if;
 --end process SHIFT_DATA;
-end Behavioral;
+
