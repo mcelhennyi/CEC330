@@ -35,7 +35,7 @@ use ieee.std_logic_arith.ALL;
 
 entity SPI is
     Port ( SPI_CLK_IN : in STD_LOGIC;
-           LED8 : out STD_LOGIC;
+           LED : out STD_LOGIC_VECTOR (11 downto 8);
            SPI_CLK_OUT : out STD_LOGIC;
            DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master aka tx_data
            DATA_IN : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master aka rx_data
@@ -54,6 +54,8 @@ signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 --signal serial_buffer : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --used to avoid multi driven net
 
+signal SPI_CLK_OUT_test : STD_LOGIC := '0';
+
 begin
 
     
@@ -63,8 +65,10 @@ SPI_PROCESS: process (TX_ENABLE, SPI_CLK_IN)
         if TX_ENABLE = '1' then
             --Sclk_out is turned on
             ---------------------------------------
+            SPI_CLK_OUT_test <= SPI_CLK_IN;------should be the same as the clk out
             SPI_CLK_OUT <= SPI_CLK_IN;-----if the clock is high when tx_enable goes high then the slave may see this as a rising edge?
                                          --may be able to resolve this problem by taking out tx_enable fromthe porcess
+            
             
             --Counter for controlling this module
             ---------------------------------------
@@ -78,8 +82,14 @@ SPI_PROCESS: process (TX_ENABLE, SPI_CLK_IN)
                 if spi_counter >= "1000" then--may need to set this to "0111" but not sure yet
                     TX_DONE <= '1';
                     spi_counter <= "0000";
+                    
+                    --LED(9) <= '1';
+                    --LED(8) <= '0';
                 else
                     TX_DONE <= '0';
+                    
+                    --LED(9) <= '0';
+                    --LED(8) <= '1';
                 end if;
             end if;
             
@@ -89,16 +99,23 @@ SPI_PROCESS: process (TX_ENABLE, SPI_CLK_IN)
                 serial_register <= serial_register(6 downto 0) & MISO;
             end if;
             
+--            LED(11) <= '1';
+--            LED(10) <= '0';
+            
         elsif TX_ENABLE = '0' then
+            SPI_CLK_OUT_test <= '0';------should be the same as the clk out
             SPI_CLK_OUT <= '0';-----------Sclk_out is turned off
             serial_register <= DATA_OUT;--Accepts the data to be transmitted
             
+--            LED(11) <= '0';
+--            LED(10) <= '1';
         end if;
 end process SPI_PROCESS; 
 
 MOSI <= serial_register(7);---------------Output bit to slave
 DATA_IN <= serial_register;---------------Data recieved from slave after transmistion is done
 
+LED(8) <= SPI_CLK_OUT_test;
 
 
 ------------------------------------------

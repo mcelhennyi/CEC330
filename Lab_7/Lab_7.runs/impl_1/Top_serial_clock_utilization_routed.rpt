@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Fri Nov 13 14:15:49 2015
+| Date              : Fri Nov 13 15:31:55 2015
 | Host              : Austin-MBP running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Top_serial_clock_utilization_routed.rpt
 | Design            : Top_serial
@@ -47,7 +47,7 @@ Table of Contents
 +-------+-----------------------+------------------+------+-------+-------+
 | Index | BUFG Cell             | Net Name         | BELs | Sites | Fixed |
 +-------+-----------------------+------------------+------+-------+-------+
-|     1 | CLK_IN_IBUF_BUFG_inst | CLK_IN_IBUF_BUFG |   33 |    12 |    no |
+|     1 | CLK_IN_IBUF_BUFG_inst | CLK_IN_IBUF_BUFG |   47 |    15 |    no |
 +-------+-----------------------+------------------+------+-------+-------+
 
 
@@ -78,11 +78,11 @@ Table of Contents
 |     8 | SPI_map/serial_register_reg[5]_LDC_i_1 | SPI_map/serial_register_reg[5]_LDC_i_1_n_0 |    2 |     2 |    no |
 |     9 | SPI_map/serial_register_reg[6]_LDC_i_1 | SPI_map/serial_register_reg[6]_LDC_i_1_n_0 |    2 |     2 |    no |
 |    10 | SPI_map/serial_register_reg[7]_LDC_i_1 | SPI_map/serial_register_reg[7]_LDC_i_1_n_0 |    2 |     2 |    no |
-|    11 | saved_data_reg_i_1                     | saved_data_reg_i_1_n_0                     |    3 |     2 |    no |
-|    12 | divider_map/clk_out50Hz_reg            | divider_map/clk_out50Hz                    |    4 |     2 |    no |
-|    13 | SPI_map/TX_DONE_reg                    | SPI_map/TX_DONE                            |   13 |     8 |    no |
-|    14 | FSM_onehot_state_reg[1]                | FSM_onehot_state_reg_n_0_[1]               |   14 |     6 |    no |
-|    15 | divider_map/clk_out100KHz_reg          | divider_map/CLK_OUT_100KHz                 |   27 |    21 |    no |
+|    11 | saved_data_reg_i_1                     | saved_data_reg_i_1_n_0                     |    3 |     1 |    no |
+|    12 | divider_map/clk_out50Hz_reg            | divider_map/clk_out50Hz                    |    4 |     3 |    no |
+|    13 | SPI_map/TX_DONE_reg                    | SPI_map/TX_DONE                            |   13 |     7 |    no |
+|    14 | FSM_onehot_state_reg[1]                | FSM_onehot_state_reg_n_0_[1]               |   14 |     8 |    no |
+|    15 | divider_map/clk_out1Hz_reg             | divider_map/CLK_OUT_1Hz                    |   27 |    21 |    no |
 +-------+----------------------------------------+--------------------------------------------+------+-------+-------+
 
 
@@ -96,7 +96,7 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |    0 | 12000 |    0 |  2200 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   90 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  104 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
@@ -112,7 +112,7 @@ Table of Contents
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |  Clock Net Name  |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
-| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  33 |     0 |        0 | CLK_IN_IBUF_BUFG |
+| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  47 |     0 |        0 | CLK_IN_IBUF_BUFG |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
 
 
@@ -144,105 +144,105 @@ add_cells_to_pblock [get_pblocks  {CLKAG_CLK_IN_IBUF_BUFG}] [get_cells -filter {
 resize_pblock [get_pblocks {CLKAG_CLK_IN_IBUF_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "FSM_onehot_state_reg_n_0_[1]" driven by instance "FSM_onehot_state_reg[1]" located at site "SLICE_X1Y83"
+# Clock net "FSM_onehot_state_reg_n_0_[1]" driven by instance "FSM_onehot_state_reg[1]" located at site "SLICE_X1Y82"
 #startgroup
 create_pblock {CLKAG_FSM_onehot_state_reg_n_0_[1]}
 add_cells_to_pblock [get_pblocks  {CLKAG_FSM_onehot_state_reg_n_0_[1]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="FSM_onehot_state_reg_n_0_[1]"}]]]
 resize_pblock [get_pblocks {CLKAG_FSM_onehot_state_reg_n_0_[1]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/TX_DONE" driven by instance "SPI_map/TX_DONE_reg" located at site "SLICE_X4Y84"
+# Clock net "SPI_map/TX_DONE" driven by instance "SPI_map/TX_DONE_reg" located at site "SLICE_X1Y83"
 #startgroup
 create_pblock {CLKAG_SPI_map/TX_DONE}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/TX_DONE}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/TX_DONE"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/TX_DONE}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/p_2_out[0]" driven by instance "SPI_map/LED_reg[14]_i_2" located at site "SLICE_X2Y82"
+# Clock net "SPI_map/p_2_out[0]" driven by instance "SPI_map/LED_reg[14]_i_2" located at site "SLICE_X1Y82"
 #startgroup
 create_pblock {CLKAG_SPI_map/p_2_out[0]}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/p_2_out[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/p_2_out[0]"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/p_2_out[0]}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[0]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[0]_LDC_i_1" located at site "SLICE_X1Y88"
+# Clock net "SPI_map/serial_register_reg[0]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[0]_LDC_i_1" located at site "SLICE_X2Y88"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[0]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[0]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[0]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[0]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[1]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[1]_LDC_i_1" located at site "SLICE_X0Y88"
+# Clock net "SPI_map/serial_register_reg[1]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[1]_LDC_i_1" located at site "SLICE_X4Y85"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[1]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[1]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[1]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[1]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[2]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[2]_LDC_i_1" located at site "SLICE_X2Y88"
+# Clock net "SPI_map/serial_register_reg[2]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[2]_LDC_i_1" located at site "SLICE_X3Y84"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[2]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[2]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[2]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[2]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[3]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[3]_LDC_i_1" located at site "SLICE_X3Y86"
+# Clock net "SPI_map/serial_register_reg[3]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[3]_LDC_i_1" located at site "SLICE_X4Y87"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[3]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[3]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[3]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[3]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[4]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[4]_LDC_i_1" located at site "SLICE_X3Y85"
+# Clock net "SPI_map/serial_register_reg[4]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[4]_LDC_i_1" located at site "SLICE_X2Y85"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[4]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[4]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[4]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[4]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[5]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[5]_LDC_i_1" located at site "SLICE_X3Y85"
+# Clock net "SPI_map/serial_register_reg[5]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[5]_LDC_i_1" located at site "SLICE_X4Y84"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[5]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[5]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[5]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[5]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[6]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[6]_LDC_i_1" located at site "SLICE_X5Y86"
+# Clock net "SPI_map/serial_register_reg[6]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[6]_LDC_i_1" located at site "SLICE_X3Y84"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[6]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[6]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[6]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[6]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_map/serial_register_reg[7]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[7]_LDC_i_1" located at site "SLICE_X5Y85"
+# Clock net "SPI_map/serial_register_reg[7]_LDC_i_1_n_0" driven by instance "SPI_map/serial_register_reg[7]_LDC_i_1" located at site "SLICE_X1Y84"
 #startgroup
 create_pblock {CLKAG_SPI_map/serial_register_reg[7]_LDC_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_map/serial_register_reg[7]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_map/serial_register_reg[7]_LDC_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_SPI_map/serial_register_reg[7]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "divider_map/CLK_OUT_100KHz" driven by instance "divider_map/clk_out100KHz_reg" located at site "SLICE_X4Y91"
+# Clock net "divider_map/CLK_OUT_1Hz" driven by instance "divider_map/clk_out1Hz_reg" located at site "SLICE_X6Y84"
 #startgroup
-create_pblock {CLKAG_divider_map/CLK_OUT_100KHz}
-add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/CLK_OUT_100KHz}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/CLK_OUT_100KHz"}]]]
-resize_pblock [get_pblocks {CLKAG_divider_map/CLK_OUT_100KHz}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+create_pblock {CLKAG_divider_map/CLK_OUT_1Hz}
+add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/CLK_OUT_1Hz}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/CLK_OUT_1Hz"}]]]
+resize_pblock [get_pblocks {CLKAG_divider_map/CLK_OUT_1Hz}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "divider_map/clk_out50Hz" driven by instance "divider_map/clk_out50Hz_reg" located at site "SLICE_X6Y88"
+# Clock net "divider_map/clk_out50Hz" driven by instance "divider_map/clk_out50Hz_reg" located at site "SLICE_X7Y87"
 #startgroup
 create_pblock {CLKAG_divider_map/clk_out50Hz}
 add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/clk_out50Hz}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/clk_out50Hz"}]]]
 resize_pblock [get_pblocks {CLKAG_divider_map/clk_out50Hz}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "saved_data" driven by instance "saved_data_reg" located at site "SLICE_X0Y82"
+# Clock net "saved_data" driven by instance "saved_data_reg" located at site "SLICE_X3Y82"
 #startgroup
 create_pblock {CLKAG_saved_data}
 add_cells_to_pblock [get_pblocks  {CLKAG_saved_data}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="saved_data"}]]]
 resize_pblock [get_pblocks {CLKAG_saved_data}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "saved_data_reg_i_1_n_0" driven by instance "saved_data_reg_i_1" located at site "SLICE_X0Y83"
+# Clock net "saved_data_reg_i_1_n_0" driven by instance "saved_data_reg_i_1" located at site "SLICE_X3Y82"
 #startgroup
 create_pblock {CLKAG_saved_data_reg_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_saved_data_reg_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="saved_data_reg_i_1_n_0"}]]]

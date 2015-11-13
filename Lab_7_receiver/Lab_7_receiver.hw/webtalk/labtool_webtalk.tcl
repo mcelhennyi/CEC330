@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.hw/webtalk/
+webtalk_init -webtalk_dir C:/Users/Austin/Documents/CEC330/Lab_7_receiver/Lab_7_receiver.hw/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Fri Nov 13 15:33:36 2015" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Fri Nov 13 14:58:26 2015" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "Vivado v2015.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "1266856" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -13,8 +13,8 @@ webtalk_add_data -client project -key target_device -value "not_applicable" -con
 webtalk_add_data -client project -key target_package -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "686e2583-0c96-407a-9a3f-23c40ebbdf5b" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_id -value "3deb547f-d2ab-4632-9109-143fd39a57f0" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "9" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_id -value "f89e5a3c-6a6b-4680-b093-76d34c415f09" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "2" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz" -context "user_environment"
@@ -24,6 +24,6 @@ webtalk_add_data -client project -key system_ram -value "8.000 GB" -context "use
 webtalk_register_client -client labtool
 webtalk_add_data -client labtool -key cable -value "Digilent/Nexys4DDR/15000000" -context "labtool\\usage"
 webtalk_add_data -client labtool -key chain -value "13631093" -context "labtool\\usage"
-webtalk_add_data -client labtool -key pgmcnt -value "03:00:00" -context "labtool\\usage"
-webtalk_transmit -clientid 2764608080 -regid "211081005_0_0_844" -xml C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_add_data -client labtool -key pgmcnt -value "01:00:00" -context "labtool\\usage"
+webtalk_transmit -clientid 1425951988 -regid "211081005_0_0_844" -xml C:/Users/Austin/Documents/CEC330/Lab_7_receiver/Lab_7_receiver.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/Austin/Documents/CEC330/Lab_7_receiver/Lab_7_receiver.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/Austin/Documents/CEC330/Lab_7_receiver/Lab_7_receiver.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
 webtalk_terminate
