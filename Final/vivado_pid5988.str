@@ -137,3 +137,5 @@ closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F:b
 // [GUI Memory]: 71 MB (+587kb) [00:13:20]
 // [GUI Memory]: 75 MB (+83kb) [00:14:10]
 // HMemoryUtils.trashcanNow. Engine heap size: 476 MB. GUI used memory: 32 MB. Current time: 11/19/15 2:03:51 PM EST
+// [GUI Memory]: 79 MB (+432kb) [00:42:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 476 MB. GUI used memory: 33 MB. Current time: 11/19/15 2:33:53 PM EST
