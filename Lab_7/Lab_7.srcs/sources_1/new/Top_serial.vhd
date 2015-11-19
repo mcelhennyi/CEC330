@@ -124,6 +124,7 @@ component SPI
     Port ( SPI_CLK_IN : in STD_LOGIC;
            LED : out STD_LOGIC_VECTOR (11 downto 8);
            SPI_CLK_OUT : out STD_LOGIC;
+           SPI_CLK_OUT_LED : out STD_LOGIC;
            DATA_OUT : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master through MOSI
            DATA_IN : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master through MISO
            SAVED_DATA : in STD_LOGIC;
@@ -168,6 +169,7 @@ SPI_map: SPI
                --SPI_CLK_IN => clk_100KHz,
                LED => LED (11 downto 8),
                SPI_CLK_OUT => SCLK,--Serial Pin OUT, JA 3
+               SPI_CLK_OUT_LED => LED(12),
                DATA_OUT => tx_data, --data to slave
                DATA_IN => rx_data, --data from slave
                SAVED_DATA => saved_data,
@@ -180,8 +182,8 @@ SPI_map: SPI
 ------------------------------------
 --Turning off unused LEDs-----------
 ------------------------------------          
-LED (13 downto 12) <= "00";    
-
+--LED (13 downto 12) <= "00";    
+LED(13) <= '0';
      
 ------------------------------------
 --State Machine---------------------

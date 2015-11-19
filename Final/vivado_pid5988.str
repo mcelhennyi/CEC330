@@ -1,0 +1,139 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 5988
+
+Current time: 	11/19/15 1:49:29 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1440x900
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Austin
+User directory: C:/Users/Austin/Documents/CEC330/Final
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	202 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 445 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Austin\Documents\CEC330\Final\Final.xpr. Version: Vivado v2015.2 
+// cp:P (cl:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Austin/Documents/CEC330/Final/Final.xpr 
+// Tcl Message: open_project C:/Users/Austin/Documents/CEC330/Final/Final.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 48 MB (+47587kb) [00:00:05]
+// [Engine Memory]: 385 MB (+252049kb) [00:00:05]
+// [GUI Memory]: 60 MB (+10674kb) [00:00:05]
+// [Engine Memory]: 407 MB (+2538kb) [00:00:05]
+// [Engine Memory]: 443 MB (+17408kb) [00:00:06]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Final; location: C:/Users/Austin/Documents/CEC330/Final; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 454 MB. GUI used memory: 29 MB. Current time: 11/19/15 1:49:31 PM EST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Final_top - Behavioral (Final_top.vhd)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Final_top - Behavioral (Final_top.vhd)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Final_top - Behavioral (Final_top.vhd)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 42 seconds
+selectCodeEditor("Final_top.vhd", 78, 363); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Final_top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 21 seconds
+selectCodeEditor("Final_top.vhd", 54, 333); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 59, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 68, 335); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 84, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 70, 198); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 82, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 113, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 89, 194); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Final_top.vhd", 143, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 108, 200); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 123, 209); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 131, 227); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 117, 113); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 36 seconds
+selectCodeEditor("Final_top.vhd", 129, 235); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Final_top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 21 seconds
+selectCodeEditor("Final_top.vhd", 271, 110); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Final_top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 40, 348); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Final_top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Final_top.vhd", 105, 335); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 64 MB (+513kb) [00:03:52]
+// Elapsed time: 31 seconds
+selectCodeEditor("Final_top.vhd", 153, 157); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 67 MB (+363kb) [00:04:07]
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Final_top - Behavioral (Final_top.vhd)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Final_top - Behavioral (Final_top.vhd), SPI_map - SPI - Behavioral (SPI.vhd)]", 3, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Final_top - Behavioral (Final_top.vhd), SPI_map - SPI - Behavioral (SPI.vhd)]", 3, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F:b
+// [Engine Memory]: 466 MB (+705kb) [00:04:19]
+// [GUI Memory]: 71 MB (+587kb) [00:13:20]
+// [GUI Memory]: 75 MB (+83kb) [00:14:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 476 MB. GUI used memory: 32 MB. Current time: 11/19/15 2:03:51 PM EST

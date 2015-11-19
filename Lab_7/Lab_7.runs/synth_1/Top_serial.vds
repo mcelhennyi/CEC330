@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri Nov 13 15:30:24 2015
-# Process ID: 3616
+# Start of session at: Thu Nov 19 14:01:31 2015
+# Process ID: 1864
 # Log file: C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.runs/synth_1/Top_serial.vds
 # Journal file: C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,33 +13,33 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 244.668 ; gain = 67.898
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 245.234 ; gain = 67.461
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top_serial' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:50]
-INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:141]
+INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:142]
 INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Divider.vhd:46]
 INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Divider.vhd:46]
-INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
+INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
 INFO: [Synth 8-638] synthesizing module 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Seven_seg_driver.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'Seven_seg_driver' (2#1) [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Seven_seg_driver.vhd:52]
-INFO: [Synth 8-3491] module 'SPI' declared at 'C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:36' bound to instance 'SPI_map' of component 'SPI' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:166]
-INFO: [Synth 8-638] synthesizing module 'SPI' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:50]
-WARNING: [Synth 8-614] signal 'DATA_OUT' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:63]
-INFO: [Synth 8-256] done synthesizing module 'SPI' (3#1) [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:50]
-WARNING: [Synth 8-614] signal 'SW' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:197]
-WARNING: [Synth 8-614] signal 'tx_done' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:232]
-WARNING: [Synth 8-614] signal 'rx_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:272]
-WARNING: [Synth 8-614] signal 'led_mux' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:272]
-WARNING: [Synth 8-614] signal 'tx_data_copy' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:272]
+INFO: [Synth 8-3491] module 'SPI' declared at 'C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:36' bound to instance 'SPI_map' of component 'SPI' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'SPI' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:51]
+WARNING: [Synth 8-614] signal 'DATA_OUT' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:64]
+WARNING: [Synth 8-3848] Net LED in module/entity SPI does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'SPI' (3#1) [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/SPI.vhd:51]
+WARNING: [Synth 8-614] signal 'SW' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:199]
+WARNING: [Synth 8-614] signal 'tx_done' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:234]
+WARNING: [Synth 8-614] signal 'rx_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:274]
+WARNING: [Synth 8-614] signal 'led_mux' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:274]
+WARNING: [Synth 8-614] signal 'tx_data_copy' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:274]
 WARNING: [Synth 8-3848] Net Disp3 in module/entity Top_serial does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:57]
 WARNING: [Synth 8-3848] Net Disp4 in module/entity Top_serial does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:58]
 WARNING: [Synth 8-3848] Net Disp5 in module/entity Top_serial does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:59]
 WARNING: [Synth 8-3848] Net Disp6 in module/entity Top_serial does not have driver. [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:60]
 INFO: [Synth 8-256] done synthesizing module 'Top_serial' (4#1) [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:50]
 WARNING: [Synth 8-3917] design Top_serial has port LED[13] driven by constant 0
-WARNING: [Synth 8-3917] design Top_serial has port LED[12] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.832 ; gain = 103.063
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.453 ; gain = 101.680
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -48,24 +48,24 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:151]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp3[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp4[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[3] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[2] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[1] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[0] to constant 0 [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:152]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.832 ; gain = 103.063
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.453 ; gain = 101.680
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -79,16 +79,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 580.875 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 580.367 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -646,14 +646,14 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Top_serial'
 INFO: [Synth 8-5544] ROM "tx_enable" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tx_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'led_mux_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:276]
-WARNING: [Synth 8-327] inferring latch for variable 'tx_data_copy_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:171]
+WARNING: [Synth 8-327] inferring latch for variable 'led_mux_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:278]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_data_copy_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:173]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -664,13 +664,13 @@ WARNING: [Synth 8-327] inferring latch for variable 'tx_data_copy_reg' [C:/Users
             st4_transmit |                            10000 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Top_serial'
-WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:169]
-WARNING: [Synth 8-327] inferring latch for variable 'received_data_for_displays_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:288]
-WARNING: [Synth 8-327] inferring latch for variable 'saved_data_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:173]
-WARNING: [Synth 8-327] inferring latch for variable 'tx_enable_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:176]
-WARNING: [Synth 8-327] inferring latch for variable 'data_accepted_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:203]
+WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:170]
+WARNING: [Synth 8-327] inferring latch for variable 'received_data_for_displays_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:290]
+WARNING: [Synth 8-327] inferring latch for variable 'saved_data_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:175]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_enable_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:178]
+WARNING: [Synth 8-327] inferring latch for variable 'data_accepted_reg' [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:205]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -748,7 +748,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.875 ; gain = 404.105
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -758,14 +758,14 @@ WARNING: [Synth 8-3917] design Top_serial has port AN[4] driven by constant 1
 WARNING: [Synth 8-3917] design Top_serial has port AN[3] driven by constant 1
 WARNING: [Synth 8-3917] design Top_serial has port AN[2] driven by constant 1
 WARNING: [Synth 8-3917] design Top_serial has port LED[13] driven by constant 0
-WARNING: [Synth 8-3917] design Top_serial has port LED[12] driven by constant 0
 WARNING: [Synth 8-3331] design Top_serial has unconnected port LED[11]
 WARNING: [Synth 8-3331] design Top_serial has unconnected port LED[10]
 WARNING: [Synth 8-3331] design Top_serial has unconnected port LED[9]
+WARNING: [Synth 8-3331] design Top_serial has unconnected port LED[8]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 580.367 ; gain = 402.594
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -813,16 +813,16 @@ WARNING: [Synth 8-3332] Sequential element (\divider_map/counter100KHz_reg[12] )
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 580.367 ; gain = 402.594
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1382,10 +1382,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1397,7 +1397,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1414,9 +1414,9 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:171]
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/Austin/Documents/CEC330/Lab_7/Lab_7.srcs/sources_1/new/Top_serial.vhd:173]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1429,7 +1429,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1441,13 +1441,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 580.875 ; gain = 404.105
+Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1480,8 +1480,8 @@ Report Cell Usage:
 |15    |LDC    |     8|
 |16    |LDP    |     1|
 |17    |IBUF   |    12|
-|18    |OBUF   |    31|
-|19    |OBUFT  |     3|
+|18    |OBUF   |    30|
+|19    |OBUFT  |     4|
 +------+-------+------+
 
 Report Instance Areas: 
@@ -1494,11 +1494,11 @@ Report Instance Areas:
 |4     |  divider_map   |Divider          |   110|
 +------+----------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 580.875 ; gain = 404.105
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 402.594
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 55 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 580.875 ; gain = 88.262
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 580.875 ; gain = 404.105
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 580.367 ; gain = 87.301
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 580.367 ; gain = 402.594
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1513,6 +1513,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 27 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 580.875 ; gain = 389.559
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 580.875 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 13 15:30:50 2015...
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 580.367 ; gain = 389.574
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 580.367 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 14:01:58 2015...

@@ -47,6 +47,9 @@ signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and 
 signal clk_state : STD_LOGIC; --Clock to change State Machine
 signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
+--States for the FSM
+type FSM_state_type is (st1_wait, st2_prep_data, st2_5_save_data, st3_saved_wait, st4_transmit); 
+signal state, next_state : FSM_state_type;
 
 -----------------------------------
 --COMPONETS------------------------
@@ -103,5 +106,91 @@ SPI_map: SPI
               TX_DONE => tx_done
               );
 
+------------------------------------
+--State Machine---------------------
+------------------------------------
+--Switches the state to the next state every clock cycle of CLK_IN
+SYNC_PROC: process (clk_state)
+begin
+    if (clk_state'event and clk_state = '1') then
+        state <= next_state;
+    end if;
+end process;
+--The operations of eache state
+OUTPUT_DECODE: process (state)
+begin
+    case state is
+        when st1_wait =>
+--            tx_enable <= '0';
+--            saved_data <= '0';
+--            data_accepted <= '0';
+
+        when st2_prep_data =>
+--            tx_data <= SW; 
+--            tx_data_copy <= SW;--testing to see if this helps
+--            saved_data <= '0';
+--            data_accepted <= '0';
+--            tx_enable <= '0';
+
+        when st2_5_save_data =>
+--            saved_data <= '1';
+--            data_accepted <= '1';
+--            tx_enable <= '0';
+
+        when st3_saved_wait =>
+--            saved_data <= '0';
+--            data_accepted <= '1';         
+--            tx_enable <= '0';
+
+        when st4_transmit =>
+--            tx_enable <= '1';
+--            data_accepted <= '0';
+--            saved_data <= '0';
+
+        when others => null;
+    end case;
+end process OUTPUT_DECODE;
+
+--Chooses the next state depending on button presses
+NEXT_STATE_DECODE: process (state, BTNC, BTNU)
+begin
+ next_state <= state;  
+ 
+--state case statement to change a state on rising edge  
+case (state) is
+    when st1_wait =>
+--        if BTNU = '1' then
+--           next_state <= st2_prep_data;
+--        end if; 
+        
+    when st2_5_save_data  =>
+--        next_state <= st3_saved_wait;
+        
+    when st2_prep_data => 
+--        if BTNU = '0' then
+--            next_state <= st2_5_save_data;
+--        end if;
+        
+    when st3_saved_wait  =>
+--        if BTNU = '1' then
+--           next_state <= st2_prep_data;
+--        elsif BTNC = '1' then
+--           next_state <= st4_transmit;
+--        end if; 
+            
+    when st4_transmit  =>
+--        if tx_done = '1' then
+--            next_state <= st1_wait;
+--        end if;
+    
+    when others =>
+--        next_state <= st1_wait;
+    
+    end case;      
+end process;
+
+------------------------------------
+--Other??---------------------------
+------------------------------------
 
 end Behavioral;
