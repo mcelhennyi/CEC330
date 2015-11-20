@@ -54,7 +54,8 @@ st5_high, st5_low,
 st6_high, st6_low, 
 st7_high, st7_low,  
 st8_high, st8_low, 
-st9_high, st9_low); 
+st9_high, st9_low,
+st10_done); 
 signal state, next_state : FSM_state_type;
 
 
@@ -77,7 +78,7 @@ begin
    case state is
        when st1_wait =>
            SPI_CLK <= '0';
-           TX_DONE <= '1';
+           TX_DONE <= '0';
 
        when st2_high =>
            SPI_CLK <= '1';
@@ -139,9 +140,13 @@ begin
            SPI_CLK <= '1';
            TX_DONE <= '0';
                                       
-       when st9_low => 
-           SPI_CLK <= '0';
-           TX_DONE <= '0';
+        when st9_low =>
+            SPI_CLK <= '0';
+            TX_DONE <= '0';
+           
+        when st10_done =>
+            SPI_CLK <= '0';
+            TX_DONE <= '1';
     
        when others => null;
    end case;
@@ -205,6 +210,9 @@ case (state) is
         next_state <= st9_low;
                            
     when st9_low =>
+        next_state <= st10_done;
+        
+    when st10_done =>
         next_state <= st1_wait;
     
     when others =>

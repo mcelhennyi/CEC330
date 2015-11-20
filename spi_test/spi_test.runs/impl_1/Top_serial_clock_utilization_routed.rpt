@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Fri Nov 20 11:39:40 2015
+| Date              : Fri Nov 20 12:49:37 2015
 | Host              : Austin-MBP running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Top_serial_clock_utilization_routed.rpt
 | Design            : Top_serial
@@ -22,7 +22,6 @@ Table of Contents
 6. Details of Local Clocks
 7. Clock Regions : Key Resource Utilization
 8. Net wise resources used in clock region X0Y1
-9. Net wise resources used in clock region X0Y2
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -48,7 +47,7 @@ Table of Contents
 +-------+-----------------------+------------------+------+-------+-------+
 | Index | BUFG Cell             | Net Name         | BELs | Sites | Fixed |
 +-------+-----------------------+------------------+------+-------+-------+
-|     1 | CLK_IN_IBUF_BUFG_inst | CLK_IN_IBUF_BUFG |   16 |     6 |    no |
+|     1 | CLK_IN_IBUF_BUFG_inst | CLK_IN_IBUF_BUFG |   30 |     9 |    no |
 +-------+-----------------------+------------------+------+-------+-------+
 
 
@@ -70,9 +69,9 @@ Table of Contents
 | Index | Local Clk Src                     | Net Name                              | BELs | Sites | Fixed |
 +-------+-----------------------------------+---------------------------------------+------+-------+-------+
 |     1 | SPI_state_clk_map/TX_DONE_reg_i_2 | SPI_state_clk_map/TX_DONE_reg_i_2_n_0 |    2 |     1 |    no |
-|     2 | LED_reg[1]_i_1                    | LED_reg[1]_i_1_n_0                    |    3 |     1 |    no |
-|     3 | divider_map/clk_out200KHz_reg     | divider_map/CLK_OUT_200KHz            |    6 |     3 |    no |
-|     4 | SPI_state_clk_map/SPI_CLK_reg     | SPI_state_clk_map/SPI_CLK             |    9 |     3 |    no |
+|     2 | LED_reg[1]_i_1                    | LED_reg[1]_i_1_n_0                    |    3 |     2 |    no |
+|     3 | divider_map/clk_out1Hz_reg        | divider_map/CLK_OUT_1Hz               |    6 |     3 |    no |
+|     4 | SPI_state_clk_map/SPI_CLK_reg     | SPI_state_clk_map/SPI_CLK             |   10 |     4 |    no |
 +-------+-----------------------------------+---------------------------------------+------+-------+-------+
 
 
@@ -86,9 +85,9 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     0 |    0 |     0 |    0 |     0 |    0 | 12000 |    0 |  2200 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    5 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   48 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   29 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 16000 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 15200 |    0 |  2600 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 20800 |    0 |  2400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     1 |    0 |     0 |    0 |     0 |    0 | 10800 |    0 |  2000 |    0 |    30 |    0 |    15 |    0 |    40 |
@@ -102,17 +101,7 @@ Table of Contents
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |  Clock Net Name  |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
-| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   2 |     0 |        0 | CLK_IN_IBUF_BUFG |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
-
-
-9. Net wise resources used in clock region X0Y2
------------------------------------------------
-
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
-| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |  Clock Net Name  |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
-| BUFG        | BUFHCE_X0Y32 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  14 |     0 |        0 | CLK_IN_IBUF_BUFG |
+| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  30 |     0 |        0 | CLK_IN_IBUF_BUFG |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------+
 
 
@@ -133,6 +122,7 @@ set_property LOC BUFGCTRL_X0Y16 [get_cells CLK_IN_IBUF_BUFG_inst]
 # Location of PLL Clock Primitives
 
 # Location of IO Primitives which is load of clock spine
+set_property LOC IOB_X0Y84 [get_cells LED_OBUF[3]_inst]
 set_property LOC IOB_X0Y108 [get_cells SCLK_OBUF_inst]
 
 # Location of clock ports
@@ -142,33 +132,33 @@ set_property LOC IOB_X1Y126 [get_ports CLK_IN]
 #startgroup
 create_pblock {CLKAG_CLK_IN_IBUF_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_CLK_IN_IBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="CLK_IN_IBUF_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_CLK_IN_IBUF_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+resize_pblock [get_pblocks {CLKAG_CLK_IN_IBUF_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "LED_reg[1]_i_1_n_0" driven by instance "LED_reg[1]_i_1" located at site "SLICE_X1Y99"
+# Clock net "LED_reg[1]_i_1_n_0" driven by instance "LED_reg[1]_i_1" located at site "SLICE_X1Y93"
 #startgroup
 create_pblock {CLKAG_LED_reg[1]_i_1_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_LED_reg[1]_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="LED_reg[1]_i_1_n_0"}]]]
 resize_pblock [get_pblocks {CLKAG_LED_reg[1]_i_1_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_state_clk_map/SPI_CLK" driven by instance "SPI_state_clk_map/SPI_CLK_reg" located at site "SLICE_X0Y107"
+# Clock net "SPI_state_clk_map/SPI_CLK" driven by instance "SPI_state_clk_map/SPI_CLK_reg" located at site "SLICE_X0Y93"
 #startgroup
 create_pblock {CLKAG_SPI_state_clk_map/SPI_CLK}
-add_cells_to_pblock [get_pblocks  {CLKAG_SPI_state_clk_map/SPI_CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=SCLK_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_state_clk_map/SPI_CLK"}]]]
-resize_pblock [get_pblocks {CLKAG_SPI_state_clk_map/SPI_CLK}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+add_cells_to_pblock [get_pblocks  {CLKAG_SPI_state_clk_map/SPI_CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=SCLK_OBUF_inst && NAME!=LED_OBUF[3]_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_state_clk_map/SPI_CLK"}]]]
+resize_pblock [get_pblocks {CLKAG_SPI_state_clk_map/SPI_CLK}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "SPI_state_clk_map/TX_DONE_reg_i_2_n_0" driven by instance "SPI_state_clk_map/TX_DONE_reg_i_2" located at site "SLICE_X1Y107"
+# Clock net "SPI_state_clk_map/TX_DONE_reg_i_2_n_0" driven by instance "SPI_state_clk_map/TX_DONE_reg_i_2" located at site "SLICE_X1Y93"
 #startgroup
 create_pblock {CLKAG_SPI_state_clk_map/TX_DONE_reg_i_2_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_SPI_state_clk_map/TX_DONE_reg_i_2_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="SPI_state_clk_map/TX_DONE_reg_i_2_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_SPI_state_clk_map/TX_DONE_reg_i_2_n_0}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+resize_pblock [get_pblocks {CLKAG_SPI_state_clk_map/TX_DONE_reg_i_2_n_0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "divider_map/CLK_OUT_200KHz" driven by instance "divider_map/clk_out200KHz_reg" located at site "SLICE_X3Y109"
+# Clock net "divider_map/CLK_OUT_1Hz" driven by instance "divider_map/clk_out1Hz_reg" located at site "SLICE_X3Y93"
 #startgroup
-create_pblock {CLKAG_divider_map/CLK_OUT_200KHz}
-add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/CLK_OUT_200KHz}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/CLK_OUT_200KHz"}]]]
-resize_pblock [get_pblocks {CLKAG_divider_map/CLK_OUT_200KHz}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+create_pblock {CLKAG_divider_map/CLK_OUT_1Hz}
+add_cells_to_pblock [get_pblocks  {CLKAG_divider_map/CLK_OUT_1Hz}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="divider_map/CLK_OUT_1Hz"}]]]
+resize_pblock [get_pblocks {CLKAG_divider_map/CLK_OUT_1Hz}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup

@@ -39,9 +39,9 @@ entity Top_serial is
            BTNU : in STD_LOGIC;
 --           SEG : out STD_LOGIC_VECTOR (7 downto 0);
 --           AN : out STD_LOGIC_VECTOR (7 downto 0);
---           SW : in STD_LOGIC_VECTOR (7 downto 0);
-           LED : out STD_LOGIC_VECTOR (2 downto 0);
-           MOSI : out STD_LOGIC;--Serial Pin JA-1
+           SW : in STD_LOGIC_VECTOR (7 downto 0);
+           LED : out STD_LOGIC_VECTOR (4 downto 0);
+          -- MOSI : out STD_LOGIC;--Serial Pin JA-1
            MISO : in STD_LOGIC;--Serial Pin Ja-2
            SCLK : out STD_LOGIC--Serial Pin JA-3
            );
@@ -97,7 +97,7 @@ signal rx_data : STD_LOGIC_VECTOR(7 downto 0);-- := x"00"; --data from slave
 
 --signal disconect_test : STD_LOGIC;--_VECTOR(7 downto 0);
 
---signal MOSI : STD_LOGIC;
+signal MOSI : STD_LOGIC;
 --signal MISO : STD_LOGIC;
 --signal SCLK : STD_LOGIC;
 
@@ -210,66 +210,17 @@ SPI_map: SPI
                );
 
 SPI_state_clk_map:  SPI_state_clk
-    port map ( CLK_200KHz => clk_200KHz,
+    port map ( CLK_200KHz => clk_1Hz,
                CLK_EN => tx_enable,
                TX_DONE => tx_done,
                SPI_CLK => spi_clk
                );
    
 SCLK <= spi_clk;--connects the spi to the output pin on the board
-          
-          
-               
---------------------------------------
-----SPI enable stuff------------------
---------------------------------------  
---SPI_PROCESS_top: process (clk_100KHz,spi_clk)
---    begin 
-----        if (rising_edge(clk_100KHz)) then 
---            if tx_enable = '1' then
---                if (rising_edge(clk_100KHz)) then
---                    spi_counter <= spi_counter + 1;
-                                
---                    if spi_counter >= "1000" then--may need to set this to "0111" but not sure yet
---                       tx_done <= '1';
---                       spi_counter <= "0000";
---                    else
---                       --tx_done <= '0';
---                    end if;
---                 end if;
---                spi_clk <= clk_100KHz;
---            elsif tx_enable = '0' then
---                spi_clk <= '0';
---                tx_done <= '0';
---               --spi_counter <= "0000";
---            end if;
-----        end if; 
-        
-----        if tx_enable = '1' then
-----            spi_clk <= clk_100KHz;
-----        elsif tx_enable = '0' then
-----            spi_clk <= '0';
-----        end if;
---end process SPI_PROCESS_top; 
+LED (3) <= spi_clk;        
+tx_data <= SW;  
+LED (4) <= MOSI;      
 
-----SPI_PROCESS_top_2: process (spi_counter,tx_done)
-----    begin 
-----        if spi_counter >= "1000" then--may need to set this to "0111" but not sure yet
-----           tx_done <= '1';
-----           --spi_counter <= "0000";
-----        else
-----           tx_done <= '0';
-----        end if;
-----end process SPI_PROCESS_top_2; 
-
---SCLK <= spi_clk; 
---------------------------------------
-----Turning off unused LEDs-----------
---------------------------------------          
-----LED (13 downto 12) <= "00";   
-----LED(12) <= spi_clk; 
-
-----LED(13) <= tx_enable;
      
 ------------------------------------
 --State Machine---------------------
