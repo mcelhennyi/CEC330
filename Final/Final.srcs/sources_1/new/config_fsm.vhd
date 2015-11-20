@@ -33,12 +33,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity config_fsm is
     Port ( 
-           FSM_CLOCK : in STD_LOGIC;
-           CONFIG_EN : in STD_LOGIC;
-           CONFIG_DONE : out STD_LOGIC;
-           TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);
-           TX_DONE : in STD_LOGIC;
-           CE : out STD_LOGIC
+           FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
+           CONFIG_EN : in STD_LOGIC;--starts the configuration FSM steps
+           TX_DONE : in STD_LOGIC;--from counter telling module that the transmitting has finished
+           CONFIG_DONE : out STD_LOGIC;--Tells controlling FSM/module that the configuration of the accel is done
+           TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
+           TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
+           TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
+           START : out STD_LOGIC--starts the communication for one register location
            );
 end config_fsm;
 
@@ -63,7 +65,7 @@ st12_prep_x2A, st12_send_x2A,
 st13_prep_x2B, st13_send_x2B,
 st14_prep_x2C, st14_send_x2C,
 st15_prep_x2D, st15_send_x2D,
-st16_tx_done); 
+st16_buffer); 
 signal state, next_state : FSM_state_type;
 
 begin
@@ -210,10 +212,10 @@ case (state) is
                                     
     when st15_send_x2D => 
         if TX_DONE = '1' then
-            next_state <= st16_tx_done;
+            next_state <= st16_buffer;
         end if; 
         
-    when st16_tx_done =>
+    when st16_buffer =>
         next_state <= st1_wait;
 
     when others =>
