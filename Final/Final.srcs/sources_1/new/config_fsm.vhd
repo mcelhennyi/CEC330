@@ -109,7 +109,7 @@ begin
             START <= '0';
             --prep stage
             TX_CMD <= x"0A";
-            TX_ADDR <= x"21"        
+            TX_ADDR <= x"21";        
             TX_DATA <= x"";
         
         when st3_send_x21 => 
@@ -424,10 +424,10 @@ case (state) is
         next_state <= st17_config_done;
 
     when st17_config_done =>
-        next_state <= 
+--        next_state <= 
         
-    when others =>
-    
+    when others => 
+        
     
     end case;      
 end process;
