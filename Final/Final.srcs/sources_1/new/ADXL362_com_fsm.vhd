@@ -49,10 +49,6 @@ architecture Behavioral of ADXL362_com_fsm is
 ---------------------------------
 
 
-
-
-
-
 --States for the FSM
 type FSM_state_type is (
 st1_wait, 
@@ -103,8 +99,9 @@ begin
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '0';
+            --prep stage
             TX_DATA <= ADDR;
-                    
+
         when st3_send_addr => 
             --state variables            
             CS <= '1';
@@ -116,8 +113,9 @@ begin
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '0';
+            --prep stage
             TX_DATA <= DATA;
-                    
+
         when st4_send_data => 
             --state variables            
             CS <= '1';
