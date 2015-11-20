@@ -38,6 +38,7 @@ entity Divider is
            CLK_OUT_16Hz : out STD_LOGIC;
            CLK_OUT_50Hz :  out STD_LOGIC;
            CLK_OUT_100KHz : out STD_LOGIC;
+           CLK_OUT_200KHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
            CLK_OUT_STATE : out STD_LOGIC
            );
@@ -57,24 +58,24 @@ signal clk_out50Hz : STD_LOGIC := '0';
 --100KHz counter signals
 signal counter100KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
 signal clk_out100KHz : STD_LOGIC := '0';
-----200KHz counter signals
---signal counter200KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
---signal clk_out200KHz : STD_LOGIC := '0';
+--200KHz counter signals
+signal counter200KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
+signal clk_out200KHz : STD_LOGIC := '0';
 
 begin
-----SPI bus 100KHz clock
---counter100K: process(CLK_IN)
---    begin
---        if (rising_edge(CLK_IN)) then
---            counter200KHz <= counter200KHz +1;
---            if counter200KHz = '0' + x"0FA" then
---                clk_out200KHz <= '1';
---            elsif counter200KHz = "0111110100" then
---                clk_out200KHz <= '0';
---                counter200KHz <= '0' & x"000";
---            end if;
---        end if;
---end process counter100K;
+--SPI bus 100KHz clock
+counter200K: process(CLK_IN)
+    begin
+        if (rising_edge(CLK_IN)) then
+            counter200KHz <= counter200KHz +1;
+            if counter200KHz = '0' & x"0FA" then
+                clk_out200KHz <= '1';
+            elsif counter200KHz = "0111110100" then
+                clk_out200KHz <= '0';
+                counter200KHz <= '0' & x"000";
+            end if;
+        end if;
+end process counter200K;
 
 --SPI bus 100KHz clock
 counter100K: process(CLK_IN)
@@ -138,6 +139,7 @@ CLK_OUT_1Hz <= clk_out1Hz;--Slow 1Hz clock
 CLK_OUT_16Hz <= clk_out16Hz;--16Hz clock
 CLK_OUT_50Hz <= clk_out50Hz; --PWM refresh clock for LEDS
 CLK_OUT_100KHz <= clk_out100KHz;--SPI bus clock
+CLK_OUT_200KHz <= clk_out200KHz;--SPI bus clock
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
 CLK_OUT_STATE <= CLK_IN; --Counter to change a state machine
 

@@ -52,18 +52,18 @@ end Top_serial;
 --Signals--------------------------
 -----------------------------------
 
---States for the FSM
-type FSM_state_type is (
-st1_wait, 
-st2_high, st2_low,
-st3_high, st3_low, 
-st4_high, st4_low, 
-st5_high, st5_low, 
-st6_high, st6_low, 
-st7_high, st7_low,  
-st8_high, st8_low, 
-st9_high, st9_low); 
-signal state, next_state : FSM_state_type;
+----States for the FSM
+--type FSM_state_type is (
+--st1_wait, 
+--st2_high, st2_low,
+--st3_high, st3_low, 
+--st4_high, st4_low, 
+--st5_high, st5_low, 
+--st6_high, st6_low, 
+--st7_high, st7_low,  
+--st8_high, st8_low, 
+--st9_high, st9_low); 
+--signal state, next_state : FSM_state_type;
 
 --display signals for the seven segment displays
 --signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);
@@ -79,6 +79,7 @@ signal clk_1Hz : STD_LOGIC := '0'; --The one Hz clock
 signal clk_16Hz : STD_LOGIC := '0'; --16Hz clock
 signal clk_50Hz : STD_LOGIC := '0'; --50Hz clock
 signal clk_100KHz : STD_LOGIC := '0'; --100KHz clock
+signal clk_200KHz : STD_LOGIC := '0'; --200KHz clock
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
 signal clk_state : STD_LOGIC; --Clock to change State Machine
 signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
@@ -104,9 +105,9 @@ signal rx_data : STD_LOGIC_VECTOR(7 downto 0);-- := x"00"; --data from slave
 signal spi_clk : STD_LOGIC := '0';
 signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 
-----States for the FSM
---type FSM_state_type is (st1_wait, st2_prep_data, st2_5_save_data, st3_saved_wait, st4_transmit); 
---signal state, next_state : FSM_state_type;
+--States for the FSM
+type FSM_state_type is (st1_wait, st2_prep_data, st2_5_save_data, st3_saved_wait, st4_transmit); 
+signal state, next_state : FSM_state_type;
 
 -----------------------------------
 --COMPONETS------------------------
@@ -118,6 +119,7 @@ component Divider
            CLK_OUT_16Hz : out STD_LOGIC;
            CLK_OUT_50Hz :  out STD_LOGIC;
            CLK_OUT_100KHz : out STD_LOGIC;
+           CLK_OUT_200KHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
            CLK_OUT_STATE : out STD_LOGIC
            );
@@ -152,6 +154,15 @@ component SPI
 --           TX_DONE : out STD_LOGIC
            );
 end component SPI;
+
+component SPI_state_clk
+    Port ( CLK_200KHz : in STD_LOGIC;
+           CLK_EN : in STD_LOGIC;
+           TX_DONE : out STD_LOGIC;
+           SPI_CLK : out STD_LOGIC
+           );
+end component SPI_state_clk;
+
 begin
 ------------------------------------
 --PORT MAPS-------------------------
@@ -163,6 +174,7 @@ divider_map: Divider
                CLK_OUT_16Hz => clk_16Hz,
                CLK_OUT_50Hz => clk_50Hz,
                CLK_OUT_100Khz => clk_100KHz,
+               CLK_OUT_200KHz => clk_200KHz,
                CLK_OUT_AN => clk_an,
                CLK_OUT_STATE => clk_state
                );
@@ -196,144 +208,15 @@ SPI_map: SPI
                TX_ENABLE => tx_enable
 --               TX_DONE => tx_done
                );
-          
-          
-          
-          
-------------------------------------
---State Machine---------------------
-------------------------------------
 
---Switches the state to the next state every clock cycle of CLK_IN
-SYNC_PROC: process (FSM_CLOCK)
-begin
-   if (FSM_CLOCK'event and FSM_CLOCK = '1') then
-       state <= next_state;
-   end if;
-end process;
-
---The operations of eache state
-OUTPUT_DECODE: process (state)
-begin
-   case state is
-       when st1_wait =>
-           spi_clk <= '0';
-
-       when st2_high =>
-           spi_clk <= '1';
-           
-       when st2_low => 
-           spi_clk <= '0';
-           
-       when st3_high =>
-           spi_clk <= '1';
-       
-       when st3_low => 
-           spi_clk <= '0';
-
-       when st4_high =>
-           spi_clk <= '1';
-                       
-       when st4_low => 
-           spi_clk <= '0';
-
-       when st5_high =>
-           spi_clk <= '1';
-                               
-       when st5_low => 
-           spi_clk <= '0';
-
-       when st6_high =>
-           spi_clk <= '1';
-                               
-       when st6_low => 
-           spi_clk <= '0';
-           
-       when st7_high =>
-           spi_clk <= '1';
-                               
-       when st7_low => 
-           spi_clk <= '0';
-                   
-       when st8_high =>
-           spi_clk <= '1';
-                               
-       when st8_low => 
-           spi_clk <= '0';
-           
-       when st9_high =>
-           spi_clk <= '1';
-                                      
-       when st9_low => 
-           spi_clk <= '0';
-    
-       when others => null;
-   end case;
-end process OUTPUT_DECODE;
-
---Chooses the next state depending on button presses
-NEXT_STATE_DECODE: process (state)
-begin
-next_state <= state;  
-
---state case statement to change a state on rising edge  
-case (state) is
-   when st1_wait =>
-      
-       
-   when st2_high  =>
-      
-       
-   when st2_low => 
-       
-       
-   when st3_high  =>
-       
-                   
-   when st3_low => 
-       
-       
-   when st4_high  =>
-      
-                   
-   when st4_low => 
-      
-      
-   when st5_high  =>
-       
-                           
-   when st5_low => 
-       
-       
-   when st6_high  =>
-       
-                           
-   when st6_low => 
-       
-       
-   when st7_high  =>
-      
-                           
-   when st7_low => 
-           
-               
-   when st8_high  =>
-       
-                           
-   when st8_low => 
-                  
-    
-   when others =>
-        next_state <= st1_wait;
+SPI_state_clk_map:  SPI_state_clk
+    port map ( CLK_200KHz => clk_200KHz,
+               CLK_EN => tx_enable,
+               TX_DONE => tx_done,
+               SPI_CLK => spi_clk
+               );
    
-   end case;      
-end process;
-          
-          
-          
-          
-          
-          
+SCLK <= spi_clk;--connects the spi to the output pin on the board
           
           
                
@@ -388,103 +271,103 @@ end process;
 
 ----LED(13) <= tx_enable;
      
---------------------------------------
-----State Machine---------------------
---------------------------------------
-----Switches the state to the next state every clock cycle of CLK_IN
---SYNC_PROC: process (clk_state)
---begin
---    if (clk_state'event and clk_state = '1') then
---        state <= next_state;
---    end if;
---end process;
-----The operations of eache state
---OUTPUT_DECODE: process (state)
---begin
---    case state is
---        when st1_wait =>
---            tx_enable <= '0';
---            LED(0) <= '1';
---            LED(1) <= '0';
---            LED(2) <= '0';
+------------------------------------
+--State Machine---------------------
+------------------------------------
+--Switches the state to the next state every clock cycle of CLK_IN
+SYNC_PROC: process (clk_state)
+begin
+    if (clk_state'event and clk_state = '1') then
+        state <= next_state;
+    end if;
+end process;
+--The operations of eache state
+OUTPUT_DECODE: process (state)
+begin
+    case state is
+        when st1_wait =>
+            tx_enable <= '0';
+            LED(0) <= '1';
+            LED(1) <= '0';
+            LED(2) <= '0';
             
+--            saved_data <= '0';
+--            data_accepted <= '0';
+
+--        when st2_prep_data =>
+----            tx_data <= SW; 
+----            tx_data_copy <= SW;--testing to see if this helps
 ----            saved_data <= '0';
 ----            data_accepted <= '0';
-
-----        when st2_prep_data =>
-------            tx_data <= SW; 
-------            tx_data_copy <= SW;--testing to see if this helps
-------            saved_data <= '0';
-------            data_accepted <= '0';
-----            tx_enable <= '0';
-
-----        when st2_5_save_data =>
-------            saved_data <= '1';
-------            data_accepted <= '1';
-----            tx_enable <= '0';
-
---        when st3_saved_wait =>
-------            saved_data <= '0';
-------            data_accepted <= '1';         
 --            tx_enable <= '0';
---            LED(0) <= '0';
---            LED(1) <= '1';
---            LED(2) <= '0';
 
---        when st4_transmit =>
---            tx_enable <= '1';
---            LED(0) <= '0';
---            LED(1) <= '0';
---            LED(2) <= '1';
+--        when st2_5_save_data =>
+----            saved_data <= '1';
+----            data_accepted <= '1';
+--            tx_enable <= '0';
 
-----            data_accepted <= '0';
+        when st3_saved_wait =>
 ----            saved_data <= '0';
+----            data_accepted <= '1';         
+            tx_enable <= '0';
+            LED(0) <= '0';
+            LED(1) <= '1';
+            LED(2) <= '0';
 
---        when others => null;
---    end case;
---end process OUTPUT_DECODE;
+        when st4_transmit =>
+            tx_enable <= '1';
+            LED(0) <= '0';
+            LED(1) <= '0';
+            LED(2) <= '1';
 
-----Chooses the next state depending on button presses
---NEXT_STATE_DECODE: process (state,BTNU)
---begin
--- next_state <= state;  
+--            data_accepted <= '0';
+--            saved_data <= '0';
+
+        when others => null;
+    end case;
+end process OUTPUT_DECODE;
+
+--Chooses the next state depending on button presses
+NEXT_STATE_DECODE: process (state,BTNU)
+begin
+ next_state <= state;  
  
-----state case statement to change a state on rising edge  
---case (state) is
---    when st1_wait =>
---        if BTNU = '1' then
---           next_state <= st3_saved_wait;
---        end if; 
+--state case statement to change a state on rising edge  
+case (state) is
+    when st1_wait =>
+        if BTNU = '1' then
+           next_state <= st3_saved_wait;
+        end if; 
         
-----    when st2_5_save_data  =>
-----        next_state <= st3_saved_wait;
+--    when st2_5_save_data  =>
+--        next_state <= st3_saved_wait;
         
-----    when st2_prep_data => 
-----        if BTNU = '0' then
-----            next_state <= st2_5_save_data;
-----        end if;
-        
---    when st3_saved_wait  =>
-----        if BTNU = '1' then
-----           next_state <= st2_prep_data;
+--    when st2_prep_data => 
 --        if BTNU = '0' then
---            if BTNC = '1' then
---               next_state <= st4_transmit;
---            end if; 
---        end if;   
+--            next_state <= st2_5_save_data;
+--        end if;
         
---    when st4_transmit  =>
+    when st3_saved_wait  =>
+--        if BTNU = '1' then
+--           next_state <= st2_prep_data;
+        if BTNU = '0' then
+            if BTNC = '1' then
+               next_state <= st4_transmit;
+            end if; 
+        end if;   
         
---            if tx_done = '1' then
---                next_state <= st1_wait;
---            end if;
+    when st4_transmit  =>
+        
+            if tx_done = '1' then
+                next_state <= st1_wait;
+            end if;
         
     
---    when others =>
---        next_state <= st1_wait;
+    when others =>
+        next_state <= st1_wait;
     
---    end case;      
---end process;
+    end case;      
+end process;
 
 --------------------------------------
 ----state functions-------------------

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Thu Nov 19 21:28:01 2015
+| Date         : Fri Nov 20 11:39:00 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 1
 
 2. REPORT DETAILS
 -----------------
@@ -35,17 +35,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT divider_map/SCLK_OBUF_inst_i_1 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
-    SPI_map/serial_register_reg[3] {FDRE}
-    SPI_map/serial_register_reg[2] {FDRE}
-    SPI_map/serial_register_reg[0] {FDRE}
-    SPI_map/serial_register_reg[1] {FDRE}
-    SPI_map/serial_register_reg[7] {FDRE}
-
 Related violations: <none>
 
 
