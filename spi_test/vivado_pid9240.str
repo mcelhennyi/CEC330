@@ -1,0 +1,2011 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 9240
+
+Current time: 	11/19/15 8:23:08 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1440x900
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Austin
+User directory: C:/Users/Austin/Documents/CEC330/spi_test
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/Austin/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	215 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 454 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Austin\Documents\CEC330\spi_test\spi_test.xpr. Version: Vivado v2015.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Austin/Documents/CEC330/spi_test/spi_test.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 46 MB (+45749kb) [00:00:04]
+// [Engine Memory]: 389 MB (+256346kb) [00:00:04]
+// [GUI Memory]: 69 MB (+21630kb) [00:00:04]
+// [Engine Memory]: 413 MB (+4818kb) [00:00:04]
+// [Engine Memory]: 442 MB (+8467kb) [00:00:05]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: spi_test; location: C:/Users/Austin/Documents/CEC330/spi_test; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 465 MB. GUI used memory: 31 MB. Current time: 11/19/15 8:23:10 PM EST
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 469 MB (+5317kb) [00:00:08]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_serial - Behavioral (Top_serial.vhd)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_serial - Behavioral (Top_serial.vhd)]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_serial - Behavioral (Top_serial.vhd)]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 1, false, true); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+// Elapsed time: 32 seconds
+selectCodeEditor("Top_serial.vhd", 424, 555); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 415, 434); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 120, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("Top_serial.vhd", 130, 450); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 385, 495); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 149, 533); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 267, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_serial.vhd", 82, 484); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 217, 485); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 221, 485); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 143, 451); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 172, 380); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 235, 382); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 248, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 119, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 129, 278); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 128, 297); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 129, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 255, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 125, 228); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 128, 247); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 253, 259); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 236, 459); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 438, 561); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_serial.vhd", 189, 351); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor("Top_serial.vhd", 243, 351); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 253, 399); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 192, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 234, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 134, 446); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 116, 491); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 135, 432); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 52, 527); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 327, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 70, 251); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 26, 260); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 263, 546); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 245, 468); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 152, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 306, 353); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:27:18 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:27:18 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// [Engine Memory]: 493 MB (+693kb) [00:04:16]
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 501 MB. GUI used memory: 33 MB. Current time: 11/19/15 8:27:20 PM EST
+// Elapsed time: 20 seconds
+selectCodeEditor("Top_serial.vhd", 247, 297); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 232, 212); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 74 MB (+2146kb) [00:04:45]
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 15 seconds
+selectCodeEditor("Top_serial.vhd", 57, 62); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 265, 318); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 211, 337); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 224, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 43 seconds
+selectCodeEditor("Top_serial.vhd", 145, 299); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 20:28:54 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+selectCodeEditor("Top_serial.vhd", 434, 355); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 26); // w:Y (v:H, cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 27, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem((HResource) null, "localhost:3121,xilinx_tcf/Digilent/210292696671A,PARAM.FREQUENCY:15000000"); // ab:JMenuItem (ai:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// cp:P (cl:JFrame):  Open Hardware Target : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// [GUI Memory]: 82 MB (+3504kb) [00:06:10]
+// Tcl Message: open_hw 
+// Tcl Message: connect_hw_server -url localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2015.2   **** Build date : Jun 26 2015-16:56:39     ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210292696671A] 
+// TclEventType: HW_TARGET_CHANGE
+// Tcl Message: set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210292696671A] 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292696671A 
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: current_hw_device [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 527 MB (+9733kb) [00:06:14]
+dismissDialog("Open Hardware Target"); // cp:P (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 529 MB. GUI used memory: 38 MB. Current time: 11/19/15 8:29:20 PM EST
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 18 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+// [Engine Memory]: 554 MB (+437kb) [00:06:34]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// HMemoryUtils.trashcanNow. Engine heap size: 554 MB. GUI used memory: 40 MB. Current time: 11/19/15 8:29:40 PM EST
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 107 seconds
+selectCodeEditor("Top_serial.vhd", 187, 327); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 202, 143); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 211, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 201, 148); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 201, 233); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 157, 302); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 116, 312); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 53, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 69 seconds
+selectCodeEditor("Top_serial.vhd", 136, 195); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 106, 111); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 92, 126); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 93, 220); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 68, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 61, 214); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_serial.vhd", 104, 351); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 196, 362); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 141, 352); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 13 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:33:56 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:33:56 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_FAILED
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_serial.vhd", 20, 318); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 58, 275); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 123, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 148, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 36, 329); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 24 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "LED"); // o:ao (f:JComboBox, cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:34:51 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:34:51 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+// TclEventType: RUN_FAILED
+// Elapsed time: 40 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-1031] tx_data is not declared [C:/Users/Austin/Documents/CEC330/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:177]. ]", 26, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\spi_test\spi_test.srcs\sources_1\new\Top_serial.vhd;-;;-;16;-;line;-;177;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-1031] tx_data is not declared [C:/Users/Austin/Documents/CEC330/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:177]. ]", 26, true, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click - Node
+selectCodeEditor("Top_serial.vhd", 234, 267); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 203, 201); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 67, 234); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 95, 265); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 61, 218); // bj:J (JPanel:JComponent, cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// aR:ah (cl:JFrame): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, aR:ah)
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Save Project"); // aR:ah (cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:36:30 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:36:30 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// [GUI Memory]: 86 MB (+242kb) [00:13:29]
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_FAILED
+// Elapsed time: 13 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/Austin/Documents/CEC330/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:50]. ]", 27, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\spi_test\spi_test.srcs\sources_1\new\Top_serial.vhd;-;;-;16;-;line;-;50;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 16 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-1031] btnc is not declared [C:/Users/Austin/Documents/CEC330/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:278]. ]", 26, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Austin\Documents\CEC330\spi_test\spi_test.srcs\sources_1\new\Top_serial.vhd;-;;-;16;-;line;-;278;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 279, 180); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:37:16 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:37:16 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// ak:a (cl:JFrame): Launch Run Critical Messages: addNotify
+// Elapsed time: 36 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cl:JFrame)
+// [GUI Memory]: 91 MB (+632kb) [00:15:32]
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 55 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 20:38:49 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 35 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 51 seconds
+selectCodeEditor("Top_serial.vhd", 213, 234); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 243, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_serial.vhd", 131, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 191, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 241, 242); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 263, 147); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 104, 182); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 275, 140); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 231, 250); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 202, 290); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 197, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 87, 278); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top_serial.vhd", 59, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 57, 247); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top_serial.vhd", 281, 270); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 151, 218); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:41:25 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:41:25 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// ak:a (cl:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 156 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cl:JFrame)
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 20:44:11 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 40 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+applyEnter(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, "C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit"); // ao:JTextField (aS:JPanel, aC:ag)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 25 seconds
+selectCodeEditor("Top_serial.vhd", 395, 287); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top_serial.vhd", 104, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 212, 228); // bj:J (JPanel:JComponent, cl:JFrame)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "--                if spi_counter >= \"1000\" then--may need to set this to \"0111\" but not sure yet     --                   tx_done <= '1';     --                   spi_counter <= \"0000\";     --                else     --                   tx_done <= '0';     --                end if;"); // o:ao (f:JComboBox, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 302, 337); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 219, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top_serial.vhd", 270, 275); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 580 MB. GUI used memory: 44 MB. Current time: 11/19/15 8:45:51 PM EST
+selectCodeEditor("Top_serial.vhd", 93, 218); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_serial.vhd", 331, 266); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_serial.vhd", 200, 98); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 205, 144); // bj:J (JPanel:JComponent, cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:46:32 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:46:32 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 595 MB (+14158kb) [00:23:58]
+// TclEventType: RUN_STEP_COMPLETED
+// ak:a (cl:JFrame): Launch Run Critical Messages: addNotify
+// Elapsed time: 37 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 220, 150); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 220, 168); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 183, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 105, 340); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 225, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 281, 333); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor("Top_serial.vhd", 176, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 148, 221); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 191, 233); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 20 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 20:48:06 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// cp:P (cl:JFrame):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 607 MB. GUI used memory: 44 MB. Current time: 11/19/15 8:48:46 PM EST
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, cp:P)
+// TclEventType: DESIGN_CLOSE
+// [Engine Memory]: 733 MB (+113525kb) [00:25:46]
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2015.2 INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Common 17-41] Interrupt caught. Command should exit soon. INFO: [Common 17-344] 'open_run' was cancelled 
+// 'dm' command handler elapsed time: 3 seconds
+dismissDialog("Open Implemented Design"); // cp:P (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+applyEnter(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, "C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit"); // ao:JTextField (aS:JPanel, aC:ag)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("Top_serial.vhd", 247, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 233, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 249, 256); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 233, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 192, 186); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 182, 65); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // w:Y (v:H, cl:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 1, false, true); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_serial - Behavioral (Top_serial.vhd)]", 1); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_serial - Behavioral (Top_serial.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_serial - Behavioral (Top_serial.vhd), divider_map - Divider - Behavioral (Divider.vhd)]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("Divider.vhd", 157, 348); // bj:J (JPanel:JComponent, cl:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F:b
+// Elapsed time: 39 seconds
+selectCodeEditor("Top_serial.vhd", 52, 89); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 87, 380); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 304, 93); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 147, 129); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 284); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top_serial.vhd", 52, 295); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 45, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 100, 297); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 87, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top_serial.vhd", 269, 311); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 185, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 162, 161); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 58, 262); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 80, 295); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:51:23 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:51:23 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// ak:a (cl:JFrame): Launch Run Critical Messages: addNotify
+// Elapsed time: 36 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 58 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 20:52:59 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 70 seconds
+selectCodeEditor("Top_serial.vhd", 151, 128); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 149, 142); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 163, 113); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 155, 91); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 131, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 182, 238); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_serial.vhd", 120, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 69, 366); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 176, 213); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top_serial.vhd", 307, 224); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 210, 214); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top_serial.vhd", 118, 110); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 158, 131); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 164, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 181, 185); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 166, 254); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 139, 276); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 140, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 134, 317); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 137, 336); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 34 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:56:40 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:56:40 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 232, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 160, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 124, 343); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// ak:a (cl:JFrame): Launch Run Critical Messages: addNotify
+// Elapsed time: 19 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cl:JFrame)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // w:Y (v:H, cl:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Master.xdc]", 7, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Master.xdc]", 7, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("Master.xdc", 278, 195); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 192, 299); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 171, 280); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 281, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 296, 313); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 282, 249); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 11 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aR:ah (cl:JFrame): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, aR:ah)
+// 'bQ' command handler elapsed time: 5 seconds
+// [GUI Memory]: 96 MB (+377kb) [00:35:16]
+dismissDialog("Save Project"); // aR:ah (cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 762 MB. GUI used memory: 47 MB. Current time: 11/19/15 8:58:21 PM EST
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 20:58:25 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 20:58:25 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 253, 134, false, false, true, false, false); // bj:J (JPanel:JComponent, cl:JFrame) - Alt Key
+selectCodeEditor("Top_serial.vhd", 261, 137, false, false, true, false, false); // bj:J (JPanel:JComponent, cl:JFrame) - Alt Key
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 88 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 21:00:01 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 40 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor("Top_serial.vhd", 221, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 224, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Master.xdc", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Master.xdc", 237, 224); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 301, 110); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("Top_serial.vhd", 175, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 257, 58); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 92, 335); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 144, 327); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 104, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top_serial.vhd", 77, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 192, 332); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 292, 234); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 107, 362); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 63, 260); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 63, 265); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 4, 197); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 72, 245); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top_serial.vhd", 261, 287); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 23 seconds
+selectCodeEditor("Top_serial.vhd", 16, 214); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 11, 261); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+selectCodeEditor("Top_serial.vhd", 107, 132); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 21:03:55 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 21:03:55 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 44 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 94 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 21:06:15 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 36 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 44 seconds
+selectCodeEditor("Top_serial.vhd", 131, 184); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 206, 462); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 204, 145); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 216, 160); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 50 seconds
+selectCodeEditor("Top_serial.vhd", 319, 218); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 102 MB (+1245kb) [00:46:06]
+// Elapsed time: 21 seconds
+selectCodeEditor("Top_serial.vhd", 244, 486); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 167, 532); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 140, 536); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 215, 275); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 215, 333); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("Top_serial.vhd", 290, 273); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("Top_serial.vhd", 217, 489); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 241, 489); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 222, 517); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 13 seconds
+selectCodeEditor("Top_serial.vhd", 110, 417); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 48 seconds
+selectCodeEditor("Top_serial.vhd", 123, 197); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 111, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 186, 498); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 118, 75); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 268, 502); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 27 seconds
+selectCodeEditor("Top_serial.vhd", 249, 182); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 253, 192); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top_serial.vhd", 187, 141); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 177, 168); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 174, 193); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 53 seconds
+selectCodeEditor("Top_serial.vhd", 195, 243); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectCodeEditor("Top_serial.vhd", 66, 499); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 160, 156); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 32 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 21:14:22 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 21:14:22 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 775 MB (+5063kb) [00:51:51]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 91 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 21:15:55 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top_serial.vhd", 407, 245); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 158 seconds
+selectCodeEditor("Top_serial.vhd", 105, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 286, 313); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Master.xdc", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Master.xdc", 487, 41); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Master.xdc", 558, 39); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 563, 79); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Master.xdc", 557, 47); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Master.xdc", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 229, 226); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("Top_serial.vhd", 174, 244); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 195, 259); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 118, 265); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 162, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 181, 285); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 225, 207); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 214, 266); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 158, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 11 seconds
+selectCodeEditor("Top_serial.vhd", 194, 260); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 229, 219); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 224, 272); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 214, 265); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 189, 244); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 219, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 253, 253); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 153, 142); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 150, 161); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 155, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 156, 177); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 167, 177); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 168, 164); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 167, 145); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 20 seconds
+selectCodeEditor("Top_serial.vhd", 127, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 183, 194); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 342, 199); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 279, 114); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 323, 146); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 323, 157); // bj:J (JPanel:JComponent, cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 21:22:09 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 21:22:09 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 91 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 21:23:41 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 803 MB. GUI used memory: 49 MB. Current time: 11/19/15 9:24:27 PM EST
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// Elapsed time: 30 seconds
+selectCodeEditor("Top_serial.vhd", 104, 195); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 136, 228); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 241, 231); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 287, 234); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 242, 271); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 266, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 303, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 32 seconds
+selectCodeEditor("Top_serial.vhd", 275, 230); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 239, 317); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 159, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Thu Nov 19 21:27:13 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/synth_1/runme.log [Thu Nov 19 21:27:13 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 97 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Thu Nov 19 21:28:53 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 35 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// cp:P (cl:JFrame):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 850 MB. GUI used memory: 47 MB. Current time: 11/19/15 9:29:30 PM EST
+// [Engine Memory]: 852 MB (+40021kb) [01:06:28]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Xgd.load filename: C:/Xilinx/Vivado/2015.2/data/parts/xilinx/artix7/artix7/xc7a100t/xc7a100t.xgd; ZipEntry: xc7a100t_detail.xgd elapsed time: 0.5s
+// [Engine Memory]: 957 MB (+65701kb) [01:06:29]
+// TclEventType: DESIGN_NEW
+// Device: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2015.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [C:/Users/Austin/Documents/CEC330/spi_test/.Xil/Vivado-9240-Austin-MBP/dcp/Top_serial.xdc] Finished Parsing XDC File [C:/Users/Austin/Documents/CEC330/spi_test/.Xil/Vivado-9240-Austin-MBP/dcp/Top_serial.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1095.746 ; gain = 0.031 
+// Tcl Message: Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1095.746 ; gain = 0.031 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1224.410 ; gain = 145.535 
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dm' command handler elapsed time: 6 seconds
+// Device view-level: 0.0
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Open Implemented Design"); // cp:P (cl:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 19); // w:Y (v:H, cl:JFrame)
+// [Engine Memory]: 1,006 MB (+1028kb) [01:06:37]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 25, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// [GUI Memory]: 107 MB (+168kb) [01:06:38]
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330/spi_test/spi_test.runs/impl_1/Top_serial.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,050 MB. GUI used memory: 76 MB. Current time: 11/19/15 9:29:48 PM EST
+// RouteApi::initDelayMediator elapsed time: 14.6s
+// [Engine Memory]: 1,346 MB (+304233kb) [01:06:47]
+// Elapsed time: 76 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_serial.vhd", 0, false, true); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+// Elapsed time: 304 seconds
+selectCodeEditor("Top_serial.vhd", 104, 247); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 113 MB (+566kb) [01:13:04]
+// Elapsed time: 20 seconds
+selectCodeEditor("Top_serial.vhd", 271, 238); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 32 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 314, 194); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 256, 266); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 148 seconds
+selectCodeEditor("Top_serial.vhd", 325, 454); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 19, 477); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 35 seconds
+selectCodeEditor("Top_serial.vhd", 67, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("Top_serial.vhd", 280, 336); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 68, 145); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top_serial.vhd", 176, 170); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 196, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 271, 123); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// [GUI Memory]: 124 MB (+5819kb) [01:18:24]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("Top_serial.vhd", 189, 417); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 20 seconds
+selectCodeEditor("Top_serial.vhd", 98, 398); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 146, 411); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 14 seconds
+selectCodeEditor("Top_serial.vhd", 193, 417); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 195, 503); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 183, 536); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 146, 245); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 151, 386); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 185, 574); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 191, 557); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 179, 587); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 186, 520); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 170, 401); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 164, 365); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 188, 361); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 175, 446); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 172, 502); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 171, 498); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 171, 552); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 178, 555); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 182, 552); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 47, 347); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 24 seconds
+selectCodeEditor("Top_serial.vhd", 92, 489); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 90, 519); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 147, 507); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 65, 555); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 23, 553); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 118, 516); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_serial.vhd", 110, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 225, 531); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("Top_serial.vhd", 99, 227); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 109, 266); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top_serial.vhd", 83, 281); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 151, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 56, 280); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 84, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 81, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 82, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 83, 347); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 83, 366); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 83, 381); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 83, 400); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 38, 282); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 40, 299); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 36, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 35, 331); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 35, 350); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 36, 368); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 35, 380); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 38, 400); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 118, 283); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 154, 297); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 153, 316); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 153, 330); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 153, 348); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 152, 363); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 152, 382); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 152, 399); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 80, 516); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 111, 536); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 131 MB (+838kb) [01:22:49]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 26 seconds
+selectCodeEditor("Top_serial.vhd", 187, 420); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 204, 424); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 171, 520); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 180, 533); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 145, 516); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 170, 490); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 125, 460); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 74, 520); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 55, 501); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 167, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 139, 245); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 166, 350); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 171, 398); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 168, 451); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 168, 553); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 167, 500); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 167, 348); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 167, 452); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 168, 498); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 105, 502); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 106, 554); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 170, 554); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 139, 553); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 126, 552); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 132, 556); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 167, 448); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 165, 349); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 166, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 166, 194); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 166, 142); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 165, 94); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 168, 40); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 168, 165); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 181, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 82, 130); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 149, 59); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 149, 158); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 147, 259); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 147, 366); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 145, 469); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 148, 569); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 143, 9); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 152, 131); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top_serial.vhd", 141, 314); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 111, 312); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 139, 433); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 141, 500); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 515); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 140, 536); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 565); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 140, 553); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 499); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 143, 500); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 500); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top_serial.vhd", 107, 501); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+typeControlKey((HResource) null, "Top_serial.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 137, 366); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 137, 279); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 160); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 86); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 140, 76); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 88, 75); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 77); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 138, 60); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top_serial.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 92, 402); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 63, 370); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 242, 315); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 270, 249); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 99, 267); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 244, 182); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 109, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 63, 158); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 250, 147); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 243, 143); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 112, 107); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 235, 179); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 104, 144); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 239, 110); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 106, 79); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 243, 90); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 111, 106); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top_serial.vhd", 235, 130); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectCodeEditor("Top_serial.vhd", 316, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH

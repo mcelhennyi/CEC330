@@ -2,10 +2,10 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu Nov 19 13:49:12 2015
-# Process ID: 5988
-# Log file: C:/Users/Austin/Documents/CEC330/Final/vivado.log
-# Journal file: C:/Users/Austin/Documents/CEC330/Final\vivado.jou
+# Start of session at: Thu Nov 19 21:34:30 2015
+# Process ID: 12480
+# Log file: C:/Users/Austin/Documents/CEC330_2/Final/vivado.log
+# Journal file: C:/Users/Austin/Documents/CEC330_2/Final\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Austin/Documents/CEC330/Final/Final.xpr
+open_project C:/Users/Austin/Documents/CEC330_2/Final/Final.xpr
