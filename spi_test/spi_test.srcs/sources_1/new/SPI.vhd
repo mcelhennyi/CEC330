@@ -47,6 +47,7 @@ end SPI;
 architecture Behavioral of SPI is
 
 signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal accel_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 
 begin
 --Creates one SPI clock that only has 8 rising edges
@@ -54,8 +55,9 @@ SPI_PROCESS: process (CLK_STATE,SPI_CLK_IN)
     begin
         if LOAD_ENABLE = '0' then
             if (rising_edge(SPI_CLK_IN)) then
-                serial_register <= serial_register(6 downto 0) & MISO;
-                --serial_register <= serial_register(6 downto 0) & '0';
+                --serial_register <= serial_register(6 downto 0) & MISO;
+                serial_register <= serial_register(6 downto 0) & '0';
+                accel_register <= accel_register(6 downto 0) & MISO;
             end if;
         elsif LOAD_ENABLE = '1' then
             serial_register <= TX_DATA;--Accepts the data to be transmitted
@@ -63,7 +65,16 @@ SPI_PROCESS: process (CLK_STATE,SPI_CLK_IN)
 end process SPI_PROCESS; 
 
 MOSI <= serial_register(7);---------------Output bit to slave
-RX_DATA <= serial_register;---------------Data recieved from slave after transmistion is done
+RX_DATA <= accel_register;---------------Data recieved from slave after transmistion is done
 
 end Behavioral;
+
+
+
+
+
+
+
+
+
 

@@ -169,7 +169,8 @@ OUTPUT_DECODE: process (state)
 begin
     case state is
         when st1_wait =>
-            tx_data <= SW; 
+--            tx_data <= SW; 
+            tx_data <= rx_data;
             load_enable <= '0';
             tx_enable <= '0';
             LED(0) <= '1';
@@ -208,15 +209,15 @@ case (state) is
     when st1_wait =>
         if BTNU = '1' then
            next_state <= st2_load_data;
-        elsif BTNL = '1' then
-          next_state <= st3_saved_wait;
+--        elsif BTNL = '1' then
+--          next_state <= st3_saved_wait;
         end if;
         
     when st2_load_data  =>
         next_state <= st3_saved_wait;
         
     when st3_saved_wait  =>
-        if BTNU = '0' and BTNL = '0' then
+        if BTNU = '0' then
             if BTNC = '1' then
                next_state <= st4_transmit;
             end if; 
