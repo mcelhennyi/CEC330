@@ -96,16 +96,23 @@ component Divider
            );
 end component Divider;
 --exports data on the SPI bus
-component SPI
+component SPI_TX
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
            TX_DATA : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master through MOSI
-           RX_DATA : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master through MISO
            MOSI : out STD_LOGIC;--output pin to slave
+           LOAD_ENABLE : in STD_LOGIC
+           );
+end component SPI_TX;
+--exports data on the SPI bus
+component SPI_RX
+    Port ( CLK_STATE : in STD_LOGIC;
+           SPI_CLK_IN : in STD_LOGIC;
+           RX_DATA : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master through MISO
            MISO : in STD_LOGIC;--input pin frome slave
            LOAD_ENABLE : in STD_LOGIC
            );
-end component SPI;
+end component SPI_RX;
 
 component SPI_state_clk
     Port ( CLK_200KHz : in STD_LOGIC;
@@ -131,12 +138,18 @@ divider_map: Divider
                CLK_OUT_STATE => clk_state
                );
 
-SPI_map: SPI 
+SPI_TX_map: SPI_TX
     port map ( CLK_STATE => clk_state,
                SPI_CLK_IN => spi_clk,
                TX_DATA => tx_data, --data to slave
-               RX_DATA => rx_data, --data from slave
                MOSI => mosi_from_SPI,--Serial Pin OUT, JA 1
+               LOAD_ENABLE => load_enable
+               );
+               
+SPI_RX_map: SPI_RX
+    port map ( CLK_STATE => clk_state,
+               SPI_CLK_IN => spi_clk,
+               RX_DATA => rx_data, --data from slave
                MISO => MISO,--Serial Pin IN, JA 2
                LOAD_ENABLE => load_enable
                );

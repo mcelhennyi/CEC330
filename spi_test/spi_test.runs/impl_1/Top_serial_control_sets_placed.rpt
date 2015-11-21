@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sat Nov 21 15:44:27 2015
+| Date         : Sat Nov 21 16:39:47 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_serial_control_sets_placed.rpt
 | Design       : Top_serial
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            6 |
+| No           | No                    | No                     |              24 |           11 |
 | No           | No                    | Yes                    |              15 |           15 |
 | No           | Yes                   | No                     |              35 |           15 |
-| Yes          | No                    | No                     |              13 |            3 |
+| Yes          | No                    | No                     |               5 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -45,39 +45,39 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------------------+---------------------------------------------------+--------------------------------------------+------------------+----------------+
-|                 Clock Signal                |                   Enable Signal                   |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
-+---------------------------------------------+---------------------------------------------------+--------------------------------------------+------------------+----------------+
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[7]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[7]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[6]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[6]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[5]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[5]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[4]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[4]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[3]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[3]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[2]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[2]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[1]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[1]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK                  |                                                   | SPI_map/serial_register_reg[0]_LDC_i_1_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[7]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[7]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[6]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[6]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[5]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[5]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[4]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[4]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[3]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[3]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[2]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[2]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[1]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[1]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_map/serial_register_reg[0]_LDC_i_1_n_0 |                                                   | SPI_map/serial_register_reg[0]_LDC_i_2_n_0 |                1 |              1 |
-|  SPI_state_clk_map/TX_DONE_reg_i_2_n_0      |                                                   |                                            |                1 |              2 |
-|  p_1_out[2]                                 |                                                   |                                            |                1 |              3 |
-|  CLK_IN_IBUF_BUFG                           |                                                   |                                            |                2 |              3 |
-|  divider_map/CLK_OUT_1Hz                    | SPI_state_clk_map/FSM_sequential_state[4]_i_1_n_0 |                                            |                2 |              5 |
-|  tx_data_reg[7]_i_1_n_0                     |                                                   |                                            |                2 |              8 |
-|  SPI_state_clk_map/SPI_CLK                  | SPI_map/load_enable                               |                                            |                1 |              8 |
-|  CLK_IN_IBUF_BUFG                           |                                                   | divider_map/counter1Hz[0]_i_1_n_0          |                7 |             27 |
-+---------------------------------------------+---------------------------------------------------+--------------------------------------------+------------------+----------------+
++------------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+
+|                  Clock Signal                  |                   Enable Signal                   |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++------------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[7]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[7]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[6]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[6]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[5]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[4]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[3]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[7]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[7]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[6]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[6]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[5]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[4]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[3]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[2]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[1]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[0]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/TX_DONE_reg_i_2_n_0         |                                                   |                                               |                1 |              2 |
+|  p_1_out[2]                                    |                                                   |                                               |                1 |              3 |
+|  CLK_IN_IBUF_BUFG                              |                                                   |                                               |                2 |              3 |
+|  divider_map/CLK_OUT_1Hz                       | SPI_state_clk_map/FSM_sequential_state[4]_i_1_n_0 |                                               |                2 |              5 |
+|  tx_data_reg[7]_i_1_n_0                        |                                                   |                                               |                4 |              8 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   |                                               |                3 |              8 |
+|  CLK_IN_IBUF_BUFG                              |                                                   | divider_map/counter1Hz[0]_i_1_n_0             |                7 |             27 |
++------------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+
 
 
