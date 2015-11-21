@@ -35,7 +35,7 @@ entity config_fsm is
     Port ( 
            FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            CONFIG_EN : in STD_LOGIC;--starts the configuration FSM steps
-           TX_DONE : in STD_LOGIC;--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
+           ADDR_DONE : in STD_LOGIC;--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
            CONFIG_DONE : out STD_LOGIC;--Tells controlling FSM/module that the configuration of the accel is done
            TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
            TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
@@ -316,35 +316,35 @@ case (state) is
         next_state <= st2_send_x20;
         
     when st2_send_x20 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st3_prep_x21;
         end if;
     when st3_prep_x21  =>
         next_state <= st3_send_x21;
                     
     when st3_send_x21 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st4_prep_x22;            
         end if;
     when st4_prep_x22  =>
         next_state <= st4_send_x22;
                     
     when st4_send_x22 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st5_prep_x23;    
         end if;
     when st5_prep_x23  =>
         next_state <= st5_send_x23;
                             
     when st5_send_x23 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st6_prep_x24;             
         end if;
     when st6_prep_x24  =>
         next_state <= st6_send_x24;
                             
     when st6_send_x24 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st7_prep_x25;
         end if;
         
@@ -352,7 +352,7 @@ case (state) is
         next_state <= st7_send_x25;
                             
     when st7_send_x25 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st8_prep_x26;
         end if;    
                 
@@ -360,7 +360,7 @@ case (state) is
         next_state <= st8_send_x26;
                             
     when st8_send_x26 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st9_prep_x27;
         end if;            
      
@@ -368,7 +368,7 @@ case (state) is
         next_state <= st9_send_x27;
                                 
     when st9_send_x27 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st10_prep_x28;
         end if;            
             
@@ -376,7 +376,7 @@ case (state) is
         next_state <= st10_send_x28;
                                     
     when st10_send_x28 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st11_prep_x29;
         end if;          
         
@@ -384,7 +384,7 @@ case (state) is
         next_state <= st11_send_x29;
                                     
     when st11_send_x29 => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st12_prep_x2A;
         end if;                  
         
@@ -392,7 +392,7 @@ case (state) is
         next_state <= st12_send_x2A;
                                     
     when st12_send_x2A => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st13_prep_x2B;
         end if;   
         
@@ -400,7 +400,7 @@ case (state) is
         next_state <= st13_send_x2B;
                                     
     when st13_send_x2B => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st14_prep_x2C;
         end if;   
            
@@ -408,7 +408,7 @@ case (state) is
         next_state <= st14_send_x2C;
                                     
     when st14_send_x2C => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st15_prep_x2D;
         end if;   
            
@@ -416,7 +416,7 @@ case (state) is
         next_state <= st15_send_x2D;
                                     
     when st15_send_x2D => 
-        if TX_DONE = '1' then
+        if ADDR_DONE = '1' then
             next_state <= st16_buffer;
         end if; 
         

@@ -34,6 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Final_top is
     Port ( CLK_IN : in STD_LOGIC;
            LED : out STD_LOGIC_VECTOR (15 downto 0)
+           --And Accelerometer ports!
            );
 end Final_top;
 

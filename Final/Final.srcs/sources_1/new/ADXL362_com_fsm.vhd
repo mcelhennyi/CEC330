@@ -39,6 +39,7 @@ entity ADXL362_com_fsm is
            TX_DONE : in STD_LOGIC; --FROM THE COUNTER OF THE SPI CLOCK
            DONE : out STD_LOGIC;--Tells the controlling module that it has finsihed
            TX_ENABLE : out STD_LOGIC;--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
+           LOAD_ENABLE : OUT STD_LOGIC;--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
            TX_DATA : out STD_LOGIC;--BYTE OF DATA TO SPI MODULE
            CS : out STD_LOGIC);--CHIP SELECT FOR THE ACCELEROMETER
 end ADXL362_com_fsm;
@@ -52,10 +53,11 @@ architecture Behavioral of ADXL362_com_fsm is
 --States for the FSM
 type FSM_state_type is (
 st1_wait, 
-st2_prep_cmd, st2_send_cmd,
-st3_prep_addr, st3_send_addr,
-st4_prep_data, st4_send_data,
-st5_buffer
+st2_prep_cmd, st2_load_cmd, st2_send_cmd,
+st3_prep_addr, st3_load_addr, st3_send_addr,
+st4_prep_data, st4_load_data, st4_send_data,
+st5_buffer,
+st6_tx_done
 ); 
 signal state, next_state : FSM_state_type;
 
@@ -77,57 +79,94 @@ begin
         when st1_wait =>--nothing happens, waiting to be told to send some data to accel
             --state variables            
             CS <= '0';
-            DONE <= '1';
+            DONE <= '0';
             TX_ENABLE <= '0';
+            LOAD_ENABLE <= '0';
         
         when st2_prep_cmd  =>
             --state variables
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '0';
+            LOAD_ENABLE <= '0';
             --prep stage
             TX_DATA <= CMD;
+        
+        when st2_load_cmd =>
+            --state variables
+            CS <= '1';
+            DONE <= '0';
+            TX_ENABLE <= '0';
+            LOAD_ENABLE <= '1';
         
         when st2_send_cmd => 
             --state variables            
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '1';
+            LOAD_ENABLE <= '0';
        
         when st3_prep_addr  =>
             --state variables            
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '0';
+            LOAD_ENABLE <= '0';
             --prep stage
             TX_DATA <= ADDR;
-
+            
+        when st3_load_addr =>
+            --state variables
+            CS <= '1';
+            DONE <= '0';
+            TX_ENABLE <= '0';
+            LOAD_ENABLE <= '1';
+        
+        
         when st3_send_addr => 
             --state variables            
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '1';
+            LOAD_ENABLE <= '0';
     
         when st4_prep_data  =>
             --state variables            
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '0';
+            LOAD_ENABLE <= '0';
             --prep stage
             TX_DATA <= DATA;
+
+        when st4_load_data =>
+            --state variables
+            CS <= '1';
+            DONE <= '0';
+            TX_ENABLE <= '0';
+            LOAD_ENABLE <= '1';
 
         when st4_send_data => 
             --state variables            
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '1';
+            LOAD_ENABLE <= '0';
            
         when st5_buffer => --gives the system an additional clock cycle to settle before going back to wait state
             --state variables            
             CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '0';
-          
+            LOAD_ENABLE <= '0';
+            
+        when st6_tx_done =>
+            --state variables            
+            CS <= '0';
+            DONE <= '1';
+            TX_ENABLE <= '0';
+            LOAD_ENABLE <= '0';   
+                   
         when others => null;
     end case;
 end process OUTPUT_DECODE;
@@ -145,7 +184,10 @@ case (state) is
         end if;
             
     when st2_prep_cmd  =>
-        next_state <= st2_send_cmd;
+        next_state <= st2_load_cmd;
+        
+    when st2_load_cmd  =>
+        next_state <= st2_send_cmd;    
         
     when st2_send_cmd => 
         if TX_DONE = '1' then
@@ -153,23 +195,33 @@ case (state) is
         end if;
         
     when st3_prep_addr  =>
+        next_state <= st3_load_addr;
+        
+    when st3_load_addr  =>
         next_state <= st3_send_addr;
-                    
+                                
     when st3_send_addr => 
         if TX_DONE = '1' then
             next_state <= st4_prep_data;            
         end if;
     
     when st4_prep_data  =>
+        next_state <= st4_load_data;
+    
+    when st4_load_data  =>
         next_state <= st4_send_data;
-                    
+                                
     when st4_send_data => 
         if TX_DONE = '1' then
             next_state <= st5_buffer;            
         end if; 
            
     when st5_buffer => --gives the system an additional clock cycle to settle before going back to wait state
+        next_state <= st6_tx_done;
+        
+    when st6_tx_done => --send the tx done signal before returning to wait 
         next_state <= st1_wait;
+
         
     when others =>
   
