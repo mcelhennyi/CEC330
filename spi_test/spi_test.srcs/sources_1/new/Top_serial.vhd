@@ -37,11 +37,10 @@ entity Top_serial is
     Port ( CLK_IN : in STD_LOGIC;
            BTNC : in STD_LOGIC;
            BTNU : in STD_LOGIC;
---           SEG : out STD_LOGIC_VECTOR (7 downto 0);
---           AN : out STD_LOGIC_VECTOR (7 downto 0);
+           BTNL : in STD_LOGIC;
            SW : in STD_LOGIC_VECTOR (7 downto 0);
            LED : out STD_LOGIC_VECTOR (4 downto 0);
-          -- MOSI : out STD_LOGIC;--Serial Pin JA-1
+           MOSI : out STD_LOGIC;--Serial Pin JA-1
            MISO : in STD_LOGIC;--Serial Pin Ja-2
            SCLK : out STD_LOGIC--Serial Pin JA-3
            );
@@ -51,29 +50,6 @@ end Top_serial;
 -----------------------------------
 --Signals--------------------------
 -----------------------------------
-
-----States for the FSM
---type FSM_state_type is (
---st1_wait, 
---st2_high, st2_low,
---st3_high, st3_low, 
---st4_high, st4_low, 
---st5_high, st5_low, 
---st6_high, st6_low, 
---st7_high, st7_low,  
---st8_high, st8_low, 
---st9_high, st9_low); 
---signal state, next_state : FSM_state_type;
-
---display signals for the seven segment displays
---signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp2 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp4 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
---signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
 
 signal clk_1Hz : STD_LOGIC := '0'; --The one Hz clock
 signal clk_16Hz : STD_LOGIC := '0'; --16Hz clock
@@ -86,27 +62,22 @@ signal pwm_clk : STD_LOGIC; --Clock that goes to PWM module
 
 signal tx_done : STD_LOGIC;
 signal tx_enable : STD_LOGIC := '0';
+signal load_enable : STD_LOGIC := '0';
 signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
---signal tx_data_copy : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
---signal received_data_for_displays : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 signal rx_data : STD_LOGIC_VECTOR(7 downto 0);-- := x"00"; --data from slave
---signal data_to_leds : STD_LOGIC_VECTOR(7 downto 0) := x"00";
---signal led_mux : STD_LOGIC;
---signal saved_data : STD_LOGIC := '0';
---signal data_accepted : STD_LOGIC := '0';
-
---signal disconect_test : STD_LOGIC;--_VECTOR(7 downto 0);
-
-signal MOSI : STD_LOGIC;
---signal MISO : STD_LOGIC;
---signal SCLK : STD_LOGIC;
 
 --spi
 signal spi_clk : STD_LOGIC := '0';
 signal spi_counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+signal mosi_from_SPI : STD_LOGIC := '0';
 
 --States for the FSM
-type FSM_state_type is (st1_wait, st2_prep_data, st2_5_save_data, st3_saved_wait, st4_transmit); 
+type FSM_state_type is (
+st1_wait,  
+st2_load_data, 
+st3_saved_wait, 
+st4_transmit
+); 
 signal state, next_state : FSM_state_type;
 
 -----------------------------------
@@ -124,34 +95,15 @@ component Divider
            CLK_OUT_STATE : out STD_LOGIC
            );
 end component Divider;
---Drives the seven segment displays
---component Seven_seg_driver
---    Port ( CLK_AN : in STD_LOGIC;
---           Disp1 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
---           Disp2 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
---           Disp3 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
---           Disp4 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
---           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
---           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
---           Display_out : out STD_LOGIC_VECTOR (7 DOWNTO 0);
---           AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
---           );
---end component Seven_seg_driver;
 --exports data on the SPI bus
 component SPI
-    Port ( SPI_CLK_IN : in STD_LOGIC;
---           LED : out STD_LOGIC_VECTOR (11 downto 8);
---           SPI_CLK_OUT : out STD_LOGIC;
---           SPI_CLK_OUT_LED : out STD_LOGIC;
+    Port ( CLK_STATE : in STD_LOGIC;
+           SPI_CLK_IN : in STD_LOGIC;
            TX_DATA : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master through MOSI
            RX_DATA : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master through MISO
---           SAVED_DATA : in STD_LOGIC;
            MOSI : out STD_LOGIC;--output pin to slave
            MISO : in STD_LOGIC;--input pin frome slave
-           TX_ENABLE : in STD_LOGIC
---           TX_DONE : out STD_LOGIC
+           LOAD_ENABLE : in STD_LOGIC
            );
 end component SPI;
 
@@ -178,35 +130,15 @@ divider_map: Divider
                CLK_OUT_AN => clk_an,
                CLK_OUT_STATE => clk_state
                );
---maps the driver 
---Seven_seg_map: Seven_seg_driver
---    port map ( CLK_AN => clk_an,
---               Disp1 => Disp1,
---               Disp2 => Disp2,
---               Disp3 => Disp3,
---               Disp4 => Disp4,
---               Disp5 => Disp5,
---               Disp6 => Disp6,
---               Disp7 => Disp7,
---               Disp8 => Disp8,
-----               FLAG_an => flag_an,
---               Display_out => SEG,
---               AN_out => AN
---               ); 
---maps the spi bus
+
 SPI_map: SPI 
-    port map ( SPI_CLK_IN => spi_clk,
-               --SPI_CLK_IN => clk_100KHz,
---               LED => LED (11 downto 8),
---               SPI_CLK_OUT => SCLK,--Serial Pin OUT, JA 3
---               SPI_CLK_OUT_LED => LED(12),
+    port map ( CLK_STATE => clk_state,
+               SPI_CLK_IN => spi_clk,
                TX_DATA => tx_data, --data to slave
                RX_DATA => rx_data, --data from slave
---               SAVED_DATA => saved_data,
-               MOSI => MOSI,--Serial Pin OUT, JA 1
+               MOSI => mosi_from_SPI,--Serial Pin OUT, JA 1
                MISO => MISO,--Serial Pin IN, JA 2
-               TX_ENABLE => tx_enable
---               TX_DONE => tx_done
+               LOAD_ENABLE => load_enable
                );
 
 SPI_state_clk_map:  SPI_state_clk
@@ -218,8 +150,8 @@ SPI_state_clk_map:  SPI_state_clk
    
 SCLK <= spi_clk;--connects the spi to the output pin on the board
 LED (3) <= spi_clk;        
-tx_data <= SW;  
-LED (4) <= MOSI;      
+LED (4) <= mosi_from_SPI;    
+MOSI <= mosi_from_SPI;--Serial Pin OUT, JA 1
 
      
 ------------------------------------
@@ -237,42 +169,30 @@ OUTPUT_DECODE: process (state)
 begin
     case state is
         when st1_wait =>
+            tx_data <= SW; 
+            load_enable <= '0';
             tx_enable <= '0';
             LED(0) <= '1';
             LED(1) <= '0';
             LED(2) <= '0';
-            
---            saved_data <= '0';
---            data_accepted <= '0';
 
---        when st2_prep_data =>
-----            tx_data <= SW; 
-----            tx_data_copy <= SW;--testing to see if this helps
-----            saved_data <= '0';
-----            data_accepted <= '0';
---            tx_enable <= '0';
-
---        when st2_5_save_data =>
-----            saved_data <= '1';
-----            data_accepted <= '1';
---            tx_enable <= '0';
-
-        when st3_saved_wait =>
-----            saved_data <= '0';
-----            data_accepted <= '1';         
+        when st2_load_data =>
             tx_enable <= '0';
+            load_enable <= '1';
+
+        when st3_saved_wait =>       
+            tx_enable <= '0';
+            load_enable <= '0';
             LED(0) <= '0';
             LED(1) <= '1';
             LED(2) <= '0';
 
         when st4_transmit =>
             tx_enable <= '1';
+            load_enable <= '0';
             LED(0) <= '0';
             LED(1) <= '0';
             LED(2) <= '1';
-
---            data_accepted <= '0';
---            saved_data <= '0';
 
         when others => null;
     end case;
@@ -287,81 +207,30 @@ begin
 case (state) is
     when st1_wait =>
         if BTNU = '1' then
-           next_state <= st3_saved_wait;
-        end if; 
+           next_state <= st2_load_data;
+        elsif BTNL = '1' then
+          next_state <= st3_saved_wait;
+        end if;
         
---    when st2_5_save_data  =>
---        next_state <= st3_saved_wait;
-        
---    when st2_prep_data => 
---        if BTNU = '0' then
---            next_state <= st2_5_save_data;
---        end if;
+    when st2_load_data  =>
+        next_state <= st3_saved_wait;
         
     when st3_saved_wait  =>
---        if BTNU = '1' then
---           next_state <= st2_prep_data;
-        if BTNU = '0' then
+        if BTNU = '0' and BTNL = '0' then
             if BTNC = '1' then
                next_state <= st4_transmit;
             end if; 
         end if;   
         
     when st4_transmit  =>
-        
-            if tx_done = '1' then
-                next_state <= st1_wait;
-            end if;
-        
+        if tx_done = '1' then
+            next_state <= st1_wait;
+        end if;
     
     when others =>
         next_state <= st1_wait;
     
     end case;      
 end process;
-
---------------------------------------
-----state functions-------------------
---------------------------------------
---state_functions: process(saved_data,tx_enable,tx_done,data_accepted)
---    begin
-        
---        if saved_data = '1' then--data saved from switches
---            led_mux <= '0';
---        end if;
-        
---        if data_accepted = '1' then--data sent to spi
---            LED(15) <= '1';
---            LED(14) <= '0';
---        elsif data_accepted = '0' then--transmistion started
---            LED(15) <= '0';
---        end if;
-        
---        --only updates the data from spi when transmission is done for displays 7 and 8
---        if tx_done = '1' then
---            received_data_for_displays <= rx_data;
---            led_mux <= '1';
---            if data_accepted = '0' then
---                LED(14) <= '1'; 
---            end if;
---        end if;
---        --chooses what value will be on the LEDs
---        if led_mux = '0' then
---            data_to_leds <= tx_data_copy;--saved data from swithces
---        elsif led_mux = '1' then
---            data_to_leds <= rx_data;--data from slave
---        end if;
-        
---end process state_functions;
-
-----display 1 and 2 will always show the value of tx_data(the value taken from the swithes when BTNU is pressed)
---Disp1 <= tx_data_copy(3 downto 0);
---Disp2 <= tx_data_copy(7 downto 4);
-----These LEDs will show the same data as displays 1 and 2
---LED(7 downto 0) <= data_to_leds;
-----display 7 and 8 show the value from the slave
---Disp7 <= received_data_for_displays(3 downto 0);
---Disp8 <= received_data_for_displays(7 downto 4);
-
 
 end Behavioral;
