@@ -37,6 +37,7 @@ entity Divider is
            CLK_OUT_1Hz : out STD_LOGIC;
            CLK_OUT_16Hz : out STD_LOGIC;
            CLK_OUT_50Hz :  out STD_LOGIC;
+           CLK_OUT_400Hz :  out STD_LOGIC;
            CLK_OUT_100KHz : out STD_LOGIC;
            CLK_OUT_200KHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
@@ -53,8 +54,11 @@ signal clk_out1Hz : STD_LOGIC := '0';
 signal counter16Hz : STD_LOGIC_VECTOR (23 DOWNTO 0) := x"000000";
 signal clk_out16Hz : STD_LOGIC := '0';
 --50Hz counter signals
-signal counter50Hz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
+signal counter50Hz : STD_LOGIC_VECTOR (23 DOWNTO 0) := x"000000";
 signal clk_out50Hz : STD_LOGIC := '0';
+--400Hz counter signals
+signal counter400Hz : STD_LOGIC_VECTOR (15 DOWNTO 0) := x"0000";
+signal clk_out400Hz : STD_LOGIC := '0';
 --100KHz counter signals
 signal counter100KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
 signal clk_out100KHz : STD_LOGIC := '0';
@@ -91,16 +95,30 @@ counter100K: process(CLK_IN)
         end if;
 end process counter100K;
 
+--400Hz clock
+counter400: process(CLK_IN)
+    begin
+        if (rising_edge(CLK_IN)) then
+            counter400Hz <= counter400Hz +1;
+            if counter400Hz = x"1E848" then
+                clk_out400Hz <= '1';
+            elsif counter400Hz = x"3D090" then
+                clk_out400Hz <= '0';
+                counter400Hz <= x"0000";
+            end if;
+        end if;
+end process counter400;
+
 --50Hz clock
 counter50: process(CLK_IN)
     begin
         if (rising_edge(CLK_IN)) then
             counter50Hz <= counter50Hz +1;
-            if counter50Hz = "0111101000010" then
+            if counter50Hz = "0F4240" then--"0111101000010"
                 clk_out50Hz <= '1';
-            elsif counter50Hz = "1111010000100" then
+            elsif counter50Hz = "1E8480" then--"1111010000100"
                 clk_out50Hz <= '0';
-                counter50Hz <= '0' & x"000";
+                counter50Hz <= x"000000";
             end if;
         end if;
 end process counter50;
@@ -138,6 +156,7 @@ counter1: process(CLK_IN)
 CLK_OUT_1Hz <= clk_out1Hz;--Slow 1Hz clock
 CLK_OUT_16Hz <= clk_out16Hz;--16Hz clock
 CLK_OUT_50Hz <= clk_out50Hz; --PWM refresh clock for LEDS
+CLK_OUT_400Hz <= clk_out400Hz;--SPI bus clock
 CLK_OUT_100KHz <= clk_out100KHz;--SPI bus clock
 CLK_OUT_200KHz <= clk_out200KHz;--SPI bus clock
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching

@@ -44,6 +44,7 @@ architecture Behavioral of Final_top is
 signal clk_1Hz : STD_LOGIC := '0'; --The one Hz clock
 signal clk_16Hz : STD_LOGIC := '0'; --16Hz clock
 signal clk_50Hz : STD_LOGIC := '0'; --50Hz clock
+signal clk_400Hz : STD_LOGIC := '0'; --400Hz clock
 signal clk_100KHz : STD_LOGIC := '0'; --100KHz clock
 signal clk_200KHz : STD_LOGIC := '0'; --200KHz clock
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
@@ -55,7 +56,7 @@ signal tx_done : STD_LOGIC;
 signal tx_enable : STD_LOGIC := '0';
 signal load_enable : STD_LOGIC := '0';
 signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
-signal rx_data : STD_LOGIC_VECTOR(7 downto 0);-- := x"00"; --data from slave
+signal rx_data : STD_LOGIC_VECTOR(15 downto 0);-- := x"00"; --data from slave
 signal mosi : STD_LOGIC := '0';
 signal miso : STD_LOGIC := '0';
 signal spi_clk : STD_LOGIC := '0';
@@ -82,6 +83,7 @@ component Divider
            CLK_OUT_1Hz : out STD_LOGIC;
            CLK_OUT_16Hz : out STD_LOGIC;
            CLK_OUT_50Hz :  out STD_LOGIC;
+           CLK_OUT_400Hz :  out STD_LOGIC;
            CLK_OUT_100KHz : out STD_LOGIC;
            CLK_OUT_200KHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
@@ -101,7 +103,7 @@ end component SPI_TX;
 component SPI_RX
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
-           RX_DATA : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master through MISO
+           RX_DATA : out STD_LOGIC_VECTOR (15 downto 0); --Data Coming into master through MISO
            MISO : in STD_LOGIC--input pin frome slave
            );
 end component SPI_RX;
@@ -142,7 +144,7 @@ end component ADXL362_com_fsm;
 component Read_accel_fsm
     Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            READ_EN : in STD_LOGIC;--starts the read FSM steps
-           RX_DATA : out STD_LOGIC_VECTOR(7 downto 0);--data from accel
+           RX_DATA : out STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
            START : out STD_LOGIC--starts the reading for 8 bits of data
            );
@@ -158,6 +160,7 @@ divider_map: Divider
                CLK_OUT_1Hz => clk_1Hz,
                CLK_OUT_16Hz => clk_16Hz,
                CLK_OUT_50Hz => clk_50Hz,
+               CLK_OUT_400Hz => clk_400Hz,
                CLK_OUT_100Khz => clk_100KHz,
                CLK_OUT_200KHz => clk_200KHz,
                CLK_OUT_AN => clk_an,
@@ -180,7 +183,7 @@ SPI_RX_map: SPI_RX
                );
 
 SPI_state_clk_map:  SPI_state_clk
-    port map ( CLK_200KHz => clk_200KHz,
+    port map ( CLK_200KHz => clk_400Hz,
                CLK_EN => tx_enable,
                TX_DONE => tx_done,
                SPI_CLK => spi_clk

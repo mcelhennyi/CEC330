@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Read_accel_fsm is
     Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            READ_EN : in STD_LOGIC;--starts the read FSM steps
-           RX_DATA : out STD_LOGIC_VECTOR(7 downto 0);--data from accel
+           RX_DATA : out STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
            START : out STD_LOGIC--starts the reading for 8 bits of data
            );
@@ -88,14 +88,14 @@ begin
         
         when st2_read_first_x =>
             START <= '0';
-            x_value (15 downto 8) <= RX_DATA;
+            x_value (7 downto 0) <= RX_DATA;
             
         when st3_start =>
             START <= '1';
             
         when st3_read_second_x =>
             START <= '0';
-            x_value (7 downto 0) <= RX_DATA;
+            x_value (15 downto 8) <= RX_DATA;
             
         ---------------------------------------------------------------
         when st4_start =>
@@ -103,14 +103,14 @@ begin
         
         when st4_read_first_y =>
             START <= '0';
-            y_value (15 downto 8) <= RX_DATA;
+            y_value (7 downto 0) <= RX_DATA;
         
         when st5_start =>
             START <= '1';
         
         when st5_read_second_y =>
             START <= '0';
-            y_value (7 downto 0) <= RX_DATA;
+            y_value (15 downto 8) <= RX_DATA;
             
         ---------------------------------------------------------------
         when st6_start =>

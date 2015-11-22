@@ -36,7 +36,7 @@ use ieee.std_logic_arith.ALL;
 entity SPI_RX is
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
-           RX_DATA : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master aka rx_data
+           RX_DATA : out STD_LOGIC_VECTOR (15 downto 0); --Data Coming into master aka rx_data
            MISO : in STD_LOGIC;--input pin frome slave
            LOAD_ENABLE : in STD_LOGIC
            );
@@ -44,14 +44,14 @@ end SPI_RX;
 
 architecture Behavioral of SPI_RX is
 
-signal accel_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal accel_register : STD_LOGIC_VECTOR(15 downto 0) := x"0000";
 
 begin
 --Creates one SPI clock that only has 8 rising edges
 SPI_PROCESS: process (CLK_STATE,SPI_CLK_IN)
     begin
         if (rising_edge(SPI_CLK_IN)) then
-            accel_register <= accel_register(6 downto 0) & MISO;
+            accel_register <= accel_register(14 downto 0) & MISO;
         end if;
 end process SPI_PROCESS; 
 
