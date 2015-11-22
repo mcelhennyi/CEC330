@@ -217,8 +217,8 @@ Read_fsm_map: Read_accel_fsm
     port map ( FSM_CLOCK => clk_state,
                READ_EN => read_accel,
                RX_DATA => rx_data,
-               READ_DONE => tx_done,
-               START => tx_enable
+               READ_DONE => tx_done,--needs to be changed
+               START => tx_enable--needs to be changed
                );           
 
 ------------------------------------

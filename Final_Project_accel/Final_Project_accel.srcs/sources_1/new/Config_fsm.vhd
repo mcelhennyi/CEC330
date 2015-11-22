@@ -444,7 +444,7 @@ case (state) is
         next_state <= st1_wait;
         
     when others => 
-        
+        next_state <= st1_wait;
     
     end case;      
 end process;
