@@ -109,8 +109,7 @@ component SPI_RX
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
            RX_DATA : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master through MISO
-           MISO : in STD_LOGIC;--input pin frome slave
-           LOAD_ENABLE : in STD_LOGIC
+           MISO : in STD_LOGIC--input pin frome slave
            );
 end component SPI_RX;
 
@@ -150,12 +149,11 @@ SPI_RX_map: SPI_RX
     port map ( CLK_STATE => clk_state,
                SPI_CLK_IN => spi_clk,
                RX_DATA => rx_data, --data from slave
-               MISO => MISO,--Serial Pin IN, JA 2
-               LOAD_ENABLE => load_enable
+               MISO => MISO--Serial Pin IN, JA 2
                );
 
 SPI_state_clk_map:  SPI_state_clk
-    port map ( CLK_200KHz => clk_1Hz,
+    port map ( CLK_200KHz => clk_200KHz,
                CLK_EN => tx_enable,
                TX_DONE => tx_done,
                SPI_CLK => spi_clk
@@ -182,8 +180,8 @@ OUTPUT_DECODE: process (state)
 begin
     case state is
         when st1_wait =>
---            tx_data <= SW; 
-            tx_data <= rx_data;
+            tx_data <= SW; 
+--            tx_data <= rx_data;
             load_enable <= '0';
             tx_enable <= '0';
             LED(0) <= '1';

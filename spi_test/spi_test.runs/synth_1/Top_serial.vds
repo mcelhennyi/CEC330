@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sat Nov 21 16:38:59 2015
-# Process ID: 9260
+# Start of session at: Sat Nov 21 17:16:21 2015
+# Process ID: 5116
 # Log file: C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.runs/synth_1/Top_serial.vds
 # Journal file: C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,41 +13,33 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 245.707 ; gain = 68.590
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 245.285 ; gain = 68.379
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top_serial' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:49]
-INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:130]
+INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:129]
 INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Divider.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Divider.vhd:47]
-INFO: [Synth 8-3491] module 'SPI_TX' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:141]
+INFO: [Synth 8-3491] module 'SPI_TX' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:140]
 INFO: [Synth 8-638] synthesizing module 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_TX.vhd:45]
 WARNING: [Synth 8-614] signal 'LOAD_ENABLE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_TX.vhd:51]
 WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_TX.vhd:51]
 INFO: [Synth 8-256] done synthesizing module 'SPI_TX' (2#1) [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_TX.vhd:45]
-INFO: [Synth 8-3491] module 'SPI_RX' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:149]
-INFO: [Synth 8-638] synthesizing module 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_RX.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (3#1) [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_RX.vhd:45]
-INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:157]
+INFO: [Synth 8-3491] module 'SPI_RX' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_RX.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (3#1) [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_RX.vhd:44]
+INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:155]
 INFO: [Synth 8-638] synthesizing module 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_state_clk.vhd:42]
 WARNING: [Synth 8-614] signal 'CLK_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_state_clk.vhd:156]
 INFO: [Synth 8-256] done synthesizing module 'SPI_state_clk' (4#1) [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_state_clk.vhd:42]
-INFO: [Synth 8-226] default block is never used [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:183]
-WARNING: [Synth 8-614] signal 'rx_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:181]
-INFO: [Synth 8-226] default block is never used [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:221]
-WARNING: [Synth 8-614] signal 'BTNC' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:216]
-WARNING: [Synth 8-614] signal 'tx_done' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:216]
+INFO: [Synth 8-226] default block is never used [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:181]
+WARNING: [Synth 8-614] signal 'SW' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:179]
+INFO: [Synth 8-226] default block is never used [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:219]
+WARNING: [Synth 8-614] signal 'BTNC' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:214]
+WARNING: [Synth 8-614] signal 'tx_done' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:214]
 INFO: [Synth 8-256] done synthesizing module 'Top_serial' (5#1) [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:49]
 WARNING: [Synth 8-3331] design Top_serial has unconnected port BTNL
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[7]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[6]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[5]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[4]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[3]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[2]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[1]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.012 ; gain = 102.895
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.566 ; gain = 102.660
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -57,7 +49,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.012 ; gain = 102.895
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 279.566 ; gain = 102.660
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -71,16 +63,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 581.004 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 580.480 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -326,7 +318,7 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'SPI_state_clk'
 INFO: [Synth 8-5546] ROM "SPI_CLK" won't be mapped to RAM because it is too sparse
@@ -356,10 +348,10 @@ WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [C:/Users/Aust
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'SPI_state_clk'
 WARNING: [Synth 8-327] inferring latch for variable 'SPI_CLK_reg' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/SPI_state_clk.vhd:80]
-WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:165]
-WARNING: [Synth 8-327] inferring latch for variable 'tx_data_reg' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:144]
+WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:163]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_data_reg' [C:/Users/Austin/Documents/CEC330_2/spi_test/spi_test.srcs/sources_1/new/Top_serial.vhd:143]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -428,29 +420,49 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 581.004 ; gain = 403.887
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3331] design Top_serial has unconnected port BTNL
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[7]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[6]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[5]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[4]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[3]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[2]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[1]
-WARNING: [Synth 8-3331] design Top_serial has unconnected port SW[0]
+WARNING: [Synth 8-3331] design Top_serial has unconnected port MISO
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[0] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[1] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[2] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[3] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[4] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[5] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[6] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[7] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[8] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[9] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[10] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[11] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[12] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[13] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[14] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[15] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[16] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[17] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[18] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[19] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[20] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[21] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[22] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[23] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[24] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[25] ) is unused and will be removed from module Top_serial.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[26] ) is unused and will be removed from module Top_serial.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[0] ) is unused and will be removed from module Top_serial.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[1] ) is unused and will be removed from module Top_serial.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[2] ) is unused and will be removed from module Top_serial.
@@ -501,35 +513,22 @@ WARNING: [Synth 8-3332] Sequential element (\divider_map/counter100KHz_reg[9] ) 
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter100KHz_reg[10] ) is unused and will be removed from module Top_serial.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter100KHz_reg[11] ) is unused and will be removed from module Top_serial.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter100KHz_reg[12] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[0] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[1] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[2] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[3] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[4] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[5] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[6] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[7] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[8] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[9] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[10] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[11] ) is unused and will be removed from module Top_serial.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter200KHz_reg[12] ) is unused and will be removed from module Top_serial.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SPI_TX_map/serial_register_reg[0]_C )
 WARNING: [Synth 8-3332] Sequential element (\SPI_TX_map/serial_register_reg[0]_C ) is unused and will be removed from module Top_serial.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -777,10 +776,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -792,7 +791,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -810,7 +809,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -823,7 +822,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -835,13 +834,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 581.004 ; gain = 403.887
+Start Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -858,19 +857,19 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     7|
-|3     |LUT1   |    28|
+|2     |CARRY4 |     4|
+|3     |LUT1   |    14|
 |4     |LUT2   |     5|
 |5     |LUT3   |    26|
-|6     |LUT4   |     3|
+|6     |LUT4   |     5|
 |7     |LUT5   |     7|
-|8     |LUT6   |     8|
+|8     |LUT6   |     2|
 |9     |FDCE   |     7|
 |10    |FDPE   |     8|
-|11    |FDRE   |    43|
+|11    |FDRE   |    21|
 |12    |LD     |    13|
 |13    |LDC    |     8|
-|14    |IBUF   |     4|
+|14    |IBUF   |    11|
 |15    |OBUF   |     7|
 +------+-------+------+
 
@@ -878,20 +877,19 @@ Report Instance Areas:
 +------+--------------------+--------------+------+
 |      |Instance            |Module        |Cells |
 +------+--------------------+--------------+------+
-|1     |top                 |              |   175|
-|2     |  SPI_RX_map        |SPI_RX        |     8|
-|3     |  SPI_TX_map        |SPI_TX        |    47|
-|4     |  SPI_state_clk_map |SPI_state_clk |    19|
-|5     |  divider_map       |Divider       |    72|
+|1     |top                 |              |   139|
+|2     |  SPI_TX_map        |SPI_TX        |    47|
+|3     |  SPI_state_clk_map |SPI_state_clk |    19|
+|4     |  divider_map       |Divider       |    37|
 +------+--------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 581.004 ; gain = 403.887
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 580.480 ; gain = 403.574
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 581.004 ; gain = 88.289
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 581.004 ; gain = 403.887
+Synthesis finished with 0 errors, 0 critical warnings and 84 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 580.480 ; gain = 87.277
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 580.480 ; gain = 403.574
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -901,8 +899,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-31 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
+31 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.004 ; gain = 389.543
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 581.004 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 21 16:39:23 2015...
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 580.480 ; gain = 389.590
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 580.480 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 21 17:16:46 2015...

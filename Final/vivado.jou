@@ -2,10 +2,26 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu Nov 19 21:34:30 2015
-# Process ID: 12480
+# Start of session at: Sat Nov 21 17:03:52 2015
+# Process ID: 9260
 # Log file: C:/Users/Austin/Documents/CEC330_2/Final/vivado.log
 # Journal file: C:/Users/Austin/Documents/CEC330_2/Final\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Austin/Documents/CEC330_2/Final/Final.xpr
+close [ open C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/SPI_TX.vhd w ]
+add_files C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/SPI_TX.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/SPI_RX.vhd w ]
+add_files C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/SPI_RX.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/SPI_state_clk.vhd w ]
+add_files C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/SPI_state_clk.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/Read_accel_fsm.vhd w ]
+add_files C:/Users/Austin/Documents/CEC330_2/Final/Final.srcs/sources_1/new/Read_accel_fsm.vhd
+update_compile_order -fileset sources_1

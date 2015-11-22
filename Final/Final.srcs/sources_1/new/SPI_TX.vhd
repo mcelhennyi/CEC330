@@ -33,27 +33,33 @@ use ieee.std_logic_arith.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity SPI_RX is
+entity SPI_TX is
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
-           RX_DATA : out STD_LOGIC_VECTOR (7 downto 0); --Data Coming into master aka rx_data
-           MISO : in STD_LOGIC--input pin frome slave
+           TX_DATA : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master aka tx_data
+           MOSI : out STD_LOGIC;--output pin to slave
+           LOAD_ENABLE : in STD_LOGIC
            );
-end SPI_RX;
+end SPI_TX;
 
-architecture Behavioral of SPI_RX is
+architecture Behavioral of SPI_TX is
 
-signal accel_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 
 begin
 --Creates one SPI clock that only has 8 rising edges
 SPI_PROCESS: process (CLK_STATE,SPI_CLK_IN)
     begin
-        if (rising_edge(SPI_CLK_IN)) then
-            accel_register <= accel_register(6 downto 0) & MISO;
+        if LOAD_ENABLE = '0' then
+            if (rising_edge(SPI_CLK_IN)) then
+                --serial_register <= serial_register(6 downto 0) & MISO;
+                serial_register <= serial_register(6 downto 0) & '0';
+            end if;
+        elsif LOAD_ENABLE = '1' then
+            serial_register <= TX_DATA;--Accepts the data to be transmitted
         end if;
 end process SPI_PROCESS; 
 
-RX_DATA <= accel_register;---------------Data recieved from slave after transmistion is done
+MOSI <= serial_register(7);---------------Output bit to slave
 
 end Behavioral;

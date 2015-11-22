@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sat Nov 21 16:39:47 2015
+| Date         : Sat Nov 21 17:17:35 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_serial_control_sets_placed.rpt
 | Design       : Top_serial
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    30 |
-| Minimum Number of register sites lost to control set restrictions |   185 |
+| Number of unique control sets                                     |    29 |
+| Minimum Number of register sites lost to control set restrictions |   183 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,9 +33,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              24 |           11 |
+| No           | No                    | No                     |              16 |            8 |
 | No           | No                    | Yes                    |              15 |           15 |
-| No           | Yes                   | No                     |              35 |           15 |
+| No           | Yes                   | No                     |              21 |           12 |
 | Yes          | No                    | No                     |               5 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -72,12 +72,11 @@ Table of Contents
 |  SPI_TX_map/serial_register_reg[1]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[1]_LDC_i_2_n_0 |                1 |              1 |
 |  SPI_TX_map/serial_register_reg[0]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[0]_LDC_i_2_n_0 |                1 |              1 |
 |  SPI_state_clk_map/TX_DONE_reg_i_2_n_0         |                                                   |                                               |                1 |              2 |
-|  p_1_out[2]                                    |                                                   |                                               |                1 |              3 |
+|  p_1_out[2]                                    |                                                   |                                               |                2 |              3 |
 |  CLK_IN_IBUF_BUFG                              |                                                   |                                               |                2 |              3 |
-|  divider_map/CLK_OUT_1Hz                       | SPI_state_clk_map/FSM_sequential_state[4]_i_1_n_0 |                                               |                2 |              5 |
-|  tx_data_reg[7]_i_1_n_0                        |                                                   |                                               |                4 |              8 |
-|  SPI_state_clk_map/SPI_CLK                     |                                                   |                                               |                3 |              8 |
-|  CLK_IN_IBUF_BUFG                              |                                                   | divider_map/counter1Hz[0]_i_1_n_0             |                7 |             27 |
+|  divider_map/CLK_OUT_200KHz                    | SPI_state_clk_map/FSM_sequential_state[4]_i_1_n_0 |                                               |                2 |              5 |
+|  tx_data_reg[7]_i_1_n_0                        |                                                   |                                               |                3 |              8 |
+|  CLK_IN_IBUF_BUFG                              |                                                   | divider_map/counter200KHz[0]_i_1_n_0          |                4 |             13 |
 +------------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+
 
 
