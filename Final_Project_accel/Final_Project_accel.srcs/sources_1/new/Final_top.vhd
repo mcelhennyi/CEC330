@@ -34,13 +34,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Final_top is
     Port ( CLK_IN : in STD_LOGIC;
            LED : out STD_LOGIC_VECTOR (15 downto 0);
-           --And Accelerometer ports!
+           --And Accelerometer ports! including CS mosi miso and sclk
            CPU_RESETN : in STD_LOGIC
            );
 end Final_top;
 
 architecture Behavioral of Final_top is
-
+--clocks
+----------------------------------------------------------------------------------------------------
 signal clk_1Hz : STD_LOGIC := '0'; --The one Hz clock
 signal clk_16Hz : STD_LOGIC := '0'; --16Hz clock
 signal clk_50Hz : STD_LOGIC := '0'; --50Hz clock
@@ -49,6 +50,7 @@ signal clk_100KHz : STD_LOGIC := '0'; --100KHz clock
 signal clk_200KHz : STD_LOGIC := '0'; --200KHz clock
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
 signal clk_state : STD_LOGIC; --Clock to change State Machine
+---------------------------------------------------------------------------------------------------
 
 --spi tx and rx signals, can be changed to make more sense later
 -------------------------------------------------------------------------
@@ -60,6 +62,30 @@ signal rx_data : STD_LOGIC_VECTOR(15 downto 0);-- := x"00"; --data from slave
 signal mosi : STD_LOGIC := '0';
 signal miso : STD_LOGIC := '0';
 signal spi_clk : STD_LOGIC := '0';
+----------------------------------------------------------------------------
+
+--config signals
+----------------------------------------------------------------------------
+signal config_done : STD_LOGIC := '0';
+----------------------------------------------------------------------------
+
+--adxl signals
+----------------------------------------------------------------------------
+--mux signals
+signal adxl_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; 
+signal adxl_addr : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal adxl_cmd : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal config_data : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal config_addr : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal config_cmd : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal read_data : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal read_addr : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal read_cmd : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal adxl_start : STD_LOGIC := '0';
+signal read_start : STD_LOGIC := '0';
+signal config_start : STD_LOGIC := '0';
+--module signals
+signal addr_done : STD_LOGIC := '0';
 ----------------------------------------------------------------------------
 
 --Master Top FSM signals
@@ -189,29 +215,31 @@ SPI_state_clk_map:  SPI_state_clk
                SPI_CLK => spi_clk
                );
 ---------------------------------------------------------------------------              
---Config_map: Config_fsm
---    port map ( FSM_CLOCK => clk_state,--gives the FSM speed clock to configuration FSM
---               CONFIG_EN--starts the configuration FSM steps
---               ADDR_DONE--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
---               CONFIG_DONE--Tells controlling FSM/module that the configuration of the accel is done
---               TX_DATA--sends the data to transmit to ADXL_fsm
---               TX_ADDR--sends addr data to ADXL_fsm 
---               TX_CMD--sends to read or write command to ADXL_fsm
---               START--starts the communication for one register location
---               ); 
+Config_map: Config_fsm
+    port map ( FSM_CLOCK => clk_state,--gives the FSM speed clock to configuration FSM
+               CONFIG_EN => configure_accel,--starts the configuration FSM steps
+               ADDR_DONE => addr_done, --from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
+               CONFIG_DONE => config_done,--Tells controlling FSM/module that the configuration of the accel is done
+               TX_DATA => config_data,--sends the data to transmit to ADXL_fsm
+               TX_ADDR => config_addr,--sends addr data to ADXL_fsm 
+               TX_CMD => config_cmd,--sends to read or write command to ADXL_fsm
+               START => config_start--starts the communication for one register location
+               ); 
 
---ADXL_com_map: ADXL362_com_fsm
---    port map ( CMD--COMMAND TO WRITE OR READ
---               ADDR--ADDRESS OF DATA TO SEND
---               DATA--DATA TO SEND TO ACCEL
---               START--FLAG TO START COMMUNICATING WITH ACCELEROMETER
---               TX_DONE--FROM THE COUNTER OF THE SPI CLOCK
---               DONE--Tells the controlling module that it has finsihed
---               TX_ENABLE--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
---               LOAD_ENABLE--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
---               TX_DATA--BYTE OF DATA TO SPI MODULE
---               CS--CHIP SELECT FOR THE ACCELEROMETER
---               );
+ADXL_com_map: ADXL362_com_fsm
+    port map ( --in
+               CMD => adxl_cmd,--COMMAND TO WRITE OR READ
+               ADDR => adxl_addr,--ADDRESS OF DATA TO SEND
+               DATA => adxl_data,--DATA TO SEND TO ACCEL
+               START => adxl_start,--FLAG TO START COMMUNICATING WITH ACCELEROMETER from the controlling module
+               TX_DONE => tx_done,--FROM THE COUNTER OF THE SPI CLOCK
+               --out
+               DONE => addr_done,--Tells the controlling module that it has finsihed
+               TX_ENABLE => tx_enable,--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
+               LOAD_ENABLE => load_enable,--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
+               TX_DATA => tx_data,--BYTE OF DATA TO SPI MODULE
+               CS => CS--CHIP SELECT FOR THE ACCELEROMETER in the top module
+               );
 ----------------------------------------------------------------------------
 Read_fsm_map: Read_accel_fsm
     port map ( FSM_CLOCK => clk_state,
@@ -222,6 +250,24 @@ Read_fsm_map: Read_accel_fsm
                );           
 
 ------------------------------------
+--MUXs------------------------------
+------------------------------------
+mux_adxl362_com_fsm: process(clk_state)
+begin
+    if(read_accel = '0' and configure_accel = '1') then --in state where config has control over the adxl362
+        adxl_data <= config_data;
+        adxl_addr <= config_addr;
+        adxl_cmd <= config_cmd;
+        adxl_start <= config_start;
+    elsif(read_accel = '1' and configure_accel = '0') then --in state where the read fsm has control over teh adxl362
+        adxl_data <= read_data;
+        adxl_addr <= read_addr;
+        adxl_cmd <= read_cmd;
+        adxl_start <= read_start;
+    end if;
+end process mux_adxl362_com_fsm;
+
+------------------------------------
 --State Machine---------------------
 ------------------------------------
 --Switches the state to the next state every clock cycle of CLK_IN
@@ -230,7 +276,7 @@ begin
     if (clk_state'event and clk_state = '1') then
         state <= next_state;
     end if;
-end process;
+end process SYNC_PROC;
 --The operations of eache state
 OUTPUT_DECODE: process (state)
 begin
@@ -264,7 +310,9 @@ begin
             end if;
             
         when st2_configure =>
-            next_state <= st3_read;
+            if(config_done = '1') then
+                next_state <= st3_read;
+            end if;
             
         when st3_read => 
             if CPU_RESET = '1' then
@@ -275,7 +323,7 @@ begin
             next_state <= st1_wait;
     
     end case;      
-end process;
+end process NEXT_STATE_DECODE;
 
 ------------------------------------
 --Other??---------------------------

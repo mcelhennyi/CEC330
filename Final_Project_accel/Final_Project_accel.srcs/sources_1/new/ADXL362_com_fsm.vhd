@@ -72,7 +72,7 @@ begin
     if (FSM_CLOCK'event and FSM_CLOCK = '1') then
         state <= next_state;
     end if;
-end process;
+end process SYNC_PROC;
 --The operations of eache state
 OUTPUT_DECODE: process (state)
 begin
@@ -227,7 +227,7 @@ case (state) is
     when others =>
   
     end case;      
-end process;
+end process NEXT_STATE_DECODE;
 
 
 end Behavioral;
