@@ -88,7 +88,8 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '0';
-
+        
+        --x20 - x27 set up activity and inactivity threashold information
         when st2_prep_x20  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -96,7 +97,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"20";
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
             
         when st2_send_x20 => 
             --state variables            
@@ -110,7 +111,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"21";        
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
         
         when st3_send_x21 => 
             --state variables            
@@ -124,7 +125,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"22";
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
                         
         when st4_send_x22 => 
             --state variables            
@@ -138,7 +139,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"23";
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
                                 
         when st5_send_x23 => 
             --state variables            
@@ -152,7 +153,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"24";
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
                                 
         when st6_send_x24 => 
             --state variables            
@@ -166,7 +167,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"25";
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
                                 
         when st7_send_x25 => 
             --state variables            
@@ -180,14 +181,13 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"26";
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
                                 
         when st8_send_x26 => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
         
-        --Sets up the activity threashold and activity type 
         when st9_prep_x27  => 
             --state variables            
             CONFIG_DONE <= '0';
@@ -255,17 +255,19 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2B";
-            TX_DATA <= "";
+            TX_DATA <= "00000000";
                                         
         when st13_send_x2B => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
         
-        --Filter control register (
+        --Filter control register 
         --[7:6] - Measurement range: +/- 4g
         --[5] - Reserved
-        --[4] - Half Bandwidth:    
+        --[4] - Half Bandwidth: 0
+        --[3] - External clock/sample enable if 1 int2 takes clock and the clock is the main clock for the accel
+        --[2:0] - Ouput data rate, 100 is 200Hz and 101...111 is 400Hz    
         when st14_prep_x2C  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -273,13 +275,20 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2C";
-            TX_DATA <= "";
+            TX_DATA <= "01000100";
                                         
         when st14_send_x2C => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
-               
+        
+        --Power Control register
+        --[7] - reserved
+        --[6] - ext_clk: 0 disables external clock
+        --[5:4] - low_noise: 10 Ultra low noise mode
+        --[3] - Wakeup mode: 0 does not operate in wakeup mode
+        --[2] - Autosleep: disabled 0
+        --[1:0] - measure: 10 measurement mode
         when st15_prep_x2D  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -287,7 +296,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2D";
-            TX_DATA <= "";
+            TX_DATA <= "00100010";
                                         
         when st15_send_x2D => 
             --state variables            
