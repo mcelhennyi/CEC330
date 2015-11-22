@@ -34,7 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Read_accel_fsm is
     Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            READ_EN : in STD_LOGIC;--starts the read FSM steps
-           RX_DATA : out STD_LOGIC_VECTOR(7 downto 0);
+           RX_DATA : out STD_LOGIC_VECTOR(7 downto 0);--data from accel
+           READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
            START : out STD_LOGIC--starts the reading for 8 bits of data
            );
 end Read_accel_fsm;
@@ -146,88 +147,88 @@ begin
 end process OUTPUT_DECODE;
 
 --Chooses the next state depending on button presses
-NEXT_STATE_DECODE: process (state, BTNC, BTNU)
+NEXT_STATE_DECODE: process (state,READ_EN,READ_DONE)
 begin
- next_state <= state;  
+    next_state <= state;  
  
 --state case statement to change a state on rising edge  
-case (state) is
-    when st1_wait =>
-        if READ_EN = '1' then
-            next_state <= st2_start;
-        end if;
+    case (state) is
+        when st1_wait =>
+            if READ_EN = '1' then
+                next_state <= st2_start;
+            end if;
+            
+        ---------------------------------------------------------------
+        when st2_start =>
+            if READ_DONE = '1' then
+                next_state <= st2_read_first_x;
+            end if;
         
-    ---------------------------------------------------------------
-    when st2_start =>
-        if READ_DONE = '1' then
-            next_state <= st2_read_first_x;
-        end if;
-    
-    when st2_read_first_x =>
-        next_state <= st3_start;
+        when st2_read_first_x =>
+            next_state <= st3_start;
+            
+        when st3_start =>
+            if READ_DONE = '1' then
+                next_state <= st3_read_second_x;
+            end if;
+            
+        when st3_read_second_x =>
+            next_state <= st4_start;
+            
+        ---------------------------------------------------------------
+        when st4_start =>
+            if READ_DONE = '1' then
+                next_state <= st4_read_first_y;
+            end if;  
         
-    when st3_start =>
-        if READ_DONE = '1' then
-            next_state <= st3_read_second_x;
-        end if;
+        when st4_read_first_y =>
+            next_state <= st5_start;
         
-    when st3_read_second_x =>
-        next_state <= st4_start;
+        when st5_start =>
+            if READ_DONE = '1' then
+                next_state <= st5_read_second_y;
+            end if;
         
-    ---------------------------------------------------------------
-    when st4_start =>
-        if READ_DONE = '1' then
-            next_state <= st4_read_first_y;
-        end if;  
-    
-    when st4_read_first_y =>
-        next_state <= st5_start;
-    
-    when st5_start =>
-        if READ_DONE = '1' then
-            next_state <= st5_read_second_y;
-        end if;
-    
-    when st5_read_second_y =>
-        next_state <= st6_start;
+        when st5_read_second_y =>
+            next_state <= st6_start;
+            
+        ---------------------------------------------------------------
+        when st6_start =>
+            if READ_DONE = '1' then
+                next_state <= st6_read_first_z;
+            end if;
         
-    ---------------------------------------------------------------
-    when st6_start =>
-        if READ_DONE = '1' then
-            next_state <= st6_read_first_z;
-        end if;
-    
-    when st6_read_first_z =>
-        next_state <= st7_start;
-    
-    when st7_start =>
-        if READ_DONE = '1' then
-            next_state <= st7_read_second_z;
-        end if;
-    
-    when st7_read_second_z =>
-        next_state <= st8_start;
+        when st6_read_first_z =>
+            next_state <= st7_start;
         
-    ---------------------------------------------------------------
-    when st8_start =>
-        if READ_DONE = '1' then
-            next_state <= st8_read_first_temp;
-        end if;
-    
-    when st8_read_first_temp =>
-        next_state <= st9_start;
-    
-    when st9_start =>
-        if READ_DONE = '1' then
-            next_state <= st9_read_second_temp;
-        end if;
-    
-    when st9_read_second_temp =>
+        when st7_start =>
+            if READ_DONE = '1' then
+                next_state <= st7_read_second_z;
+            end if;
         
+        when st7_read_second_z =>
+            next_state <= st8_start;
+            
+        ---------------------------------------------------------------
+        when st8_start =>
+            if READ_DONE = '1' then
+                next_state <= st8_read_first_temp;
+            end if;
         
-    when others => 
+        when st8_read_first_temp =>
+            next_state <= st9_start;
         
-    
+        when st9_start =>
+            if READ_DONE = '1' then
+                next_state <= st9_read_second_temp;
+            end if;
+        
+        when st9_read_second_temp =>
+            next_state <= st1_wait;
+            
+        when others => 
+            next_state <= st1_wait;
+        
     end case;      
 end process;
 

@@ -88,7 +88,7 @@ component Divider
            CLK_OUT_STATE : out STD_LOGIC
            );
 end component Divider;
---exports data on the SPI bus
+------------------------------------------------------------------exports data on the SPI bus
 component SPI_TX
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
@@ -97,7 +97,7 @@ component SPI_TX
            LOAD_ENABLE : in STD_LOGIC
            );
 end component SPI_TX;
---exports data on the SPI bus
+
 component SPI_RX
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
@@ -113,6 +113,40 @@ component SPI_state_clk
            SPI_CLK : out STD_LOGIC
            );
 end component SPI_state_clk;
+------------------------------------------------------------------
+component config_fsm
+    Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
+           CONFIG_EN : in STD_LOGIC;--starts the configuration FSM steps
+           ADDR_DONE : in STD_LOGIC;--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
+           CONFIG_DONE : out STD_LOGIC;--Tells controlling FSM/module that the configuration of the accel is done
+           TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
+           TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
+           TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
+           START : out STD_LOGIC--starts the communication for one register location
+           );
+end component config_fsm;
+
+component ADXL362_com_fsm
+    Port ( CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
+           ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
+           DATA : in STD_LOGIC_VECTOR (7 downto 0);--DATA TO SEND TO ACCEL
+           START : in STD_LOGIC;--FLAG TO START COMMUNICATING WITH ACCELEROMETER
+           TX_DONE : in STD_LOGIC; --FROM THE COUNTER OF THE SPI CLOCK
+           DONE : out STD_LOGIC;--Tells the controlling module that it has finsihed
+           TX_ENABLE : out STD_LOGIC;--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
+           LOAD_ENABLE : OUT STD_LOGIC;--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
+           TX_DATA : out STD_LOGIC;--BYTE OF DATA TO SPI MODULE
+           CS : out STD_LOGIC);--CHIP SELECT FOR THE ACCELEROMETER
+end component ADXL362_com_fsm;
+-----------------------------------------------------------------
+component Read_accel_fsm
+    Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
+           READ_EN : in STD_LOGIC;--starts the read FSM steps
+           RX_DATA : out STD_LOGIC_VECTOR(7 downto 0);--data from accel
+           READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
+           START : out STD_LOGIC--starts the reading for 8 bits of data
+           );
+end component Read_accel_fsm;
 
 begin
 ------------------------------------
@@ -129,7 +163,7 @@ divider_map: Divider
                CLK_OUT_AN => clk_an,
                CLK_OUT_STATE => clk_state
                );
---maps the spi bus
+----------------------------------------------------------------------------maps the spi
 SPI_TX_map: SPI_TX
     port map ( CLK_STATE => clk_state,
                SPI_CLK_IN => spi_clk,
@@ -151,12 +185,38 @@ SPI_state_clk_map:  SPI_state_clk
                TX_DONE => tx_done,
                SPI_CLK => spi_clk
                );
-               
-               
-               
-               
-               
-               
+---------------------------------------------------------------------------              
+--Config_map: config_fsm
+--    port map ( FSM_CLOCK => clk_state,--gives the FSM speed clock to configuration FSM
+--               CONFIG_EN--starts the configuration FSM steps
+--               ADDR_DONE--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
+--               CONFIG_DONE--Tells controlling FSM/module that the configuration of the accel is done
+--               TX_DATA--sends the data to transmit to ADXL_fsm
+--               TX_ADDR--sends addr data to ADXL_fsm 
+--               TX_CMD--sends to read or write command to ADXL_fsm
+--               START--starts the communication for one register location
+--               ); 
+
+--ADXL_com_map: ADXL362_com_fsm
+--    port map ( CMD--COMMAND TO WRITE OR READ
+--               ADDR--ADDRESS OF DATA TO SEND
+--               DATA--DATA TO SEND TO ACCEL
+--               START--FLAG TO START COMMUNICATING WITH ACCELEROMETER
+--               TX_DONE--FROM THE COUNTER OF THE SPI CLOCK
+--               DONE--Tells the controlling module that it has finsihed
+--               TX_ENABLE--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
+--               LOAD_ENABLE--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
+--               TX_DATA--BYTE OF DATA TO SPI MODULE
+--               CS--CHIP SELECT FOR THE ACCELEROMETER
+--               );
+----------------------------------------------------------------------------
+Read_fsm_map: Read_accel_fsm
+    port map ( FSM_CLOCK => clk_state,
+               READ_EN => read_accel,
+               RX_DATA => rx_data,
+               READ_DONE => tx_done,
+               START => tx_enable
+               );           
 
 ------------------------------------
 --State Machine---------------------
