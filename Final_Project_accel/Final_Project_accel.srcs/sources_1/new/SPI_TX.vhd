@@ -48,7 +48,7 @@ signal serial_register : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 
 begin
 --Creates one SPI clock that only has 8 rising edges
-SPI_PROCESS: process (CLK_STATE,SPI_CLK_IN)
+SPI_PROCESS: process (CLK_STATE, SPI_CLK_IN, LOAD_ENABLE)
     begin
         if LOAD_ENABLE = '0' then
             if (rising_edge(SPI_CLK_IN)) then

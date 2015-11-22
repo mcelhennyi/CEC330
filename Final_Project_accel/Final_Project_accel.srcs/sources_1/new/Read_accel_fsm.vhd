@@ -34,8 +34,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Read_accel_fsm is
     Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            READ_EN : in STD_LOGIC;--starts the read FSM steps
-           RX_DATA : out STD_LOGIC_VECTOR(15 downto 0);--data from accel
+           RX_DATA : in STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
+           TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
+           TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
+           TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
            START : out STD_LOGIC--starts the reading for 8 bits of data
            );
 end Read_accel_fsm;
@@ -53,14 +56,10 @@ signal temperature_value : STD_LOGIC_VECTOR(15 downto 0) := x"0000";
 --States for the FSM
 type FSM_state_type is (
 st1_wait, 
-st2_start, st2_read_first_x, 
-st3_start, st3_read_second_x,
-st4_start, st4_read_first_y, 
-st5_start, st5_read_second_y,
-st6_start, st6_read_first_z, 
-st7_start, st7_read_second_z,
-st8_start, st8_read_first_temp,
-st9_start, st9_read_second_temp
+st2_prep, st2_start, st2_read_x, 
+st3_prep, st3_start, st3_read_y,
+st4_prep, st4_start, st4_read_z, 
+st5_prep, st5_start, st5_read_temp
 ); 
 signal state, next_state : FSM_state_type;
 
@@ -81,66 +80,66 @@ begin
     case state is
         when st1_wait =>
             START <= '0';
-            
+           
         ---------------------------------------------------------------
+        when st2_prep  =>
+            START <= '0';
+            --prep stage
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
         when st2_start =>
             START <= '1';
-        
-        when st2_read_first_x =>
-            START <= '0';
-            x_value (7 downto 0) <= RX_DATA;
             
+        when st2_read_x =>
+            START <= '0';
+            x_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+       
+        ---------------------------------------------------------------
+        when st3_prep  =>
+            START <= '0';
+            --prep stage
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+                    
         when st3_start =>
             START <= '1';
-            
-        when st3_read_second_x =>
+        
+        when st3_read_y =>
             START <= '0';
-            x_value (15 downto 8) <= RX_DATA;
+            y_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
             
         ---------------------------------------------------------------
+        when st4_prep  =>
+            START <= '0';
+            --prep stage
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
         when st4_start =>
             START <= '1';
         
-        when st4_read_first_y =>
+        when st4_read_z =>
             START <= '0';
-            y_value (7 downto 0) <= RX_DATA;
-        
+            z_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            
+        ---------------------------------------------------------------
+        when st5_prep  =>
+            START <= '0';
+            --prep stage
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+                    
         when st5_start =>
             START <= '1';
         
-        when st5_read_second_y =>
+        when st5_read_temp =>
             START <= '0';
-            y_value (15 downto 8) <= RX_DATA;
-            
-        ---------------------------------------------------------------
-        when st6_start =>
-            START <= '1';
-        
-        when st6_read_first_z =>
-            START <= '0';
-            z_value (15 downto 8) <= RX_DATA;
-        
-        when st7_start =>
-            START <= '1';
-        
-        when st7_read_second_z =>
-            START <= '0';
-            z_value (7 downto 0) <= RX_DATA;
-            
-        ---------------------------------------------------------------
-        when st8_start =>
-            START <= '1';
-        
-        when st8_read_first_temp =>
-            START <= '0';
-            temperature_value (15 downto 8) <= RX_DATA;
-        
-        when st9_start =>
-            START <= '1';
-        
-        when st9_read_second_temp =>
-            START <= '0';
-            temperature_value (7 downto 0) <= RX_DATA;
+            temperature_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
 
         when others => null;
     end case;
@@ -155,77 +154,58 @@ begin
     case (state) is
         when st1_wait =>
             if READ_EN = '1' then
-                next_state <= st2_start;
+                next_state <= st2_prep;
             end if;
             
         ---------------------------------------------------------------
+        when st2_prep =>
+            next_state <= st2_start;
+            
         when st2_start =>
             if READ_DONE = '1' then
-                next_state <= st2_read_first_x;
+                next_state <= st2_read_x;
             end if;
         
-        when st2_read_first_x =>
+        when st2_read_x =>
+            next_state <= st3_prep;
+        
+        ---------------------------------------------------------------
+        when st3_prep =>
             next_state <= st3_start;
             
         when st3_start =>
             if READ_DONE = '1' then
-                next_state <= st3_read_second_x;
+                next_state <= st3_read_y;
             end if;
+        
+        when st3_read_y =>
+            next_state <= st4_prep;
             
-        when st3_read_second_x =>
+        ---------------------------------------------------------------
+        when st4_prep =>
             next_state <= st4_start;
             
-        ---------------------------------------------------------------
         when st4_start =>
             if READ_DONE = '1' then
-                next_state <= st4_read_first_y;
-            end if;  
+                next_state <= st4_read_z;
+            end if;
         
-        when st4_read_first_y =>
+        when st4_read_z =>
+            next_state <= st5_prep;
+            
+        ---------------------------------------------------------------
+        when st5_prep =>
             next_state <= st5_start;
-        
+            
         when st5_start =>
             if READ_DONE = '1' then
-                next_state <= st5_read_second_y;
+                next_state <= st5_read_temp;
             end if;
         
-        when st5_read_second_y =>
-            next_state <= st6_start;
-            
-        ---------------------------------------------------------------
-        when st6_start =>
-            if READ_DONE = '1' then
-                next_state <= st6_read_first_z;
-            end if;
-        
-        when st6_read_first_z =>
-            next_state <= st7_start;
-        
-        when st7_start =>
-            if READ_DONE = '1' then
-                next_state <= st7_read_second_z;
-            end if;
-        
-        when st7_read_second_z =>
-            next_state <= st8_start;
-            
-        ---------------------------------------------------------------
-        when st8_start =>
-            if READ_DONE = '1' then
-                next_state <= st8_read_first_temp;
-            end if;
-        
-        when st8_read_first_temp =>
-            next_state <= st9_start;
-        
-        when st9_start =>
-            if READ_DONE = '1' then
-                next_state <= st9_read_second_temp;
-            end if;
-        
-        when st9_read_second_temp =>
+        when st5_read_temp =>
             next_state <= st1_wait;
             
+        ---------------------------------------------------------------    
         when others => 
             next_state <= st1_wait;
         

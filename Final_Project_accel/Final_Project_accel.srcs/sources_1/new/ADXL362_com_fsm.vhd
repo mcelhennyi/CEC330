@@ -41,7 +41,7 @@ entity ADXL362_com_fsm is
            DONE : out STD_LOGIC;--Tells the controlling module that it has finsihed
            TX_ENABLE : out STD_LOGIC;--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
            LOAD_ENABLE : OUT STD_LOGIC;--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
-           TX_DATA : out STD_LOGIC;--BYTE OF DATA TO SPI MODULE
+           TX_DATA : out STD_LOGIC_VECTOR (7 downto 0);--BYTE OF DATA TO SPI MODULE
            CS : out STD_LOGIC);--CHIP SELECT FOR THE ACCELEROMETER
 end ADXL362_com_fsm;
 
@@ -173,7 +173,7 @@ begin
 end process OUTPUT_DECODE;
 
 --Chooses the next state depending on button presses
-NEXT_STATE_DECODE: process (state, BTNC, BTNU)
+NEXT_STATE_DECODE: process (state)
 begin
  next_state <= state;  
  

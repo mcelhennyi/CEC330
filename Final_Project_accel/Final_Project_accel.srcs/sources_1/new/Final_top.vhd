@@ -35,11 +35,17 @@ entity Final_top is
     Port ( CLK_IN : in STD_LOGIC;
            LED : out STD_LOGIC_VECTOR (15 downto 0);
            --And Accelerometer ports! including CS mosi miso and sclk
-           CPU_RESETN : in STD_LOGIC
+           CPU_RESET : in STD_LOGIC
            );
 end Final_top;
 
 architecture Behavioral of Final_top is
+--things that need to be ports 
+signal mosi : STD_LOGIC := '0';
+signal miso : STD_LOGIC := '0';
+signal spi_clk : STD_LOGIC := '0';
+signal CS : STD_LOGIC := '0';
+
 --clocks
 ----------------------------------------------------------------------------------------------------
 signal clk_1Hz : STD_LOGIC := '0'; --The one Hz clock
@@ -59,9 +65,6 @@ signal tx_enable : STD_LOGIC := '0';
 signal load_enable : STD_LOGIC := '0';
 signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
 signal rx_data : STD_LOGIC_VECTOR(15 downto 0);-- := x"00"; --data from slave
-signal mosi : STD_LOGIC := '0';
-signal miso : STD_LOGIC := '0';
-signal spi_clk : STD_LOGIC := '0';
 ----------------------------------------------------------------------------
 
 --config signals
@@ -96,7 +99,7 @@ signal read_accel : STD_LOGIC := '0';
 type FSM_state_type is (
 st1_wait, 
 st2_configure, 
-st2_read
+st3_read
 ); 
 signal state, next_state : FSM_state_type;
 
@@ -163,15 +166,18 @@ component ADXL362_com_fsm
            DONE : out STD_LOGIC;--Tells the controlling module that it has finsihed
            TX_ENABLE : out STD_LOGIC;--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
            LOAD_ENABLE : OUT STD_LOGIC;--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
-           TX_DATA : out STD_LOGIC;--BYTE OF DATA TO SPI MODULE
+           TX_DATA : out STD_LOGIC_VECTOR (7 downto 0);--BYTE OF DATA TO SPI MODULE
            CS : out STD_LOGIC);--CHIP SELECT FOR THE ACCELEROMETER
 end component ADXL362_com_fsm;
 -----------------------------------------------------------------
 component Read_accel_fsm
     Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            READ_EN : in STD_LOGIC;--starts the read FSM steps
-           RX_DATA : out STD_LOGIC_VECTOR(15 downto 0);--data from accel
+           RX_DATA : in STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
+           TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
+           TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
+           TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
            START : out STD_LOGIC--starts the reading for 8 bits of data
            );
 end component Read_accel_fsm;
@@ -245,8 +251,11 @@ Read_fsm_map: Read_accel_fsm
     port map ( FSM_CLOCK => clk_state,
                READ_EN => read_accel,
                RX_DATA => rx_data,
-               READ_DONE => tx_done,--needs to be changed
-               START => tx_enable--needs to be changed
+               READ_DONE => addr_done, --from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
+               TX_DATA => read_data,--sends the data to transmit to ADXL_fsm
+               TX_ADDR => read_addr,--sends addr data to ADXL_fsm 
+               TX_CMD => read_cmd,--sends to read or write command to ADXL_fsm
+               START => read_start
                );           
 
 ------------------------------------
@@ -298,7 +307,7 @@ begin
 end process OUTPUT_DECODE;
 
 --Chooses the next state depending on button presses
-NEXT_STATE_DECODE: process (state, BTNC, BTNU)
+NEXT_STATE_DECODE: process (state, CPU_RESET, config_done)
 begin
     next_state <= state;  
  

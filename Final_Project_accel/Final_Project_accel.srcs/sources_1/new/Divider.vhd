@@ -114,9 +114,9 @@ counter50: process(CLK_IN)
     begin
         if (rising_edge(CLK_IN)) then
             counter50Hz <= counter50Hz +1;
-            if counter50Hz = "0F4240" then--"0111101000010"
+            if counter50Hz = x"0F4240" then--"0111101000010"
                 clk_out50Hz <= '1';
-            elsif counter50Hz = "1E8480" then--"1111010000100"
+            elsif counter50Hz = x"1E8480" then--"1111010000100"
                 clk_out50Hz <= '0';
                 counter50Hz <= x"000000";
             end if;

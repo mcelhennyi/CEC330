@@ -318,7 +318,7 @@ begin
 end process OUTPUT_DECODE;
 
 --Chooses the next state depending on button presses
-NEXT_STATE_DECODE: process (state, BTNC, BTNU)
+NEXT_STATE_DECODE: process (state)
 begin
  next_state <= state;  
  
