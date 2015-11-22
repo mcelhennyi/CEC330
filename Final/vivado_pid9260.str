@@ -3336,3 +3336,49 @@ selectCodeEditor("Final_top.vhd", 107, 198); // bj:J (JPanel:JComponent, cl:JFra
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_UPDATE_GRAPH
 // [GUI Memory]: 100 MB (+291kb) [03:44:28]
+// Elapsed time: 66 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F:b
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Config_fsm - Behavioral (Config_fsm.vhd)]", 8, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Config_fsm - Behavioral (Config_fsm.vhd)]", 8, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("Config_fsm.vhd", 15, 231); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Config_fsm.vhd", 197, 226); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Config_fsm.vhd", 117, 75); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Config_fsm.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Config_fsm.vhd", 191, 234); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Config_fsm.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 9); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 10, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 10, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cl:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_EXISTING_OR_CREATE_NEW_CONSTRAINTS, (String) null); // w:JideButton (JPanel:JComponent, b:g)
+selectMenuItem(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File..."); // ab:JMenuItem (ai:JPopupMenu, b:g)
+// E:ag (cl:JFrame): Create Constraints File: addNotify
+// Tcl Message: file mkdir C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1 
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "Master"); // ao:JTextField (JPanel:JComponent, E:ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, E:ag)
+dismissDialog("Create Constraints File"); // E:ag (cl:JFrame)
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 13 seconds
+dismissDialog("Add Sources"); // b:g (cl:JFrame)
+// Tcl Message: file mkdir C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new 
+// Tcl Message: close [ open C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 10, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 10, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Master.xdc]", 11, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Master.xdc]", 11, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+typeControlKey((HResource) null, "Master.xdc", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: FILE_SET_CHANGE

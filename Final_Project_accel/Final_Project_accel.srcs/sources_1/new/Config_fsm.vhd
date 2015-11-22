@@ -441,7 +441,7 @@ case (state) is
         next_state <= st17_config_done;
 
     when st17_config_done =>
---        next_state <= 
+        next_state <= st1_wait;
         
     when others => 
         
