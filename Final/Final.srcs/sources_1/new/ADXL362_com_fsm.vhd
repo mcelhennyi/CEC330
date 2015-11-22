@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ADXL362_com_fsm is
-    Port ( CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
+    Port ( FSM_CLOCK : in STD_LOGIC; --State machine clock
+           CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
            ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
            DATA : in STD_LOGIC_VECTOR (7 downto 0);--DATA TO SEND TO ACCEL
            START : in STD_LOGIC;--FLAG TO START COMMUNICATING WITH ACCELEROMETER

@@ -96,7 +96,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"20";
-            TX_DATA <= x"";
+            TX_DATA <= "";
             
         when st2_send_x20 => 
             --state variables            
@@ -110,7 +110,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"21";        
-            TX_DATA <= x"";
+            TX_DATA <= "";
         
         when st3_send_x21 => 
             --state variables            
@@ -124,7 +124,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"22";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                         
         when st4_send_x22 => 
             --state variables            
@@ -138,7 +138,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"23";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                                 
         when st5_send_x23 => 
             --state variables            
@@ -152,7 +152,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"24";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                                 
         when st6_send_x24 => 
             --state variables            
@@ -166,7 +166,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"25";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                                 
         when st7_send_x25 => 
             --state variables            
@@ -180,27 +180,29 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"26";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                                 
         when st8_send_x26 => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
-         
-        when st9_prep_x27  =>
+        
+        --Sets up the activity threashold and activity type 
+        when st9_prep_x27  => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '0';
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"27";
-            TX_DATA <= x"";
+            TX_DATA <= "00000000";
                                     
         when st9_send_x27 => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
-                
+        
+        --Sets the Fifo control register, bit 1 and 0 put it into stream mode, bit 2 enables temperature to be included in xyz data        
         when st10_prep_x28  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -208,13 +210,14 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"28";
-            TX_DATA <= x"";
+            TX_DATA <= "00001110";
                                         
         when st10_send_x28 => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
-            
+        
+        --Fifo samples register 
         when st11_prep_x29  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -222,14 +225,14 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"29";
-            TX_DATA <= x"";
-    
-                                        
+            TX_DATA <= "00001000";
+                                           
         when st11_send_x29 => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
-            
+        
+        --interupts for the int1 pin  
         when st12_prep_x2A  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -237,13 +240,14 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2A";
-            TX_DATA <= x"";
+            TX_DATA <= "00000000";
                                         
         when st12_send_x2A => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
-            
+        
+        --interupts for the int2 pin  
         when st13_prep_x2B  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -251,13 +255,17 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2B";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                                         
         when st13_send_x2B => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
-               
+        
+        --Filter control register (
+        --[7:6] - Measurement range: +/- 4g
+        --[5] - Reserved
+        --[4] - Half Bandwidth:    
         when st14_prep_x2C  =>
             --state variables            
             CONFIG_DONE <= '0';
@@ -265,7 +273,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2C";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                                         
         when st14_send_x2C => 
             --state variables            
@@ -279,7 +287,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2D";
-            TX_DATA <= x"";
+            TX_DATA <= "";
                                         
         when st15_send_x2D => 
             --state variables            
