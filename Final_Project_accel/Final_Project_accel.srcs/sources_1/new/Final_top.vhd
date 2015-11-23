@@ -35,7 +35,12 @@ entity Final_top is
     Port ( CLK_IN : in STD_LOGIC;
            LED : out STD_LOGIC_VECTOR (15 downto 0);
            --And Accelerometer ports! including CS mosi miso and sclk
-           CPU_RESET : in STD_LOGIC
+           CPU_RESETN : in STD_LOGIC;
+           ACL_CSN : out STD_LOGIC;
+           ACL_SCLK : out STD_LOGIC;
+           ACL_MOSI : out STD_LOGIC;
+           ACL_MISO : in STD_LOGIC;
+           ACL_INT : out STD_LOGIC_VECTOR  (2 downto 1)
            );
 end Final_top;
 
@@ -158,7 +163,8 @@ component Config_fsm
 end component Config_fsm;
 
 component ADXL362_com_fsm
-    Port ( CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
+    Port ( FSM_CLOCK : in STD_LOGIC; --State machine clock
+           CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
            ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
            DATA : in STD_LOGIC_VECTOR (7 downto 0);--DATA TO SEND TO ACCEL
            START : in STD_LOGIC;--FLAG TO START COMMUNICATING WITH ACCELEROMETER
@@ -184,6 +190,13 @@ end component Read_accel_fsm;
 
 begin
 ------------------------------------
+--Asynchronus-----------------------
+------------------------------------
+ACL_SCLK <= spi_clk;
+ACL_INT(1) <= '0';
+ACL_INT(2) <= '0';
+
+------------------------------------
 --PORT MAPS-------------------------
 ------------------------------------
 -- maps the divider to the annode/cathode clock and the slow 1hz clock and 8 bit random number      
@@ -203,7 +216,7 @@ SPI_TX_map: SPI_TX
     port map ( CLK_STATE => clk_state,
                SPI_CLK_IN => spi_clk,
                TX_DATA => tx_data, --data to slave
-               MOSI => mosi,--Serial Pin OUT, JA 1
+               MOSI => ACL_MOSI,--Serial Pin OUT, JA 1
                LOAD_ENABLE => load_enable
                );
                
@@ -211,7 +224,7 @@ SPI_RX_map: SPI_RX
     port map ( CLK_STATE => clk_state,
                SPI_CLK_IN => spi_clk,
                RX_DATA => rx_data, --data from slave
-               MISO => miso--Serial Pin IN, JA 2
+               MISO => ACL_MISO--Serial Pin IN, JA 2
                );
 
 SPI_state_clk_map:  SPI_state_clk
@@ -234,6 +247,7 @@ Config_map: Config_fsm
 
 ADXL_com_map: ADXL362_com_fsm
     port map ( --in
+               FSM_CLOCK => clk_state,
                CMD => adxl_cmd,--COMMAND TO WRITE OR READ
                ADDR => adxl_addr,--ADDRESS OF DATA TO SEND
                DATA => adxl_data,--DATA TO SEND TO ACCEL
@@ -244,7 +258,7 @@ ADXL_com_map: ADXL362_com_fsm
                TX_ENABLE => tx_enable,--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
                LOAD_ENABLE => load_enable,--TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
                TX_DATA => tx_data,--BYTE OF DATA TO SPI MODULE
-               CS => CS--CHIP SELECT FOR THE ACCELEROMETER in the top module
+               CS => ACL_CSN--CHIP SELECT FOR THE ACCELEROMETER in the top module
                );
 ----------------------------------------------------------------------------
 Read_fsm_map: Read_accel_fsm
@@ -307,14 +321,14 @@ begin
 end process OUTPUT_DECODE;
 
 --Chooses the next state depending on button presses
-NEXT_STATE_DECODE: process (state, CPU_RESET, config_done)
+NEXT_STATE_DECODE: process (state, CPU_RESETN, config_done)
 begin
     next_state <= state;  
  
 --state case statement to change a state on rising edge  
     case (state) is
         when st1_wait =>
-            if CPU_RESET = '0' then
+            if CPU_RESETN = '0' then
                 next_state <= st2_configure;
             end if;
             
@@ -324,7 +338,7 @@ begin
             end if;
             
         when st3_read => 
-            if CPU_RESET = '1' then
+            if CPU_RESETN = '1' then
                 next_state <= st1_wait;
             end if;
         

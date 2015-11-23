@@ -37,8 +37,7 @@ entity SPI_RX is
     Port ( CLK_STATE : in STD_LOGIC;
            SPI_CLK_IN : in STD_LOGIC;
            RX_DATA : out STD_LOGIC_VECTOR (15 downto 0); --Data Coming into master aka rx_data
-           MISO : in STD_LOGIC;--input pin frome slave
-           LOAD_ENABLE : in STD_LOGIC
+           MISO : in STD_LOGIC--input pin frome slave
            );
 end SPI_RX;
 

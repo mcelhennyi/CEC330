@@ -2,10 +2,10 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sun Nov 22 18:46:05 2015
-# Process ID: 6836
-# Log file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.runs/synth_1/Final_top.vds
-# Journal file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.runs/synth_1\vivado.jou
+# Start of session at: Sun Nov 22 21:33:17 2015
+# Process ID: 3232
+# Log file: F:/CEC330/Final_Project_accel/Final_Project_accel.runs/synth_1/Final_top.vds
+# Journal file: F:/CEC330/Final_Project_accel/Final_Project_accel.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Final_top.tcl -notrace
 Command: synth_design -top Final_top -part xc7a100tcsg324-1
@@ -13,52 +13,52 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 245.043 ; gain = 68.246
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 244.680 ; gain = 68.469
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Final_top' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:42]
-INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:190]
-INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Divider.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Divider.vhd:48]
-INFO: [Synth 8-3491] module 'SPI_TX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:202]
-INFO: [Synth 8-638] synthesizing module 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:45]
-WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'SPI_TX' (2#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:45]
-INFO: [Synth 8-3491] module 'SPI_RX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:210]
-INFO: [Synth 8-638] synthesizing module 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (3#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:45]
-INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:217]
-INFO: [Synth 8-638] synthesizing module 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
-WARNING: [Synth 8-614] signal 'CLK_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:156]
-INFO: [Synth 8-256] done synthesizing module 'SPI_state_clk' (4#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
-INFO: [Synth 8-3491] module 'Config_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:34' bound to instance 'Config_map' of component 'Config_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:224]
-INFO: [Synth 8-638] synthesizing module 'Config_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
-WARNING: [Synth 8-614] signal 'CONFIG_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:321]
-WARNING: [Synth 8-614] signal 'ADDR_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:321]
-INFO: [Synth 8-256] done synthesizing module 'Config_fsm' (5#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
-INFO: [Synth 8-3491] module 'ADXL362_com_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:34' bound to instance 'ADXL_com_map' of component 'ADXL362_com_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:235]
-INFO: [Synth 8-638] synthesizing module 'ADXL362_com_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:48]
-WARNING: [Synth 8-614] signal 'CMD' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:77]
-WARNING: [Synth 8-614] signal 'ADDR' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:77]
-WARNING: [Synth 8-614] signal 'DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:77]
-WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:176]
-WARNING: [Synth 8-614] signal 'TX_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:176]
-INFO: [Synth 8-256] done synthesizing module 'ADXL362_com_fsm' (6#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:48]
-INFO: [Synth 8-3491] module 'Read_accel_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:34' bound to instance 'Read_fsm_map' of component 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:250]
-INFO: [Synth 8-638] synthesizing module 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:46]
-WARNING: [Synth 8-614] signal 'RX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'Read_accel_fsm' (7#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:46]
-WARNING: [Synth 8-614] signal 'read_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'configure_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'config_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'config_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'config_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'config_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'read_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'read_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'read_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-614] signal 'read_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
-WARNING: [Synth 8-3848] Net LED in module/entity Final_top does not have driver. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'Final_top' (8#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'Final_top' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:47]
+INFO: [Synth 8-3491] module 'Divider' declared at 'F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'Divider' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Divider.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Divider.vhd:48]
+INFO: [Synth 8-3491] module 'SPI_TX' declared at 'F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:215]
+INFO: [Synth 8-638] synthesizing module 'SPI_TX' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:45]
+WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'SPI_TX' (2#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:45]
+INFO: [Synth 8-3491] module 'SPI_RX' declared at 'F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'SPI_RX' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (3#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:44]
+INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'SPI_state_clk' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
+WARNING: [Synth 8-614] signal 'CLK_EN' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'SPI_state_clk' (4#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
+INFO: [Synth 8-3491] module 'Config_fsm' declared at 'F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:34' bound to instance 'Config_map' of component 'Config_fsm' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:237]
+INFO: [Synth 8-638] synthesizing module 'Config_fsm' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
+WARNING: [Synth 8-614] signal 'CONFIG_EN' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:321]
+WARNING: [Synth 8-614] signal 'ADDR_DONE' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:321]
+INFO: [Synth 8-256] done synthesizing module 'Config_fsm' (5#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
+INFO: [Synth 8-3491] module 'ADXL362_com_fsm' declared at 'F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:34' bound to instance 'ADXL_com_map' of component 'ADXL362_com_fsm' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'ADXL362_com_fsm' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:48]
+WARNING: [Synth 8-614] signal 'CMD' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:77]
+WARNING: [Synth 8-614] signal 'ADDR' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:77]
+WARNING: [Synth 8-614] signal 'DATA' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:77]
+WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:176]
+WARNING: [Synth 8-614] signal 'TX_DONE' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:176]
+INFO: [Synth 8-256] done synthesizing module 'ADXL362_com_fsm' (6#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:48]
+INFO: [Synth 8-3491] module 'Read_accel_fsm' declared at 'F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:34' bound to instance 'Read_fsm_map' of component 'Read_accel_fsm' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:264]
+INFO: [Synth 8-638] synthesizing module 'Read_accel_fsm' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:46]
+WARNING: [Synth 8-614] signal 'RX_DATA' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'Read_accel_fsm' (7#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:46]
+WARNING: [Synth 8-614] signal 'read_accel' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'configure_accel' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'config_data' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'config_addr' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'config_cmd' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'config_start' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'read_data' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'read_addr' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'read_cmd' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-614] signal 'read_start' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:278]
+WARNING: [Synth 8-3848] Net LED in module/entity Final_top does not have driver. [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'Final_top' (8#1) [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:47]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[15]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[14]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[13]
@@ -75,8 +75,10 @@ WARNING: [Synth 8-3331] design Final_top has unconnected port LED[3]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[2]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[1]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[0]
+WARNING: [Synth 8-3917] design Final_top has port ACL_INT[2] driven by constant 0
+WARNING: [Synth 8-3917] design Final_top has port ACL_INT[1] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.191 ; gain = 103.395
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 278.949 ; gain = 102.738
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -85,42 +87,37 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin SPI_RX_map:LOAD_ENABLE to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:210]
-WARNING: [Synth 8-3295] tying undriven pin ADXL_com_map:FSM_CLOCK to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:235]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.191 ; gain = 103.395
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 278.949 ; gain = 102.738
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
+Parsing XDC File [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
+Finished Parsing XDC File [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 584.613 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 581.898 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 3 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 3 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -131,8 +128,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 27 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 27 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -143,8 +140,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 28 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 28 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -155,8 +152,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 29 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 29 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -167,8 +164,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 30 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 30 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -179,8 +176,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 31 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 31 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -191,8 +188,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 32 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 32 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -203,8 +200,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 33 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 33 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -215,8 +212,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 34 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 34 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 34 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 34 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -227,8 +224,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 35 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -239,8 +236,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 36 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -251,8 +248,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 37 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 37 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -263,8 +260,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 38 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 38 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -275,8 +272,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 39 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 39 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -287,8 +284,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 40 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 40 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -299,8 +296,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 41 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 41 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -311,8 +308,92 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 42 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 42 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 68 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 100 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 100 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 101 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 101 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 102 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 102 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 103 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 103 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 104 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 104 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 105 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 105 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -324,7 +405,7 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'SPI_state_clk'
 INFO: [Synth 8-5546] ROM "SPI_CLK" won't be mapped to RAM because it is too sparse
@@ -338,7 +419,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Read_
 INFO: [Synth 8-5544] ROM "START" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "TX_CMD" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:81]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:81]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -362,8 +443,8 @@ WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [C:/Users/Aust
                st10_done |                            10001 |                            10001
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'SPI_state_clk'
-WARNING: [Synth 8-327] inferring latch for variable 'SPI_CLK_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:80]
-WARNING: [Synth 8-327] inferring latch for variable 'CONFIG_DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:89]
+WARNING: [Synth 8-327] inferring latch for variable 'SPI_CLK_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:80]
+WARNING: [Synth 8-327] inferring latch for variable 'CONFIG_DONE_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:89]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -400,11 +481,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'CONFIG_DONE_reg' [C:/Users/
         st17_config_done |                            11110 |                            11110
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Config_fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:100]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:99]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:98]
-WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:90]
-WARNING: [Synth 8-327] inferring latch for variable 'DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:83]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:90]
+WARNING: [Synth 8-327] inferring latch for variable 'DONE_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:83]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -422,11 +503,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'DONE_reg' [C:/Users/Austin/
              st6_tx_done |                             1011 |                             1011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ADXL362_com_fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ENABLE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:84]
-WARNING: [Synth 8-327] inferring latch for variable 'LOAD_ENABLE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:94]
-WARNING: [Synth 8-327] inferring latch for variable 'CS_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:82]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:89]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ENABLE_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:84]
+WARNING: [Synth 8-327] inferring latch for variable 'LOAD_ENABLE_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:85]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:94]
+WARNING: [Synth 8-327] inferring latch for variable 'CS_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:82]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:89]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -445,16 +526,16 @@ WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Aust
            st5_read_temp |                             1100 |                             1100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Read_accel_fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:88]
-WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:82]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_data_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:239]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_addr_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:238]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_cmd_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:237]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_start_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:240]
-WARNING: [Synth 8-327] inferring latch for variable 'configure_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:294]
-WARNING: [Synth 8-327] inferring latch for variable 'read_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:295]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:88]
+WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:82]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_cmd_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:251]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_addr_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:252]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_data_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:253]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_start_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:254]
+WARNING: [Synth 8-327] inferring latch for variable 'read_accel_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:309]
+WARNING: [Synth 8-327] inferring latch for variable 'configure_accel_reg' [F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:308]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -485,8 +566,7 @@ Detailed RTL Component Info :
 	  12 Input      1 Bit        Muxes := 7     
 	  13 Input      1 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -502,8 +582,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 3     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
 Module Divider 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -552,7 +631,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 584.613 ; gain = 407.816
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -572,10 +651,13 @@ WARNING: [Synth 8-3331] design Final_top has unconnected port LED[3]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[2]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[1]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[0]
+WARNING: [Synth 8-3917] design Final_top has port ACL_INT[2] driven by constant 0
+WARNING: [Synth 8-3917] design Final_top has port ACL_INT[1] driven by constant 0
+WARNING: [Synth 8-3331] design Final_top has unconnected port ACL_MISO
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.898 ; gain = 405.688
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -597,81 +679,52 @@ ROM:
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (\SPI_state_clk_map/SPI_CLK_reg ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[4] ) is unused and will be removed from module Final_top.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Config_map/TX_CMD_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Read_fsm_map/TX_CMD_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Config_map/CONFIG_DONE_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\divider_map/clk_out400Hz_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Config_map/TX_CMD_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Read_fsm_map/TX_CMD_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\adxl_cmd_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\adxl_cmd_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_com_map/TX_DATA_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (\Config_map/CONFIG_DONE_reg ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[2] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[7] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[0] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/LOAD_ENABLE_reg ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[2] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[6] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[6] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[7] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[7] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[5] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/CS_reg ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[4] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[3] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_addr_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[7] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[2] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[3] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[6] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[6] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[7] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[0] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[0] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[2] ) is unused and will be removed from module Final_top.
@@ -697,29 +750,68 @@ WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[21] ) is
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[22] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[23] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[24] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[25] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[26] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[2] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[3] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[6] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[7] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[8] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[9] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[10] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[11] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[12] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[13] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[14] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[15] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[16] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[17] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[18] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[19] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[20] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[21] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[22] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[23] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[2] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[3] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[6] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[7] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[8] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[9] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[10] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter50Hz_reg[11] ) is unused and will be removed from module Final_top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SPI_TX_map/serial_register_reg[0]_C )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.898 ; gain = 405.688
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 3 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 3 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -730,8 +822,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 27 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 27 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -742,8 +834,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 28 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 28 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -754,8 +846,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 29 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 29 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -766,8 +858,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 30 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 30 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -778,8 +870,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 31 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 31 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -790,8 +882,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 32 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 32 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -802,8 +894,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 33 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 33 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -814,8 +906,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 34 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 34 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 34 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 34 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -826,8 +918,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 35 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -838,8 +930,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 36 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -850,8 +942,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 37 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 37 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -862,8 +954,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 38 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 38 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -874,8 +966,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 39 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 39 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -886,8 +978,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 40 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 40 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -898,8 +990,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 41 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 41 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -910,8 +1002,92 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 42 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 42 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 68 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 100 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 100 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 101 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 101 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 102 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 102 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 103 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 103 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 104 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 104 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 105 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 105 of file F:/CEC330/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -923,10 +1099,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -938,7 +1114,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -956,7 +1132,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -969,7 +1145,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -981,13 +1157,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 584.613 ; gain = 407.816
+Start Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1004,46 +1180,51 @@ Report Cell Usage:
 |      |Cell  |Count |
 +------+------+------+
 |1     |BUFG  |     1|
-|2     |LUT2  |     3|
-|3     |LUT3  |     6|
-|4     |LUT4  |    13|
-|5     |LUT5  |    11|
+|2     |LUT2  |    19|
+|3     |LUT3  |    22|
+|4     |LUT4  |    26|
+|5     |LUT5  |    17|
 |6     |LUT6  |     4|
-|7     |FDRE  |    21|
-|8     |LD    |     8|
-|9     |IBUF  |     2|
-|10    |OBUFT |    16|
+|7     |FDCE  |     7|
+|8     |FDPE  |     6|
+|9     |FDRE  |    20|
+|10    |LD    |    39|
+|11    |LDC   |     6|
+|12    |IBUF  |     2|
+|13    |OBUF  |     5|
+|14    |OBUFT |    16|
 +------+------+------+
 
 Report Instance Areas: 
 +------+--------------------+----------------+------+
 |      |Instance            |Module          |Cells |
 +------+--------------------+----------------+------+
-|1     |top                 |                |    85|
-|2     |  divider_map       |Divider         |     1|
-|3     |  ADXL_com_map      |ADXL362_com_fsm |    14|
-|4     |  Config_map        |Config_fsm      |    16|
-|5     |  Read_fsm_map      |Read_accel_fsm  |    12|
-|6     |  SPI_state_clk_map |SPI_state_clk   |    14|
+|1     |top                 |                |   190|
+|2     |  ADXL_com_map      |ADXL362_com_fsm |    43|
+|3     |  Config_map        |Config_fsm      |    47|
+|4     |  Read_fsm_map      |Read_accel_fsm  |    12|
+|5     |  SPI_TX_map        |SPI_TX          |    25|
+|6     |  SPI_state_clk_map |SPI_state_clk   |    16|
 +------+--------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 584.613 ; gain = 407.816
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.898 ; gain = 405.688
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 214 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 584.613 ; gain = 88.219
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 584.613 ; gain = 407.816
+Synthesis finished with 0 errors, 0 critical warnings and 188 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 581.898 ; gain = 87.289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 581.898 ; gain = 405.688
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  LD => LDCE: 8 instances
+  A total of 45 instances were transformed.
+  LD => LDCE: 39 instances
+  LDC => LDCE: 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 177 Warnings, 1 Critical Warnings and 0 Errors encountered.
+60 Infos, 179 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 584.613 ; gain = 393.992
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 584.613 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 22 18:46:32 2015...
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 581.898 ; gain = 391.641
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 581.898 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 22 21:33:40 2015...

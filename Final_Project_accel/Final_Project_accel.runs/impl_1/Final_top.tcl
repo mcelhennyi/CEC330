@@ -42,80 +42,24 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
-start_step init_design
+start_step write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
+  create_msg_db write_bitstream.pb
   debug::add_scope template.lib 1
-  set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.xpr [current_project]
-  set_property ip_repo_paths c:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.cache/ip [current_project]
-  set_property ip_output_repo c:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.cache/ip [current_project]
-  add_files -quiet C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.runs/synth_1/Final_top.dcp
-  read_xdc C:/Users/Austin/Documents/CEC330_2/Final_Project_accel/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-  link_design -top Final_top -part xc7a100tcsg324-1
-  close_msg_db -file init_design.pb
+  open_checkpoint Final_top_routed.dcp
+  set_property webtalk.parent_dir F:/CEC330/Final_Project_accel/Final_Project_accel.cache/wt [current_project]
+  write_bitstream -force Final_top.bit 
+  catch { write_sysdef -hwdef Final_top.hwdef -bitfile Final_top.bit -meminfo Final_top.mmi -ltxfile debug_nets.ltx -file Final_top.sysdef }
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
-}
-
-start_step opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  catch {write_debug_probes -quiet -force debug_nets}
-  opt_design 
-  write_checkpoint -force Final_top_opt.dcp
-  catch {report_drc -file Final_top_drc_opted.rpt}
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-}
-
-start_step place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  catch {write_hwdef -file Final_top.hwdef}
-  place_design 
-  write_checkpoint -force Final_top_placed.dcp
-  catch { report_io -file Final_top_io_placed.rpt }
-  catch { report_utilization -file Final_top_utilization_placed.rpt -pb Final_top_utilization_placed.pb }
-  catch { report_control_sets -verbose -file Final_top_control_sets_placed.rpt }
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-}
-
-start_step route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force Final_top_routed.dcp
-  catch { report_drc -file Final_top_drc_routed.rpt -pb Final_top_drc_routed.pb }
-  catch { report_timing_summary -warn_on_violation -max_paths 10 -file Final_top_timing_summary_routed.rpt -rpx Final_top_timing_summary_routed.rpx }
-  catch { report_power -file Final_top_power_routed.rpt -pb Final_top_power_summary_routed.pb }
-  catch { report_route_status -file Final_top_route_status.rpt -pb Final_top_route_status.pb }
-  catch { report_clock_utilization -file Final_top_clock_utilization_routed.rpt }
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
+  end_step write_bitstream
 }
 
