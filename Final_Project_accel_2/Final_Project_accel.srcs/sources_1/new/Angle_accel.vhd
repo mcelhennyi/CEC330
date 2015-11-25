@@ -65,9 +65,9 @@ signal temp_negative : STD_LOGIC := '0';
 
 signal gravity : STD_LOGIC_VECTOR (11 downto 0) := x"00A";
 
-signal x_angle : STD_LOGIC_VECTOR (11 downto 0) : x"000";--------------may need to change these
-signal y_angle : STD_LOGIC_VECTOR (11 downto 0) : x"000";
-signal z_angle : STD_LOGIC_VECTOR (11 downto 0) : x"000";
+signal x_angle : STD_LOGIC_VECTOR (11 downto 0) := x"000";--------------may need to change these
+signal y_angle : STD_LOGIC_VECTOR (11 downto 0) := x"000";
+signal z_angle : STD_LOGIC_VECTOR (11 downto 0) := x"000";
 
 begin
 
