@@ -49,69 +49,97 @@ Component ADXL362_com_fsm
            CS : out STD_LOGIC);--CHIP SELECT FOR THE ACCELEROMETER
 end component ADXL362_com_fsm;
 
-component SPI_TX
-    Port ( CLK_STATE : in STD_LOGIC;
-           SPI_CLK_IN : in STD_LOGIC;
-           TX_DATA : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master aka tx_data
-           MOSI : out STD_LOGIC;--output pin to slave
-           LOAD_ENABLE : in STD_LOGIC
-           );
-end component SPI_TX;
+
 
 signal FSM_CLOCK : std_logic := '0';   --State machine clock
 signal CMD : STD_LOGIC_VECTOR (7 downto 0):= x"00";--COMMAND TO WRITE OR READ
 signal ADDR : STD_LOGIC_VECTOR (7 downto 0):= x"00";--ADDRESS OF DATA TO SEND
 signal DATA : STD_LOGIC_VECTOR (7 downto 0):= x"00";--DATA TO SEND TO ACCEL
-signal START : std_logic := '0';--FLAG TO START COMMUNICATING WITH ACCELEROMETER
-signal TX_DONE  : std_logic := '0';--FROM THE COUNTER OF THE SPI CLOCK
+signal START : std_logic := '1';--FLAG TO START COMMUNICATING WITH ACCELEROMETER
+signal TX_DONE  : std_logic := '1';--FROM THE COUNTER OF THE SPI CLOCK
 signal DONE : std_logic := '0';--Tells the controlling module that it has finsihed
 signal TX_ENABLE : std_logic := '0';--TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
+signal LOAD_ENABLE : std_logic := '0';
 signal CS : std_logic := '0';
 
 signal CLK_STATE : std_logic := '0';
-signal SPI_CLK : std_logic := '0';
 signal TX_DATA  : STD_LOGIC_VECTOR (7 downto 0):= x"00";--Data leaving master aka tx_data
-signal MOSI : std_logic := '0';--output pin to slave
-signal LOAD_ENABLE : std_logic := '0';
+
+--signal CLK_SPI_IN : std_logic := '0';
 
  --Clock Period
 constant CLK_state_period : time := 10 ns; --100MHz clock
-constant CLK_spi_period : time := 10000 ns; --100kHz clock
+--constant CLK_spi_in_period : time := 5000 ns; --200kHz clock
 
 
 begin
 --uut
 uut: ADXL362_com_fsm
-        Port ( FSM_CLOCK  --State machine clock
-               CMD --COMMAND TO WRITE OR READ
-               ADDR --ADDRESS OF DATA TO SEND
-               DATA --DATA TO SEND TO ACCEL
-               START --FLAG TO START COMMUNICATING WITH ACCELEROMETER
-               TX_DONE  --FROM THE COUNTER OF THE SPI CLOCK
-               DONE --Tells the controlling module that it has finsihed
-               TX_ENABLE --TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
-               LOAD_ENABLE => LOAD_ENABLE, --TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
-               TX_DATA => TX_DATA,--BYTE OF DATA TO SPI MODULE
-               CS =>  CS--CHIP SELECT FOR THE ACCELEROMETER
-                );
-spi_tx: SPI_TX
-    Port ( CLK_STATE => CLK_STATE,
-           SPI_CLK_IN => SPI_CLK,
-           TX_DATA => TX_DATA,--Data leaving master aka tx_data
-           MOSI => MOSI,--output pin to slave
-           LOAD_ENABLE => LOAD_ENABLE
-           );
-
+        Port map ( --in
+                   FSM_CLOCK => CLK_STATE,  --State machine clock
+                   CMD =>  CMD,--COMMAND TO WRITE OR READ
+                   ADDR =>  ADDR, --ADDRESS OF DATA TO SEND
+                   DATA =>  DATA, --DATA TO SEND TO ACCEL
+                   START =>  START, --FLAG TO START COMMUNICATING WITH ACCELEROMETER
+                   TX_DONE =>  TX_DONE,  --FROM THE COUNTER OF THE SPI CLOCK
+                   --out
+                   DONE =>  DONE, --Tells the controlling module that it has finsihed
+                   TX_ENABLE => TX_ENABLE, --TELLS THE COUNTER, SPI module AND CLOCK TO START TO ALLOW 8 BITS TO TRANSFER
+                   LOAD_ENABLE => LOAD_ENABLE, --TELLS THE SPI BUS TO LOAD THE VALUE TO ITS SHIFT REGISTER BEFORE SHIFTING
+                   TX_DATA => TX_DATA,--BYTE OF DATA TO SPI MODULE
+                   CS =>  CS--CHIP SELECT FOR THE ACCELEROMETER
+                    );
 
 --clock process clock of 100 MHz
 CLK_STATE_PROCESS: process
-begin
-   CLK_STATE <= '0';
-   wait for CLK_state_period/2;
-   CLK_STATE <= '1';
-   wait for CLK_state_period/2;
+    begin
+       CLK_STATE <= '0';
+       wait for CLK_state_period/2;
+       CLK_STATE <= '1';
+       wait for CLK_state_period/2;
 end process CLK_STATE_PROCESS;
 
+----clock process clock of 200 KHz
+--CLK_SPI_IN_PROCESS: process
+--    begin
+--       CLK_SPI_IN <= '0';
+--       wait for CLK_spi_in_period/2;
+--       CLK_SPI_IN <= '1';
+--       wait for CLK_spi_in_period/2;
+--end process CLK_SPI_IN_PROCESS;
 
+--stimulus to write to memory
+stim_proc: process
+    begin
+        --load the data
+        CMD <= x"0A";
+        ADDR <= x"28";
+        DATA <= "00001110";
+        wait for 40 ns;
+        --Notify UUT to start FSM
+        START <= '1';
+        wait for 10 ns;
+        START <= '0';
+        wait for 90 ns;
+        --message from SPI_TX that it has tx-ed the data
+        TX_DONE <= '1';
+        wait for 7 ns;
+--        TX_DONE <= '0';--reset the tx_done
+        --message from SPI_TX that it has tx-ed the data
+        wait for 100 ns;
+        TX_DONE <= '1';
+        wait for 15 ns;
+--        TX_DONE <= '0';--reset the tx_done
+        --message from SPI_TX that it has tx-ed the data
+        wait for 100 ns;
+        TX_DONE <= '1';
+        wait for 7 ns;
+--        TX_DONE <= '0';
+        CMD <= x"00";
+        ADDR <= x"00";
+        DATA <= "00000000";       
+        wait;
+        
+end process stim_proc;
 
 end Behavioral;
