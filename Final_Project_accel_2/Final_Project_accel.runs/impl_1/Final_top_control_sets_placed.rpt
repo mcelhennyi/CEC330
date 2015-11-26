@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Wed Nov 25 19:38:24 2015
+| Date         : Wed Nov 25 20:37:46 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Final_top_control_sets_placed.rpt
 | Design       : Final_top
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    34 |
-| Minimum Number of register sites lost to control set restrictions |   198 |
+| Number of unique control sets                                     |    32 |
+| Minimum Number of register sites lost to control set restrictions |   186 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,8 +33,8 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              66 |           39 |
-| No           | No                    | Yes                    |              13 |           12 |
+| No           | No                    | No                     |              46 |           22 |
+| No           | No                    | Yes                    |              13 |           13 |
 | No           | Yes                   | No                     |              33 |           13 |
 | Yes          | No                    | No                     |              18 |            8 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -48,39 +48,37 @@ Table of Contents
 +------------------------------------------+---------------------------------------------------+-----------------------------------------+------------------+----------------+
 |               Clock Signal               |                   Enable Signal                   |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
 +------------------------------------------+---------------------------------------------------+-----------------------------------------+------------------+----------------+
-|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[2]_C   |                1 |              1 |
-|  ADXL_com_map/serial_register_reg[3]_P   |                                                   | ADXL_com_map/serial_register_reg[3]_C   |                1 |              1 |
-|  ADXL_com_map/serial_register_reg[5]_P   |                                                   | ADXL_com_map/serial_register_reg[5]_C   |                1 |              1 |
-|  ADXL_com_map/serial_register_reg[6]_P   |                                                   | ADXL_com_map/serial_register_reg[6]_C   |                1 |              1 |
-|  Config_map/START_reg_i_2__0_n_0         |                                                   |                                         |                1 |              1 |
-|  Read_fsm_map/START_reg_i_2_n_0          |                                                   |                                         |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[0]_P   |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[1]_C   |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[2]_P   |                1 |              1 |
-|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[1]_P_0 |                1 |              1 |
 |  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[6]_P   |                1 |              1 |
 |  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[6]_C   |                1 |              1 |
 |  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[5]_P   |                1 |              1 |
 |  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[5]_C   |                1 |              1 |
 |  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[3]_P   |                1 |              1 |
 |  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[3]_C   |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[2]_P   |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[2]_C   |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[1]_P_0 |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[1]_C   |                1 |              1 |
+|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/serial_register_reg[0]_C   |                1 |              1 |
+|  Read_fsm_map/START_reg_i_2_n_0          |                                                   |                                         |                1 |              1 |
+|  Config_map/START_reg_i_2__0_n_0         |                                                   |                                         |                1 |              1 |
+|  ADXL_com_map/serial_register_reg[6]_P   |                                                   | ADXL_com_map/serial_register_reg[6]_C   |                1 |              1 |
+|  ADXL_com_map/serial_register_reg[5]_P   |                                                   | ADXL_com_map/serial_register_reg[5]_C   |                1 |              1 |
+|  ADXL_com_map/serial_register_reg[3]_P   |                                                   | ADXL_com_map/serial_register_reg[3]_C   |                1 |              1 |
 |  ADXL_com_map/serial_register_reg[2]_P   |                                                   | ADXL_com_map/serial_register_reg[2]_C   |                1 |              1 |
 |  ADXL_com_map/serial_register_reg[1]_P_0 |                                                   | ADXL_com_map/serial_register_reg[1]_C   |                1 |              1 |
-|  ADXL_com_map/serial_register_reg[0]_P   |                                                   | ADXL_com_map/serial_register_reg[1]_P   |                1 |              1 |
-|  SPI_state_clk_map/TX_DONE_reg_i_2_n_0   |                                                   |                                         |                1 |              2 |
+|  ADXL_com_map/serial_register_reg[1]_P   |                                                   | ADXL_com_map/serial_register_reg[0]_C   |                1 |              1 |
 |  read_accel_reg_i_1_n_0                  |                                                   |                                         |                1 |              2 |
-|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/LOAD_ENABLE                |                1 |              2 |
+|  SPI_state_clk_map/TX_DONE_reg_i_2_n_0   |                                                   |                                         |                1 |              2 |
+|  SPI_state_clk_map/SPI_CLK               |                                                   | ADXL_com_map/LOAD_ENABLE                |                2 |              2 |
 |  CLK_IN_IBUF_BUFG                        |                                                   |                                         |                2 |              3 |
 |  CLK_IN_IBUF_BUFG                        | Read_fsm_map/FSM_sequential_state[3]_i_1__1_n_0   |                                         |                2 |              4 |
-|  CLK_IN_IBUF_BUFG                        | ADXL_com_map/FSM_sequential_state[3]_i_1__0_n_0   |                                         |                1 |              4 |
-|  ADXL_com_map/DONE_reg_i_2_n_0           |                                                   |                                         |                2 |              4 |
-|  CLK_IN_IBUF_BUFG                        | Config_map/FSM_sequential_state[4]_i_1__0_n_0     |                                         |                3 |              5 |
+|  CLK_IN_IBUF_BUFG                        | ADXL_com_map/FSM_sequential_state[3]_i_1__0_n_0   |                                         |                2 |              4 |
+|  CLK_IN_IBUF_BUFG                        | Config_map/FSM_sequential_state[4]_i_1__0_n_0     |                                         |                2 |              5 |
 |  divider_map/CLK_OUT_1Hz                 | SPI_state_clk_map/FSM_sequential_state[4]_i_1_n_0 |                                         |                2 |              5 |
 |  ADXL_com_map/TX_DATA_reg[6]_i_2_n_0     |                                                   |                                         |                3 |              6 |
-|  Config_map/TX_DATA_reg[6]_i_2__0_n_0    |                                                   |                                         |                3 |             10 |
-|  Read_fsm_map/y_value_reg[11]_i_1_n_0    |                                                   |                                         |               10 |             12 |
+|  ADXL_com_map/LED_reg[3]_i_2_n_0         |                                                   |                                         |                3 |              8 |
+|  Config_map/TX_DATA_reg[6]_i_2__0_n_0    |                                                   |                                         |                5 |             10 |
 |  adxl_cmd_reg[2]_i_2_n_0                 |                                                   |                                         |                5 |             13 |
-|  SPI_state_clk_map/SPI_CLK               |                                                   |                                         |               11 |             13 |
 |  CLK_IN_IBUF_BUFG                        |                                                   | divider_map/counter1Hz[0]_i_1_n_0       |                7 |             27 |
 +------------------------------------------+---------------------------------------------------+-----------------------------------------+------------------+----------------+
 

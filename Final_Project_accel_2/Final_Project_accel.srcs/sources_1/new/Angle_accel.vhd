@@ -38,7 +38,7 @@ use ieee.numeric_std.all;
 
 entity Angle_accel is
     Port ( CLK_IN : in STD_LOGIC;
-           LED : out STD_LOGIC_VECTOR (12 downto 0);
+--           LED : out STD_LOGIC_VECTOR (12 downto 0);
            X_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Y_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Z_IN : in STD_LOGIC_VECTOR (11 downto 0);
@@ -141,7 +141,7 @@ begin
 --        end if;
 --    end process average;
     
-LED <= "0" & Y_IN;
+--LED <= "0" & Y_IN;
 
 --LEDs: process(CLK_IN)
 --    begin

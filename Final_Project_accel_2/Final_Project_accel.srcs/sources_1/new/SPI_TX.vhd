@@ -53,7 +53,7 @@ SPI_PROCESS: process (CLK_STATE, SPI_CLK_IN, LOAD_ENABLE)
         if LOAD_ENABLE = '0' then
             if (rising_edge(SPI_CLK_IN)) then
                 --serial_register <= serial_register(6 downto 0) & MISO;
-                serial_register <= serial_register(6 downto 0) & '0';
+                serial_register <= serial_register(6 downto 0) & '1';
             end if;
         elsif LOAD_ENABLE = '1' then
             serial_register <= TX_DATA;--Accepts the data to be transmitted

@@ -171,7 +171,7 @@ component Config_fsm
 end component Config_fsm;
 
 component ADXL362_com_fsm
-    Port ( --LED : out STD_LOGIC_VECTOR(9 downto 6);
+    Port ( LED : out STD_LOGIC_VECTOR(3 downto 0);
            FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
            ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
@@ -203,7 +203,7 @@ end component Read_accel_fsm;
 -----------------------------------------------------------------
 component Angle_accel
     Port ( CLK_IN : in STD_LOGIC;
-           LED : out STD_LOGIC_VECTOR (12 downto 0);
+--           LED : out STD_LOGIC_VECTOR (12 downto 0);
            X_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Y_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Z_IN : in STD_LOGIC_VECTOR (11 downto 0);
@@ -230,6 +230,9 @@ miso <= ACL_MISO;
 LED (15) <= mosi;
 LED (14) <= spi_clk;
 LED (13) <= miso;
+
+LED (7 downto 0) <= tx_data;
+
 --LED (15) <= clk_state;
 --LED (14) <= spi_clk;
 
@@ -288,7 +291,7 @@ Config_map: Config_fsm
 
 ADXL_com_map: ADXL362_com_fsm
     port map ( --in
---                LED => LED (9 downto 6),
+               LED => LED (11 downto 8),
                FSM_CLOCK => clk_state,
                CMD => adxl_cmd,--COMMAND TO WRITE OR READ
                ADDR => adxl_addr,--ADDRESS OF DATA TO SEND
@@ -320,7 +323,7 @@ Read_fsm_map: Read_accel_fsm
 -----------------------------------------------------------------------------
 Angle_map: Angle_accel
     port map ( CLK_IN => CLK_IN,
-               LED => LED(12 downto 0),
+--               LED => LED(12 downto 0),
                X_IN => x_data,
                Y_IN => y_data,
                Z_IN => z_data,
