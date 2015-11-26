@@ -39,7 +39,11 @@ entity Read_accel_fsm is
            TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
            TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
            TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
-           START : out STD_LOGIC--starts the reading for 8 bits of data
+           START : out STD_LOGIC;--starts the reading for 8 bits of data
+           X_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
+           Y_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
+           Z_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
+           TEMP_DATA :  out STD_LOGIC_VECTOR(11 downto 0)
            );
 end Read_accel_fsm;
 
@@ -64,6 +68,14 @@ st5_prep, st5_start, st5_read_temp
 signal state, next_state : FSM_state_type;
 
 begin
+------------------------------------
+--Assigns data output---------------
+------------------------------------
+X_DATA <= x_value(11 downto 0);
+Y_DATA <= y_value(11 downto 0);
+Z_DATA <= z_value(11 downto 0);
+TEMP_DATA <= temperature_value(11 downto 0);
+           
 ------------------------------------
 --State Machine---------------------
 ------------------------------------

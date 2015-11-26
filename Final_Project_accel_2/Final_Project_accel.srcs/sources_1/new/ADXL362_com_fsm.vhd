@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ADXL362_com_fsm is
-    Port ( FSM_CLOCK : in STD_LOGIC; --State machine clock
+    Port ( --LED : out STD_LOGIC_VECTOR(9 downto 6);
+           FSM_CLOCK : in STD_LOGIC; --State machine clock
            CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
            ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
            DATA : in STD_LOGIC_VECTOR (7 downto 0);--DATA TO SEND TO ACCEL
@@ -63,6 +64,8 @@ st6_tx_done
 signal state, next_state : FSM_state_type;
 
 begin
+
+--LED (9) <= START;
 ------------------------------------
 --State Machine---------------------
 ------------------------------------
@@ -79,61 +82,89 @@ begin
     case state is
         when st1_wait =>--nothing happens, waiting to be told to send some data to accel
             --state variables            
-            CS <= '0';
+            CS <= '1';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
+            
+--            LED (6) <= '1';
+--            LED (7) <= '0';
+--            LED (8) <= '0';
         
         when st2_prep_cmd  =>
             --state variables
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             --prep stage
             TX_DATA <= CMD;
+            
+--            LED (6) <= '0';
+--            LED (7) <= '1';
+--            LED (8) <= '0';
         
         when st2_load_cmd =>
             --state variables
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
+            
+--            LED (6) <= '1';
+--            LED (7) <= '1';
+--            LED (8) <= '0';
         
         when st2_send_cmd => 
             --state variables            
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
+            
+--            LED (6) <= '0';
+--            LED (7) <= '0';
+--            LED (8) <= '1';
        
         when st3_prep_addr  =>
             --state variables            
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             --prep stage
             TX_DATA <= ADDR;
             
+--            LED (6) <= '1';
+--            LED (7) <= '0';
+--            LED (8) <= '1';
+            
         when st3_load_addr =>
             --state variables
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
+            
+--            LED (6) <= '0';
+--            LED (7) <= '1';
+--            LED (8) <= '1';
         
         
         when st3_send_addr => 
             --state variables            
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
+            
+--            LED (6) <= '1';
+--            LED (7) <= '1';
+--            LED (8) <= '1';
     
         when st4_prep_data  =>
             --state variables            
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
@@ -142,28 +173,28 @@ begin
 
         when st4_load_data =>
             --state variables
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
 
         when st4_send_data => 
             --state variables            
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
            
         when st5_buffer => --gives the system an additional clock cycle to settle before going back to wait state
             --state variables            
-            CS <= '1';
+            CS <= '0';
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             
         when st6_tx_done =>
             --state variables            
-            CS <= '0';
+            CS <= '1';
             DONE <= '1';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';   
@@ -225,6 +256,7 @@ case (state) is
 
         
     when others =>
+        next_state <= st1_wait;
   
     end case;      
 end process NEXT_STATE_DECODE;

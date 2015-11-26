@@ -46,8 +46,8 @@ end Final_top;
 
 architecture Behavioral of Final_top is
 --things that need to be ports 
---signal mosi : STD_LOGIC := '0';
---signal miso : STD_LOGIC := '0';
+signal mosi : STD_LOGIC := '0';
+signal miso : STD_LOGIC := '0';
 signal spi_clk : STD_LOGIC := '0';
 --signal CS : STD_LOGIC := '0';
 
@@ -70,7 +70,14 @@ signal tx_enable : STD_LOGIC := '0';
 signal load_enable : STD_LOGIC := '0';
 signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
 signal rx_data : STD_LOGIC_VECTOR(15 downto 0);-- := x"00"; --data from slave
-----------------------------------------------------------------------------
+---------------------------------------------------------------------------
+--data from accel
+signal x_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
+signal y_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
+signal z_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
+signal temp_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
+
+signal avg_temp_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
 
 --config signals
 ----------------------------------------------------------------------------
@@ -151,7 +158,8 @@ component SPI_state_clk
 end component SPI_state_clk;
 ------------------------------------------------------------------
 component Config_fsm
-    Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
+    Port ( --LED : out STD_LOGIC_VECTOR(5 downto 3);
+           FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            CONFIG_EN : in STD_LOGIC;--starts the configuration FSM steps
            ADDR_DONE : in STD_LOGIC;--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
            CONFIG_DONE : out STD_LOGIC;--Tells controlling FSM/module that the configuration of the accel is done
@@ -163,7 +171,9 @@ component Config_fsm
 end component Config_fsm;
 
 component ADXL362_com_fsm
-    Port ( CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
+    Port ( --LED : out STD_LOGIC_VECTOR(9 downto 6);
+           FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
+           CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
            ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
            DATA : in STD_LOGIC_VECTOR (7 downto 0);--DATA TO SEND TO ACCEL
            START : in STD_LOGIC;--FLAG TO START COMMUNICATING WITH ACCELEROMETER
@@ -183,9 +193,28 @@ component Read_accel_fsm
            TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
            TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
            TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
-           START : out STD_LOGIC--starts the reading for 8 bits of data
+           START : out STD_LOGIC;--starts the reading for 8 bits of data
+           X_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
+           Y_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
+           Z_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
+           TEMP_DATA :  out STD_LOGIC_VECTOR(11 downto 0)
            );
 end component Read_accel_fsm;
+-----------------------------------------------------------------
+component Angle_accel
+    Port ( CLK_IN : in STD_LOGIC;
+           LED : out STD_LOGIC_VECTOR (12 downto 0);
+           X_IN : in STD_LOGIC_VECTOR (11 downto 0);
+           Y_IN : in STD_LOGIC_VECTOR (11 downto 0);
+           Z_IN : in STD_LOGIC_VECTOR (11 downto 0);
+           TEMP_IN : in STD_LOGIC_VECTOR (11 downto 0);
+           --
+--           X_ANGLE : out STD_LOGIC_VECTOR (11 downto 0);
+--           Y_ANGLE : out STD_LOGIC_VECTOR (11 downto 0);
+--           Z_ANGLE : out STD_LOGIC_VECTOR (11 downto 0);
+           TEMP_AVG : out STD_LOGIC_VECTOR (11 downto 0)
+           );
+end component Angle_accel;
 
 begin
 ------------------------------------
@@ -194,6 +223,18 @@ begin
 ACL_SCLK <= spi_clk;
 ACL_INT(1) <= '0';
 ACL_INT(2) <= '0';
+
+ACL_MOSI <= mosi;
+miso <= ACL_MISO;
+
+LED (15) <= mosi;
+LED (14) <= spi_clk;
+LED (13) <= miso;
+--LED (15) <= clk_state;
+--LED (14) <= spi_clk;
+
+--LED (12) <= adxl_start;
+--LED (11) <= config_start;
 
 ------------------------------------
 --PORT MAPS-------------------------
@@ -215,7 +256,7 @@ SPI_TX_map: SPI_TX
     port map ( CLK_STATE => clk_state,
                SPI_CLK_IN => spi_clk,
                TX_DATA => tx_data, --data to slave
-               MOSI => ACL_MOSI,--
+               MOSI => mosi,--
                LOAD_ENABLE => load_enable
                );
                
@@ -223,18 +264,19 @@ SPI_RX_map: SPI_RX
     port map ( CLK_STATE => clk_state,
                SPI_CLK_IN => spi_clk,
                RX_DATA => rx_data, --data from slave
-               MISO => ACL_MISO--
+               MISO => miso--
                );
 
 SPI_state_clk_map:  SPI_state_clk
-    port map ( CLK_200KHz => clk_400Hz,
+    port map ( CLK_200KHz => clk_1Hz,
                CLK_EN => tx_enable,
                TX_DONE => tx_done,
                SPI_CLK => spi_clk
                );
 ---------------------------------------------------------------------------              
 Config_map: Config_fsm
-    port map ( FSM_CLOCK => clk_state,--gives the FSM speed clock to configuration FSM
+    port map ( --LED => LED (5 downto 3),
+                FSM_CLOCK => clk_state,--gives the FSM speed clock to configuration FSM
                CONFIG_EN => configure_accel,--starts the configuration FSM steps
                ADDR_DONE => addr_done, --from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
                CONFIG_DONE => config_done,--Tells controlling FSM/module that the configuration of the accel is done
@@ -246,6 +288,8 @@ Config_map: Config_fsm
 
 ADXL_com_map: ADXL362_com_fsm
     port map ( --in
+--                LED => LED (9 downto 6),
+               FSM_CLOCK => clk_state,
                CMD => adxl_cmd,--COMMAND TO WRITE OR READ
                ADDR => adxl_addr,--ADDRESS OF DATA TO SEND
                DATA => adxl_data,--DATA TO SEND TO ACCEL
@@ -267,9 +311,27 @@ Read_fsm_map: Read_accel_fsm
                TX_DATA => read_data,--sends the data to transmit to ADXL_fsm
                TX_ADDR => read_addr,--sends addr data to ADXL_fsm 
                TX_CMD => read_cmd,--sends to read or write command to ADXL_fsm
-               START => read_start
+               START => read_start,
+               X_DATA => x_data,
+               Y_DATA => y_data,
+               Z_DATA => z_data,
+               TEMP_DATA => temp_data
                );         
-
+-----------------------------------------------------------------------------
+Angle_map: Angle_accel
+    port map ( CLK_IN => CLK_IN,
+               LED => LED(12 downto 0),
+               X_IN => x_data,
+               Y_IN => y_data,
+               Z_IN => z_data,
+               TEMP_IN => temp_data,
+               --
+--               X_ANGLE : out STD_LOGIC_VECTOR (11 downto 0);
+--               Y_ANGLE : out STD_LOGIC_VECTOR (11 downto 0);
+--               Z_ANGLE : out STD_LOGIC_VECTOR (11 downto 0);
+               TEMP_AVG => avg_temp_data
+               );
+           
 ------------------------------------
 --MUXs------------------------------
 ------------------------------------
@@ -305,14 +367,24 @@ begin
         when st1_wait =>
             configure_accel <= '0';
             read_accel <= '0';
+--            LED (0) <= '1';
+--            LED (1) <= '0';
+--            LED (2) <= '0';
 
         when st2_configure =>
             configure_accel <= '1';
             read_accel <= '0';
+--            LED (0) <= '0';
+--            LED (1) <= '1';
+--            LED (2) <= '0';
 
         when st3_read  =>
             configure_accel <= '0';
             read_accel <= '1';
+--            LED (0) <= '0';
+--            LED (1) <= '0';
+--            LED (2) <= '1';
+            
 
         when others => null;
     end case;
@@ -326,9 +398,9 @@ begin
 --state case statement to change a state on rising edge  
     case (state) is
         when st1_wait =>
-            if CPU_RESETN = '0' then
+--            if CPU_RESETN = '1' then
                 next_state <= st2_configure;
-            end if;
+--            end if;
             
         when st2_configure =>
             if(config_done = '1') then
@@ -336,7 +408,7 @@ begin
             end if;
             
         when st3_read => 
-            if CPU_RESETN = '1' then
+            if CPU_RESETN = '0' then
                 next_state <= st1_wait;
             end if;
         

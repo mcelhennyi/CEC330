@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Config_fsm is
-    Port ( 
+    Port ( --LED : out STD_LOGIC_VECTOR(5 downto 3);
            FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            CONFIG_EN : in STD_LOGIC;--starts the configuration FSM steps
            ADDR_DONE : in STD_LOGIC;--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
@@ -88,6 +88,9 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '0';
+--            LED (3) <= '1';
+--            LED (4) <= '0';
+--            LED (5) <= '0';
         
         --x20 - x27 set up activity and inactivity threashold information
         when st2_prep_x20  =>
@@ -99,10 +102,18 @@ begin
             TX_ADDR <= x"20";
             TX_DATA <= "00000000";
             
+--            LED (3) <= '0';
+--            LED (4) <= '1';
+--            LED (5) <= '0';
+            
         when st2_send_x20 => 
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            
+--            LED (3) <= '1';
+--            LED (4) <= '1';
+--            LED (5) <= '0';
             
         when st3_prep_x21  =>
             --state variables            
@@ -112,6 +123,10 @@ begin
             TX_CMD <= x"0A";
             TX_ADDR <= x"21";        
             TX_DATA <= "00000000";
+            
+--            LED (3) <= '0';
+--            LED (4) <= '0';
+--            LED (5) <= '1';
         
         when st3_send_x21 => 
             --state variables            
