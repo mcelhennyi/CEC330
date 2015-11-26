@@ -15,6 +15,7 @@ set_property parent.project_path C:/Users/Austin/Documents/CEC330_2/Final_Projec
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 read_vhdl -library xil_defaultlib {
+  C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd
   C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd
   C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd
   C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd

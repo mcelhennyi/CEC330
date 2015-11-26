@@ -34,6 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Final_top is
     Port ( CLK_IN : in STD_LOGIC;
            LED : out STD_LOGIC_VECTOR (15 downto 0);
+           SEG : out STD_LOGIC_VECTOR (7 downto 0);
+           AN : out STD_LOGIC_VECTOR (7 downto 0);
            --And Accelerometer ports! including CS mosi miso and sclk
            CPU_RESETN : in STD_LOGIC;
            ACL_CSN : out STD_LOGIC;
@@ -45,6 +47,19 @@ entity Final_top is
 end Final_top;
 
 architecture Behavioral of Final_top is
+-----------------------------------
+--Signals--------------------------
+-----------------------------------
+--display signals for the seven segment displays
+signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);--top FSM
+signal Disp2 : STD_LOGIC_VECTOR (3 downto 0);--config FSM
+signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);--ADXL FSM
+signal Disp4 : STD_LOGIC_VECTOR (3 downto 0) := x"0";
+signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
+signal Disp8 : STD_LOGIC_VECTOR (3 downto 0);
+
 --things that need to be ports 
 signal mosi : STD_LOGIC := '0';
 signal miso : STD_LOGIC := '0';
@@ -131,6 +146,21 @@ component Divider
            CLK_OUT_STATE : out STD_LOGIC
            );
 end component Divider;
+--Drives the seven segment displays
+component Seven_seg_driver
+    Port ( CLK_AN : in STD_LOGIC;
+           Disp1 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           Disp2 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           Disp3 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           Disp4 : in STD_LOGIC_VECTOR (3 DOWNTO 0);
+           Disp5 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp6 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp7 : in STD_LOGIC_VECTOR (3 downto 0);
+           Disp8 : in STD_LOGIC_VECTOR (3 downto 0);
+           Display_out : out STD_LOGIC_VECTOR (7 DOWNTO 0);
+           AN_out : out STD_LOGIC_VECTOR (7 DOWNTO 0)
+           );
+end component Seven_seg_driver;
 ------------------------------------------------------------------exports data on the SPI bus
 component SPI_TX
     Port ( CLK_STATE : in STD_LOGIC;
@@ -158,7 +188,7 @@ component SPI_state_clk
 end component SPI_state_clk;
 ------------------------------------------------------------------
 component Config_fsm
-    Port ( --LED : out STD_LOGIC_VECTOR(5 downto 3);
+    Port ( Disp2 : out STD_LOGIC_VECTOR(3 downto 0);
            FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            CONFIG_EN : in STD_LOGIC;--starts the configuration FSM steps
            ADDR_DONE : in STD_LOGIC;--from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
@@ -171,7 +201,7 @@ component Config_fsm
 end component Config_fsm;
 
 component ADXL362_com_fsm
-    Port ( LED : out STD_LOGIC_VECTOR(3 downto 0);
+    Port ( Disp3 : out STD_LOGIC_VECTOR(3 downto 0);
            FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
            ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
@@ -231,7 +261,10 @@ LED (15) <= mosi;
 LED (14) <= spi_clk;
 LED (13) <= miso;
 
-LED (7 downto 0) <= tx_data;
+--LED (7 downto 0) <= tx_data;
+
+Disp7 <= tx_data(3 downto 0);
+Disp8 <= tx_data(7 downto 4);
 
 --LED (15) <= clk_state;
 --LED (14) <= spi_clk;
@@ -254,6 +287,21 @@ divider_map: Divider
                CLK_OUT_AN => clk_an,
                CLK_OUT_STATE => clk_state
                );
+--maps the driver 
+Seven_seg_map: Seven_seg_driver
+    port map ( CLK_AN => clk_an,
+               Disp1 => Disp1,
+               Disp2 => Disp2,
+               Disp3 => Disp3,
+               Disp4 => Disp4,
+               Disp5 => Disp5,
+               Disp6 => Disp6,
+               Disp7 => Disp7,
+               Disp8 => Disp8,
+    --               FLAG_an => flag_an,
+               Display_out => SEG,
+               AN_out => AN
+              ); 
 ----------------------------------------------------------------------------maps the spi
 SPI_TX_map: SPI_TX
     port map ( CLK_STATE => clk_state,
@@ -278,8 +326,8 @@ SPI_state_clk_map:  SPI_state_clk
                );
 ---------------------------------------------------------------------------              
 Config_map: Config_fsm
-    port map ( --LED => LED (5 downto 3),
-                FSM_CLOCK => clk_state,--gives the FSM speed clock to configuration FSM
+    port map ( Disp2 => Disp2,
+               FSM_CLOCK => clk_state,--gives the FSM speed clock to configuration FSM
                CONFIG_EN => configure_accel,--starts the configuration FSM steps
                ADDR_DONE => addr_done, --from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
                CONFIG_DONE => config_done,--Tells controlling FSM/module that the configuration of the accel is done
@@ -291,7 +339,7 @@ Config_map: Config_fsm
 
 ADXL_com_map: ADXL362_com_fsm
     port map ( --in
-               LED => LED (11 downto 8),
+               Disp3 => Disp3,
                FSM_CLOCK => clk_state,
                CMD => adxl_cmd,--COMMAND TO WRITE OR READ
                ADDR => adxl_addr,--ADDRESS OF DATA TO SEND
@@ -370,24 +418,20 @@ begin
         when st1_wait =>
             configure_accel <= '0';
             read_accel <= '0';
---            LED (0) <= '1';
---            LED (1) <= '0';
---            LED (2) <= '0';
+            
+            Disp1 <= x"0";
 
         when st2_configure =>
             configure_accel <= '1';
             read_accel <= '0';
---            LED (0) <= '0';
---            LED (1) <= '1';
---            LED (2) <= '0';
+            
+            Disp1 <= x"1";
 
         when st3_read  =>
             configure_accel <= '0';
             read_accel <= '1';
---            LED (0) <= '0';
---            LED (1) <= '0';
---            LED (2) <= '1';
             
+            Disp1 <= x"2";
 
         when others => null;
     end case;

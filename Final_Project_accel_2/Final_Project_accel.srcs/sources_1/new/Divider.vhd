@@ -54,7 +54,7 @@ signal clk_out1Hz : STD_LOGIC := '0';
 signal counter16Hz : STD_LOGIC_VECTOR (23 DOWNTO 0) := x"000000";
 signal clk_out16Hz : STD_LOGIC := '0';
 --50Hz counter signals
-signal counter50Hz : STD_LOGIC_VECTOR (23 DOWNTO 0) := x"000000";
+signal counter50Hz : STD_LOGIC_VECTOR (12 DOWNTO 0) := "0000000000000";
 signal clk_out50Hz : STD_LOGIC := '0';
 --400Hz counter signals
 signal counter400Hz : STD_LOGIC_VECTOR (15 DOWNTO 0) := x"0000";
@@ -109,16 +109,30 @@ counter400: process(CLK_IN)
         end if;
 end process counter400;
 
+----50Hz clock
+--counter50: process(CLK_IN)
+--    begin
+--        if (rising_edge(CLK_IN)) then
+--            counter50Hz <= counter50Hz +1;
+--            if counter50Hz = x"0F4240" then--"0111101000010"
+--                clk_out50Hz <= '1';
+--            elsif counter50Hz = x"1E8480" then--"1111010000100"
+--                clk_out50Hz <= '0';
+--                counter50Hz <= x"000000";
+--            end if;
+--        end if;
+--end process counter50;
+
 --50Hz clock
 counter50: process(CLK_IN)
     begin
         if (rising_edge(CLK_IN)) then
             counter50Hz <= counter50Hz +1;
-            if counter50Hz = x"0F4240" then--"0111101000010"
+            if counter50Hz = "0111101000010" then
                 clk_out50Hz <= '1';
-            elsif counter50Hz = x"1E8480" then--"1111010000100"
+            elsif counter50Hz = "1111010000100" then
                 clk_out50Hz <= '0';
-                counter50Hz <= x"000000";
+                counter50Hz <= "0000000000000";
             end if;
         end if;
 end process counter50;
@@ -160,6 +174,7 @@ CLK_OUT_400Hz <= clk_out400Hz;--SPI bus clock
 CLK_OUT_100KHz <= clk_out100KHz;--SPI bus clock
 CLK_OUT_200KHz <= clk_out200KHz;--SPI bus clock
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
-CLK_OUT_STATE <= CLK_IN; --Counter to change a state machine
+--CLK_OUT_STATE <= CLK_IN; --Counter to change a state machine
+CLK_OUT_STATE <= clk_out1Hz; --Counter to change a state machine
 
 end Behavioral;

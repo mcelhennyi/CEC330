@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ADXL362_com_fsm is
-    Port ( LED : out STD_LOGIC_VECTOR(3 downto 0);
+    Port ( Disp3 : out STD_LOGIC_VECTOR(3 downto 0);
            FSM_CLOCK : in STD_LOGIC; --State machine clock
            CMD : in STD_LOGIC_VECTOR (7 downto 0);--COMMAND TO WRITE OR READ
            ADDR : in STD_LOGIC_VECTOR (7 downto 0);--ADDRESS OF DATA TO SEND
@@ -87,10 +87,7 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             
-            LED (0) <= '1';
-            LED (1) <= '0';
-            LED (2) <= '0';
-            LED (3) <= '0';
+            Disp3 <= x"0";
         
         when st2_prep_cmd  =>
             --state variables
@@ -101,10 +98,7 @@ begin
             --prep stage
             TX_DATA <= CMD;
             
-            LED (0) <= '0';
-            LED (1) <= '1';
-            LED (2) <= '0';
-            LED (3) <= '0';
+            Disp3 <= x"1";
         
         when st2_load_cmd =>
             --state variables
@@ -113,10 +107,7 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
             
-            LED (0) <= '1';
-            LED (1) <= '1';
-            LED (2) <= '0';
-            LED (3) <= '0';
+            Disp3 <= x"2";
         
         when st2_send_cmd => 
             --state variables            
@@ -125,10 +116,7 @@ begin
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
             
-            LED (0) <= '0';
-            LED (1) <= '0';
-            LED (2) <= '1';
-            LED (3) <= '0';
+            Disp3 <= x"3";
        
         when st3_prep_addr  =>
             --state variables            
@@ -139,10 +127,7 @@ begin
             --prep stage
             TX_DATA <= ADDR;
             
-            LED (0) <= '1';
-            LED (1) <= '0';
-            LED (2) <= '1';
-            LED (3) <= '0';
+            Disp3 <= x"4";
             
         when st3_load_addr =>
             --state variables
@@ -151,11 +136,7 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
             
-            LED (0) <= '0';
-            LED (1) <= '1';
-            LED (2) <= '1';
-            LED (3) <= '0';
-        
+            Disp3 <= x"5";
         
         when st3_send_addr => 
             --state variables            
@@ -164,10 +145,7 @@ begin
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
             
-            LED (0) <= '1';
-            LED (1) <= '1';
-            LED (2) <= '1';
-            LED (3) <= '0';
+            Disp3 <= x"6";
     
         when st4_prep_data  =>
             --state variables            
@@ -178,10 +156,7 @@ begin
             --prep stage
             TX_DATA <= DATA;
             
-            LED (0) <= '0';
-            LED (1) <= '0';
-            LED (2) <= '0';
-            LED (3) <= '1';
+            Disp3 <= x"7";
 
         when st4_load_data =>
             --state variables
@@ -190,10 +165,7 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
             
-            LED (0) <= '1';
-            LED (1) <= '0';
-            LED (2) <= '0';
-            LED (3) <= '1';
+            Disp3 <= x"8";
 
         when st4_send_data => 
             --state variables            
@@ -202,10 +174,7 @@ begin
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
             
-            LED (0) <= '0';
-            LED (1) <= '1';
-            LED (2) <= '0';
-            LED (3) <= '1';
+            Disp3 <= x"9";
            
         when st5_buffer => --gives the system an additional clock cycle to settle before going back to wait state
             --state variables            
@@ -214,10 +183,7 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             
-            LED (0) <= '1';
-            LED (1) <= '1';
-            LED (2) <= '0';
-            LED (3) <= '1';
+            Disp3 <= x"A";
             
         when st6_tx_done =>
             --state variables            
@@ -226,10 +192,7 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0'; 
             
-            LED (0) <= '0';
-            LED (1) <= '0';
-            LED (2) <= '1';
-            LED (3) <= '1';  
+            Disp3 <= x"B";  
                    
         when others => null;
     end case;
