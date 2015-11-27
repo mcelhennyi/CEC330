@@ -88,6 +88,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '0';
+            --place holder
+            TX_CMD <= x"00";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00"; 
             
             Disp2 <= x"0";
         
@@ -107,6 +111,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"20";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"2";
             
@@ -125,6 +133,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"21";        
+            TX_DATA <= "00000000";
             
             Disp2 <= x"4";
 
@@ -143,6 +155,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"22";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"6";
 
@@ -161,6 +177,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"23";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"8";
 
@@ -179,6 +199,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"24";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"A";
             
@@ -197,6 +221,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"25";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"C";
                     
@@ -215,6 +243,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"26";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"E";
         
@@ -233,6 +265,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"27";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"E";
         
@@ -252,6 +288,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"28";
+            TX_DATA <= "00001110";
             
             Disp2 <= x"C";
         
@@ -271,6 +311,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"29";
+            TX_DATA <= "00001000";
             
             Disp2 <= x"A";
         
@@ -290,6 +334,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"2A";
+            TX_DATA <= "00000001";--this was 00000000
             
             Disp2 <= x"8";
         
@@ -301,7 +349,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2B";
-            TX_DATA <= "00000000";
+            TX_DATA <= "00000010";--this was 00000000
             
             Disp2 <= x"7";
                                         
@@ -309,6 +357,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"2B";
+            TX_DATA <= "00000000";
             
             Disp2 <= x"6";
         
@@ -333,6 +385,10 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"2C";
+            TX_DATA <= "01000100";
             
             Disp2 <= x"4";
         
@@ -358,20 +414,32 @@ begin
             --state variables            
             CONFIG_DONE <= '0';
             START <= '1';
+            --data
+            TX_CMD <= x"0A";
+            TX_ADDR <= x"2D";
+            TX_DATA <= "00100010";
             
             Disp2 <= x"2";
             
         when st16_buffer =>
             --state variables            
             CONFIG_DONE <= '0';
-            START <= '0';       
+            START <= '0';    
+            --place holder
+            TX_CMD <= x"00";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";   
             
             Disp2 <= x"1";
              
         when st17_config_done =>
             --state variables            
-            CONFIG_DONE <= '0';
-            START <= '0';       
+            CONFIG_DONE <= '1';
+            START <= '0';
+            --place holder
+            TX_CMD <= x"00";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";   
             
             Disp2 <= x"2";
 

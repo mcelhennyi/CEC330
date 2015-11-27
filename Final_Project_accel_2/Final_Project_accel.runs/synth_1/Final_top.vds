@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Wed Nov 25 21:33:30 2015
-# Process ID: 6256
+# Start of session at: Fri Nov 27 18:21:19 2015
+# Process ID: 8824
 # Log file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.runs/synth_1/Final_top.vds
 # Journal file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,77 +13,66 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 245.711 ; gain = 68.574
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 245.789 ; gain = 68.754
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Final_top' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:49]
-INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:279]
-INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:48]
-INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
+INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:50]
+INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
 INFO: [Synth 8-638] synthesizing module 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'Seven_seg_driver' (2#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:52]
-INFO: [Synth 8-3491] module 'SPI_TX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:306]
-INFO: [Synth 8-638] synthesizing module 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:45]
-WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'SPI_TX' (3#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:45]
-INFO: [Synth 8-3491] module 'SPI_RX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:314]
-INFO: [Synth 8-638] synthesizing module 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (4#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:45]
-INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:321]
+INFO: [Synth 8-3491] module 'SPI_TX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:333]
+INFO: [Synth 8-638] synthesizing module 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:48]
+WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'SPI_TX' (3#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:48]
+INFO: [Synth 8-3491] module 'SPI_RX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:344]
+INFO: [Synth 8-638] synthesizing module 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (4#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:48]
+INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:354]
 INFO: [Synth 8-638] synthesizing module 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
 WARNING: [Synth 8-614] signal 'CLK_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:156]
 INFO: [Synth 8-256] done synthesizing module 'SPI_state_clk' (5#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
-INFO: [Synth 8-3491] module 'Config_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:34' bound to instance 'Config_map' of component 'Config_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:328]
+INFO: [Synth 8-3491] module 'Config_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:34' bound to instance 'Config_map' of component 'Config_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:361]
 INFO: [Synth 8-638] synthesizing module 'Config_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
-WARNING: [Synth 8-614] signal 'CONFIG_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:383]
-WARNING: [Synth 8-614] signal 'ADDR_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:383]
+WARNING: [Synth 8-614] signal 'CONFIG_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:451]
+WARNING: [Synth 8-614] signal 'ADDR_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:451]
 INFO: [Synth 8-256] done synthesizing module 'Config_fsm' (6#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
-INFO: [Synth 8-3491] module 'ADXL362_com_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:34' bound to instance 'ADXL_com_map' of component 'ADXL362_com_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:340]
+INFO: [Synth 8-3491] module 'ADXL362_com_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:34' bound to instance 'ADXL_com_map' of component 'ADXL362_com_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:373]
 INFO: [Synth 8-638] synthesizing module 'ADXL362_com_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:49]
 WARNING: [Synth 8-614] signal 'CMD' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
 WARNING: [Synth 8-614] signal 'ADDR' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
 WARNING: [Synth 8-614] signal 'DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
-WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:202]
-WARNING: [Synth 8-614] signal 'TX_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:202]
+WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:238]
+WARNING: [Synth 8-614] signal 'TX_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:238]
 INFO: [Synth 8-256] done synthesizing module 'ADXL362_com_fsm' (7#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:49]
-INFO: [Synth 8-3491] module 'Read_accel_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:34' bound to instance 'Read_fsm_map' of component 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:357]
-INFO: [Synth 8-638] synthesizing module 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:50]
-WARNING: [Synth 8-614] signal 'RX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:90]
-INFO: [Synth 8-256] done synthesizing module 'Read_accel_fsm' (8#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:50]
-INFO: [Synth 8-3491] module 'Angle_accel' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:39' bound to instance 'Angle_map' of component 'Angle_accel' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:372]
+INFO: [Synth 8-3491] module 'Read_accel_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:34' bound to instance 'Read_fsm_map' of component 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:390]
+INFO: [Synth 8-638] synthesizing module 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:52]
+WARNING: [Synth 8-614] signal 'RX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'Read_accel_fsm' (8#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:52]
+INFO: [Synth 8-3491] module 'Angle_accel' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:39' bound to instance 'Angle_map' of component 'Angle_accel' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:407]
 INFO: [Synth 8-638] synthesizing module 'Angle_accel' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:54]
 WARNING: [Synth 8-3848] Net TEMP_AVG in module/entity Angle_accel does not have driver. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'Angle_accel' (9#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:54]
-WARNING: [Synth 8-614] signal 'read_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'configure_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'config_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'config_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'config_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'config_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'read_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'read_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'read_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
-WARNING: [Synth 8-614] signal 'read_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:389]
+WARNING: [Synth 8-614] signal 'read_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'configure_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'config_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'config_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'config_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'config_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'Disp5' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'Disp6' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'config_LED' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'read_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'read_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'read_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'read_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
+WARNING: [Synth 8-614] signal 'read_LED' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
 WARNING: [Synth 8-3848] Net Disp5 in module/entity Final_top does not have driver. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:58]
 WARNING: [Synth 8-3848] Net Disp6 in module/entity Final_top does not have driver. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:59]
 INFO: [Synth 8-256] done synthesizing module 'Final_top' (10#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:49]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[12]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[11]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[10]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[9]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[8]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[7]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[6]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[5]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[4]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[3]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[2]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[1]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[0]
-WARNING: [Synth 8-3917] design Final_top has port ACL_INT[2] driven by constant 0
-WARNING: [Synth 8-3917] design Final_top has port ACL_INT[1] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.961 ; gain = 103.824
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 281.055 ; gain = 104.020
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -92,17 +81,17 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[3] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[2] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[1] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[0] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[3] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[2] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[1] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[0] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:291]
-WARNING: [Synth 8-3295] tying undriven pin SPI_RX_map:LOAD_ENABLE to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:314]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[3] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[2] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[1] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[0] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[3] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[2] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[1] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[0] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
+WARNING: [Synth 8-3295] tying undriven pin SPI_RX_map:LOAD_ENABLE to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:344]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 280.961 ; gain = 103.824
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 281.055 ; gain = 104.020
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -116,16 +105,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 582.773 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 583.809 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -611,7 +600,7 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'SPI_state_clk'
 INFO: [Synth 8-5546] ROM "SPI_CLK" won't be mapped to RAM because it is too sparse
@@ -620,20 +609,11 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Confi
 INFO: [Synth 8-5546] ROM "CONFIG_DONE" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ADXL362_com_fsm'
 INFO: [Synth 8-5544] ROM "CS" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "TX_DATA" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-3936] Found unconnected internal register 'temperature_value_reg' and it is trimmed from '16' to '12' bits. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:77]
-WARNING: [Synth 8-3936] Found unconnected internal register 'z_value_reg' and it is trimmed from '16' to '12' bits. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:76]
-WARNING: [Synth 8-3936] Found unconnected internal register 'y_value_reg' and it is trimmed from '16' to '12' bits. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:75]
-WARNING: [Synth 8-3936] Found unconnected internal register 'x_value_reg' and it is trimmed from '16' to '12' bits. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:74]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Read_accel_fsm'
 INFO: [Synth 8-5544] ROM "START" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "TX_CMD" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "x_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "y_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "z_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "temperature_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3936] Found unconnected internal register 'y_average_reg' and it is trimmed from '12' to '8' bits. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:81]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Final_top'
 INFO: [Synth 8-5544] ROM "configure_accel" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:81]
@@ -661,7 +641,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [C:/Users/Aust
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'SPI_state_clk'
 WARNING: [Synth 8-327] inferring latch for variable 'SPI_CLK_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:80]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:96]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -699,11 +679,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [C:/Users/Austin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Config_fsm'
 WARNING: [Synth 8-327] inferring latch for variable 'CONFIG_DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:89]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:102]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:101]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:94]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:93]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:92]
 WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:90]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp3_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:90]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp3_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:92]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -724,9 +704,9 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-327] inferring latch for variable 'DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:86]
 WARNING: [Synth 8-327] inferring latch for variable 'TX_ENABLE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:87]
 WARNING: [Synth 8-327] inferring latch for variable 'LOAD_ENABLE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:88]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:90]
 WARNING: [Synth 8-327] inferring latch for variable 'CS_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp4_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:109]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -745,13 +725,16 @@ WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Aust
            st5_read_temp |                             1100 |                             1100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Read_accel_fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:100]
-WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:94]
-WARNING: [Synth 8-327] inferring latch for variable 'x_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:74]
-WARNING: [Synth 8-327] inferring latch for variable 'y_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:75]
-WARNING: [Synth 8-327] inferring latch for variable 'z_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:76]
-WARNING: [Synth 8-327] inferring latch for variable 'temperature_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:77]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp1_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:293]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:96]
+WARNING: [Synth 8-327] inferring latch for variable 'SAVE_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:102]
+WARNING: [Synth 8-327] inferring latch for variable 'x_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:76]
+WARNING: [Synth 8-327] inferring latch for variable 'y_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'z_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:78]
+WARNING: [Synth 8-327] inferring latch for variable 'temperature_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:79]
+WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:279]
+WARNING: [Synth 8-327] inferring latch for variable 'read_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:464]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -762,14 +745,14 @@ WARNING: [Synth 8-327] inferring latch for variable 'Disp1_reg' [C:/Users/Austin
 *
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Final_top'
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_cmd_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:344]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_addr_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:345]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_data_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:346]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_start_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:347]
-WARNING: [Synth 8-327] inferring latch for variable 'configure_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:419]
-WARNING: [Synth 8-327] inferring latch for variable 'read_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:420]
+WARNING: [Synth 8-327] inferring latch for variable 'configure_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:463]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp1_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:320]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_cmd_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_addr_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:378]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_data_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:379]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_start_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:380]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -782,28 +765,34 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
 +---Muxes : 
+	  13 Input     16 Bit        Muxes := 4     
 	  16 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 5     
-	  31 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 8     
+	  31 Input      8 Bit        Muxes := 3     
 	  12 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
 	  18 Input      5 Bit        Muxes := 1     
 	  31 Input      5 Bit        Muxes := 1     
 	  31 Input      4 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 2     
-	  13 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 2     
 	   5 Input      2 Bit        Muxes := 1     
 	  18 Input      1 Bit        Muxes := 4     
 	  31 Input      1 Bit        Muxes := 4     
-	  12 Input      1 Bit        Muxes := 7     
-	  13 Input      1 Bit        Muxes := 8     
+	  12 Input      1 Bit        Muxes := 6     
+	  13 Input      1 Bit        Muxes := 4     
 	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
@@ -816,14 +805,17 @@ Hierarchical RTL Component report
 Module Final_top 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 6     
 	   5 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
 Module Divider 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	                1 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
 Module Seven_seg_driver 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -851,7 +843,7 @@ Detailed RTL Component Info :
 Module Config_fsm 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  31 Input      8 Bit        Muxes := 2     
+	  31 Input      8 Bit        Muxes := 3     
 	  31 Input      5 Bit        Muxes := 1     
 	  31 Input      4 Bit        Muxes := 1     
 	  31 Input      1 Bit        Muxes := 4     
@@ -860,12 +852,21 @@ Detailed RTL Component Info :
 +---Muxes : 
 	  12 Input      8 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 2     
-	  12 Input      1 Bit        Muxes := 7     
+	  12 Input      1 Bit        Muxes := 6     
 Module Read_accel_fsm 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  13 Input      4 Bit        Muxes := 1     
-	  13 Input      1 Bit        Muxes := 8     
+	  13 Input     16 Bit        Muxes := 4     
+	  13 Input      8 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 4     
+Module Angle_accel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -878,33 +879,18 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 582.773 ; gain = 405.637
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[12]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[11]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[10]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[9]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[8]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[7]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[6]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[5]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[4]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[3]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[2]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[1]
-WARNING: [Synth 8-3331] design Final_top has unconnected port LED[0]
 WARNING: [Synth 8-3917] design Final_top has port SEG[7] driven by constant 1
-WARNING: [Synth 8-3917] design Final_top has port AN[5] driven by constant 1
-WARNING: [Synth 8-3917] design Final_top has port AN[4] driven by constant 1
-WARNING: [Synth 8-3917] design Final_top has port AN[3] driven by constant 1
-WARNING: [Synth 8-3917] design Final_top has port ACL_INT[2] driven by constant 0
-WARNING: [Synth 8-3917] design Final_top has port ACL_INT[1] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -919,29 +905,19 @@ ROM:
 +------------+------------+---------------+----------------+
 |Module Name | RTL Object | Depth x Width | Implemented As | 
 +------------+------------+---------------+----------------+
-|Final_top   | rom        | 32x8          | LUT            | 
-|Final_top   | rom__1     | 32x8          | LUT            | 
+|Final_top   | rom        | 32x6          | LUT            | 
 +------------+------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Config_map/CONFIG_DONE_reg )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Read_fsm_map/TX_CMD_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Config_map/TX_CMD_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Config_map/TX_CMD_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Read_fsm_map/TX_CMD_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Config_map/TX_CMD_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Read_fsm_map/TX_CMD_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Disp1_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\adxl_cmd_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\adxl_cmd_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ADXL_com_map/TX_DATA_reg[4] )
-WARNING: [Synth 8-3332] Sequential element (\Config_map/CONFIG_DONE_reg ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[2] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_DATA_reg[7] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[7] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[6] ) is unused and will be removed from module Final_top.
@@ -950,11 +926,16 @@ WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[4] ) is unus
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[4] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_ADDR_reg[6] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[2] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Config_map/TX_CMD_reg[0] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[7] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\ADXL_com_map/TX_DATA_reg[4] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[2] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[15] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[14] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[13] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[12] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[11] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[10] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[9] ) is unused and will be removed from module Final_top.
@@ -967,18 +948,18 @@ WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[3] ) is un
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[2] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/x_value_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[15] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[14] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[13] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[12] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[11] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[10] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[9] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[8] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/y_value_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[15] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[14] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[13] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[12] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[11] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[10] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[9] ) is unused and will be removed from module Final_top.
@@ -991,6 +972,10 @@ WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[3] ) is un
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[2] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/z_value_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[15] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[14] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[13] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[12] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[11] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[10] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[9] ) is unused and will be removed from module Final_top.
@@ -1004,11 +989,6 @@ WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/temperature_value_reg[0] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[1] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[7] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[6] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[4] ) is unused and will be removed from module Final_top.
@@ -1016,41 +996,42 @@ WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[4] ) is unu
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[6] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[5] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_CMD_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[3] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[2] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\Read_fsm_map/TX_ADDR_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (read_accel_reg) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (configure_accel_reg) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Disp1_reg[3] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\Disp1_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[3] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\adxl_cmd_reg[0] ) is unused and will be removed from module Final_top.
 WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\adxl_data_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (configure_accel_reg) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (read_accel_reg) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[0] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[1] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[2] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[3] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[4] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[5] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[6] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[7] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[8] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[9] ) is unused and will be removed from module Final_top.
-WARNING: [Synth 8-3332] Sequential element (\divider_map/counter16Hz_reg[10] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[0] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[1] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[2] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[3] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[4] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[5] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[6] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[7] ) is unused and will be removed from module Final_top.
+WARNING: [Synth 8-3332] Sequential element (\divider_map/counter1Hz_reg[8] ) is unused and will be removed from module Final_top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SPI_TX_map/serial_register_reg[0]_P )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1538,10 +1519,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1553,7 +1534,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1571,7 +1552,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1584,7 +1565,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1596,13 +1577,27 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 582.773 ; gain = 405.637
+Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Final_top   | SPI_RX_map/accel_register_reg[8] | 9      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1619,56 +1614,59 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    11|
-|3     |LUT1   |    41|
+|2     |CARRY4 |     4|
+|3     |LUT1   |    15|
 |4     |LUT2   |    22|
-|5     |LUT3   |    31|
-|6     |LUT4   |    41|
-|7     |LUT5   |    37|
-|8     |LUT6   |    24|
-|9     |MUXF7  |     2|
-|10    |FDCE   |     8|
-|11    |FDPE   |     5|
-|12    |FDRE   |    65|
-|13    |LD     |    47|
-|14    |LDC    |     6|
-|15    |IBUF   |     3|
-|16    |OBUF   |    24|
-|17    |OBUFT  |    13|
+|5     |LUT3   |    37|
+|6     |LUT4   |    49|
+|7     |LUT5   |    49|
+|8     |LUT6   |    28|
+|9     |MUXF7  |     7|
+|10    |SRL16E |     1|
+|11    |FDCE   |     8|
+|12    |FDPE   |     5|
+|13    |FDRE   |    55|
+|14    |LD     |    74|
+|15    |LDC    |     6|
+|16    |IBUF   |     5|
+|17    |OBUF   |    32|
+|18    |OBUFT  |     3|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+-----------------+------+
 |      |Instance            |Module           |Cells |
 +------+--------------------+-----------------+------+
-|1     |top                 |                 |   381|
-|2     |  ADXL_com_map      |ADXL362_com_fsm  |    77|
-|3     |  Config_map        |Config_fsm       |    62|
-|4     |  Read_fsm_map      |Read_accel_fsm   |    12|
-|5     |  SPI_TX_map        |SPI_TX           |    25|
-|6     |  SPI_state_clk_map |SPI_state_clk    |    16|
-|7     |  Seven_seg_map     |Seven_seg_driver |    16|
-|8     |  divider_map       |Divider          |   109|
+|1     |top                 |                 |   401|
+|2     |  ADXL_com_map      |ADXL362_com_fsm  |    88|
+|3     |  Angle_map         |Angle_accel      |    13|
+|4     |  Config_map        |Config_fsm       |    71|
+|5     |  Read_fsm_map      |Read_accel_fsm   |    49|
+|6     |  SPI_RX_map        |SPI_RX           |     9|
+|7     |  SPI_TX_map        |SPI_TX           |    33|
+|8     |  SPI_state_clk_map |SPI_state_clk    |    16|
+|9     |  Seven_seg_map     |Seven_seg_driver |    14|
+|10    |  divider_map       |Divider          |    38|
 +------+--------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 582.773 ; gain = 405.637
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 215 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 582.773 ; gain = 88.266
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 582.773 ; gain = 405.637
+Synthesis finished with 0 errors, 0 critical warnings and 217 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 583.809 ; gain = 89.273
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 53 instances were transformed.
-  LD => LDCE: 47 instances
+  A total of 80 instances were transformed.
+  LD => LDCE: 74 instances
   LDC => LDCE: 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-74 Infos, 198 Warnings, 0 Critical Warnings and 0 Errors encountered.
+64 Infos, 172 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 582.773 ; gain = 391.348
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 582.773 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 25 21:33:57 2015...
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 392.301
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 583.809 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 18:21:45 2015...

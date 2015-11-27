@@ -87,6 +87,8 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             
+            TX_DATA <= x"00";
+            
             Disp3 <= x"0";
         
         when st2_prep_cmd  =>
@@ -96,7 +98,9 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             --prep stage
-            TX_DATA <= CMD;
+            TX_DATA <= CMD;--commented out for testing
+            
+            --TX_DATA <= x"ab";---------------------------------------------------------------------------------
             
             Disp3 <= x"1";
         
@@ -107,6 +111,10 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
             
+            TX_DATA <= CMD;
+            
+--            TX_DATA <= x"ab";---------------------------------------------------------------------------------
+            
             Disp3 <= x"2";
         
         when st2_send_cmd => 
@@ -115,6 +123,10 @@ begin
             DONE <= '0';
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
+            
+            TX_DATA <= CMD;
+            
+--            TX_DATA <= x"ab";---------------------------------------------------------------------------------
             
             Disp3 <= x"3";
        
@@ -127,6 +139,8 @@ begin
             --prep stage
             TX_DATA <= ADDR;
             
+--            TX_DATA <= x"cd";-------------------------------------------------------------------------------
+            
             Disp3 <= x"4";
             
         when st3_load_addr =>
@@ -136,6 +150,10 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
             
+            TX_DATA <= ADDR;
+            
+--            TX_DATA <= x"cd";-------------------------------------------------------------------------------
+            
             Disp3 <= x"5";
         
         when st3_send_addr => 
@@ -144,6 +162,10 @@ begin
             DONE <= '0';
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
+            
+            TX_DATA <= ADDR;
+            
+--            TX_DATA <= x"cd";-------------------------------------------------------------------------------
             
             Disp3 <= x"6";
     
@@ -156,6 +178,8 @@ begin
             --prep stage
             TX_DATA <= DATA;
             
+--            TX_DATA <= x"ef";--------------------------------------------------------------------------------
+            
             Disp3 <= x"7";
 
         when st4_load_data =>
@@ -164,6 +188,10 @@ begin
             DONE <= '0';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '1';
+            
+            TX_DATA <= DATA;
+            
+--            TX_DATA <= x"ef";--------------------------------------------------------------------------------
             
             Disp3 <= x"8";
 
@@ -174,6 +202,10 @@ begin
             TX_ENABLE <= '1';
             LOAD_ENABLE <= '0';
             
+            TX_DATA <= DATA;
+            
+--            TX_DATA <= x"ef";--------------------------------------------------------------------------------
+            
             Disp3 <= x"9";
            
         when st5_buffer => --gives the system an additional clock cycle to settle before going back to wait state
@@ -183,6 +215,8 @@ begin
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0';
             
+            TX_DATA <= x"00";
+            
             Disp3 <= x"A";
             
         when st6_tx_done =>
@@ -191,6 +225,8 @@ begin
             DONE <= '1';
             TX_ENABLE <= '0';
             LOAD_ENABLE <= '0'; 
+            
+            TX_DATA <= x"00";
             
             Disp3 <= x"B";  
                    

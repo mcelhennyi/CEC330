@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Read_accel_fsm is
-    Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
+    Port ( Disp4 : out STD_LOGIC_VECTOR(3 downto 0);
+           FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            READ_EN : in STD_LOGIC;--starts the read FSM steps
            RX_DATA : in STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
@@ -40,6 +41,7 @@ entity Read_accel_fsm is
            TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
            TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
            START : out STD_LOGIC;--starts the reading for 8 bits of data
+           SAVE_DATA : out STD_LOGIC;--gives the angle modul a clock puls to function off of
            X_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
            Y_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
            Z_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
@@ -92,6 +94,19 @@ begin
     case state is
         when st1_wait =>
             START <= '0';
+            --place holder
+            TX_CMD <= x"00";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '0';
+            
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"0";
            
         ---------------------------------------------------------------
         when st2_prep  =>
@@ -101,12 +116,46 @@ begin
             TX_ADDR <= x"00";
             TX_DATA <= x"00";
             
+            SAVE_DATA <= '0';
+            
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"1";
+            
         when st2_start =>
             START <= '1';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '0';
+            --place holders
+            x_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"2";
             
         when st2_read_x =>
             START <= '0';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '1';
             x_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            --place holders
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"3";
        
         ---------------------------------------------------------------
         when st3_prep  =>
@@ -115,13 +164,47 @@ begin
             TX_CMD <= x"0D";
             TX_ADDR <= x"00";
             TX_DATA <= x"00";
+            
+            SAVE_DATA <= '0';
+            --place holders
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"4";
                     
         when st3_start =>
             START <= '1';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '0';
+            --place holders
+            x_value <= x"0000";
+            y_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"5";
         
         when st3_read_y =>
             START <= '0';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+                            
+            SAVE_DATA <= '1';
             y_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            --place holders
+            x_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"6";
             
         ---------------------------------------------------------------
         when st4_prep  =>
@@ -131,12 +214,46 @@ begin
             TX_ADDR <= x"00";
             TX_DATA <= x"00";
             
+            SAVE_DATA <= '0';
+            --place holders
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"7";
+            
         when st4_start =>
             START <= '1';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '0';
+            --place holders
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"8";
         
         when st4_read_z =>
             START <= '0';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '1';
             z_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            --place holders
+            x_value <= x"0000";
+            y_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"9";
             
         ---------------------------------------------------------------
         when st5_prep  =>
@@ -145,13 +262,47 @@ begin
             TX_CMD <= x"0D";
             TX_ADDR <= x"00";
             TX_DATA <= x"00";
+            
+            SAVE_DATA <= '0';
+            --place holders
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= x"0000";
+            
+            Disp4 <= x"A";
                     
         when st5_start =>
             START <= '1';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '0';
+            --place holders
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= x"0000";
+            temperature_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            
+            Disp4 <= x"B";
         
         when st5_read_temp =>
             START <= '0';
+            --data
+            TX_CMD <= x"0D";
+            TX_ADDR <= x"00";
+            TX_DATA <= x"00";
+            
+            SAVE_DATA <= '1';
             temperature_value <= RX_DATA(7 downto 0) & RX_DATA(15 downto 8);
+            --place holders
+            x_value <= x"0000";
+            y_value <= x"0000";
+            z_value <= x"0000";
+            
+            Disp4 <= x"C";
 
         when others => null;
     end case;

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Wed Nov 25 21:34:58 2015
+| Date             : Fri Nov 27 18:22:47 2015
 | Host             : Austin-MBP running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : Final_top
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 14.766 (Junction temp exceeded!) |
-| Dynamic (W)              | 14.436                           |
-| Device Static (W)        | 0.330                            |
+| Total On-Chip Power (W)  | 17.551 (Junction temp exceeded!) |
+| Dynamic (W)              | 17.085                           |
+| Device Static (W)        | 0.465                            |
 | Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 17.6                             |
-| Junction Temperature (C) | 92.4                             |
+| Max Ambient (C)          | 4.9                              |
+| Junction Temperature (C) | 105.1                            |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -46,21 +46,22 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.645 |      325 |       --- |             --- |
-|   LUT as Logic |     0.588 |      133 |     63400 |            0.21 |
-|   Register     |     0.029 |      131 |    126800 |            0.10 |
-|   CARRY4       |     0.023 |       11 |     15850 |            0.07 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |        2 |     63400 |           <0.01 |
-|   Others       |     0.000 |       22 |       --- |             --- |
-| Signals        |     0.803 |      263 |       --- |             --- |
-| I/O            |    12.987 |       27 |       210 |           12.86 |
-| Static Power   |     0.330 |          |           |                 |
-| Total          |    14.766 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |     0.699 |      375 |       --- |             --- |
+|   LUT as Logic          |     0.656 |      155 |     63400 |            0.24 |
+|   Register              |     0.026 |      148 |    126800 |            0.12 |
+|   CARRY4                |     0.009 |        4 |     15850 |            0.03 |
+|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
+|   LUT as Shift Register |     0.002 |        1 |     19000 |           <0.01 |
+|   F7/F8 Muxes           |    <0.001 |        7 |     63400 |            0.01 |
+|   Others                |     0.000 |       26 |       --- |             --- |
+| Signals                 |     0.829 |      285 |       --- |             --- |
+| I/O                     |    15.558 |       37 |       210 |           17.62 |
+| Static Power            |     0.465 |          |           |                 |
+| Total                   |    17.551 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -69,16 +70,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.660 |       1.460 |      0.199 |
-| Vccaux    |       1.800 |     0.518 |       0.475 |      0.042 |
-| Vcco33    |       3.300 |     3.676 |       3.672 |      0.004 |
+| Vccint    |       1.000 |     1.853 |       1.548 |      0.305 |
+| Vccaux    |       1.800 |     0.626 |       0.569 |      0.057 |
+| Vcco33    |       3.300 |     4.402 |       4.398 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.005 |       0.000 |      0.005 |
+| Vccbram   |       1.000 |     0.009 |       0.000 |      0.009 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -136,14 +137,16 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| Final_top           |    14.436 |
-|   ADXL_com_map      |     0.285 |
-|   Config_map        |     0.275 |
-|   Read_fsm_map      |     0.081 |
-|   SPI_TX_map        |     0.004 |
-|   SPI_state_clk_map |     0.116 |
-|   Seven_seg_map     |     0.449 |
-|   divider_map       |     0.203 |
+| Final_top           |    17.085 |
+|   ADXL_com_map      |     0.254 |
+|   Angle_map         |     0.069 |
+|   Config_map        |     0.293 |
+|   Read_fsm_map      |     0.209 |
+|   SPI_RX_map        |     0.021 |
+|   SPI_TX_map        |     0.018 |
+|   SPI_state_clk_map |     0.103 |
+|   Seven_seg_map     |     0.420 |
+|   divider_map       |     0.083 |
 +---------------------+-----------+
 
 

@@ -37,8 +37,8 @@ use ieee.numeric_std.all;
 --use UNISIM.VComponents.all;
 
 entity Angle_accel is
-    Port ( CLK_IN : in STD_LOGIC;
---           LED : out STD_LOGIC_VECTOR (12 downto 0);
+    Port ( CLK_READ : in STD_LOGIC;
+           LED : out STD_LOGIC_VECTOR (7 downto 0);
            X_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Y_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Z_IN : in STD_LOGIC_VECTOR (11 downto 0);
@@ -54,6 +54,8 @@ end Angle_accel;
 architecture Behavioral of Angle_accel is
 
 signal counter : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
+signal counter_select : STD_LOGIC_VECTOR (1 downto 0) := "00";
+
 
 --variable x_in_int : integer := to_integer(unsigned(X_IN));
 
@@ -76,18 +78,38 @@ signal z_angle : STD_LOGIC_VECTOR (11 downto 0) := x"000";
 
 begin
 
---counter_process: process(CLK_IN)
+LED <= y_average(7 downto 0);
+
+input_select: process(CLK_READ)
+    begin
+        if (rising_edge(CLK_READ)) then
+            counter_select <= counter_select + 1;
+            
+            if counter_select = "00" then
+            
+            elsif counter_select = "01" then
+                y_average <= Y_IN;
+            
+            elsif counter_select = "10" then
+            
+            elsif counter_select = "11" then
+            
+            end if;
+        end if;
+    end process input_select;  
+
+--counter_process: process(CLK_READ)
 --    begin
---        if (rising_edge(CLK_IN)) then
+--        if (rising_edge(CLK_READ)) then
 --            --counter for takings samples
 --            --will reset itself after it gets to 127
 --            counter <= counter + 1;
 --        end if;
 --    end process counter_process;       
 
---average: process(CLK_IN)
+--average: process(CLK_READ)
 --    begin
---        if (rising_edge(CLK_IN)) then
+--        if (rising_edge(CLK_READ)) then
 --            --calculates the angle after about 125 samples
 --            if (counter = "1111111") then    
 ----                x_angle <= ASIN(x_average/gravity);----------------may need to do somthing different here
@@ -140,12 +162,10 @@ begin
 --            end if;
 --        end if;
 --    end process average;
-    
---LED <= "0" & Y_IN;
 
---LEDs: process(CLK_IN)
+--LEDs: process(CLK_READ)
 --    begin
---        if (rising_edge(CLK_IN)) then
+--        if (rising_edge(CLK_READ)) then
 --            if (y_negative = '0') then
                 --if ((y_angle >= 0) and (y_angle < 11.25)) then 
                 

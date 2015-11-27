@@ -60,9 +60,9 @@ architecture Behavioral of Seven_seg_driver is
    
 begin
 --These anodes are not used and are set to be off
-an(4) <= "11111111";
-an(5) <= "11111111";
-an(6) <= "11111111";
+--an(4) <= "11111111";
+--an(5) <= "11111111";
+--an(6) <= "11111111";
 
 --anodes are off if FLAG_an is 0, else they are on
 --anode_states: process(CLK_AN, FLAG_an)
@@ -110,10 +110,10 @@ WITH Display SELECT
                     "10110000" WHEN x"3", -- number 3 on seven seg display
                     "10011001" WHEN x"4", -- number 4 on seven seg display
                     "10010010" WHEN x"5", -- number 5 on seven seg display
-                    "10000011" WHEN x"6", -- number 6 on seven seg display
+                    "10000010" WHEN x"6", -- number 6 on seven seg display
                     "11111000" WHEN x"7", -- number 7 on seven seg display
                     "10000000" WHEN x"8", -- number 8 on seven seg display
-                    "10011000" WHEN x"9", -- number 9 on seven seg display   
+                    "10010000" WHEN x"9", -- number 9 on seven seg display   
                     "10001000" WHEN x"a", -- number A on seven seg display 
                     "10000011" WHEN x"b", -- number B on seven seg display 
                     "10100111" WHEN x"c", -- number C on seven seg display 

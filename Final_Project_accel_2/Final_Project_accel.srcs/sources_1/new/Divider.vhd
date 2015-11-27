@@ -40,8 +40,10 @@ entity Divider is
            CLK_OUT_400Hz :  out STD_LOGIC;
            CLK_OUT_100KHz : out STD_LOGIC;
            CLK_OUT_200KHz : out STD_LOGIC;
+           CLK_OUT_8MHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
-           CLK_OUT_STATE : out STD_LOGIC
+           CLK_OUT_STATE : out STD_LOGIC;
+           CLK_OUT_STATE_SPI : out STD_LOGIC
            );
 end Divider;
 
@@ -65,13 +67,30 @@ signal clk_out100KHz : STD_LOGIC := '0';
 --200KHz counter signals
 signal counter200KHz : STD_LOGIC_VECTOR (12 DOWNTO 0) := '0' & x"000";
 signal clk_out200KHz : STD_LOGIC := '0';
+--200KHz counter signals
+signal counter8MHz : STD_LOGIC_VECTOR (3 DOWNTO 0) := x"0";
+signal clk_out8MHz : STD_LOGIC := '0';
 
 begin
+--SPI bus 8MHz clock
+counter8M: process(CLK_IN)
+    begin
+        if (rising_edge(CLK_IN)) then
+            counter8MHz <= counter8MHz + 1;
+            if counter8MHz = x"6" then
+                clk_out8MHz <= '1';
+            elsif counter8MHz = x"C" then
+                clk_out8MHz <= '0';
+                counter8MHz <= x"0";
+            end if;
+        end if;
+end process counter8M;
+
 --SPI bus 200KHz clock
 counter200K: process(CLK_IN)
     begin
         if (rising_edge(CLK_IN)) then
-            counter200KHz <= counter200KHz +1;
+            counter200KHz <= counter200KHz + 1;
             if counter200KHz = '0' & x"0FA" then
                 clk_out200KHz <= '1';
             elsif counter200KHz = "0111110100" then
@@ -156,7 +175,7 @@ counter16: process(CLK_IN)
 counter1: process(CLK_IN)
         begin
             if (rising_edge(CLK_IN)) then
-                counter1Hz <= counter1Hz +1;
+                counter1Hz <= counter1Hz +2;
                 if counter1Hz = "010111110101111000010000000" then
                     clk_out1Hz <= '1';
                 elsif counter1Hz = "101111101011110000100000000" then
@@ -173,8 +192,10 @@ CLK_OUT_50Hz <= clk_out50Hz; --PWM refresh clock for LEDS
 CLK_OUT_400Hz <= clk_out400Hz;--SPI bus clock
 CLK_OUT_100KHz <= clk_out100KHz;--SPI bus clock
 CLK_OUT_200KHz <= clk_out200KHz;--SPI bus clock
+CLK_OUT_8MHz <= clk_out8MHz; --8MHz
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
 --CLK_OUT_STATE <= CLK_IN; --Counter to change a state machine
-CLK_OUT_STATE <= clk_out1Hz; --Counter to change a state machine
+CLK_OUT_STATE <= clk_out50Hz; --Counter to change a state machine
+CLK_OUT_STATE_SPI <= clk_out50Hz;-- state clock for the spi clock state machine
 
 end Behavioral;

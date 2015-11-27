@@ -35,6 +35,9 @@ use ieee.std_logic_arith.ALL;
 
 entity SPI_TX is
     Port ( CLK_STATE : in STD_LOGIC;
+           Disp5 : out STD_LOGIC_VECTOR(3 downto 0);
+           Disp6 : out STD_LOGIC_VECTOR(3 downto 0);
+           LED : out STD_LOGIC_VECTOR(7 downto 0);
            SPI_CLK_IN : in STD_LOGIC;
            TX_DATA : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master aka tx_data
            MOSI : out STD_LOGIC;--output pin to slave
@@ -61,5 +64,10 @@ SPI_PROCESS: process (CLK_STATE, SPI_CLK_IN, LOAD_ENABLE)
 end process SPI_PROCESS; 
 
 MOSI <= serial_register(7);---------------Output bit to slave
+
+Disp5 <= serial_register(3 downto 0);
+Disp6 <= serial_register(7 downto 4);
+
+LED <= serial_register;
 
 end Behavioral;

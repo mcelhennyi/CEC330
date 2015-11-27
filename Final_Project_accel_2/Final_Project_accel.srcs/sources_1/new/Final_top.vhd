@@ -42,7 +42,7 @@ entity Final_top is
            ACL_SCLK : out STD_LOGIC;
            ACL_MOSI : out STD_LOGIC;
            ACL_MISO : in STD_LOGIC;
-           ACL_INT : out STD_LOGIC_VECTOR  (2 downto 1)
+           ACL_INT : in STD_LOGIC_VECTOR(2 downto 1)
            );
 end Final_top;
 
@@ -54,7 +54,7 @@ architecture Behavioral of Final_top is
 signal Disp1 : STD_LOGIC_VECTOR (3 downto 0);--top FSM
 signal Disp2 : STD_LOGIC_VECTOR (3 downto 0);--config FSM
 signal Disp3 : STD_LOGIC_VECTOR (3 downto 0);--ADXL FSM
-signal Disp4 : STD_LOGIC_VECTOR (3 downto 0) := x"0";
+signal Disp4 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp5 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp6 : STD_LOGIC_VECTOR (3 downto 0);
 signal Disp7 : STD_LOGIC_VECTOR (3 downto 0);
@@ -74,8 +74,11 @@ signal clk_50Hz : STD_LOGIC := '0'; --50Hz clock
 signal clk_400Hz : STD_LOGIC := '0'; --400Hz clock
 signal clk_100KHz : STD_LOGIC := '0'; --100KHz clock
 signal clk_200KHz : STD_LOGIC := '0'; --200KHz clock
+signal clk_8MHz : STD_LOGIC := '0'; --200KHz clock
 signal clk_an : STD_LOGIC; --Clock that is around 70Hz going to the annodes and cathode counter
 signal clk_state : STD_LOGIC; --Clock to change State Machine
+signal clk_state_spi : STD_LOGIC; --Clock to change SPI State Machine for the spi clock
+
 ---------------------------------------------------------------------------------------------------
 
 --spi tx and rx signals, can be changed to make more sense later
@@ -87,6 +90,8 @@ signal tx_data : STD_LOGIC_VECTOR(7 downto 0) := x"00"; --data to slave
 signal rx_data : STD_LOGIC_VECTOR(15 downto 0);-- := x"00"; --data from slave
 ---------------------------------------------------------------------------
 --data from accel
+signal save_data_from_accel : STD_LOGIC := '0';
+
 signal x_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
 signal y_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
 signal z_data : STD_LOGIC_VECTOR(11 downto 0) := x"000";
@@ -114,6 +119,14 @@ signal read_cmd : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 signal adxl_start : STD_LOGIC := '0';
 signal read_start : STD_LOGIC := '0';
 signal config_start : STD_LOGIC := '0';
+
+signal config_disp5 : STD_LOGIC_VECTOR(3 downto 0) := x"0";
+signal config_disp6 : STD_LOGIC_VECTOR(3 downto 0) := x"0";
+signal config_LED : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+signal read_disp5 : STD_LOGIC_VECTOR(3 downto 0) := x"0";
+signal read_disp6 : STD_LOGIC_VECTOR(3 downto 0) := x"0";
+signal read_LED : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+
 --module signals
 signal addr_done : STD_LOGIC := '0';
 ----------------------------------------------------------------------------
@@ -142,8 +155,10 @@ component Divider
            CLK_OUT_400Hz :  out STD_LOGIC;
            CLK_OUT_100KHz : out STD_LOGIC;
            CLK_OUT_200KHz : out STD_LOGIC;
+           CLK_OUT_8MHz : out STD_LOGIC;
            CLK_OUT_AN : out STD_LOGIC;
-           CLK_OUT_STATE : out STD_LOGIC
+           CLK_OUT_STATE : out STD_LOGIC;
+           CLK_OUT_STATE_SPI : out STD_LOGIC
            );
 end component Divider;
 --Drives the seven segment displays
@@ -164,6 +179,9 @@ end component Seven_seg_driver;
 ------------------------------------------------------------------exports data on the SPI bus
 component SPI_TX
     Port ( CLK_STATE : in STD_LOGIC;
+           Disp5 : out STD_LOGIC_VECTOR(3 downto 0);
+           Disp6 : out STD_LOGIC_VECTOR(3 downto 0);
+           LED : out STD_LOGIC_VECTOR(7 downto 0);
            SPI_CLK_IN : in STD_LOGIC;
            TX_DATA : in STD_LOGIC_VECTOR (7 downto 0); --Data leaving master through MOSI
            MOSI : out STD_LOGIC;--output pin to slave
@@ -173,6 +191,9 @@ end component SPI_TX;
 
 component SPI_RX
     Port ( CLK_STATE : in STD_LOGIC;
+--           Disp5 : out STD_LOGIC_VECTOR(3 downto 0);
+--           Disp6 : out STD_LOGIC_VECTOR(3 downto 0);
+--           LED : out STD_LOGIC_VECTOR(7 downto 0);
            SPI_CLK_IN : in STD_LOGIC;
            RX_DATA : out STD_LOGIC_VECTOR (15 downto 0); --Data Coming into master through MISO
            MISO : in STD_LOGIC--input pin frome slave
@@ -216,7 +237,8 @@ component ADXL362_com_fsm
 end component ADXL362_com_fsm;
 -----------------------------------------------------------------
 component Read_accel_fsm
-    Port ( FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
+    Port ( Disp4 : out STD_LOGIC_VECTOR(3 downto 0);
+           FSM_CLOCK : in STD_LOGIC;--gives the FSM speed clock to configuration FSM
            READ_EN : in STD_LOGIC;--starts the read FSM steps
            RX_DATA : in STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
@@ -224,6 +246,7 @@ component Read_accel_fsm
            TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
            TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
            START : out STD_LOGIC;--starts the reading for 8 bits of data
+           SAVE_DATA : out STD_LOGIC;--gives the angle modul a clock puls to function off of
            X_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
            Y_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
            Z_DATA :  out STD_LOGIC_VECTOR(11 downto 0);
@@ -232,8 +255,8 @@ component Read_accel_fsm
 end component Read_accel_fsm;
 -----------------------------------------------------------------
 component Angle_accel
-    Port ( CLK_IN : in STD_LOGIC;
---           LED : out STD_LOGIC_VECTOR (12 downto 0);
+    Port ( CLK_READ : in STD_LOGIC;
+           LED : out STD_LOGIC_VECTOR (7 downto 0);
            X_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Y_IN : in STD_LOGIC_VECTOR (11 downto 0);
            Z_IN : in STD_LOGIC_VECTOR (11 downto 0);
@@ -251,8 +274,10 @@ begin
 --Asynchronus-----------------------
 ------------------------------------
 ACL_SCLK <= spi_clk;
-ACL_INT(1) <= '0';
-ACL_INT(2) <= '0';
+--ACL_INT(1) <= '0';
+--ACL_INT(2) <= '0';
+LED (11) <= ACL_INT(1);
+LED (12) <= ACL_INT(2);
 
 ACL_MOSI <= mosi;
 miso <= ACL_MISO;
@@ -284,8 +309,10 @@ divider_map: Divider
                CLK_OUT_400Hz => clk_400Hz,
                CLK_OUT_100Khz => clk_100KHz,
                CLK_OUT_200KHz => clk_200KHz,
+               CLK_OUT_8MHz => clk_8MHz,
                CLK_OUT_AN => clk_an,
-               CLK_OUT_STATE => clk_state
+               CLK_OUT_STATE => clk_state,
+               CLK_OUT_STATE_SPI => clk_state_spi
                );
 --maps the driver 
 Seven_seg_map: Seven_seg_driver
@@ -305,6 +332,9 @@ Seven_seg_map: Seven_seg_driver
 ----------------------------------------------------------------------------maps the spi
 SPI_TX_map: SPI_TX
     port map ( CLK_STATE => clk_state,
+               Disp5 => config_disp5,
+               Disp6 => config_disp6,
+               LED => config_LED,
                SPI_CLK_IN => spi_clk,
                TX_DATA => tx_data, --data to slave
                MOSI => mosi,--
@@ -313,13 +343,16 @@ SPI_TX_map: SPI_TX
                
 SPI_RX_map: SPI_RX
     port map ( CLK_STATE => clk_state,
+--               Disp5 => read_disp5,
+--               Disp6 => read_disp6,
+--               LED => read_LED,
                SPI_CLK_IN => spi_clk,
                RX_DATA => rx_data, --data from slave
                MISO => miso--
                );
 
 SPI_state_clk_map:  SPI_state_clk
-    port map ( CLK_200KHz => clk_1Hz,
+    port map ( CLK_200KHz => clk_state_spi,
                CLK_EN => tx_enable,
                TX_DONE => tx_done,
                SPI_CLK => spi_clk
@@ -355,7 +388,8 @@ ADXL_com_map: ADXL362_com_fsm
                );
 ----------------------------------------------------------------------------
 Read_fsm_map: Read_accel_fsm
-    port map ( FSM_CLOCK => clk_state,
+    port map ( Disp4 => Disp4,
+               FSM_CLOCK => clk_state,
                READ_EN => read_accel,
                RX_DATA => rx_data,
                READ_DONE => addr_done, --from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
@@ -363,6 +397,7 @@ Read_fsm_map: Read_accel_fsm
                TX_ADDR => read_addr,--sends addr data to ADXL_fsm 
                TX_CMD => read_cmd,--sends to read or write command to ADXL_fsm
                START => read_start,
+               SAVE_DATA => save_data_from_accel,
                X_DATA => x_data,
                Y_DATA => y_data,
                Z_DATA => z_data,
@@ -370,8 +405,8 @@ Read_fsm_map: Read_accel_fsm
                );         
 -----------------------------------------------------------------------------
 Angle_map: Angle_accel
-    port map ( CLK_IN => CLK_IN,
---               LED => LED(12 downto 0),
+    port map ( CLK_READ => save_data_from_accel,
+               LED => read_LED,
                X_IN => x_data,
                Y_IN => y_data,
                Z_IN => z_data,
@@ -393,11 +428,20 @@ begin
         adxl_addr <= config_addr;
         adxl_cmd <= config_cmd;
         adxl_start <= config_start;
+        
+        config_disp5 <= Disp5;
+        config_disp6 <= Disp6;
+        LED (7 downto 0) <= config_LED;
+        
     elsif(read_accel = '1' and configure_accel = '0') then --in state where the read fsm has control over teh adxl362
         adxl_data <= read_data;
         adxl_addr <= read_addr;
         adxl_cmd <= read_cmd;
         adxl_start <= read_start;
+        
+        read_disp5 <= Disp5;
+        read_disp6 <= Disp6;
+        LED (7 downto 0) <=  read_LED;
     end if;
 end process mux_adxl362_com_fsm;
 
@@ -445,9 +489,9 @@ begin
 --state case statement to change a state on rising edge  
     case (state) is
         when st1_wait =>
---            if CPU_RESETN = '1' then
+            if CPU_RESETN = '1' then
                 next_state <= st2_configure;
---            end if;
+            end if;
             
         when st2_configure =>
             if(config_done = '1') then

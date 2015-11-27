@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Wed Nov 25 21:34:21 2015
+| Date         : Fri Nov 27 18:22:09 2015
 | Host         : Austin-MBP running 64-bit major release  (build 9200)
 | Command      : report_io -file Final_top_io_placed.rpt
 | Design       : Final_top
@@ -63,7 +63,7 @@ Table of Contents
 | B10        |             | High Range | VCCO_16                      | VCCO        |             |      16 |            |      |                     |                      |   any** |            |           |      |                  |
 | B11        |             | High Range | IO_L4P_T0_15                 | User IO     |             |      15 |            |      |                     |                      |         |            |           |      |                  |
 | B12        |             | High Range | IO_L3N_T0_DQS_AD1N_15        | User IO     |             |      15 |            |      |                     |                      |         |            |           |      |                  |
-| B13        | ACL_INT[1]  | High Range | IO_L2P_T0_AD8P_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |      | NONE             |
+| B13        | ACL_INT[1]  | High Range | IO_L2P_T0_AD8P_15            | INPUT       | LVCMOS33    |      15 |            |      |                     |                 NONE |         | FIXED      |           |      | NONE             |
 | B14        |             | High Range | IO_L2N_T0_AD8N_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |      |                  |
 | B15        |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |      |                  |
 | B16        |             | High Range | IO_L7P_T1_AD2P_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |      |                  |
@@ -84,7 +84,7 @@ Table of Contents
 | C13        |             | High Range | VCCO_15                      | VCCO        |             |      15 |            |      |                     |                      |    3.30 |            |           |      |                  |
 | C14        |             | High Range | IO_L1N_T0_AD0N_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |      |                  |
 | C15        |             | High Range | IO_L12N_T1_MRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |      |                  |
-| C16        | ACL_INT[2]  | High Range | IO_L20P_T3_A20_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |      | NONE             |
+| C16        | ACL_INT[2]  | High Range | IO_L20P_T3_A20_15            | INPUT       | LVCMOS33    |      15 |            |      |                     |                 NONE |         | FIXED      |           |      | NONE             |
 | C17        |             | High Range | IO_L20N_T3_A19_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |      |                  |
 | C18        |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |      |                  |
 | D1         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |      |                  |
