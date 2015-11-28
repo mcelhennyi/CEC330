@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Nov 27 18:22:46 2015
-| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Date         : Sat Nov 28 17:05:20 2015
+| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Final_top_timing_summary_routed.rpt -rpx Final_top_timing_summary_routed.rpx
 | Design       : Final_top
 | Device       : 7a100t-csg324
@@ -50,7 +50,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 14 register/latch pins with no clock driven by root clock pin: CLK_IN (HIGH)
+ There are 34 register/latch pins with no clock driven by root clock pin: CLK_IN (HIGH)
 
  There are 14 register/latch pins with no clock driven by root clock pin: ADXL_com_map/FSM_sequential_state_reg[2]/C (HIGH)
 
@@ -80,9 +80,9 @@ Table of Contents
 
  There are 18 register/latch pins with no clock driven by root clock pin: Config_map/FSM_sequential_state_reg[4]/C (HIGH)
 
- There are 23 register/latch pins with no clock driven by root clock pin: Disp1_reg[0]/G (HIGH)
+ There are 31 register/latch pins with no clock driven by root clock pin: Disp1_reg[0]/G (HIGH)
 
- There are 23 register/latch pins with no clock driven by root clock pin: Disp1_reg[1]/G (HIGH)
+ There are 31 register/latch pins with no clock driven by root clock pin: Disp1_reg[1]/G (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: FSM_sequential_state_reg[0]/C (HIGH)
 
@@ -108,7 +108,9 @@ Table of Contents
 
  There are 22 register/latch pins with no clock driven by root clock pin: SPI_state_clk_map/SPI_CLK_reg/G (HIGH)
 
- There are 23 register/latch pins with no clock driven by root clock pin: divider_map/clk_out50Hz_reg/C (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: divider_map/clk_out50Hz_reg/C (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: divider_map/clk_out8MHz_reg/C (HIGH)
 
 
 2. checking constant_clock
@@ -123,14 +125,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 200 pins that are not constrained for maximum delay. (HIGH)
+ There are 217 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 3 input ports with no input delay specified. (HIGH)
+ There are 4 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

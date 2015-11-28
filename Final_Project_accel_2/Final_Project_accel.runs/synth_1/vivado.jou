@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri Nov 27 18:21:19 2015
-# Process ID: 8824
-# Log file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.runs/synth_1/Final_top.vds
-# Journal file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.runs/synth_1\vivado.jou
+# Start of session at: Sat Nov 28 17:03:56 2015
+# Process ID: 16880
+# Log file: F:/CEC330/Final_Project_accel_2/Final_Project_accel.runs/synth_1/Final_top.vds
+# Journal file: F:/CEC330/Final_Project_accel_2/Final_Project_accel.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Final_top.tcl -notrace

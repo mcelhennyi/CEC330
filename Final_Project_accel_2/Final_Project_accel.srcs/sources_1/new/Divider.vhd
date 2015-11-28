@@ -195,7 +195,7 @@ CLK_OUT_200KHz <= clk_out200KHz;--SPI bus clock
 CLK_OUT_8MHz <= clk_out8MHz; --8MHz
 CLK_OUT_AN <= clk_out50Hz;--For seven segment display switching
 --CLK_OUT_STATE <= CLK_IN; --Counter to change a state machine
-CLK_OUT_STATE <= clk_out50Hz; --Counter to change a state machine
-CLK_OUT_STATE_SPI <= clk_out50Hz;-- state clock for the spi clock state machine
+CLK_OUT_STATE <= CLK_IN; --Counter to change a state machine
+CLK_OUT_STATE_SPI <= clk_out8MHz;-- state clock for the spi clock state machine
 
 end Behavioral;

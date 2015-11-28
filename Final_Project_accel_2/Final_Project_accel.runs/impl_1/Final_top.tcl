@@ -42,7 +42,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
@@ -52,7 +51,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   open_checkpoint Final_top_routed.dcp
-  set_property webtalk.parent_dir C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.cache/wt [current_project]
+  set_property webtalk.parent_dir F:/CEC330/Final_Project_accel_2/Final_Project_accel.cache/wt [current_project]
   write_bitstream -force Final_top.bit 
   catch { write_sysdef -hwdef Final_top.hwdef -bitfile Final_top.bit -meminfo Final_top.mmi -ltxfile debug_nets.ltx -file Final_top.sysdef }
   close_msg_db -file write_bitstream.pb

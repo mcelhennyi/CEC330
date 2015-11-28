@@ -326,7 +326,7 @@ begin
             --prep stage
             TX_CMD <= x"0A";
             TX_ADDR <= x"2A";
-            TX_DATA <= "00000000";
+            TX_DATA <= "00000001";
             
             Disp2 <= x"9";
                                         
@@ -360,7 +360,7 @@ begin
             --data
             TX_CMD <= x"0A";
             TX_ADDR <= x"2B";
-            TX_DATA <= "00000000";
+            TX_DATA <= "00000010";
             
             Disp2 <= x"6";
         
@@ -423,7 +423,7 @@ begin
             
         when st16_buffer =>
             --state variables            
-            CONFIG_DONE <= '0';
+            CONFIG_DONE <= '1';
             START <= '0';    
             --place holder
             TX_CMD <= x"00";

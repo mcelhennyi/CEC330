@@ -37,6 +37,7 @@ entity Read_accel_fsm is
            READ_EN : in STD_LOGIC;--starts the read FSM steps
            RX_DATA : in STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
+           BTNC : in STD_LOGIC;
            TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
            TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
            TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
@@ -317,7 +318,9 @@ begin
     case (state) is
         when st1_wait =>
             if READ_EN = '1' then
-                next_state <= st2_prep;
+                if BTNC = '1' then
+                    next_state <= st2_prep;
+                end if;
             end if;
             
         ---------------------------------------------------------------

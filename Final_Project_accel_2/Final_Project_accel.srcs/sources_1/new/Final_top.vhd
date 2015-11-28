@@ -38,6 +38,7 @@ entity Final_top is
            AN : out STD_LOGIC_VECTOR (7 downto 0);
            --And Accelerometer ports! including CS mosi miso and sclk
            CPU_RESETN : in STD_LOGIC;
+           BTNC : in STD_LOGIC;
            ACL_CSN : out STD_LOGIC;
            ACL_SCLK : out STD_LOGIC;
            ACL_MOSI : out STD_LOGIC;
@@ -242,6 +243,7 @@ component Read_accel_fsm
            READ_EN : in STD_LOGIC;--starts the read FSM steps
            RX_DATA : in STD_LOGIC_VECTOR(15 downto 0);--data from accel
            READ_DONE : in STD_LOGIC;--When the 8 clock cycles are done
+           BTNC : in STD_LOGIC;
            TX_DATA: out STD_LOGIC_VECTOR(7 downto 0);--sends the data to transmit to ADXL_fsm
            TX_ADDR : out STD_LOGIC_VECTOR(7 downto 0);--sends addr data to ADXL_fsm 
            TX_CMD : out STD_LOGIC_VECTOR(7 downto 0);--sends to read or write command to ADXL_fsm
@@ -393,6 +395,7 @@ Read_fsm_map: Read_accel_fsm
                READ_EN => read_accel,
                RX_DATA => rx_data,
                READ_DONE => addr_done, --from ADXL362_com_fsm telling the transmission of data, addr, and cmd are done
+               BTNC => BTNC,
                TX_DATA => read_data,--sends the data to transmit to ADXL_fsm
                TX_ADDR => read_addr,--sends addr data to ADXL_fsm 
                TX_CMD => read_cmd,--sends to read or write command to ADXL_fsm
@@ -429,8 +432,8 @@ begin
         adxl_cmd <= config_cmd;
         adxl_start <= config_start;
         
-        config_disp5 <= Disp5;
-        config_disp6 <= Disp6;
+        Disp5 <= config_disp5;
+        Disp6 <= config_disp6;
         LED (7 downto 0) <= config_LED;
         
     elsif(read_accel = '1' and configure_accel = '0') then --in state where the read fsm has control over teh adxl362
@@ -439,8 +442,8 @@ begin
         adxl_cmd <= read_cmd;
         adxl_start <= read_start;
         
-        read_disp5 <= Disp5;
-        read_disp6 <= Disp6;
+        Disp5 <= read_disp5;
+        Disp6 <= read_disp6;
         LED (7 downto 0) <=  read_LED;
     end if;
 end process mux_adxl362_com_fsm;

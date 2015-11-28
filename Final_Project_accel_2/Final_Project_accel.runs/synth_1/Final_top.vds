@@ -2,10 +2,10 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri Nov 27 18:21:19 2015
-# Process ID: 8824
-# Log file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.runs/synth_1/Final_top.vds
-# Journal file: C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.runs/synth_1\vivado.jou
+# Start of session at: Sat Nov 28 17:03:56 2015
+# Process ID: 16880
+# Log file: F:/CEC330/Final_Project_accel_2/Final_Project_accel.runs/synth_1/Final_top.vds
+# Journal file: F:/CEC330/Final_Project_accel_2/Final_Project_accel.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Final_top.tcl -notrace
 Command: synth_design -top Final_top -part xc7a100tcsg324-1
@@ -13,66 +13,67 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 245.789 ; gain = 68.754
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 245.699 ; gain = 68.375
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Final_top' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:49]
-INFO: [Synth 8-3491] module 'Divider' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:304]
-INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:50]
-INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-INFO: [Synth 8-638] synthesizing module 'Seven_seg_driver' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:52]
-INFO: [Synth 8-256] done synthesizing module 'Seven_seg_driver' (2#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:52]
-INFO: [Synth 8-3491] module 'SPI_TX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:333]
-INFO: [Synth 8-638] synthesizing module 'SPI_TX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:48]
-WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'SPI_TX' (3#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:48]
-INFO: [Synth 8-3491] module 'SPI_RX' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:344]
-INFO: [Synth 8-638] synthesizing module 'SPI_RX' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (4#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:48]
-INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:354]
-INFO: [Synth 8-638] synthesizing module 'SPI_state_clk' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
-WARNING: [Synth 8-614] signal 'CLK_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:156]
-INFO: [Synth 8-256] done synthesizing module 'SPI_state_clk' (5#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
-INFO: [Synth 8-3491] module 'Config_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:34' bound to instance 'Config_map' of component 'Config_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:361]
-INFO: [Synth 8-638] synthesizing module 'Config_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
-WARNING: [Synth 8-614] signal 'CONFIG_EN' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:451]
-WARNING: [Synth 8-614] signal 'ADDR_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:451]
-INFO: [Synth 8-256] done synthesizing module 'Config_fsm' (6#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
-INFO: [Synth 8-3491] module 'ADXL362_com_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:34' bound to instance 'ADXL_com_map' of component 'ADXL362_com_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:373]
-INFO: [Synth 8-638] synthesizing module 'ADXL362_com_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:49]
-WARNING: [Synth 8-614] signal 'CMD' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
-WARNING: [Synth 8-614] signal 'ADDR' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
-WARNING: [Synth 8-614] signal 'DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
-WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:238]
-WARNING: [Synth 8-614] signal 'TX_DONE' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:238]
-INFO: [Synth 8-256] done synthesizing module 'ADXL362_com_fsm' (7#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:49]
-INFO: [Synth 8-3491] module 'Read_accel_fsm' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:34' bound to instance 'Read_fsm_map' of component 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:390]
-INFO: [Synth 8-638] synthesizing module 'Read_accel_fsm' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:52]
-WARNING: [Synth 8-614] signal 'RX_DATA' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:92]
-INFO: [Synth 8-256] done synthesizing module 'Read_accel_fsm' (8#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:52]
-INFO: [Synth 8-3491] module 'Angle_accel' declared at 'C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:39' bound to instance 'Angle_map' of component 'Angle_accel' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:407]
-INFO: [Synth 8-638] synthesizing module 'Angle_accel' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:54]
-WARNING: [Synth 8-3848] Net TEMP_AVG in module/entity Angle_accel does not have driver. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'Angle_accel' (9#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:54]
-WARNING: [Synth 8-614] signal 'read_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'configure_accel' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'config_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'config_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'config_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'config_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'Disp5' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'Disp6' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'config_LED' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'read_data' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'read_addr' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'read_cmd' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'read_start' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-614] signal 'read_LED' is read in the process but is not in the sensitivity list [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:424]
-WARNING: [Synth 8-3848] Net Disp5 in module/entity Final_top does not have driver. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:58]
-WARNING: [Synth 8-3848] Net Disp6 in module/entity Final_top does not have driver. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:59]
-INFO: [Synth 8-256] done synthesizing module 'Final_top' (10#1) [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'Final_top' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:50]
+INFO: [Synth 8-3491] module 'Divider' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:35' bound to instance 'divider_map' of component 'Divider' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:306]
+INFO: [Synth 8-638] synthesizing module 'Divider' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Divider' (1#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Divider.vhd:50]
+INFO: [Synth 8-3491] module 'Seven_seg_driver' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:36' bound to instance 'Seven_seg_map' of component 'Seven_seg_driver' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:320]
+INFO: [Synth 8-638] synthesizing module 'Seven_seg_driver' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'Seven_seg_driver' (2#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Seven_seg_driver.vhd:52]
+INFO: [Synth 8-3491] module 'SPI_TX' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:36' bound to instance 'SPI_TX_map' of component 'SPI_TX' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:335]
+INFO: [Synth 8-638] synthesizing module 'SPI_TX' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:48]
+WARNING: [Synth 8-614] signal 'TX_DATA' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'SPI_TX' (3#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_TX.vhd:48]
+INFO: [Synth 8-3491] module 'SPI_RX' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:36' bound to instance 'SPI_RX_map' of component 'SPI_RX' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:346]
+INFO: [Synth 8-638] synthesizing module 'SPI_RX' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'SPI_RX' (4#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_RX.vhd:48]
+INFO: [Synth 8-3491] module 'SPI_state_clk' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:34' bound to instance 'SPI_state_clk_map' of component 'SPI_state_clk' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:356]
+INFO: [Synth 8-638] synthesizing module 'SPI_state_clk' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
+WARNING: [Synth 8-614] signal 'CLK_EN' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'SPI_state_clk' (5#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:42]
+INFO: [Synth 8-3491] module 'Config_fsm' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:34' bound to instance 'Config_map' of component 'Config_fsm' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:363]
+INFO: [Synth 8-638] synthesizing module 'Config_fsm' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
+WARNING: [Synth 8-614] signal 'CONFIG_EN' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:451]
+WARNING: [Synth 8-614] signal 'ADDR_DONE' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:451]
+INFO: [Synth 8-256] done synthesizing module 'Config_fsm' (6#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:47]
+INFO: [Synth 8-3491] module 'ADXL362_com_fsm' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:34' bound to instance 'ADXL_com_map' of component 'ADXL362_com_fsm' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:375]
+INFO: [Synth 8-638] synthesizing module 'ADXL362_com_fsm' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:49]
+WARNING: [Synth 8-614] signal 'CMD' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
+WARNING: [Synth 8-614] signal 'ADDR' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
+WARNING: [Synth 8-614] signal 'DATA' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:80]
+WARNING: [Synth 8-614] signal 'START' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:238]
+WARNING: [Synth 8-614] signal 'TX_DONE' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:238]
+INFO: [Synth 8-256] done synthesizing module 'ADXL362_com_fsm' (7#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:49]
+INFO: [Synth 8-3491] module 'Read_accel_fsm' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:34' bound to instance 'Read_fsm_map' of component 'Read_accel_fsm' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:392]
+INFO: [Synth 8-638] synthesizing module 'Read_accel_fsm' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:53]
+WARNING: [Synth 8-614] signal 'RX_DATA' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:93]
+WARNING: [Synth 8-614] signal 'BTNC' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:313]
+INFO: [Synth 8-256] done synthesizing module 'Read_accel_fsm' (8#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:53]
+INFO: [Synth 8-3491] module 'Angle_accel' declared at 'F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:39' bound to instance 'Angle_map' of component 'Angle_accel' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:410]
+INFO: [Synth 8-638] synthesizing module 'Angle_accel' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:54]
+WARNING: [Synth 8-3848] Net TEMP_AVG in module/entity Angle_accel does not have driver. [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Angle_accel' (9#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:54]
+WARNING: [Synth 8-614] signal 'read_accel' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'configure_accel' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'config_data' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'config_addr' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'config_cmd' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'config_start' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'config_disp5' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'config_disp6' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'config_LED' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'read_data' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'read_addr' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'read_cmd' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'read_start' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'read_disp5' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'read_disp6' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+WARNING: [Synth 8-614] signal 'read_LED' is read in the process but is not in the sensitivity list [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:427]
+INFO: [Synth 8-256] done synthesizing module 'Final_top' (10#1) [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 281.055 ; gain = 104.020
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 280.992 ; gain = 103.668
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -81,46 +82,38 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[3] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[2] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[1] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp5[0] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[3] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[2] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[1] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin Seven_seg_map:Disp6[0] to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:318]
-WARNING: [Synth 8-3295] tying undriven pin SPI_RX_map:LOAD_ENABLE to constant 0 [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:344]
+WARNING: [Synth 8-3295] tying undriven pin SPI_RX_map:LOAD_ENABLE to constant 0 [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:346]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 281.055 ; gain = 104.020
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 280.992 ; gain = 103.668
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
-Finished Parsing XDC File [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
+Parsing XDC File [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
+Finished Parsing XDC File [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 583.809 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 584.664 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 3 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 3 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -131,8 +124,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 26 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 26 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 26 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 26 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -143,8 +136,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 27 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 27 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -155,8 +148,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 28 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 28 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -167,8 +160,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 29 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 29 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -179,8 +172,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 30 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 30 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -191,8 +184,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 31 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 31 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -203,8 +196,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 32 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 32 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -215,8 +208,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 33 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 33 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -227,8 +220,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 35 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -239,8 +232,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 36 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -251,8 +244,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 37 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 37 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -263,8 +256,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 38 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 38 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -275,8 +268,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 39 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 39 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -287,8 +280,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 40 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 40 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -299,8 +292,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 41 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 41 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -311,8 +304,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 42 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 42 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -323,8 +316,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 47 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 47 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 47 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 47 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -335,8 +328,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 48 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 48 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 48 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 48 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -347,8 +340,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 49 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 49 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 49 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 49 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -359,8 +352,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 50 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 50 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 50 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 50 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -371,8 +364,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 51 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 51 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 51 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 51 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -383,8 +376,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 52 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 52 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 52 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 52 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -395,8 +388,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 53 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 53 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 53 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 53 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -407,8 +400,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 54 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 54 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 54 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 54 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -419,8 +412,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 55 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 55 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 55 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 55 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -431,8 +424,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 56 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 56 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 56 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 56 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -443,8 +436,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 57 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 57 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 57 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 57 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -455,8 +448,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 58 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 58 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 58 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 58 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -467,8 +460,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 59 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 59 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 59 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 59 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -479,8 +472,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 60 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 60 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 60 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 60 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -491,8 +484,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 61 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 61 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 61 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 61 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -503,8 +496,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 62 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 62 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 62 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 62 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -515,8 +508,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 88 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 88 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 88 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 88 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -527,8 +520,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 120 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 120 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 90 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 90 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -539,8 +532,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 121 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 121 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 120 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 120 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -551,8 +544,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 122 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 122 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 121 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 121 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -563,8 +556,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 123 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 123 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 122 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 122 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -575,8 +568,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 124 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 124 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 123 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 123 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -587,8 +580,20 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 125 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 125 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 124 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 124 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 125 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 125 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -600,7 +605,7 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'SPI_state_clk'
 INFO: [Synth 8-5546] ROM "SPI_CLK" won't be mapped to RAM because it is too sparse
@@ -613,10 +618,10 @@ INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because addre
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Read_accel_fsm'
 INFO: [Synth 8-5544] ROM "START" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-3936] Found unconnected internal register 'y_average_reg' and it is trimmed from '12' to '8' bits. [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:81]
+WARNING: [Synth 8-3936] Found unconnected internal register 'y_average_reg' and it is trimmed from '12' to '8' bits. [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Angle_accel.vhd:81]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Final_top'
 INFO: [Synth 8-5544] ROM "configure_accel" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:81]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:81]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -640,8 +645,8 @@ WARNING: [Synth 8-327] inferring latch for variable 'TX_DONE_reg' [C:/Users/Aust
                st10_done |                            10001 |                            10001
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'SPI_state_clk'
-WARNING: [Synth 8-327] inferring latch for variable 'SPI_CLK_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:80]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:96]
+WARNING: [Synth 8-327] inferring latch for variable 'SPI_CLK_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/SPI_state_clk.vhd:80]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:96]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -678,12 +683,12 @@ WARNING: [Synth 8-327] inferring latch for variable 'Disp2_reg' [C:/Users/Austin
         st17_config_done |                            11110 |                            11110
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Config_fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'CONFIG_DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:89]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:94]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:93]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:92]
-WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:90]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp3_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'CONFIG_DONE_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:89]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:94]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:93]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Config_fsm.vhd:90]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp3_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:92]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -701,12 +706,12 @@ WARNING: [Synth 8-327] inferring latch for variable 'Disp3_reg' [C:/Users/Austin
              st6_tx_done |                             1011 |                             1011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ADXL362_com_fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'DONE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:86]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ENABLE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:87]
-WARNING: [Synth 8-327] inferring latch for variable 'LOAD_ENABLE_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:88]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:90]
-WARNING: [Synth 8-327] inferring latch for variable 'CS_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp4_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:109]
+WARNING: [Synth 8-327] inferring latch for variable 'DONE_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:86]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ENABLE_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:87]
+WARNING: [Synth 8-327] inferring latch for variable 'LOAD_ENABLE_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:88]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_DATA_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:90]
+WARNING: [Synth 8-327] inferring latch for variable 'CS_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/ADXL362_com_fsm.vhd:85]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp4_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:110]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -725,16 +730,16 @@ WARNING: [Synth 8-327] inferring latch for variable 'Disp4_reg' [C:/Users/Austin
            st5_read_temp |                             1100 |                             1100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Read_accel_fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:99]
-WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:98]
-WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:96]
-WARNING: [Synth 8-327] inferring latch for variable 'SAVE_DATA_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:102]
-WARNING: [Synth 8-327] inferring latch for variable 'x_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:76]
-WARNING: [Synth 8-327] inferring latch for variable 'y_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:77]
-WARNING: [Synth 8-327] inferring latch for variable 'z_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:78]
-WARNING: [Synth 8-327] inferring latch for variable 'temperature_value_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:79]
-WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:279]
-WARNING: [Synth 8-327] inferring latch for variable 'read_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:464]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_ADDR_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'TX_CMD_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'START_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:97]
+WARNING: [Synth 8-327] inferring latch for variable 'SAVE_DATA_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:103]
+WARNING: [Synth 8-327] inferring latch for variable 'x_value_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'y_value_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:78]
+WARNING: [Synth 8-327] inferring latch for variable 'z_value_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:79]
+WARNING: [Synth 8-327] inferring latch for variable 'temperature_value_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Read_accel_fsm.vhd:80]
+WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:281]
+WARNING: [Synth 8-327] inferring latch for variable 'read_accel_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:467]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                     Old Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -745,14 +750,16 @@ WARNING: [Synth 8-327] inferring latch for variable 'read_accel_reg' [C:/Users/A
 *
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Final_top'
-WARNING: [Synth 8-327] inferring latch for variable 'configure_accel_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:463]
-WARNING: [Synth 8-327] inferring latch for variable 'Disp1_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:320]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_cmd_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_addr_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:378]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_data_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:379]
-WARNING: [Synth 8-327] inferring latch for variable 'adxl_start_reg' [C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:380]
+WARNING: [Synth 8-327] inferring latch for variable 'configure_accel_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:466]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp1_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:322]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp5_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:326]
+WARNING: [Synth 8-327] inferring latch for variable 'Disp6_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:327]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_cmd_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:379]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_addr_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:380]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_data_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:381]
+WARNING: [Synth 8-327] inferring latch for variable 'adxl_start_reg' [F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/sources_1/new/Final_top.vhd:382]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -788,6 +795,7 @@ Detailed RTL Component Info :
 	  31 Input      4 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 2     
 	  13 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
 	   5 Input      2 Bit        Muxes := 1     
 	  18 Input      1 Bit        Muxes := 4     
 	  31 Input      1 Bit        Muxes := 4     
@@ -806,6 +814,7 @@ Module Final_top
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 2     
 	   5 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
@@ -879,7 +888,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 583.809 ; gain = 406.773
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -888,9 +897,9 @@ WARNING: [Synth 8-3331] design Final_top has unconnected port LED[9]
 WARNING: [Synth 8-3331] design Final_top has unconnected port LED[8]
 WARNING: [Synth 8-3917] design Final_top has port SEG[7] driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 584.664 ; gain = 407.340
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1020,26 +1029,26 @@ INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instan
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\SPI_TX_map/serial_register_reg[0]_P )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SPI_TX_map/serial_register_reg[0]_C )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 584.664 ; gain = 407.340
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 3 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 3 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 3 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1050,8 +1059,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 26 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 26 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 26 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 26 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1062,8 +1071,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 27 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 27 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 27 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1074,8 +1083,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 28 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 28 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 28 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1086,8 +1095,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 29 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 29 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 29 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1098,8 +1107,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 30 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 30 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 30 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1110,8 +1119,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 31 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 31 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 31 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1122,8 +1131,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 32 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 32 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 32 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1134,8 +1143,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 33 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 33 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 33 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1146,8 +1155,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 35 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 35 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 35 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1158,8 +1167,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 36 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 36 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 36 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1170,8 +1179,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 37 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 37 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 37 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1182,8 +1191,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 38 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 38 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 38 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1194,8 +1203,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 39 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 39 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 39 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1206,8 +1215,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 40 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 40 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 40 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1218,8 +1227,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 41 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 41 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 41 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1230,8 +1239,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 42 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 42 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 42 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1242,8 +1251,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 47 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 47 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 47 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 47 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1254,8 +1263,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 48 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 48 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 48 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 48 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1266,8 +1275,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 49 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 49 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 49 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 49 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1278,8 +1287,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 50 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 50 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 50 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 50 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1290,8 +1299,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 51 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 51 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 51 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 51 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1302,8 +1311,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 52 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 52 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 52 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 52 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1314,8 +1323,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 53 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 53 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 53 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 53 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1326,8 +1335,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 54 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 54 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 54 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 54 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1338,8 +1347,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 55 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 55 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 55 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 55 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1350,8 +1359,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 56 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 56 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 56 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 56 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1362,8 +1371,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 57 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 57 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 57 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 57 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1374,8 +1383,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 58 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 58 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 58 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 58 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1386,8 +1395,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 59 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 59 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 59 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 59 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1398,8 +1407,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 60 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 60 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 60 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 60 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1410,8 +1419,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 61 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 61 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 61 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 61 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1422,8 +1431,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 62 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 62 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 62 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 62 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1434,8 +1443,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 88 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 88 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 88 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 88 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1446,8 +1455,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 120 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 120 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 90 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 90 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1458,8 +1467,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 121 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 121 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 120 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 120 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1470,8 +1479,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 122 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 122 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 121 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 121 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1482,8 +1491,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 123 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 123 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 122 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 122 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1494,8 +1503,8 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 124 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 124 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 123 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 123 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1506,8 +1515,20 @@ Usage:
     object
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
-incorrect argument "-dict" for "set_property" at line 125 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
-incorrect set of required parameters for "set_property" at line 125 of file C:/Users/Austin/Documents/CEC330_2/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect argument "-dict" for "set_property" at line 124 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 124 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 125 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
+incorrect set of required parameters for "set_property" at line 125 of file F:/CEC330/Final_Project_accel_2/Final_Project_accel.srcs/constrs_1/new/Master.xdc
 ---------------------------------------------------------------------
 Usage:
   set_property
@@ -1519,10 +1540,10 @@ Usage:
     [{>|>>} <stdoutFile>]
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1534,7 +1555,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1552,7 +1573,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1565,7 +1586,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1577,13 +1598,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
+Start Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1615,58 +1636,57 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     4|
-|3     |LUT1   |    15|
-|4     |LUT2   |    22|
-|5     |LUT3   |    37|
-|6     |LUT4   |    49|
+|3     |LUT1   |    16|
+|4     |LUT2   |    26|
+|5     |LUT3   |    39|
+|6     |LUT4   |    52|
 |7     |LUT5   |    49|
-|8     |LUT6   |    28|
-|9     |MUXF7  |     7|
-|10    |SRL16E |     1|
-|11    |FDCE   |     8|
-|12    |FDPE   |     5|
-|13    |FDRE   |    55|
-|14    |LD     |    74|
-|15    |LDC    |     6|
-|16    |IBUF   |     5|
-|17    |OBUF   |    32|
-|18    |OBUFT  |     3|
+|8     |LUT6   |    46|
+|9     |SRL16E |     1|
+|10    |FDCE   |     7|
+|11    |FDPE   |     6|
+|12    |FDRE   |    60|
+|13    |LD     |    82|
+|14    |LDC    |     6|
+|15    |IBUF   |     6|
+|16    |OBUF   |    32|
+|17    |OBUFT  |     3|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+-----------------+------+
 |      |Instance            |Module           |Cells |
 +------+--------------------+-----------------+------+
-|1     |top                 |                 |   401|
-|2     |  ADXL_com_map      |ADXL362_com_fsm  |    88|
+|1     |top                 |                 |   436|
+|2     |  ADXL_com_map      |ADXL362_com_fsm  |    71|
 |3     |  Angle_map         |Angle_accel      |    13|
-|4     |  Config_map        |Config_fsm       |    71|
+|4     |  Config_map        |Config_fsm       |    72|
 |5     |  Read_fsm_map      |Read_accel_fsm   |    49|
 |6     |  SPI_RX_map        |SPI_RX           |     9|
-|7     |  SPI_TX_map        |SPI_TX           |    33|
+|7     |  SPI_TX_map        |SPI_TX           |    41|
 |8     |  SPI_state_clk_map |SPI_state_clk    |    16|
-|9     |  Seven_seg_map     |Seven_seg_driver |    14|
-|10    |  divider_map       |Divider          |    38|
+|9     |  Seven_seg_map     |Seven_seg_driver |    35|
+|10    |  divider_map       |Divider          |    48|
 +------+--------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 217 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 583.809 ; gain = 89.273
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 583.809 ; gain = 406.773
+Synthesis finished with 0 errors, 0 critical warnings and 215 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 584.664 ; gain = 88.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 584.664 ; gain = 407.340
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 98 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 80 instances were transformed.
-  LD => LDCE: 74 instances
+  A total of 88 instances were transformed.
+  LD => LDCE: 82 instances
   LDC => LDCE: 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-64 Infos, 172 Warnings, 0 Critical Warnings and 0 Errors encountered.
+64 Infos, 167 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 583.809 ; gain = 392.301
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 583.809 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 18:21:45 2015...
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 584.664 ; gain = 393.301
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 584.664 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 28 17:04:21 2015...

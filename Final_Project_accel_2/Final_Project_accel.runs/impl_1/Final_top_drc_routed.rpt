@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Nov 27 18:22:46 2015
-| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Date         : Sat Nov 28 17:05:20 2015
+| Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 13
+             Violations found: 12
 
 2. REPORT DETAILS
 -----------------
@@ -44,7 +44,7 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net ADXL_com_map/serial_register_reg[1]_P is a gated clock net sourced by a combinational pin ADXL_com_map/serial_register_reg[0]_LDC_i_1/O, cell ADXL_com_map/serial_register_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net ADXL_com_map/serial_register_reg[0]_P is a gated clock net sourced by a combinational pin ADXL_com_map/serial_register_reg[0]_LDC_i_1/O, cell ADXL_com_map/serial_register_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
@@ -90,11 +90,6 @@ Related violations: <none>
 PDRC-153#11 Warning
 Gated clock check  
 Net SPI_state_clk_map/TX_DONE_reg_i_2_n_0 is a gated clock net sourced by a combinational pin SPI_state_clk_map/TX_DONE_reg_i_2/O, cell SPI_state_clk_map/TX_DONE_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#12 Warning
-Gated clock check  
-Net p_3_out[7] is a gated clock net sourced by a combinational pin LED_reg[7]_i_2/O, cell LED_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
