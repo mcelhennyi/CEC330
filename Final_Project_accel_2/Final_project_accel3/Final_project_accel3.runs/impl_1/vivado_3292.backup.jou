@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun Nov 29 14:10:49 2015
+# Process ID: 3292
+# Current directory: F:/CEC330/Final_Project_accel_2/Final_Project_accel.runs/impl_1
+# Command line: vivado.exe -log Final_top.vdi -applog -messageDb vivado.pb -mode batch -source Final_top.tcl -notrace
+# Log file: F:/CEC330/Final_Project_accel_2/Final_Project_accel.runs/impl_1/Final_top.vdi
+# Journal file: F:/CEC330/Final_Project_accel_2/Final_Project_accel.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Final_top.tcl -notrace
