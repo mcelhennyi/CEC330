@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sat Nov 28 17:05:20 2015
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Nov 29 14:11:45 2015
 | Host         : IanMcElhenny-PC running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file Final_top_timing_summary_routed.rpt -rpx Final_top_timing_summary_routed.rpx
 | Design       : Final_top
@@ -22,6 +22,8 @@ Timing Summary Report
   Enable Input Delay Default Clock           :  No
   Enable Preset / Clear Arcs                 :  No
   Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
 
   Corner  Analyze    Analyze    
   Name    Max Paths  Min Paths  
@@ -50,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 34 register/latch pins with no clock driven by root clock pin: CLK_IN (HIGH)
+ There are 14 register/latch pins with no clock driven by root clock pin: CLK_IN (HIGH)
 
  There are 14 register/latch pins with no clock driven by root clock pin: ADXL_com_map/FSM_sequential_state_reg[2]/C (HIGH)
 
@@ -108,9 +110,7 @@ Table of Contents
 
  There are 22 register/latch pins with no clock driven by root clock pin: SPI_state_clk_map/SPI_CLK_reg/G (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: divider_map/clk_out50Hz_reg/C (HIGH)
-
- There are 5 register/latch pins with no clock driven by root clock pin: divider_map/clk_out8MHz_reg/C (HIGH)
+ There are 23 register/latch pins with no clock driven by root clock pin: divider_map/clk_out50Hz_reg/C (HIGH)
 
 
 2. checking constant_clock
@@ -125,14 +125,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 217 pins that are not constrained for maximum delay. (HIGH)
+ There are 208 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 4 input ports with no input delay specified. (HIGH)
+ There are 3 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

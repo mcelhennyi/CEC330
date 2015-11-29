@@ -49,11 +49,11 @@ start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param xicom.use_bs_reader 1
-  debug::add_scope template.lib 1
   open_checkpoint Final_top_routed.dcp
   set_property webtalk.parent_dir F:/CEC330/Final_Project_accel_2/Final_Project_accel.cache/wt [current_project]
+  catch { write_mem_info -force Final_top.mmi }
   write_bitstream -force Final_top.bit 
-  catch { write_sysdef -hwdef Final_top.hwdef -bitfile Final_top.bit -meminfo Final_top.mmi -ltxfile debug_nets.ltx -file Final_top.sysdef }
+  catch { write_sysdef -hwdef Final_top.hwdef -bitfile Final_top.bit -meminfo Final_top.mmi -file Final_top.sysdef }
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
