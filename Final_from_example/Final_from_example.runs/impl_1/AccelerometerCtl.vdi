@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Nov 30 14:59:19 2015
+# Process ID: 10984
+# Log file: C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/impl_1/AccelerometerCtl.vdi
+# Journal file: C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source AccelerometerCtl.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK_IN'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RESETN'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sclk'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ss'. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.srcs/constrs_1/new/Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 458.922 ; gain = 3.063

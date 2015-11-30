@@ -119,7 +119,49 @@ begin
 
 reset <= not RESETN;
 --LED (15 downto 8) <= ACCEL_X;
-LED (8 downto 0) <= ACCEL_Y;
+--LED (8 downto 0) <= ACCEL_Y;
+
+LEDs: process(CLK_IN, ACCEL_Y)
+    begin
+        if (rising_edge(CLK_IN)) then
+            if (ACCEL_Y >= x"000") and (ACCEL_Y < x"020") then
+                LED <= "1100000000000000";
+            elsif (ACCEL_Y >= x"020") and (ACCEL_Y < x"040") then
+                LED <= "0110000000000000";
+            elsif (ACCEL_Y >= x"040") and (ACCEL_Y < x"060") then
+                LED <= "0011000000000000";
+            elsif (ACCEL_Y >= x"060") and (ACCEL_Y < x"080") then
+                LED <= "0001100000000000";
+            elsif (ACCEL_Y >= x"080") and (ACCEL_Y < x"0A0") then
+                LED <= "0000110000000000";
+            elsif (ACCEL_Y >= x"0A0") and (ACCEL_Y < x"0C0") then
+                LED <= "0000011000000000";
+            elsif (ACCEL_Y >= x"0C0") and (ACCEL_Y < x"0E0") then
+                LED <= "0000001100000000";
+            elsif (ACCEL_Y >= x"0E0") and (ACCEL_Y < x"100") then
+                LED <= "0000000110000000";
+            --
+            elsif (ACCEL_Y >= x"100") and (ACCEL_Y < x"120") then
+                LED <= "0000000110000000";
+            elsif (ACCEL_Y >= x"120") and (ACCEL_Y < x"140") then
+                LED <= "0000000011000000";
+            elsif (ACCEL_Y >= x"140") and (ACCEL_Y < x"160") then
+                LED <= "0000000001100000";
+            elsif (ACCEL_Y >= x"160") and (ACCEL_Y < x"180") then
+                LED <= "0000000000110000";
+            elsif (ACCEL_Y >= x"180") and (ACCEL_Y < x"1A0") then
+                LED <= "0000000000011000";
+            elsif (ACCEL_Y >= x"1A0") and (ACCEL_Y < x"1C0") then
+                LED <= "0000000000001100";
+            elsif (ACCEL_Y >= x"1C0") and (ACCEL_Y < x"1E0") then
+                LED <= "0000000000000110";
+            elsif (ACCEL_Y >= x"1E0") and (ACCEL_Y < x"200") then
+                LED <= "0000000000000011";
+                
+            end if;
+        end if;
+    end process;
+          
 
 ----------------------------------------------------------------------------------
 -- Port Maps

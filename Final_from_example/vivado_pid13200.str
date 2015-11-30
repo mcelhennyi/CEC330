@@ -1182,3 +1182,433 @@ dismissDialog("Program Device"); // cp:P (cl:JFrame)
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
 selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 0, false, true); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame) - Double Click
 maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P:a (Workspace:JPanel, cl:JFrame)
+// Elapsed time: 148 seconds
+selectCodeEditor("Top.vhd", 183, 559); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 228, 433); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 230, 166); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 213, 411); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top.vhd", 435, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 18 seconds
+selectCodeEditor("Top.vhd", 154, 177); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 188, 145); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 138, 180); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 155, 181); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 147, 181); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 141, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 223, 213); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 275, 230); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 149, 538); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 587, 205); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 56 seconds
+selectCodeEditor("Top.vhd", 268, 464); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top.vhd", 241, 96); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top.vhd", 285, 104); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 132, 129); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 97 seconds
+selectCodeEditor("Top.vhd", 201, 78); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 134, 140); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 124, 121); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top.vhd", 372, 177); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 190, 126); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top.vhd", 206, 131); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 280, 132); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 251, 133); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 315, 130); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 194, 130); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("Top.vhd", 348, 124); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("Top.vhd", 427, 130); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 128, 159); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 120, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 230, 159); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 386, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 472, 166); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 455, 168); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 232, 181); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 90 seconds
+selectCodeEditor("Top.vhd", 384, 214); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("Top.vhd", 382, 245); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 379, 250); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 380, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 376, 206); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 375, 193); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 377, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 376, 160); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 357, 128); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 202, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 225, 160); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 225, 177); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 222, 196); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 225, 215); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 226, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 225, 246); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 225, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 301, 518); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 481, 105); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 478, 81); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 86, 96); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 288, 111); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 315, 93); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 485, 106); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 333, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 479, 138); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top.vhd", 513, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 491, 214); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 461, 249); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 520, 286); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 487, 309); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 168, 127); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 168, 162); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 171, 193); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 168, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 168, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 168, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 168, 334); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 328, 332); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 319, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 312, 265); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 308, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top.vhd", 286, 126); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 293, 163); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 299, 196); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 276, 232); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 495, 337); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 147, 535); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 309, 381); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 311, 387); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 310, 451); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 467, 178); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top.vhd", 209, 211); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 232, 247); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 371, 210); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 232, 247); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 36 seconds
+selectCodeEditor("Top.vhd", 394, 248); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 15 seconds
+selectCodeEditor("Top.vhd", 119, 513); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 115, 486); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 309, 463); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top.vhd", 79, 515); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 26 seconds
+selectCodeEditor("Top.vhd", 89, 488); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 10 seconds
+selectCodeEditor("Top.vhd", 5, 143); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 168, 228); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 170, 263); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 216, 230); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'c'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 170, 298); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 167, 332); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 175, 365); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 176, 400); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 178, 433); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 187, 469); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "Top.vhd", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 253, 433); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 327, 467); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 330, 432); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 326, 398); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 329, 364); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 329, 325); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 327, 296); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 329, 264); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("Top.vhd", 328, 229); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("Top.vhd", 317, 254); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Mon Nov 30 14:58:49 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/synth_1/runme.log [Mon Nov 30 14:58:49 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// ak:a (cl:JFrame): Launch Run Critical Messages: addNotify
+// Elapsed time: 42 seconds
+dismissDialog("Launch Run Critical Messages"); // ak:a (cl:JFrame)
+selectButton(PAResourceQtoS.StateMonitor_CANCEL, "Cancel"); // a:JButton (r:JPanel, cl:JFrame)
+// bI:P (cl:JFrame): Cancel Implementation: addNotify
+selectButton(PAResourceQtoS.StateMonitor_RESET_RUN, "Reset Run"); // a:JButton (JPanel:JComponent, bI:P)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Cancel Implementation"); // bI:P (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -noclean_dir  
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // cp:P (cl:JFrame)
+selectCodeEditor("Top.vhd", 86, 266); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("Top.vhd", 304, 158); // bj:J (JPanel:JComponent, cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// ap:bI (cl:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, ap:bI)
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // ap:bI (cl:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Mon Nov 30 14:59:48 2015] Launched synth_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/synth_1/runme.log [Mon Nov 30 14:59:48 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/impl_1/runme.log 
+// [GUI Memory]: 108 MB (+339kb) [01:06:54]
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Implementation Completed: addNotify
+// Elapsed time: 100 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a:JRadioButton (JPanel:JComponent, Q:ap)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // Q:ap (cl:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Mon Nov 30 15:01:30 2015] Launched impl_1... Run output will be captured here: C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/impl_1/runme.log 
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 54 MB. Current time: 11/30/15 3:01:47 PM EST
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 41 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Bitstream Generation Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 28, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aC:ag (cl:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aC:ag)
+// cp:P (cl:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aC:ag (cl:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Austin/Documents/CEC330_3/Final_from_example/Final_from_example.runs/impl_1/Top.bit} [lindex [get_hw_devices] 0] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'x' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // cp:P (cl:JFrame)
