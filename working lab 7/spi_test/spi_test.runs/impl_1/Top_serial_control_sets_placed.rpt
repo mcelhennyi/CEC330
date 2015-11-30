@@ -1,0 +1,84 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sun Nov 29 16:58:31 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_serial_control_sets_placed.rpt
+| Design       : Top_serial
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    31 |
+| Minimum Number of register sites lost to control set restrictions |   185 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |           16 |
+| No           | No                    | Yes                    |              15 |           15 |
+| No           | Yes                   | No                     |              34 |           16 |
+| Yes          | No                    | No                     |               5 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+
+|                  Clock Signal                  |                   Enable Signal                   |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++------------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[7]_LDC_i_2_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[7]_LDC_i_1_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[6]_LDC_i_2_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[6]_LDC_i_1_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[5]_LDC_i_1_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[4]_LDC_i_1_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[3]_LDC_i_1_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+| ~SPI_state_clk_map/SPI_CLK                     |                                                   | SPI_TX_map/serial_register_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[7]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[7]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[6]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[6]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[5]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[4]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[3]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[2]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[1]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_TX_map/serial_register_reg[0]_LDC_i_1_n_0 |                                                   | SPI_TX_map/serial_register_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  SPI_state_clk_map/TX_DONE_reg_i_2_n_0         |                                                   |                                               |                1 |              2 |
+|  divider_map/clk_out50Hz                       |                                                   |                                               |                2 |              3 |
+|  CLK_IN_IBUF_BUFG                              |                                                   |                                               |                3 |              4 |
+|  divider_map/CLK_OUT_200KHz                    | SPI_state_clk_map/FSM_sequential_state[4]_i_1_n_0 |                                               |                2 |              5 |
+|  tx_data_reg[7]_i_1_n_0                        |                                                   |                                               |                3 |              8 |
+|  SPI_state_clk_map/SPI_CLK                     |                                                   |                                               |                7 |              8 |
+|  CLK_IN_IBUF_BUFG                              |                                                   | divider_map/counter50Hz[0]_i_1_n_0            |                4 |             13 |
+|  CLK_IN_IBUF_BUFG                              |                                                   | divider_map/counter200KHz[0]_i_1_n_0          |                4 |             13 |
++------------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+
+
+

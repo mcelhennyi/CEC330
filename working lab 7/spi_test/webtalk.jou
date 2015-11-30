@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Nov 29 17:01:45 2015
+# Process ID: 9036
+# Log file: C:/Users/Austin/Desktop/spi_test/webtalk.log
+# Journal file: C:/Users/Austin/Desktop/spi_test\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Austin/Desktop/spi_test/spi_test.hw/webtalk/labtool_webtalk.tcl -notrace
