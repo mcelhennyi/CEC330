@@ -1,0 +1,75 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Mon Nov 30 14:39:10 2015
+| Host         : Austin-MBP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    22 |
+| Minimum Number of register sites lost to control set restrictions |    78 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              55 |           18 |
+| Yes          | No                    | No                     |              40 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              94 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------+----------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|    Clock Signal   |                             Enable Signal                            |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++-------------------+----------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/Cmd_Reg[0][6]_i_2_n_0             | Inst_AccelerometerCtl/ADXL_Control/Cmd_Reg[0][6]_i_1_n_0      |                1 |              4 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/CE_Cnt_Num_Reads                  | Inst_AccelerometerCtl/ADXL_Control/Reset_Cnt_Num_Reads        |                1 |              4 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/StC_Spi_Trans[9]_i_1_n_0          | Inst_AccelerometerCtl/RESET_INT_reg_n_0                       |                1 |              5 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/Cmd_Reg[1][6]_i_2_n_0             | Inst_AccelerometerCtl/ADXL_Control/Cmd_Reg[1]0_in[7]          |                2 |              5 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/Cmd_Reg[2][6]_i_2_n_0             | Inst_AccelerometerCtl/ADXL_Control/Cmd_Reg[2][7]              |                2 |              6 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/SPI_Interface/StC[5]_i_1_n_0      | Inst_AccelerometerCtl/RESET_INT_reg_n_0                       |                2 |              6 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/SPI_Interface/MOSI_REG[6]_i_1_n_0 |                                                               |                1 |              6 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/Shift_Cmd_Reg                     | Inst_AccelerometerCtl/RESET_INT_reg_n_0                       |                1 |              7 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/SPI_Interface/E[0]                | Inst_AccelerometerCtl/RESET_INT_reg_n_0                       |                4 |              7 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/SPI_Interface/SHIFT_TICK_IN       |                                                               |                3 |              8 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/SPI_Interface/EN_LOAD_DOUT        |                                                               |                2 |              8 |
+|  CLK_IN_IBUF_BUFG |                                                                      | Inst_AccelerometerCtl/Accel_Calculation/ACCEL_Y_CLIP[8]       |                4 |              9 |
+|  CLK_IN_IBUF_BUFG |                                                                      | Inst_AccelerometerCtl/ADXL_Control/SPI_Interface/SCLK_2X_DIV0 |                3 |              9 |
+|  CLK_IN_IBUF_BUFG |                                                                      | Inst_AccelerometerCtl/sel0[10]                                |                3 |             10 |
+|  CLK_IN_IBUF_BUFG |                                                                      | Inst_AccelerometerCtl/ADXL_Control/Cnt_SS_Inactive0           |                3 |             10 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/E[0]                              | Inst_AccelerometerCtl/RESET_INT_reg_n_0                       |                3 |             11 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/StC_Adxl_Ctrl[11]_i_1_n_0         | Inst_AccelerometerCtl/RESET_INT_reg_n_0                       |                7 |             11 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/Data_Ready_1                      | Inst_AccelerometerCtl/RESET_INT_reg_n_0                       |                3 |             12 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/CE_Cnt_Num_Reads                  | Inst_AccelerometerCtl/ADXL_Control/ACCEL_X_SUM0               |                4 |             16 |
+|  CLK_IN_IBUF_BUFG |                                                                      | Inst_AccelerometerCtl/ADXL_Control/Reset_Sample_Rate_Div      |                5 |             17 |
+|  CLK_IN_IBUF_BUFG |                                                                      |                                                               |               11 |             21 |
+|  CLK_IN_IBUF_BUFG | Inst_AccelerometerCtl/ADXL_Control/SPI_Interface/Shift_Data_Reg      |                                                               |                7 |             26 |
++-------------------+----------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+
+

@@ -77,15 +77,15 @@ architecture Behavioral of AccelArithmetics is
 -- Then limit to -1g = 0, 0g = 255, 1g = 511
 
 -- Use a Square Root Logicore component to calculate the magnitude
-COMPONENT Square_Root
-  PORT (
-    x_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-    nd : IN STD_LOGIC;
-    x_out : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
-    rdy : OUT STD_LOGIC;
-    clk : IN STD_LOGIC
-  );
-END COMPONENT;
+--COMPONENT Square_Root--------------------------------------------------------commented this out
+--  PORT (
+--    x_in : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
+--    nd : IN STD_LOGIC;
+--    x_out : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
+--    rdy : OUT STD_LOGIC;
+--    clk : IN STD_LOGIC
+--  );
+--END COMPONENT;
 
 constant SUM_FACTOR : std_logic_vector (12 downto 0) :=  '0' & X"7FF"; --2047
 constant LOWER_ACC_BOUNDARY : std_logic_vector (9 downto 0) := "00" & X"FF"; -- 255
@@ -226,14 +226,14 @@ begin
 end process Calculate_Square_Sum;
 
 -- Calculate the square root to determine magnitude
-Magnitude_Calculation: Square_Root
-  PORT MAP (
-    x_in => ACCEL_MAG_SQUARE,
-    nd => Data_Ready_1,
-    x_out => ACCEL_MAG_SQRT,
-    rdy => open,
-    clk => SYSCLK
-  );
+--Magnitude_Calculation: Square_Root---------------------------------------------------------------------------------------commented this out
+--  PORT MAP (
+--    x_in => ACCEL_MAG_SQUARE,
+--    nd => Data_Ready_1,
+--    x_out => ACCEL_MAG_SQRT,
+--    rdy => open,
+--    clk => SYSCLK
+--  );
 
 -- Also divide the square root by 4
 ACCEL_MAG_OUT <= ACCEL_MAG_SQRT(13 downto 2);

@@ -60,128 +60,24 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity Top is
-   port(
-      clk_i          : in  std_logic;
-      rstn_i         : in  std_logic;
-      -- push-buttons
-      btnl_i         : in  std_logic;
-      btnc_i         : in  std_logic;
-      btnr_i         : in  std_logic;
-      btnd_i         : in  std_logic;
-      btnu_i         : in  std_logic;
-      -- switches
-      sw_i           : in  std_logic_vector(15 downto 0);
-      -- 7-segment display
-      disp_seg_o     : out std_logic_vector(7 downto 0);
-      disp_an_o      : out std_logic_vector(7 downto 0);
-      -- leds
-      led_o          : out std_logic_vector(15 downto 0);
-      -- RGB leds
-      rgb1_red_o     : out std_logic;
-      rgb1_green_o   : out std_logic;
-      rgb1_blue_o    : out std_logic;
-      rgb2_red_o     : out std_logic;
-      rgb2_green_o   : out std_logic;
-      rgb2_blue_o    : out std_logic;
-      -- VGA display
-      vga_hs_o       : out std_logic;
-      vga_vs_o       : out std_logic;
-      vga_red_o      : out std_logic_vector(3 downto 0);
-      vga_blue_o     : out std_logic_vector(3 downto 0);
-      vga_green_o    : out std_logic_vector(3 downto 0);
-      -- PDM microphone
-      pdm_clk_o      : out std_logic;
-      pdm_data_i     : in  std_logic;
-      pdm_lrsel_o    : out std_logic;
-      -- PWM audio
-      pwm_audio_o    : inout std_logic;
-      pwm_sdaudio_o  : out std_logic;
-		-- Temperature sensor
-		tmp_scl        : inout std_logic;
-		tmp_sda        : inout std_logic;
---		tmp_int        : in std_logic; -- Not used in this project
---		tmp_ct         : in std_logic; -- Not used in this project
-      -- SPI Interface signals for the ADXL362 accelerometer
-      sclk           : out STD_LOGIC;
-      mosi           : out STD_LOGIC;
-      miso           : in STD_LOGIC;
-      ss             : out STD_LOGIC;
-      -- PS2 interface signals
-      ps2_clk        : inout std_logic;
-      ps2_data       : inout std_logic;
-      
-      SCLK_DBG       : out STD_LOGIC;
-      MOSI_DBG       : out STD_LOGIC;
-      MISO_DBG       : out STD_LOGIC;
-      SS_DBG         : out STD_LOGIC;
-      
-      PS2C_DBG       : out std_logic;
-      PS2D_DBG       : out std_logic;
-      
-      -- DDR2 interface signals
-      ddr2_addr      : out   std_logic_vector(12 downto 0);
-      ddr2_ba        : out   std_logic_vector(2 downto 0);
-      ddr2_ras_n     : out   std_logic;
-      ddr2_cas_n     : out   std_logic;
-      ddr2_we_n      : out   std_logic;
-      ddr2_ck_p      : out   std_logic_vector(0 downto 0);
-      ddr2_ck_n      : out   std_logic_vector(0 downto 0);
-      ddr2_cke       : out   std_logic_vector(0 downto 0);
-      ddr2_cs_n      : out   std_logic_vector(0 downto 0);
-      ddr2_dm        : out   std_logic_vector(1 downto 0);
-      ddr2_odt       : out   std_logic_vector(0 downto 0);
-      ddr2_dq        : inout std_logic_vector(15 downto 0);
-      ddr2_dqs_p     : inout std_logic_vector(1 downto 0);
-      ddr2_dqs_n     : inout std_logic_vector(1 downto 0)
-
-   );
+    port(
+            CLK_IN         : in  std_logic;
+            RESETN         : in  std_logic;
+            --
+            LED            : out  STD_LOGIC_VECTOR (15 downto 0);
+            -- SPI Interface signals for the ADXL362 accelerometer
+            sclk           : out STD_LOGIC;
+            mosi           : out STD_LOGIC;
+            miso           : in STD_LOGIC;
+            ss             : out STD_LOGIC
+            );
 end Top;
 
 architecture Behavioral of Top is
-
-----------------------------------------------------------------------------------
--- Component Declarations
-----------------------------------------------------------------------------------
-
-component AccelerometerCtl is
-generic 
-(
-   SYSCLK_FREQUENCY_HZ : integer := 100000000;
-   SCLK_FREQUENCY_HZ   : integer := 1000000;
-   NUM_READS_AVG       : integer := 16;
-   UPDATE_FREQUENCY_HZ : integer := 1000
-);
-port
-(
- SYSCLK     : in STD_LOGIC; -- System Clock
- RESET      : in STD_LOGIC; -- Reset button on the Nexys4 board is active low
-
- -- SPI interface Signals
- SCLK       : out STD_LOGIC;
- MOSI       : out STD_LOGIC;
- MISO       : in STD_LOGIC;
- SS         : out STD_LOGIC;
- 
--- Accelerometer data signals
- ACCEL_X_OUT    : out STD_LOGIC_VECTOR (8 downto 0);
- ACCEL_Y_OUT    : out STD_LOGIC_VECTOR (8 downto 0);
- ACCEL_MAG_OUT  : out STD_LOGIC_VECTOR (11 downto 0);
- ACCEL_TMP_OUT  : out STD_LOGIC_VECTOR (11 downto 0)
-);
-end component;
-
-
 ----------------------------------------------------------------------------------
 -- Signal Declarations
 ----------------------------------------------------------------------------------  
--- Inverted input reset signal
-signal rst        : std_logic;
--- Reset signal conditioned by the PLL lock
 signal reset      : std_logic;
-signal resetn     : std_logic;
-signal locked     : std_logic;
-
-
 
 -- ADXL362 Accelerometer data signals
 signal ACCEL_X    : STD_LOGIC_VECTOR (8 downto 0);
@@ -190,51 +86,67 @@ signal ACCEL_MAG  : STD_LOGIC_VECTOR (11 downto 0);
 signal ACCEL_TMP  : STD_LOGIC_VECTOR (11 downto 0);
 
 
+----------------------------------------------------------------------------------
+-- Component Declarations
+----------------------------------------------------------------------------------
+
+component AccelerometerCtl is
+    generic (
+                SYSCLK_FREQUENCY_HZ : integer := 100000000;
+                SCLK_FREQUENCY_HZ   : integer := 1000000;
+                NUM_READS_AVG       : integer := 16;
+                UPDATE_FREQUENCY_HZ : integer := 1000
+                );
+    port (
+                SYSCLK     : in STD_LOGIC; -- System Clock
+                RESET      : in STD_LOGIC; -- Reset button on the Nexys4 board is active low
+                
+                -- SPI interface Signals
+                SCLK       : out STD_LOGIC;
+                MOSI       : out STD_LOGIC;
+                MISO       : in STD_LOGIC;
+                SS         : out STD_LOGIC;
+                
+                -- Accelerometer data signals
+                ACCEL_X_OUT    : out STD_LOGIC_VECTOR (8 downto 0);
+                ACCEL_Y_OUT    : out STD_LOGIC_VECTOR (8 downto 0);
+                ACCEL_MAG_OUT  : out STD_LOGIC_VECTOR (11 downto 0);
+                ACCEL_TMP_OUT  : out STD_LOGIC_VECTOR (11 downto 0)
+                );
+end component AccelerometerCtl;
+
 begin
-   
-   -- Assign LEDs
-   led_o <= sw_i when (led_audio = X"0000") else led_audio;
 
-   -- The Reset Button on the Nexys4 board is active-low,
-   -- however many components need an active-high reset
-   rst <= not rstn_i;
-
-   -- Assign reset signals conditioned by the PLL lock
-   reset <= rst or (not locked);
-   -- active-low version of the reset signal
-   resetn <= not reset;
-
-
-   -- Assign pdm_clk output
-   pdm_clk_o <= pdm_clk;
-
+reset <= not RESETN;
+--LED (15 downto 8) <= ACCEL_X;
+LED (8 downto 0) <= ACCEL_Y;
 
 ----------------------------------------------------------------------------------
--- Accelerometer Controller
+-- Port Maps
 ----------------------------------------------------------------------------------
-   Inst_AccelerometerCtl: AccelerometerCtl
-   generic map
-   (
-        SYSCLK_FREQUENCY_HZ   => 100000000,
-        SCLK_FREQUENCY_HZ     => 100000,
-        NUM_READS_AVG         => 16,
-        UPDATE_FREQUENCY_HZ   => 1000
-   )
-   port map
-   (
-       SYSCLK     => clk_100MHz_buf,
-       RESET      => reset, 
-       -- Spi interface Signals
-       SCLK       => sclk,
-       MOSI       => mosi,
-       MISO       => miso,
-       SS         => ss,
-     
-      -- Accelerometer data signals
-       ACCEL_X_OUT   => ACCEL_X,
-       ACCEL_Y_OUT   => ACCEL_Y,
-       ACCEL_MAG_OUT => ACCEL_MAG,
-       ACCEL_TMP_OUT => ACCEL_TMP
-   );
+
+Inst_AccelerometerCtl: AccelerometerCtl
+    generic map (
+                    SYSCLK_FREQUENCY_HZ   => 100000000,
+                    SCLK_FREQUENCY_HZ     => 100000,
+                    NUM_READS_AVG         => 16,
+                    UPDATE_FREQUENCY_HZ   => 1000
+                    )
+    port map (
+--                    SYSCLK     => clk_100MHz_buf,    --neet to map this? not sure what this is
+                    SYSCLK     => CLK_IN,
+                    RESET      => reset,
+                    -- Spi interface Signals
+                    SCLK       => sclk,
+                    MOSI       => mosi,
+                    MISO       => miso,
+                    SS         => ss,
+                    
+                    -- Accelerometer data signals
+                    ACCEL_X_OUT   => ACCEL_X,
+                    ACCEL_Y_OUT   => ACCEL_Y,
+                    ACCEL_MAG_OUT => ACCEL_MAG,
+                    ACCEL_TMP_OUT => ACCEL_TMP
+                    );
 
 end Behavioral;
